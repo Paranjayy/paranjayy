@@ -19,8 +19,8 @@ Here are some ideas to get you started:
 ###
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=paranjayy&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=confusedjpeg&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=paranjayy&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=nightowl&locale=en&hide_border=false" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=paranjayy&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
 </div>
 
 ###
@@ -66,6 +66,11 @@ Here are some ideas to get you started:
 ---
 <h1 align="center">Paranjay ⚡</h1>
 <h3 align="center">Backend Dev | Building Fast Infra & Crafting Clean Code</h3>
+
+
+![paranjayy's Stats](https://github-readme-stats.vercel.app/api?username=paranjayy&theme=nightowl&show_icons=true&hide_border=false&count_private=true)
+![paranjayy's Streak](https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=nightowl&hide_border=false)
+![paranjayy's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&theme=nightowl&show_icons=true&hide_border=false&layout=compact)
 
 <p align="center">
   <a href="https://twitter.com/kparanjay245" target="_blank">
