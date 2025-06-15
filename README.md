@@ -68,9 +68,9 @@ Here are some ideas to get you started:
 <h3 align="center">Backend Dev | Building Fast Infra & Crafting Clean Code</h3>
 
 
-![paranjayy's Stats](https://github-readme-stats.vercel.app/api?username=paranjayy&theme=nightowl&show_icons=true&hide_border=false&count_private=true)
-![paranjayy's Streak](https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=nightowl&hide_border=false)
-![paranjayy's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&theme=nightowl&show_icons=true&hide_border=false&layout=compact)
+![paranjayy's Stats](https://github-readme-stats.vercel.app/api?username=paranjayy&theme=vision-friendly-dark&show_icons=true&hide_border=false&count_private=true)
+![paranjayy's Streak](https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=vision-friendly-dark&hide_border=false)
+![paranjayy's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&theme=vision-friendly-dark&show_icons=true&hide_border=false&layout=compact)
 
 <p align="center">
   <a href="https://twitter.com/kparanjay245" target="_blank">
@@ -139,3 +139,50 @@ Here are some ideas to get you started:
 ---
 
 ⚡ If you're into distributed systems, async infra, or just want to build mad performant stuff—let's jam.
+
+---
+<p align="center"><a href="https://paranjayy.github.io"><img width="80%" alt="Hello, I'm Paranjay. I do open source!" src="./assets/gh-readme-header.png" /></a></p>
+
+<br />
+
+I'm a self-taught passionate FrontEnd/Backend developer from India 🇮🇳
+
+**About me**
+
+- 💼 FrontEnd Engineer at 
+
+- 📈 Built 
+
+- ❤️ I love writing TypeScript, and building fun experiments on type-level
+
+- 💬 Ask me about anything [here](https://github.com/paranjayy/paranjayy/issues)
+
+<code><img height="20" alt="javascript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="20" alt="typescript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>
+<code><img height="20" alt="react" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
+<code><img height="20" alt="graphql" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/graphql/graphql.png"></code>
+<code><img height="20" alt="nodejs" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>    
+
+
+| <a href="https://github.com/paranjayy/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Paranjayy's github stats" /></a> | <a href="https://github.com/paranjayy/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&theme=buefy&hide_border=true" /></a> |
+| ------------- | ------------- |
+
+#### Top Repositories
+
+
+<a href="https://github.com/paranjayy/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=paranjayy&repo=github-readme-stats&theme=buefy" />
+</a>
+<a href="https://github.com/paranjayy/paranjayy.github.io">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=paranjayy&repo=paranjayy.github.io&theme=buefy" />
+</a>
+
+<br />
+<br />
+
+<a href="https://twitter.com/kparanjay245">
+  <img align="right" alt="Paranjay | Twitter" width="21px" src="https://raw.githubusercontent.com/paranjayy/paranjayy/master/assets/twitter.svg" />
+</a>
+<a href="https://codesandbox.io/u/">
+  <img align="right" alt="Anurag Hazra | CodeSandbox" width="20px" src="https://raw.githubusercontent.com/paranjayy/paranjayy/master/assets/codesandbox.svg" />
+</a>
