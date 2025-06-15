@@ -19,7 +19,7 @@ Here are some ideas to get you started:
 ###
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=paranjayy&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=nightowl&locale=en&hide_border=false" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=paranjayy&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=paranjayy&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
 </div>
 
@@ -184,5 +184,5 @@ I'm a self-taught passionate FrontEnd/Backend developer from India 🇮🇳
   <img align="right" alt="Paranjay | Twitter" width="21px" src="https://raw.githubusercontent.com/paranjayy/paranjayy/master/assets/twitter.svg" />
 </a>
 <a href="https://codesandbox.io/u/">
-  <img align="right" alt="Anurag Hazra | CodeSandbox" width="20px" src="https://raw.githubusercontent.com/paranjayy/paranjayy/master/assets/codesandbox.svg" />
+  <img align="right" alt="Paranjay | CodeSandbox" width="20px" src="https://raw.githubusercontent.com/paranjayy/paranjayy/master/assets/codesandbox.svg" />
 </a>
