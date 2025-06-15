@@ -69,7 +69,7 @@ Here are some ideas to get you started:
 
 <p align="center">
   <a href="https://twitter.com/kparanjay245" target="_blank">
-    <img src="https://img.shields.io/twitter/follow/pixperk_?logo=twitter&style=for-the-badge" alt="Follow @pixperk_" />
+    <img src="https://img.shields.io/twitter/follow/kparanjay245?logo=twitter&style=for-the-badge" alt="Follow @kparanjay245" />
   </a>
 </p>
 
