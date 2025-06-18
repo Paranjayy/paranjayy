@@ -13,9 +13,12 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
+
+===
+<h2 align="left">Hello There 👋! My name is Paranjay </h2>
 -->
 
-<h2 align="left">Hello There 👋! My name is Paranjay Khachar and I'm a Software Developer and UI/UX Designer</h2>
+
 
 ###
 
