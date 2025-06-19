@@ -29,5 +29,6 @@ Here are some ideas to get you started:
 
 ###
 
-
+<div align="center">
 [![Paranjayy's GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=paranjayy)](https://icantcode.fyi/)
+</div>
