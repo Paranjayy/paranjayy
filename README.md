@@ -24,8 +24,12 @@ Here are some ideas to get you started:
 - [Sahaj Jain](https://iamsahaj.xyz/)
 - [Lakshay Bhushan](https://www.lakshb.dev/)
 - [T3 Chat Cloneathon](https://cloneathon.t3.chat/)
+- volt.fm & stats.fm like cool things
 
 - cool things
+
+- <a href="https://glama.ai/mcp/servers/3wko1bhuek"><img width="380" height="200" src="https://glama.ai/mcp/servers/3wko1bhuek/badge" alt="server for Obsidian MCP server" /></a>
+
 
 
 <img src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&show=reviews,prs_merged,prs_merged_percentage&theme=dark" />
