@@ -325,4 +325,4 @@ I almost always listen to music whenever I can. My taste ranges from beautiful c
 
 ![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=paranjayy&theme=dark)
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=paranjayy&theme=dark&utcOffset=8)
+![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=paranjayy&theme=dark&utcOffset=5.30)
