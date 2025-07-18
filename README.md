@@ -36,7 +36,8 @@ Here are some ideas to get you started:
 ###
 
 
-[![Paranjayy's GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=paranjayy)](https://icantcode.fyi/)
+[![Paranjayy's GitHub stats](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=paranjayy&theme=dark)
+](https://icantcode.fyi/)
 
 
 
