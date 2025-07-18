@@ -40,3 +40,5 @@ Here are some ideas to get you started:
 <img src ="https://lakshay-github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&hide=prs,issues&count_private=true&include_all_commits=true&rank_icon=github&bg_color=0D1116&hide_border=true&text_color=FDFFF5&title_color=65E0BD&icon_color=65E0BD" alt="GitHub Stats" height="50%" width="auto">
 <img src ="https://lakshay-github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&size_weight=0.5&count_weight=1&layout=compact&bg_color=0D1116&hide_border=true&text_color=FDFFF5&title_color=65E0BD&icon_color=65E0BD" alt="Top Languages" height="50%" width="auto">
 </p>
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=paranjayy&theme=dark&utcOffset=5.30)
