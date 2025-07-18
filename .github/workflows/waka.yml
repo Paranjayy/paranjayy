@@ -9,8 +9,8 @@ on:
     branches: ["main"]
 
 jobs:
-  update-stats:
-    name: Update Profile Stats
+  update-readme:
+    name: Update Waka Stats & Starred Count
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,22 +20,22 @@ jobs:
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_PROJECTS: "True"
-          SHOW_UPDATED_DATE: "True"
-          SHOW_LINES_OF_CODE: "True"
-          SHOW_EDITORS: "True"
-          SHOW_LOC_CHART: "True"
-          SHOW_TIMEZONE: "False"
-          SHOW_OS: "True"
-          SHOW_LANGUAGE: "True"
-          SHOW_COMMIT_PERSONA: "True"
+          SHOW_TIME_OF_DAY: "True"
           SHOW_DAYS_OF_WEEK: "True"
+          SHOW_LANGUAGE: "True"
+          SHOW_PROJECTS: "True"
+          SHOW_EDITORS: "True"
+          SHOW_OS: "True"
+          SHOW_LINES_OF_CODE: "True"
+          SHOW_UPDATED_DATE: "True"
+          SHOW_TOTAL_CODE_TIME: "True"
+          SHOW_PROFILE_VIEWS: "False"
+          SHOW_COMMIT_PERSONA: "True"
           
-      # 2. Get Advanced GitHub Stats (Starred Given & Stars Received)
+      # 2. Get Stats via GraphQL (Total Stars Given & Received)
       - name: Get GitHub Stats
         id: get_stats
         run: |
-          # Query both starred count and repository star counts
           RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GH_TOKEN }}" \
             -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: OWNER) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
             https://api.github.com/graphql)
@@ -43,18 +43,17 @@ jobs:
           GIVEN=$(echo $RESULT | jq '.data.user.starredRepositories.totalCount')
           RECEIVED=$(echo $RESULT | jq '.data.user.repositories.nodes | map(.stargazerCount) | add')
           
-          # Default to 0 if null
           if [ -z "$GIVEN" ] || [ "$GIVEN" == "null" ]; then GIVEN=0; fi
           if [ -z "$RECEIVED" ] || [ "$RECEIVED" == "null" ]; then RECEIVED=0; fi
           
           echo "given=$GIVEN" >> "$GITHUB_OUTPUT"
           echo "received=$RECEIVED" >> "$GITHUB_OUTPUT"
           
-      # 3. Update README with precise badges and custom text
-      - name: Inject Stats into README
+      # 3. Update README with Starred Count and custom Hiring Status
+      - name: Update README
         run: |
-          # 1. Update Starred (Given) - Dark Green
-          GIVEN_BADGE='  <img src="https://img.shields.io/badge/Starred-${{ steps.get_stats.outputs.given }}-065f46?logo=github&logoColor=white" alt="Starred Repos" />'
+          # 1. Update Starred (Given) - Emerald Green
+          GIVEN_BADGE='  <img src="https://img.shields.io/badge/Starred-${{ steps.get_stats.outputs.given }}-10b981?logo=github&logoColor=white" alt="Starred Repos" />'
           sed -i "/<!-- STARRED_COUNT -->/,/<!-- \/STARRED_COUNT -->/{ /<!-- STARRED_COUNT -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
           sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
           
@@ -63,14 +62,16 @@ jobs:
           sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
           
-          # 3. Restore custom Studying status (replaces the default "Not Opted to Hire")
+          # 3. Replace the auto-generated hiring status with custom text
           sed -i "s/.*Not Opted to Hire.*/Currently Learning \& Studying 📚/g" README.md
           
-      # 4. Final Commit and Push
+      # 4. Commit and Push everything
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "chore: update profile analytics [skip ci]" || echo "No changes to commit"
-          git push
+          # Added [skip ci] to prevent infinite loop and keep history clean
+          git commit -m "chore: update profile stats [skip ci]" || echo "No changes to commit"
+          git pull --rebase origin main
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git

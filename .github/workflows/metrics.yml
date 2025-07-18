@@ -1,4 +1,4 @@
-# Steam + WakaTime + MonkeyType metrics workflow
+# Steam + WakaTime metrics workflow
 # Visit https://github.com/lowlighter/metrics#-documentation for full reference.
 name: Metrics
 
@@ -36,12 +36,14 @@ jobs:
         continue-on-error: true
         with:
           filename: metrics.steam.svg
+
           token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_message: "chore: update metrics [skip ci]"
           base: ""
+
           plugin_steam: yes
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          # Keep Steam ID as a string to avoid YAML scientific notation in Action inputs.
           plugin_steam_user: "76561199379635572"
           plugin_steam_sections: recently-played
           plugin_steam_recent_games_limit: 5
@@ -71,11 +73,31 @@ jobs:
         if: steps.check_token.outputs.available == 'true'
         continue-on-error: true
         with:
-          filename: metrics.wakatime.full.svg
+          filename: metrics.wakatime.svg
+
           token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_message: "chore: update metrics [skip ci]"
           base: ""
+
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 30
+          plugin_wakatime_sections: time, projects, languages, editors, os
+          plugin_wakatime_limit: 5
+          plugin_wakatime_url: https://wakatime.com
+          plugin_wakatime_user: current
+          plugin_wakatime_repositories_visibility: all
+
+      - uses: lowlighter/metrics@latest
+        if: steps.check_token.outputs.available == 'true'
+        continue-on-error: true
+        with:
+          filename: metrics.wakatime.full.svg
+
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 180
@@ -85,23 +107,3 @@ jobs:
           plugin_wakatime_url: https://wakatime.com
           plugin_wakatime_user: current
           plugin_wakatime_repositories_visibility: all
-
-  # ── MonkeyType metrics ──────────────────────────────────────────────────────
-  monkeytype:
-    name: MonkeyType Metrics
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
-        continue-on-error: true
-        with:
-          filename: metrics.monkeytype.svg
-          token: NOT_NEEDED
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_message: "chore: update monkeytype [skip ci]"
-          base: ""
-          plugin_monkeytype: yes
-          plugin_monkeytype_user: Paranjayy
-          plugin_monkeytype_sections: score, stats
-          plugin_monkeytype_limit: 5
