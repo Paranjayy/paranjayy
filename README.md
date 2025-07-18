@@ -314,3 +314,15 @@ I almost always listen to music whenever I can. My taste ranges from beautiful c
   
 <!-- Last updated on Wed Jun 04 2025 06:27:44 GMT+0000 (Coordinated Universal Time) ;-;-->
 <i>Last updated on 4th June 2025 using magic</i> ✨ 
+
+[GitHub Profile Summary Cards](https://github-profile-summary-cards.vercel.app/demo.html)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=paranjayy&theme=dark)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=paranjayy&theme=dark)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=paranjayy&theme=dark)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=paranjayy&theme=dark)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=paranjayy&theme=dark&utcOffset=8)
