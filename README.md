@@ -16,6 +16,8 @@ Here are some ideas to get you started:
 ===
 <h2 align="left">Hello There 👋! My name is Paranjay </h2>
 -->
+- [BEPb (Andrej Marinchenko)](https://github.com/BEPb)
+- [BEPb/README.md at main · BEPb/BEPb](https://github.com/BEPb/BEPb/blob/main/README.md)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/github-metrics.svg" />
