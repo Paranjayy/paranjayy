@@ -16,61 +16,10 @@ Here are some ideas to get you started:
 ===
 <h2 align="left">Hello There 👋! My name is Paranjay </h2>
 -->
-- [BEPb (Andrej Marinchenko)](https://github.com/BEPb)
-- [BEPb/README.md at main · BEPb/BEPb](https://github.com/BEPb/BEPb/blob/main/README.md)
-
-- [lakshaybhushan/lakshaybhushan: About me](https://github.com/lakshaybhushan/lakshaybhushan)
-- [lakshaybhushan (Lakshay Bhushan )](https://github.com/lakshaybhushan)
-- [intern3.chat](https://intern3.chat/)
-- [intern3-chat/intern3-chat: Built for interns by interns](https://github.com/intern3-chat/intern3-chat)
-- [MultiboxLabs/flow-browser: A modern, privacy-focused browser with a minimalistic design.](https://github.com/MultiboxLabs/flow-browser)
-- [Flow Browser](https://flow-browser.com/)
-- [Sahaj Jain](https://iamsahaj.xyz/)
-- [Lakshay Bhushan](https://www.lakshb.dev/)
-- [T3 Chat Cloneathon](https://cloneathon.t3.chat/)
-- volt.fm & stats.fm like cool things
-
-- cool things
-
-- <a href="https://glama.ai/mcp/servers/3wko1bhuek"><img width="380" height="200" src="https://glama.ai/mcp/servers/3wko1bhuek/badge" alt="server for Obsidian MCP server" /></a>
-
-
-
-<img src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&show=reviews,prs_merged,prs_merged_percentage&theme=dark" />
-[<img src="https://github.com/user-attachments/assets/3c16f516-4683-492e-b3dd-f581cd3f50c0" alt="Banner"/>]()
-
-<h2 align="center">
-  
-<img src ="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white">
-<img src ="https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white">
-<img src ="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black">
-<img src ="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white">
-<img src ="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-<img src ="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
-<img src ="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black">
-<img src ="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white">
-<img src ="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white">
-<img src ="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-<img src ="https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white">
-<img src ="https://img.shields.io/badge/Unity-000000.svg?style=for-the-badge&logo=Unity&logoColor=white">
-<img src ="https://img.shields.io/badge/Blender-F5792A.svg?style=for-the-badge&logo=Blender&logoColor=white">
-
-</h2>
-
-<br>
-
----
 
 <p align="center">
-
-<img src ="https://lakshay-github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&hide=prs,issues&count_private=true&include_all_commits=true&rank_icon=github&bg_color=0D1116&hide_border=true&text_color=FDFFF5&title_color=65E0BD&icon_color=65E0BD" alt="GitHub Stats" height="50%" width="auto">
-<img src ="https://lakshay-github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&size_weight=0.5&count_weight=1&layout=compact&bg_color=0D1116&hide_border=true&text_color=FDFFF5&title_color=65E0BD&icon_color=65E0BD" alt="Top Languages" height="50%" width="auto">
+  <img src="https://metrics.lecoq.io/paranjayy?template=classic&base.indepth=true&isocalendar=1&languages=1&stargazers=1&lines=1&topics=1&stars=1&habits=1&followup=1&reactions=1&starlists=1&calendar=1&introduction=1&skyline=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=false&base.skip=false&isocalendar=false&isocalendar.duration=full-year&languages=false&languages.limit=8&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.indepth=true&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&stargazers=false&stargazers.days=14&stargazers.charts=true&stargazers.charts.type=classic&stargazers.worldmap=true&stargazers.worldmap.sample=0&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&lines.delay=0&topics=false&topics.mode=starred&topics.sort=stars&topics.limit=15&stars=false&stars.limit=4&habits=false&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&habits.charts.type=classic&habits.trim=false&habits.languages.limit=8&habits.languages.threshold=0%25&followup=false&followup.sections=repositories&followup.indepth=false&followup.archived=true&reactions=false&reactions.limit=200&reactions.limit.issues=100&reactions.limit.discussions=100&reactions.limit.discussions.comments=100&reactions.days=0&reactions.display=absolute&starlists=false&starlists.limit=2&starlists.limit.repositories=2&starlists.languages=false&starlists.limit.languages=8&starlists.shuffle.repositories=true&calendar=false&calendar.limit=1&introduction=false&introduction.title=true&skyline=false&skyline.year=current-year&skyline.frames=60&skyline.quality=0.5&skyline.compatibility=false&skyline.settings=%7B%0A%20%20%22url%22%3A%20%22https%3A%2F%2Fskyline.github.com%2F%24%7Blogin%7D%2F%24%7Byear%7D%22%2C%0A%20%20%22ready%22%3A%20%22%5B...document.querySelectorAll('span')%5D.map(span%20%3D%3E%20span.innerText).includes('Share%20on%20Twitter')%22%2C%0A%20%20%22wait%22%3A%201%2C%0A%20%20%22hide%22%3A%20%22button%2C%20footer%2C%20a%22%0A%7D%0A&config.timezone=Asia%2FCalcutta&config.twemoji=true&config.octicon=true" />
 </p>
-
-<h2 align="left">Hello There 👋! My name is Paranjay Khachar and I'm a Software Developer and UI/UX Designer</h2>
-
-
-- updated at  20jun25
 
 
 ###
