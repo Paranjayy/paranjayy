@@ -60,13 +60,10 @@ jobs:
           plugin_calendar: yes
           plugin_calendar_limit: 1
           plugin_chess: yes
-          plugin_chess_animation: {
-  plugin_chess_animation: yes
-plugin_chess_animation_size: 40
-plugin_chess_animation_delay: 3
-plugin_chess_animation_duration: 0.6
-}
-
+          plugin_chess_animation: yes
+          plugin_chess_animation_size: 40
+          plugin_chess_animation_delay: 3
+          plugin_chess_animation_duration: 0.6
           plugin_chess_user: .user.login
           plugin_code: yes
           plugin_code_days: 3
