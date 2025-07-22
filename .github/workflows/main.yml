@@ -22,7 +22,7 @@ jobs:
           #  - read:user     (for user related data)
           #  - read:packages (for some packages related data)
           #  - repo          (optional, if you want to include private repositories)
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
           user: paranjayy
@@ -63,7 +63,7 @@ jobs:
           plugin_lines: yes
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 4
-          plugin_lines_sections: base
+          plugin_lines_sections: history, repositories
           plugin_reactions: yes
           plugin_reactions_display: absolute
           plugin_reactions_limit: 200
