@@ -1,3 +1,23 @@
+<!-- Profile views -->
+<p align="right">
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&style=flat&color=gray" alt="profile views" />
+</p>
+
+<div align="center" style="background-color:#000000; color:#ffffff; padding: 20px; border-radius: 10px;">
+
+<h1 align="left"><code style="color:#ffffff;">paranjayy</code></h1>
+
+ loves working on <code style="color:#00ffe1;">Building Cool Prod with Any Language</code>, <code style="color:#00ffe1;">Mac</code>, <code style="color:#00ffe1;">linux</code>, and <code style="color:#00ffe1;">""</code>.
+
+---
+
+<p align="center">
+  <code style="color:#ffffff;">building prods.</code><br>
+  <code style="color:#ffffff;">writing thoughts.</code><br>
+  <code style="color:#ffffff;">& many more.</code>
+</p>
+
+</div>
 
 <!--
 **Paranjayy/paranjayy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
