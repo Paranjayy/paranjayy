@@ -1,4 +1,23 @@
-later 
+<!-- Profile views -->
+<p align="right">
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&style=flat&color=gray" alt="profile views" />
+</p>
+
+<div align="center" style="background-color:#000000; color:#ffffff; padding: 20px; border-radius: 10px;">
+
+<h1 align="left"><code style="color:#ffffff;">paranjayy</code></h1>
+
+ loves working on <code style="color:#00ffe1;">Building Cool Prod with Any Language</code>, <code style="color:#00ffe1;">Mac</code>, <code style="color:#00ffe1;">linux</code>, and <code style="color:#00ffe1;">""</code>.
+
+---
+
+<p align="center">
+  <code style="color:#ffffff;">building prods.</code><br>
+  <code style="color:#ffffff;">writing thoughts.</code><br>
+  <code style="color:#ffffff;">& many more.</code>
+</p>
+
+</div>
 
 <!--
 **Paranjayy/paranjayy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -20,73 +39,31 @@ Here are some ideas to get you started:
 - [BEPb (Andrej Marinchenko)](https://github.com/BEPb)
 - [BEPb/README.md at main · BEPb/BEPb](https://github.com/BEPb/BEPb/blob/main/README.md)
 
-- [lakshaybhushan/lakshaybhushan: About me](https://github.com/lakshaybhushan/lakshaybhushan)
-- [lakshaybhushan (Lakshay Bhushan )](https://github.com/lakshaybhushan)
-- [intern3.chat](https://intern3.chat/)
-- [intern3-chat/intern3-chat: Built for interns by interns](https://github.com/intern3-chat/intern3-chat)
-- [MultiboxLabs/flow-browser: A modern, privacy-focused browser with a minimalistic design.](https://github.com/MultiboxLabs/flow-browser)
-- [Flow Browser](https://flow-browser.com/)
-- [Sahaj Jain](https://iamsahaj.xyz/)
-- [Lakshay Bhushan](https://www.lakshb.dev/)
-- [T3 Chat Cloneathon](https://cloneathon.t3.chat/)
 
-- cool things
-
-
-<img src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&show=reviews,prs_merged,prs_merged_percentage&theme=dark" />
-[<img src="https://github.com/user-attachments/assets/3c16f516-4683-492e-b3dd-f581cd3f50c0" alt="Banner"/>]()
-
-<h2 align="center">
-  
-<img src ="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white">
-<img src ="https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white">
-<img src ="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black">
-<img src ="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white">
-<img src ="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-<img src ="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
-<img src ="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black">
-<img src ="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white">
-<img src ="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white">
-<img src ="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-<img src ="https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white">
-<img src ="https://img.shields.io/badge/Unity-000000.svg?style=for-the-badge&logo=Unity&logoColor=white">
-<img src ="https://img.shields.io/badge/Blender-F5792A.svg?style=for-the-badge&logo=Blender&logoColor=white">
-
-</h2>
-
-<br>
-
----
-
-<p align="center">
-
-<img src ="https://lakshay-github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&hide=prs,issues&count_private=true&include_all_commits=true&rank_icon=github&bg_color=0D1116&hide_border=true&text_color=FDFFF5&title_color=65E0BD&icon_color=65E0BD" alt="GitHub Stats" height="50%" width="auto">
-<img src ="https://lakshay-github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&size_weight=0.5&count_weight=1&layout=compact&bg_color=0D1116&hide_border=true&text_color=FDFFF5&title_color=65E0BD&icon_color=65E0BD" alt="Top Languages" height="50%" width="auto">
-</p>
-
-<h2 align="left">Hello There 👋! My name is Paranjay Khachar and I'm a Software Developer and UI/UX Designer</h2>
+<h1 align="center">Hi 🙋🏻‍♂️, I'm </h1>
+<h3 align="center">A passionate developer from India</h3>
 
 
 - updated at  20jun25
 
-
-###
-
-
-  <img src="https://github-readme-stats.vercel.app/api?username=paranjayy&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=paranjayy&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
 
 
-###
 
+<p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
 
-[![Paranjayy's GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=paranjayy)](https://icantcode.fyi/)
+- 🌱 I’m currently learning **Data Science**
 
-<img src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&show=reviews,prs_merged,prs_merged_percentage&theme=dark" />
+- 📫 How to reach me **@gmail.com**
 
+<h3 align="left">Connect with me:</h3>
+<p align="left">
 
----
-
-
-<img src ="https://lakshay-github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&hide=prs,issues&count_private=true&include_all_commits=true&rank_icon=github&bg_color=0D1116&hide_border=true&text_color=FDFFF5&title_color=65E0BD&icon_color=65E0BD" alt="GitHub Stats" height="50%" width="auto">
-<img src ="https://lakshay-github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&size_weight=0.5&count_weight=1&layout=compact&bg_color=0D1116&hide_border=true&text_color=FDFFF5&title_color=65E0BD&icon_color=65E0BD" alt="Top Languages" height="50%" width="auto">
+<a href="https://linkedin.com/in/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="" height="30" width="40" /></a>
+<a href="https://twitter.com/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="" height="30" width="40" /></a>
+<a href="https://auth.geeksforgeeks.org/user/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="" height="30" width="40" /></a>
 </p>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left">  <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>  </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a>  <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a>  </p>
