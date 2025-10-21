@@ -1,23 +1,4 @@
-<!-- Profile views -->
-<p align="right">
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&style=flat&color=gray" alt="profile views" />
-</p>
-
-<div align="center" style="background-color:#000000; color:#ffffff; padding: 20px; border-radius: 10px;">
-
-<h1 align="left"><code style="color:#ffffff;">paranjayy</code></h1>
-
- loves working on <code style="color:#00ffe1;">Building Cool Prod with Any Language</code>, <code style="color:#00ffe1;">Mac</code>, <code style="color:#00ffe1;">linux</code>, and <code style="color:#00ffe1;">""</code>.
-
----
-
-<p align="center">
-  <code style="color:#ffffff;">building prods.</code><br>
-  <code style="color:#ffffff;">writing thoughts.</code><br>
-  <code style="color:#ffffff;">& many more.</code>
-</p>
-
-</div>
+later 
 
 <!--
 **Paranjayy/paranjayy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -32,19 +13,13 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
-
-===
-<h2 align="left">Hello There 👋! My name is Paranjay </h2>
 -->
-- [BEPb (Andrej Marinchenko)](https://github.com/BEPb)
-- [BEPb/README.md at main · BEPb/BEPb](https://github.com/BEPb/BEPb/blob/main/README.md)
 
 
 <h1 align="center">Hi 🙋🏻‍♂️, I'm </h1>
 <h3 align="center">A passionate developer from India</h3>
 
 
-- updated at  20jun25
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
 
