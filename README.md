@@ -1,16 +1,23 @@
-<p align="left">
-  <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
-  <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=%230e75b6" alt="GitHub Repo Views" />
-  <img src="https://img.shields.io/github/stars/paranjayy?style=flat&logo=github&label=Stars&color=%230e75b6" alt="GitHub Stars" />
+<!-- Profile views -->
+<p align="right">
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&style=flat&color=gray" alt="profile views" />
 </p>
 
-<br>
+<div align="center" style="background-color:#000000; color:#ffffff; padding: 20px; border-radius: 10px;">
 
-<img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
+<h1 align="left"><code style="color:#ffffff;">paranjayy</code></h1>
 
-<h2 align="center" >Hi there✨, I'm Paranjay <img src="https://media.tenor.com/_Utilxgj8RUAAAAj/peach-goma-peach-and-goma.gif" width="60" /></h2>
-<h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=An+Aspiring+SDE" alt="Typing SVG" /></a></h3>
+ loves working on <code style="color:#00ffe1;">Building Cool Prod with Any Language</code>, <code style="color:#00ffe1;">Mac</code>, <code style="color:#00ffe1;">linux</code>, and <code style="color:#00ffe1;">""</code>.
+
+---
+
+<p align="center">
+  <code style="color:#ffffff;">building prods.</code><br>
+  <code style="color:#ffffff;">writing thoughts.</code><br>
+  <code style="color:#ffffff;">& many more.</code>
+</p>
+
+</div>
 
 <!--
 **Paranjayy/paranjayy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -26,22 +33,88 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 
----
-
-### 👩‍💻 About Me
-
-- 🔭 Learning full-stack development and solving daily DSA problems  
-- 💡 Participated in coding contests and hackathons like Flipkart Grid 6.0, CodeThon, Hack-ethon, DecoCX  
-- 💼 Member of   
-- 🎖️ Mentee at 0  
-- 🧠 Solved **+ DSA questions** on Hyperskill  
-- 💡 Solved **+ questions** on LeetCode  
-- 🌐 Created  mini-projects and UI-based web apps  
-- 🌸 Contributor at GSOC  
-- 📖 Love Watching Movies & Shows & Listening to banger Songs 🎶
-
+===
+<h2 align="left">Hello There 👋! My name is Paranjay </h2>
 -->
-<!--
+- [BEPb (Andrej Marinchenko)](https://github.com/BEPb)
+- [BEPb/README.md at main · BEPb/BEPb](https://github.com/BEPb/BEPb/blob/main/README.md)
+
+
+<h1 align="center">Hi 🙋🏻‍♂️, I'm </h1>
+<h3 align="center">A passionate developer from India</h3>
+
+
+- updated at  20jun25
+
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=&label=Profile%20views&color=0e75b6&style=flat" alt="" /> </p>
+
+
+
+<p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
+
+- 🌱 I’m currently learning **Data Science**
+
+- 📫 How to reach me **@gmail.com**
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+
+<a href="https://linkedin.com/in/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="" height="30" width="40" /></a>
+<a href="https://twitter.com/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="" height="30" width="40" /></a>
+<a href="https://auth.geeksforgeeks.org/user/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="" height="30" width="40" /></a>
+</p>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left">  <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>  </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a>  <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a>  </p>
+
+
+
+
+
+```http
+HTTP/1.1 200 OK
+Date: Sat, 30 Aug 2025 15:04:00 GMT
+Server: Mumbai/1.0 (Ubuntu)
+Content-Type: application/json
+Connection: keep-alive
+Last-Modified: Sat, 30 Aug 2025 23:27:00 GMT
+ETag: "skills-v2.0"
+X-Powered-By: Java/17, Node.js/20, Go/1.22
+Machine: x86_64-linux-gnu
+Transfer-Encoding: chunked
+
+{
+  "developer": {
+    "name": "Paranjay Khachar",
+    "age": 19,
+    "location": ", India",
+    "status": [
+      "Upcoming SWE @"
+      "Ex-SWE Intern @",
+    ],
+    "interests": [
+      "Full Stack Web Development"
+      "Competitive Programming and Problem Solving",
+      "Building RESTful API Tools and Automation Systems"
+    ],
+    "education": {
+      "degree": "",
+      "institute": "",
+      "cgpa": "don't care"
+    }
+  }
+}
+```
+
+<h3 align="left">A bit <code>Competitive</code></h3>
+<p align="left">
+  <a href="https://codeforces.com/profile/paranjayy" target="blank"><img align="center" src="https://cdn.iconscout.com/icon/free/png-256/free-code-forces-3521352-2944796.png" alt="Codeforces" height="40" /></a>
+  <a href="https://www.leetcode.com/user0872ue" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/LeetCode_logo_white_no_text.svg" alt="LeetCode" height="40" width="40" /></a>
+  <a href="https://www.codechef.com/users/satyam_vyas_04" target="blank"><img align="center" src="https://user-images.githubusercontent.com/112865144/208242156-4db8653b-0464-43ce-a54e-08f701b64b73.png" alt="CodeChef" height="40" width="40" /></a>
+  <a href="https://www.hackerrank.com/satyam_vyas_04" target="blank"><img align="center" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png" alt="HackerRank" height="40" width="40" /></a>
+</p>
+
 <h3 align="right">Tech Stack</h3>
 <table width="100%">
 	<thead>
@@ -287,102 +360,93 @@ Here are some ideas to get you started:
 	</tbody>
 </table>
 
+### My Stats
 
--->
+[![An image of @paranjayy's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/paranjayy)](https://holopin.io/@paranjayy)
 
-
-
-### 🔗 Find me around the web
-
-<p align="left">
-  <a href="https://gravatar.com/sweetly00638681c8"><img src="https://img.shields.io/badge/Gravatar-Paranjay_Khachar-1e8a4c?style=flat&logo=gravatar&logoColor=white" alt="Gravatar" /></a>
-  <a href="https://www.linkedin.com/in/paranjayy/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://leetcode.com/u/Paranjayy/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
-  <a href="https://www.hackerrank.com/profile/kparanjay245"><img src="https://img.shields.io/badge/HackerRank-00EA64?style=flat&logo=hackerrank&logoColor=black" alt="HackerRank" /></a>
-  <a href="https://www.codewars.com/users/Paranjayy"><img src="https://img.shields.io/badge/Codewars-B1361E?style=flat&logo=codewars&logoColor=white" alt="Codewars" /></a>
-  <a href="https://www.kaggle.com/paranjay"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white" alt="Kaggle" /></a>
-  <a href="https://stackoverflow.com/users/22587473/khachar-paranjay"><img src="https://img.shields.io/badge/Stack%20Overflow-F58025?style=flat&logo=stackoverflow&logoColor=white" alt="Stack Overflow" /></a>
-  <a href="https://hashnode.com/@paranjayy"><img src="https://img.shields.io/badge/Hashnode-2962FF?style=flat&logo=hashnode&logoColor=white" alt="Hashnode" /></a>
-  <a href="https://hub.docker.com/u/paranjay245"><img src="https://img.shields.io/badge/Docker%20Hub-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Hub" /></a>
-  <a href="https://steamcommunity.com/id/paranjayy/"><img src="https://img.shields.io/badge/Steam-171a21?style=flat&logo=steam&logoColor=white" alt="Steam" /></a>
-  <a href="https://x.com/paranjay245"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X / Twitter" /></a>
-  <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://monkeytype.com/profile/Paranjayy"><img src="https://img.shields.io/badge/MonkeyType-E2B714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
-  <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
+<p align='center'>
+  <img align="center" src="https://raw.githubusercontent.com/paranjayy/README-Stats/master/generated/overview.svg"/>
+  <img align="center" src="https://raw.githubusercontent.com/paranjayy/README-Stats/master/generated/languages.svg"/>
+  <br />
+  <img align="center" src="https://leetcard.jacoblin.cool/user0872ue?theme=wtf&font=Fira+Code&ext=heatmap" height="220"/>
+  <img align="center" src="https://codeforces-readme-stats.vercel.app/api/card?username=paranjayy&theme=vue&disable_animations=false&show_icons=true&force_username=true" height="220"/>
 </p>
 
-<br>
+### Wakatime Stats
+
+<!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-861%20hrs%2044%20mins-blue)
+
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-3.2%20million%20lines%20of%20code-blue)
+
+**🐱 My GitHub Data** 
+
+> 📦 535.1 kB Used in GitHub's Storage 
+ > 
+> 🏆 764 Contributions in the Year 2025
+ > 
+> 💼 Opted to Hire
+ > 
+> 📜 19 Public Repositories 
+ > 
+> 🔑 3 Private Repositories 
+ > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                263 commits         ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   12.56 % 
+🌆 Daytime                738 commits         ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   35.24 % 
+🌃 Evening                847 commits         ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   40.45 % 
+🌙 Night                  246 commits         ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   11.75 % 
+```
+📅 **I'm Most Productive on Sunday** 
+
+```text
+Monday                   259 commits         ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   12.37 % 
+Tuesday                  247 commits         ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   11.80 % 
+Wednesday                333 commits         ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   15.90 % 
+Thursday                 292 commits         ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   13.94 % 
+Friday                   252 commits         ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   12.03 % 
+Saturday                 302 commits         ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   14.42 % 
+Sunday                   409 commits         ⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   19.53 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+💬 Programming Languages: 
+Python                   2 hrs 55 mins       ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   59.62 % 
+TypeScript               1 hr 25 mins        ⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   29.15 % 
+TeX                      28 mins             ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   09.82 % 
+CSS                      2 mins              ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.68 % 
+BibTeX                   1 min               ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.58 % 
+
+🐱‍💻 Projects: 
+Strivers_A2Z_DSA         2 hrs 53 mins       ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   58.98 % 
+Avruti                   1 hr 24 mins        ⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   28.81 % 
+College                  32 mins             ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   11.03 % 
+clarity                  3 mins              ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   01.18 % 
+```
+
+**I Mostly Code in TypeScript** 
+
+```text
+TypeScript               18 repos            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   45.00 % 
+JavaScript               14 repos            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   35.00 % 
+Python                   7 repos             ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   17.50 % 
+HTML                     1 repo              ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   02.50 % 
+```
 
 
 
-<details>
-<summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
-<br>
 
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&langs_count=8&theme=tokyonight" alt="Top languages" />
-</div>
+<!--END_SECTION:waka-->
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
-</div>
+<p align='center'>
+  <img src="https://raw.githubusercontent.com/saadeghi/saadeghi/master/dino.gif" alt="footergif" align=center>
+</p>
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-
-**🎮 Steam**
-
-[![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
-
-  </td>
-    <td valign="top" width="50%">
-
-**💬 Discord**
-
-[![Discord Presence](https://lanyard.cnrad.dev/api/999432437740347486)](https://discord.com/users/999432437740347486)
-
-  </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-
-**⌨️ WakaTime**
-
-[![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com)
-
-<div align="center">
-  <img src="metrics.wakatime.full.svg" alt="WakaTime full stats" />
-</div>
-
-  </td>
-  </tr>
-</table>
-
-</details>
-
-<!--
-  === FUTURE IMPROVEMENT IDEAS ===
-
-  1. CIRCULAR AVATAR: Implemented via `avatar-circle.svg` — a local SVG with a circular clipPath
-     that wraps the GitHub avatar. If GitHub ever strips external `<image>` hrefs from SVGs,
-     the fallback is to bake a pre-cropped circular PNG into the repo.
-
-  2. SKILLS GRID: Replace or supplement the commented-out Tech Stack table with
-     https://skillicons.dev icons (rounded-square style, looks great):
-     <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres" />
-
-  3. GITHUB STATS CARDS: Add https://github-readme-stats.vercel.app cards for streak and
-     language stats — they have rounded corners and look clean:
-     ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=paranjayy&theme=tokyonight&hide_border=true&border_radius=10)
-
-  4. WAKATIME / CODING ACTIVITY: Add a WakaTime weekly coding stats card once you set up the
-     WakaTime extension in your editor.
-
-  5. SPOTIFY NOW PLAYING: Add a Spotify "now playing" card with
-     https://github.com/novatorem/novatorem for a fun personal touch.
-
-  6. TROPHY SHOWCASE: https://github.com/ryo-ma/github-profile-trophy shows GitHub trophies
-     with rounded card styling.
--->
+<p align='center'>
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&style=for-the-badge&color=343434"/>
+</p>
