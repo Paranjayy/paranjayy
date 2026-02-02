@@ -3,6 +3,7 @@
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
   <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+  <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=%230e75b6" alt="GitHub Repo Views" />
 </p>
 
 
