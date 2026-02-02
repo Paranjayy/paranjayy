@@ -11,7 +11,7 @@
 <img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
 
 <h2 align="center" >Hi there✨, I'm Paranjay <img src="[https://user-images.githubusercontent.com/74038190/216654128-ad1c5827-e18e-43a6-974b-3669cbb082b9.gif](https://media.tenor.com/_Utilxgj8RUAAAAj/peach-goma-peach-and-goma.gif)" width="60" /></h2>
-<h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=A+Aspiring+SDE" alt="Typing SVG" /></a></h3>
+<h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=An+Aspiring+SDE" alt="Typing SVG" /></a></h3>
 
 ## 📊 Repository Views
 
