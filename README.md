@@ -13,6 +13,30 @@
 <h2 align="center" >Hi there✨, I'm Paranjay <img src="[https://user-images.githubusercontent.com/74038190/216654128-ad1c5827-e18e-43a6-974b-3669cbb082b9.gif](https://media.tenor.com/_Utilxgj8RUAAAAj/peach-goma-peach-and-goma.gif)" width="60" /></h2>
 <h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=A+Aspiring+SDE" alt="Typing SVG" /></a></h3>
 
+## 📊 Repository Views
+
+<div align="center">
+
+| Repository | Views |
+|------------|-------|
+| [paranjayy](https://github.com/Paranjayy/paranjayy) | ![Views](https://gitviews.com/user/paranjayy/repo/paranjayy.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [IIT-Madras-Notes](https://github.com/Paranjayy/IIT-Madras-Notes) | ![Views](https://gitviews.com/user/paranjayy/repo/IIT-Madras-Notes.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [resume-site-v0](https://github.com/Paranjayy/resume-site-v0) | ![Views](https://gitviews.com/user/paranjayy/repo/resume-site-v0.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [my-public-notes](https://github.com/Paranjayy/my-public-notes) | ![Views](https://gitviews.com/user/paranjayy/repo/my-public-notes.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [My-Public-Notes-Experiment](https://github.com/Paranjayy/My-Public-Notes-Experiment) | ![Views](https://gitviews.com/user/paranjayy/repo/My-Public-Notes-Experiment.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [Personal-Website](https://github.com/Paranjayy/Personal-Website) | ![Views](https://gitviews.com/user/paranjayy/repo/Personal-Website.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [TokenSlicer](https://github.com/Paranjayy/TokenSlicer) | ![Views](https://gitviews.com/user/paranjayy/repo/TokenSlicer.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [content-extractor](https://github.com/Paranjayy/content-extractor) | ![Views](https://gitviews.com/user/paranjayy/repo/content-extractor.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [paranjayy.github.io](https://github.com/Paranjayy/paranjayy.github.io) | ![Views](https://gitviews.com/user/paranjayy/repo/paranjayy.github.io.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [-Old-personal-website](https://github.com/Paranjayy/-Old-personal-website) | ![Views](https://gitviews.com/user/paranjayy/repo/-Old-personal-website.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [eleventy-blog](https://github.com/Paranjayy/eleventy-blog) | ![Views](https://gitviews.com/user/paranjayy/repo/eleventy-blog.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [astro-blog](https://github.com/Paranjayy/astro-blog) | ![Views](https://gitviews.com/user/paranjayy/repo/astro-blog.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [nextjs-blog](https://github.com/Paranjayy/nextjs-blog) | ![Views](https://gitviews.com/user/paranjayy/repo/nextjs-blog.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [Horse-trade](https://github.com/Paranjayy/Horse-trade) | ![Views](https://gitviews.com/user/paranjayy/repo/Horse-trade.svg?style=flat&label-color=%23555&color=%230e75b6) |
+| [iitm-assignment-scraper](https://github.com/Paranjayy/iitm-assignment-scraper) | ![Views](https://gitviews.com/user/paranjayy/repo/iitm-assignment-scraper.svg?style=flat&label-color=%23555&color=%230e75b6) |
+
+</div>
+
 <!--
 **Paranjayy/paranjayy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
