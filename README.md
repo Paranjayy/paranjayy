@@ -313,6 +313,10 @@ Here are some ideas to get you started:
 
 <br>
 
+<p align="center">
+  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjVrbHdzd2d5eTdxc3hqYXV6ZW9rZnF0c3cxYXB3NmozZWtrMzZ5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hwvxuIKLEayDS/giphy.gif" alt="coding mode" width="480" />
+</p>
+
 
 <details>
 <summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
@@ -349,7 +353,11 @@ Here are some ideas to get you started:
 
 **⌨️ WakaTime**
 
-[![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com/@paranjayy)
+[![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com)
+
+<div align="center">
+  <img src="metrics.wakatime.full.svg" alt="WakaTime full stats" />
+</div>
 
   </td>
   </tr>
