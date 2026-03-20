@@ -324,6 +324,12 @@ Here are some ideas to get you started:
 
 [![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
 
+### ⌨️ WakaTime
+
+<br>
+
+[![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com/@paranjayy)
+
 <!--
   === FUTURE IMPROVEMENT IDEAS ===
 
