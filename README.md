@@ -301,3 +301,7 @@ Here are some ideas to get you started:
 
 
  
+
+### 🎮 Steam
+
+[![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)

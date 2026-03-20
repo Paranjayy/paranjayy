@@ -1,0 +1,31 @@
+name: Steam Metrics
+
+on:
+  schedule:
+    # Runs daily at 18:30 UTC
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+
+jobs:
+  steam:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.steam.svg
+
+          # Disable GitHub parts
+          token: NOT_NEEDED
+          base: ""
+
+          # Steam plugin
+          plugin_steam: yes
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: ${{ secrets.STEAM_USER_ID }}
+
+          plugin_steam_sections: recently-played
+          plugin_steam_recent_games_limit: 3
+          plugin_steam_achievements_limit: 0
