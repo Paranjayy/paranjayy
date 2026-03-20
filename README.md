@@ -315,20 +315,45 @@ Here are some ideas to get you started:
 
 
 <details>
-<summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime</summary>
+<summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
 <br>
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&langs_count=8&theme=tokyonight" alt="Top languages" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
+</div>
+
+<table>
+  <tr>
+    <td valign="top" width="50%">
 
 **🎮 Steam**
 
 [![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
 
+  </td>
+    <td valign="top" width="50%">
+
 **💬 Discord**
 
 [![Discord Presence](https://lanyard.cnrad.dev/api/999432437740347486)](https://discord.com/users/999432437740347486)
 
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+
 **⌨️ WakaTime**
 
 [![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com/@paranjayy)
+
+  </td>
+  </tr>
+</table>
 
 </details>
 
@@ -356,4 +381,3 @@ Here are some ideas to get you started:
   6. TROPHY SHOWCASE: https://github.com/ryo-ma/github-profile-trophy shows GitHub trophies
      with rounded card styling.
 -->
-
