@@ -15,7 +15,21 @@ jobs:
       contents: write
 
     steps:
+      - name: Check Steam token availability
+        id: check_token
+        shell: bash
+        run: |
+          if [[ -n "${STEAM_TOKEN}" ]]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::STEAM_TOKEN secret is not configured — skipping Steam metrics generation"
+          fi
+        env:
+          STEAM_TOKEN: ${{ secrets.STEAM_TOKEN }}
+
       - uses: lowlighter/metrics@latest
+        if: steps.check_token.outputs.available == 'true'
         with:
           filename: metrics.steam.svg
 
@@ -27,7 +41,7 @@ jobs:
           # Steam plugin
           plugin_steam: yes
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
-          plugin_steam_user: ${{ secrets.STEAM_USER_ID }}
+          plugin_steam_user: paranjayy
 
           plugin_steam_sections: recently-played
           plugin_steam_recent_games_limit: 3
