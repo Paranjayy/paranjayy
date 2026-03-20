@@ -313,37 +313,21 @@ Here are some ideas to get you started:
 
 <br>
 
-<!-- GitHub Metrics — disabled for now; re-enable in .github/workflows/main.yml to run it again
-### 📊 GitHub Metrics
-
-![GitHub Metrics](github-metrics.svg)
--->
-
-### 🎮 Steam
+### 🎮 Steam · 💬 Discord · ⌨️ WakaTime
 
 <details>
 <summary>Click to expand</summary>
 <br>
+
+**🎮 Steam**
 
 [![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
 
-</details>
-
-### 💬 Discord
-
-<details>
-<summary>Click to expand</summary>
-<br>
+**💬 Discord**
 
 [![Discord Presence](https://lanyard.cnrad.dev/api/999432437740347486)](https://discord.com/users/999432437740347486)
 
-</details>
-
-### ⌨️ WakaTime
-
-<details>
-<summary>Click to expand</summary>
-<br>
+**⌨️ WakaTime**
 
 [![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com/@paranjayy)
 
