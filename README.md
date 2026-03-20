@@ -313,37 +313,21 @@ Here are some ideas to get you started:
 
 <br>
 
-<!-- GitHub Metrics — run manually via the "Metrics" workflow in GitHub Actions
-### 📊 GitHub Metrics
-
-![GitHub Metrics](github-metrics.svg)
--->
-
-### 🎮 Steam
+### 🎮 Steam · 💬 Discord · ⌨️ WakaTime
 
 <details>
 <summary>Click to expand</summary>
 <br>
+
+**🎮 Steam**
 
 [![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
 
-</details>
-
-### 💬 Discord
-
-<details>
-<summary>Click to expand</summary>
-<br>
+**💬 Discord**
 
 [![Discord Presence](https://lanyard.cnrad.dev/api/999432437740347486)](https://discord.com/users/999432437740347486)
 
-</details>
-
-### ⌨️ WakaTime
-
-<details>
-<summary>Click to expand</summary>
-<br>
+**⌨️ WakaTime**
 
 [![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com/@paranjayy)
 
