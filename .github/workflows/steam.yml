@@ -2,8 +2,8 @@ name: Steam Metrics
 
 on:
   schedule:
-    # Runs daily at 18:30 UTC
-    - cron: "30 18 * * *"
+    # Runs weekly on Sunday at 18:30 UTC
+    - cron: "30 18 * * 0"
   workflow_dispatch:
 
 jobs:
