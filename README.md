@@ -1,4 +1,9 @@
 
+<p align="center">
+  <a href="https://gravatar.com/sweetly00638681c8">
+    <img src="https://github.com/Paranjayy.png" width="110" alt="Paranjay Khachar — GitHub Avatar" />
+  </a>
+</p>
 
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
@@ -296,6 +301,7 @@ Here are some ideas to get you started:
 ### 🔗 Find me around the web
 
 <p align="left">
+  <a href="https://gravatar.com/sweetly00638681c8"><img src="https://img.shields.io/badge/Gravatar-Paranjay_Khachar-1e8a4c?style=for-the-badge&logo=gravatar&logoColor=white" alt="Gravatar" /></a>
   <a href="https://www.linkedin.com/in/paranjayy/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://leetcode.com/u/Paranjayy/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
   <a href="https://www.hackerrank.com/profile/kparanjay245"><img src="https://img.shields.io/badge/HackerRank-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank" /></a>
@@ -310,10 +316,38 @@ Here are some ideas to get you started:
   <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" /></a>
 </p>
 
+<!-- GitHub Metrics — disabled for now; re-enable in .github/workflows/main.yml to run it again
 ### 📊 GitHub Metrics
 
 ![GitHub Metrics](github-metrics.svg)
+-->
 
 ### 🎮 Steam
 
 [![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
+
+<!--
+  === FUTURE IMPROVEMENT IDEAS ===
+
+  1. CIRCULAR AVATAR: GitHub README strips CSS `border-radius` on img tags, so the avatar above
+     appears square. To get a truly circular avatar, save a pre-cropped circular PNG to the repo
+     (e.g., avatar-circle.png) and reference it — that's the reliable solution.
+
+  2. SKILLS GRID: Replace or supplement the commented-out Tech Stack table with
+     https://skillicons.dev icons (rounded-square style, looks great):
+     <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres" />
+
+  3. GITHUB STATS CARDS: Add https://github-readme-stats.vercel.app cards for streak and
+     language stats — they have rounded corners and look clean:
+     ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=paranjayy&theme=tokyonight&hide_border=true&border_radius=10)
+
+  4. WAKATIME / CODING ACTIVITY: Add a WakaTime weekly coding stats card once you set up the
+     WakaTime extension in your editor.
+
+  5. SPOTIFY NOW PLAYING: Add a Spotify "now playing" card with
+     https://github.com/novatorem/novatorem for a fun personal touch.
+
+  6. TROPHY SHOWCASE: https://github.com/ryo-ma/github-profile-trophy shows GitHub trophies
+     with rounded card styling.
+-->
+
