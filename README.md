@@ -4,8 +4,8 @@
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
   <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=%230e75b6" alt="GitHub Repo Views" />
+  <img src="https://img.shields.io/github/stars/paranjayy?style=flat&logo=github&label=Stars&color=%230e75b6" alt="GitHub Stars" />
 </p>
-
 
 
 <img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
