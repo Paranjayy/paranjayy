@@ -306,9 +306,7 @@ Here are some ideas to get you started:
   <a href="https://hub.docker.com/u/paranjay245"><img src="https://img.shields.io/badge/Docker%20Hub-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Hub" /></a>
   <a href="https://steamcommunity.com/id/paranjayy/"><img src="https://img.shields.io/badge/Steam-171a21?style=flat&logo=steam&logoColor=white" alt="Steam" /></a>
   <a href="https://x.com/paranjay245"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X / Twitter" /></a>
-  <!-- TODO: Discord — replace DISCORD_USER_ID below with your numeric Discord user ID
-       (Discord Settings → Advanced → enable Developer Mode, then right-click your username → Copy ID) -->
-  <a href="https://discord.com/users/DISCORD_USER_ID"><img src="https://img.shields.io/badge/Discord-paranjayy-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://monkeytype.com/profile/Paranjayy"><img src="https://img.shields.io/badge/MonkeyType-E2B714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
   <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
 </p>
@@ -337,11 +335,7 @@ Here are some ideas to get you started:
 <summary>Click to expand</summary>
 <br>
 
-<!-- TODO: Discord presence card via Lanyard.
-     Step 1: Enable Developer Mode in Discord (Settings → Advanced), right-click your username, Copy ID.
-     Step 2: Join https://discord.gg/lanyard with that Discord account so Lanyard can read your presence.
-     Step 3: Replace both occurrences of DISCORD_USER_ID below with your numeric ID. -->
-[![Discord Presence](https://lanyard.cnrad.dev/api/DISCORD_USER_ID)](https://discord.com/users/DISCORD_USER_ID)
+[![Discord Presence](https://lanyard.cnrad.dev/api/999432437740347486)](https://discord.com/users/999432437740347486)
 
 </details>
 
