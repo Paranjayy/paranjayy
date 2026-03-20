@@ -1,7 +1,7 @@
 
 <p align="center">
-  <a href="https://gravatar.com/sweetly00638681c8">
-    <img src="https://github.com/Paranjayy.png" width="110" alt="Paranjay Khachar — GitHub Avatar" />
+  <a href="https://gravatar.com/sweetly00638681c8" aria-label="Visit Paranjay Khachar's Gravatar profile">
+    <img src="avatar-circle.svg" width="110" alt="Paranjay Khachar — GitHub Avatar" />
   </a>
 </p>
 
@@ -12,6 +12,7 @@
   <img src="https://img.shields.io/github/stars/paranjayy?style=flat&logo=github&label=Stars&color=%230e75b6" alt="GitHub Stars" />
 </p>
 
+<br>
 
 <img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
 
@@ -316,6 +317,8 @@ Here are some ideas to get you started:
   <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" /></a>
 </p>
 
+<br>
+
 <!-- GitHub Metrics — disabled for now; re-enable in .github/workflows/main.yml to run it again
 ### 📊 GitHub Metrics
 
@@ -324,14 +327,16 @@ Here are some ideas to get you started:
 
 ### 🎮 Steam
 
+<br>
+
 [![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
 
 <!--
   === FUTURE IMPROVEMENT IDEAS ===
 
-  1. CIRCULAR AVATAR: GitHub README strips CSS `border-radius` on img tags, so the avatar above
-     appears square. To get a truly circular avatar, save a pre-cropped circular PNG to the repo
-     (e.g., avatar-circle.png) and reference it — that's the reliable solution.
+  1. CIRCULAR AVATAR: Implemented via `avatar-circle.svg` — a local SVG with a circular clipPath
+     that wraps the GitHub avatar. If GitHub ever strips external `<image>` hrefs from SVGs,
+     the fallback is to bake a pre-cropped circular PNG into the repo.
 
   2. SKILLS GRID: Replace or supplement the commented-out Tech Stack table with
      https://skillicons.dev icons (rounded-square style, looks great):
