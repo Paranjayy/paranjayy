@@ -5,6 +5,8 @@ on:
     # Runs weekly on Sunday at 18:30 UTC
     - cron: "30 18 * * 0"
   workflow_dispatch:
+  push:
+    branches: ["copilot/add-github-config-similar-to-steam"]
 
 jobs:
   steam:
