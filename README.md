@@ -1,10 +1,3 @@
-
-<p align="center">
-  <a href="https://gravatar.com/sweetly00638681c8" aria-label="Visit Paranjay Khachar's Gravatar profile">
-    <img src="avatar-circle.svg" width="110" alt="Paranjay Khachar — GitHub Avatar" />
-  </a>
-</p>
-
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
   <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
