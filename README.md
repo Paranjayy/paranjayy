@@ -313,7 +313,7 @@ Here are some ideas to get you started:
 
 <br>
 
-<!-- GitHub Metrics — disabled for now; re-enable in .github/workflows/main.yml to run it again
+<!-- GitHub Metrics — run manually via the "Metrics" workflow in GitHub Actions
 ### 📊 GitHub Metrics
 
 ![GitHub Metrics](github-metrics.svg)
