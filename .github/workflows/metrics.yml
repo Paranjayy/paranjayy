@@ -33,6 +33,7 @@ jobs:
 
       - uses: lowlighter/metrics@latest
         if: steps.check_token.outputs.available == 'true'
+        continue-on-error: true
         with:
           filename: metrics.steam.svg
 
@@ -44,7 +45,11 @@ jobs:
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam_user: 76561199379635572
 
-          plugin_steam_sections: most-played
+          # "recent" uses GetRecentlyPlayedGames (works with public profile).
+          # "most-played" uses GetOwnedGames which requires public "Game details"
+          # privacy and was previously returning API error 400.
+          plugin_steam_sections: recent
+          plugin_steam_games_limit: 5
           plugin_steam_achievements_limit: 0
 
   # ── WakaTime metrics ─────────────────────────────────────────────────────────
@@ -69,6 +74,7 @@ jobs:
 
       - uses: lowlighter/metrics@latest
         if: steps.check_token.outputs.available == 'true'
+        continue-on-error: true
         with:
           filename: metrics.wakatime.svg
 
