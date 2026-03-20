@@ -28,21 +28,6 @@ jobs:
         env:
           STEAM_TOKEN: ${{ secrets.STEAM_TOKEN }}
 
-      - name: Resolve Steam vanity URL to Steam64 ID
-        id: steam_id
-        if: steps.check_token.outputs.available == 'true'
-        shell: bash
-        run: |
-          STEAM_ID=$(curl -sf "https://api.steampowered.com/ISteamUser/ResolveVanityURL/v1/?key=${STEAM_TOKEN}&vanityurl=paranjayy" \
-            | jq -r 'if .response.success == 1 then .response.steamid else "" end')
-          if [[ -z "$STEAM_ID" ]]; then
-            echo "::error::Failed to resolve Steam vanity URL 'paranjayy' to a Steam64 ID"
-            exit 1
-          fi
-          echo "id=$STEAM_ID" >> "$GITHUB_OUTPUT"
-        env:
-          STEAM_TOKEN: ${{ secrets.STEAM_TOKEN }}
-
       - uses: lowlighter/metrics@latest
         if: steps.check_token.outputs.available == 'true'
         with:
@@ -56,7 +41,7 @@ jobs:
           # Steam plugin
           plugin_steam: yes
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
-          plugin_steam_user: ${{ steps.steam_id.outputs.id }}
+          plugin_steam_user: 76561199379635572
 
           plugin_steam_sections: recently-played
           plugin_steam_recent_games_limit: 3
