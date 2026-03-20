@@ -313,10 +313,9 @@ Here are some ideas to get you started:
 
 <br>
 
-### 🎮 Steam · 💬 Discord · ⌨️ WakaTime
 
 <details>
-<summary>Click to expand</summary>
+<summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime</summary>
 <br>
 
 **🎮 Steam**
