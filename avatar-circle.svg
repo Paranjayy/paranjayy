@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="55" cy="55" r="55"/>
+    </clipPath>
+  </defs>
+  <image xlink:href="https://github.com/Paranjayy.png?size=110" width="110" height="110" clip-path="url(#circle-clip)"/>
+</svg>
