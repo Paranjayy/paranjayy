@@ -5,13 +5,14 @@
   <img src="https://img.shields.io/github/stars/paranjayy?style=flat&logo=github&label=Stars&color=%230e75b6" alt="GitHub Stars" />
 </p>
 
-<br>
 
 <img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
 
-<h2 align="center" >Hi there✨, I'm Paranjay <img src="https://media.tenor.com/_Utilxgj8RUAAAAj/peach-goma-peach-and-goma.gif" width="60" /></h2>
-<h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=An+Aspiring+SDE" alt="Typing SVG" /></a></h3>
+<h2 align="center" >Hi there✨, I'm Paranjay <img src="[https://user-images.githubusercontent.com/74038190/216654128-ad1c5827-e18e-43a6-974b-3669cbb082b9.gif](https://media.tenor.com/_Utilxgj8RUAAAAj/peach-goma-peach-and-goma.gif)" width="60" /></h2>
+<h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=A+Aspiring+SDE" alt="Typing SVG" /></a></h3>
 
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=paranjayy&theme=dark&hide_border=true)](https://git.io/streak-stats)
 <!--
 **Paranjayy/paranjayy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -292,7 +293,7 @@ Here are some ideas to get you started:
 
 
 
-### 🔗 Find me around the web
+[![Twitter](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/https://x.com/paranjay245) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://www.youtube.com/@michealscott24) 
 
 <p align="left">
   <a href="https://gravatar.com/sweetly00638681c8"><img src="https://img.shields.io/badge/Gravatar-Paranjay_Khachar-1e8a4c?style=flat&logo=gravatar&logoColor=white" alt="Gravatar" /></a>
@@ -308,73 +309,8 @@ Here are some ideas to get you started:
 
 
 <details>
-<summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
+<summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime</summary>
 <br>
 
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&langs_count=8&theme=tokyonight" alt="Top languages" />
-</div>
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
-</div>
-
-<table>
-  <tr>
-    <td valign="top" width="50%">
-
-**🎮 Steam**
-
-[![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
-
-  </td>
-    <td valign="top" width="50%">
-
-**💬 Discord**
-
-[![Discord Presence](https://lanyard.cnrad.dev/api/999432437740347486)](https://discord.com/users/999432437740347486)
-
-  </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-
-**⌨️ WakaTime**
-
-[![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com)
-
-<div align="center">
-  <img src="metrics.wakatime.full.svg" alt="WakaTime full stats" />
-</div>
-
-  </td>
-  </tr>
-</table>
-
-</details>
-
-<!--
-  === FUTURE IMPROVEMENT IDEAS ===
-
-  1. CIRCULAR AVATAR: Implemented via `avatar-circle.svg` — a local SVG with a circular clipPath
-     that wraps the GitHub avatar. If GitHub ever strips external `<image>` hrefs from SVGs,
-     the fallback is to bake a pre-cropped circular PNG into the repo.
-
-  2. SKILLS GRID: Replace or supplement the commented-out Tech Stack table with
-     https://skillicons.dev icons (rounded-square style, looks great):
-     <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres" />
-
-  3. GITHUB STATS CARDS: Add https://github-readme-stats.vercel.app cards for streak and
-     language stats — they have rounded corners and look clean:
-     ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=paranjayy&theme=tokyonight&hide_border=true&border_radius=10)
-
-  4. WAKATIME / CODING ACTIVITY: Add a WakaTime weekly coding stats card once you set up the
-     WakaTime extension in your editor.
-
-  5. SPOTIFY NOW PLAYING: Add a Spotify "now playing" card with
-     https://github.com/novatorem/novatorem for a fun personal touch.
-
-  6. TROPHY SHOWCASE: https://github.com/ryo-ma/github-profile-trophy shows GitHub trophies
-     with rounded card styling.
--->
+ 
