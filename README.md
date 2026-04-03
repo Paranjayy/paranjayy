@@ -356,6 +356,10 @@ Here are some ideas to get you started:
 
 <a href="https://info.flagcounter.com/JzdT"><img src="https://s01.flagcounter.com/countxl/JzdT/bg_000000/txt_FFFFFF/border_CC0A2B/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
+![](https://githubcard.com/paranjayy.svg?d=profile)
+![](https://githubcard.com/paranjayy/paranjayy.svg?d=config)
+ 
+
 <!--
   === FUTURE IMPROVEMENT IDEAS ===
 
