@@ -1,1 +1,11 @@
 chatty.md
+
+# macOS
+.DS_Store
+
+# Environment variables (never commit secrets)
+.env
+
+# Python virtual environment
+.venv
+__pycache__

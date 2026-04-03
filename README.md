@@ -305,7 +305,11 @@ Here are some ideas to get you started:
 
 <br>
 
+### 🎵 Now Playing
 
+[![Spotify](https://paranjayy.vercel.app/api/orchestrator)](https://open.spotify.com/user/paranjayy)
+
+<br>
 
 <details>
 <summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
@@ -372,8 +376,9 @@ Here are some ideas to get you started:
   4. WAKATIME / CODING ACTIVITY: Add a WakaTime weekly coding stats card once you set up the
      WakaTime extension in your editor.
 
-  5. SPOTIFY NOW PLAYING: Add a Spotify "now playing" card with
-     https://github.com/novatorem/novatorem for a fun personal touch.
+  5. SPOTIFY NOW PLAYING: ✅ Implemented via novatorem — widget at /api/orchestrator,
+     deployed to https://paranjayy.vercel.app. Add SPOTIFY_CLIENT_ID, SPOTIFY_SECRET_ID,
+     and SPOTIFY_REFRESH_TOKEN in Vercel environment variables.
 
   6. TROPHY SHOWCASE: https://github.com/ryo-ma/github-profile-trophy shows GitHub trophies
      with rounded card styling.
