@@ -5,6 +5,13 @@
   <img src="https://img.shields.io/github/stars/paranjayy?style=flat&logo=github&label=Stars&color=%230e75b6" alt="GitHub Stars" />
 </p>
 
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![GitHub stars](https://img.shields.io/github/stars/paranjayy/paranjayy)](https://github.com/paranjayy/paranjayy/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/paranjayy/paranjayy)](https://github.com/LaurieWired/tailslayer/network/members)
+[![GitHub contributors](https://img.shields.io/github/contributors/paranjayy/paranjayy)](https://github.com/paranjayy/paranjayy/graphs/contributors)
+[![Follow @paranjay245](https://img.shields.io/twitter/follow/paranjay245?style=social)](https://twitter.com/paranjay245)
+
 <br>
 
 <img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
