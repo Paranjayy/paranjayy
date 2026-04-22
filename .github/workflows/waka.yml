@@ -1,0 +1,58 @@
+name: Waka Readme
+
+on:
+  schedule:
+    # Runs daily at 01:00 UTC
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  # ── WakaTime + GitHub stats (commit timing, day-of-week, language, short info) ─
+  waka-stats:
+    name: Update WakaTime & GitHub Stats
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anmol098/waka-readme-stats@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SHOW_SHORT_INFO: "True"
+          SHOW_COMMIT: "True"
+          SHOW_DAYS_OF_WEEK: "True"
+          SHOW_LINES_OF_CODE: "True"
+          SHOW_PROFILE_VIEWS: "True"
+          SHOW_LANGUAGE: "True"
+          SHOW_EDITORS: "False"
+          SHOW_OS: "False"
+          SHOW_TIMEZONE: "False"
+          SHOW_PROJECTS: "False"
+          SHOW_LOC_CHART: "False"
+          SHOW_UPDATED_DATE: "True"
+
+  # ── Exact starred-repos count (avoids shields.io k-truncation) ────────────────
+  starred-count:
+    name: Update Starred Repos Count
+    runs-on: ubuntu-latest
+    needs: waka-stats
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Fetch & update exact starred count
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          STARRED=$(gh api graphql \
+            -f query='{ viewer { starredRepositories { totalCount } } }' \
+            --jq '.data.viewer.starredRepositories.totalCount')
+          echo "Starred count: ${STARRED}"
+          sed -i "s|<!-- STARRED -->[0-9]*<!-- /STARRED -->|<!-- STARRED -->${STARRED}<!-- /STARRED -->|g" README.md
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "chore: update starred count [skip ci]"
+          git push

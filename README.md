@@ -305,7 +305,14 @@ Here are some ideas to get you started:
 
 <br>
 
+⭐ **<!-- STARRED -->0<!-- /STARRED --> repos starred** — updated daily
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=paranjayy&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=10" alt="GitHub Trophies" />
+</div>
 
 <details>
 <summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
