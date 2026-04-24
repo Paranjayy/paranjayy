@@ -1,0 +1,109 @@
+# Steam + WakaTime metrics workflow
+# Visit https://github.com/lowlighter/metrics#-documentation for full reference.
+name: Metrics
+
+on:
+  schedule:
+    # Weekly on Sunday at 18:30 UTC
+    - cron: "30 18 * * 0"
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+jobs:
+  # ── Steam metrics ────────────────────────────────────────────────────────────
+  steam:
+    name: Steam Metrics
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check Steam token availability
+        id: check_token
+        shell: bash
+        run: |
+          if [[ -n "${STEAM_TOKEN}" ]]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::STEAM_TOKEN secret is not configured — skipping Steam metrics generation"
+          fi
+        env:
+          STEAM_TOKEN: ${{ secrets.STEAM_TOKEN }}
+
+      - uses: lowlighter/metrics@latest
+        if: steps.check_token.outputs.available == 'true'
+        continue-on-error: true
+        with:
+          filename: metrics.steam.svg
+
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+
+          plugin_steam: yes
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          # Keep Steam ID as a string to avoid YAML scientific notation in Action inputs.
+          plugin_steam_user: "76561199379635572"
+          plugin_steam_sections: recently-played
+          plugin_steam_recent_games_limit: 5
+          plugin_steam_achievements_limit: 0
+
+  # ── WakaTime metrics ─────────────────────────────────────────────────────────
+  wakatime:
+    name: WakaTime Metrics
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check WakaTime token availability
+        id: check_token
+        shell: bash
+        run: |
+          if [[ -n "${WAKATIME_TOKEN}" ]]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::WAKATIME_TOKEN secret is not configured — skipping WakaTime metrics generation"
+          fi
+        env:
+          WAKATIME_TOKEN: ${{ secrets.WAKATIME_TOKEN }}
+
+      - uses: lowlighter/metrics@latest
+        if: steps.check_token.outputs.available == 'true'
+        continue-on-error: true
+        with:
+          filename: metrics.wakatime.svg
+
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 30
+          plugin_wakatime_sections: time, projects, languages, editors, os
+          plugin_wakatime_limit: 5
+          plugin_wakatime_url: https://wakatime.com
+          plugin_wakatime_user: current
+          plugin_wakatime_repositories_visibility: all
+
+      - uses: lowlighter/metrics@latest
+        if: steps.check_token.outputs.available == 'true'
+        continue-on-error: true
+        with:
+          filename: metrics.wakatime.full.svg
+
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 180
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, editors-graphs, os, os-graphs
+          plugin_wakatime_limit: 8
+          plugin_wakatime_languages_other: yes
+          plugin_wakatime_url: https://wakatime.com
+          plugin_wakatime_user: current
+          plugin_wakatime_repositories_visibility: all

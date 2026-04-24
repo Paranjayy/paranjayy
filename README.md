@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/github/stars/paranjayy?style=flat&logo=github&label=Stars&color=%230e75b6" alt="GitHub Stars" />
 </p>
 
+<br>
 
 <img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
 
@@ -288,7 +289,7 @@
 
 
 
-[![Twitter](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/https://x.com/paranjay245) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://www.youtube.com/@michealscott24) 
+### 🔗 Find me around the web
 
 <p align="left">
   <a href="https://gravatar.com/sweetly00638681c8"><img src="https://img.shields.io/badge/Gravatar-Paranjay_Khachar-1e8a4c?style=flat&logo=gravatar&logoColor=white" alt="Gravatar" /></a>
@@ -326,6 +327,10 @@
 <summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats · ⌨️ MonkeyType</summary>
 <br>
 
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&langs_count=8&theme=tokyonight" alt="Top languages" />
+</div>
 
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
