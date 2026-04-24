@@ -31,15 +31,7 @@
 
 <!-- Skills hidden while learning - uncomment when ready to showcase!
 <div align="center">
-  <a href="https://github.com/paranjayy">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=800&lines=An+Aspiring+SDE;Currently+Learning+%26+Exploring+%F0%9F%93%9A;~52+hrs+coded+this+month+%E2%8C%A8%EF%B8%8F" alt="Typing SVG" />
-  </a>
-</div>
-
-<div align="center">
-
-[![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=paranjayy&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
-
+  <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres,mongodb,mysql,aws,docker,git,linux,postman,figma" />
 </div>
 -->
 
