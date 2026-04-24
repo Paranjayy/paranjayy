@@ -57,12 +57,12 @@ jobs:
           sed -i "/<!-- STARRED_COUNT -->/,/<!-- \/STARRED_COUNT -->/{ /<!-- STARRED_COUNT -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
           sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
           
-          # 2. Update Stars (Received) - Amber
-          RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-${{ steps.get_stats.outputs.received }}-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />'
+          # 2. Update Stars (Received) - Gold
+          RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-${{ steps.get_stats.outputs.received }}-eab308?logo=github&logoColor=black" alt="GitHub Stars" />'
           sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
           
-          # 3. Replace the auto-generated hiring status with custom text
+          # 3. Replace the auto-generated hiring status with custom text (Robust Regex)
           sed -i "s/.*Not Opted to Hire.*/Currently Learning \& Studying 📚/g" README.md
           
       # 4. Commit and Push everything
@@ -71,7 +71,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          # Added [skip ci] to prevent infinite loop and keep history clean
           git commit -m "chore: update profile stats [skip ci]" || echo "No changes to commit"
           git pull --rebase origin main
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
