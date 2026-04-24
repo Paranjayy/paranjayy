@@ -300,8 +300,15 @@ Here are some ideas to get you started:
   <a href="https://x.com/paranjay245"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X / Twitter" /></a>
   <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://monkeytype.com/profile/Paranjayy"><img src="https://img.shields.io/badge/MonkeyType-E2B714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
+  <a href="https://open.spotify.com"><img src="https://img.shields.io/badge/Spotify-1DB954?style=flat&logo=spotify&logoColor=white" alt="Spotify" /></a>
   <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
 </p>
+
+<br>
+
+### 🛠️ Tech Stack
+
+<img src="https://skillicons.dev/icons?i=java,python,go,ts,js,react,nextjs,tailwind,nodejs,express,postgres,mongodb,mysql,redis,docker,git,vscode,figma&perline=9" alt="Tech stack icons" />
 
 <br>
 
@@ -315,7 +322,31 @@ Here are some ideas to get you started:
 </div>
 
 <details>
-<summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
+<summary>🎵 Spotify · ⌨️ MonkeyType · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
+<br>
+
+<!-- 🎵 Spotify Now Playing -->
+<!-- To enable:
+     1. Go to https://spotify-github-profile.kittinan.app/
+     2. Click "Login with Spotify" and authorize the app
+     3. Copy your Spotify User ID from your profile URL: open.spotify.com/user/YOUR_ID
+     4. Replace YOUR_SPOTIFY_ID below with your actual Spotify user ID
+-->
+<div align="center">
+  <a href="https://spotify.com">
+    <img src="https://spotify-github-profile.kittinan.app/api/view?uid=YOUR_SPOTIFY_ID&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false" alt="Spotify Now Playing" />
+  </a>
+</div>
+
+<br>
+
+<!-- ⌨️ MonkeyType -->
+<div align="center">
+  <a href="https://monkeytype.com/profile/Paranjayy">
+    <img src="https://img.shields.io/badge/MonkeyType-Paranjayy-E2B714?style=for-the-badge&logo=monkeytype&logoColor=black" alt="MonkeyType profile" />
+  </a>
+</div>
+
 <br>
 
 <div align="center">
@@ -327,37 +358,19 @@ Here are some ideas to get you started:
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
 </div>
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-
-**🎮 Steam**
-
-[![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
-
-  </td>
-    <td valign="top" width="50%">
+<br>
 
 **💬 Discord**
 
 [![Discord Presence](https://lanyard.cnrad.dev/api/999432437740347486)](https://discord.com/users/999432437740347486)
 
-  </td>
-  </tr>
-  <tr>
-    <td colspan="2">
+**⌨️ WakaTime — Coding Hours**
 
-**⌨️ WakaTime**
-
-[![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com)
+[![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com/@paranjayy)
 
 <div align="center">
   <img src="metrics.wakatime.full.svg" alt="WakaTime full stats" />
 </div>
-
-  </td>
-  </tr>
-</table>
 
 </details>
 
@@ -368,20 +381,21 @@ Here are some ideas to get you started:
      that wraps the GitHub avatar. If GitHub ever strips external `<image>` hrefs from SVGs,
      the fallback is to bake a pre-cropped circular PNG into the repo.
 
-  2. SKILLS GRID: Replace or supplement the commented-out Tech Stack table with
-     https://skillicons.dev icons (rounded-square style, looks great):
-     <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres" />
+  2. SKILLS GRID: ✅ DONE — skillicons.dev icons added above the details section.
 
-  3. GITHUB STATS CARDS: Add https://github-readme-stats.vercel.app cards for streak and
-     language stats — they have rounded corners and look clean:
-     ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=paranjayy&theme=tokyonight&hide_border=true&border_radius=10)
+  3. GITHUB STATS CARDS: ✅ DONE — GitHub stats, streak, and language cards inside the details section.
 
-  4. WAKATIME / CODING ACTIVITY: Add a WakaTime weekly coding stats card once you set up the
-     WakaTime extension in your editor.
+  4. WAKATIME / CODING ACTIVITY: ✅ DONE — WakaTime SVG cards committed to repo and displayed.
 
-  5. SPOTIFY NOW PLAYING: Add a Spotify "now playing" card with
-     https://github.com/novatorem/novatorem for a fun personal touch.
+  5. SPOTIFY NOW PLAYING: ✅ ADDED (needs auth activation).
+     Go to https://spotify-github-profile.kittinan.app/ → connect your Spotify account
+     → replace the UID in the Spotify img src with your actual Spotify user ID.
 
-  6. TROPHY SHOWCASE: https://github.com/ryo-ma/github-profile-trophy shows GitHub trophies
-     with rounded card styling.
+  6. TROPHY SHOWCASE: ✅ DONE — GitHub trophies shown above the details section.
+
+  7. MONKEYTYPE STATS: Badge links to your profile. For a live stats card,
+     see https://github.com/Zexivs/monkeytype-readme once it matures.
+
+  8. STEAM: Steam metrics SVG still generated by metrics.yml but removed from README
+     display to avoid spotlighting any single game.
 -->
