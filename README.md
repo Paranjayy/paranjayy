@@ -1,12 +1,12 @@
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=818cf8&style=flat" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=f43f5e&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
-  <img src="https://img.shields.io/badge/Stars-17-fde047?logo=github&logoColor=black" alt="GitHub Stars" />
+  <img src="https://img.shields.io/badge/Stars-17-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
   <!-- /TOTAL_STARS -->
   <!-- STARRED_COUNT -->
-  <img src="https://img.shields.io/badge/Starred-3381-4ade80?logo=github&logoColor=white" alt="Starred Repos" />
+  <img src="https://img.shields.io/badge/Starred-3381-10b981?logo=github&logoColor=white" alt="Starred Repos" />
   <!-- /STARRED_COUNT -->
 </p>
 
@@ -29,9 +29,11 @@
 
 <br>
 
+<!-- Skills hidden while learning - uncomment when ready to showcase!
 <div align="center">
   <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres,mongodb,mysql,aws,docker,git,linux,postman,figma" />
 </div>
+-->
 
 <br>
 
