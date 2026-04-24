@@ -1,12 +1,12 @@
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=64748b&style=flat" alt="Profile views" />
-  <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=94a3b8" alt="GitHub Repo Views" />
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=818cf8&style=flat" alt="Profile views" />
+  <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
-  <img src="https://img.shields.io/badge/Stars-17-eab308?logo=github&logoColor=black" alt="GitHub Stars" />
+  <img src="https://img.shields.io/badge/Stars-17-fde047?logo=github&logoColor=black" alt="GitHub Stars" />
   <!-- /TOTAL_STARS -->
   <!-- STARRED_COUNT -->
-  <img src="https://img.shields.io/badge/Starred-3381-10b981?logo=github&logoColor=white" alt="Starred Repos" />
+  <img src="https://img.shields.io/badge/Starred-3381-4ade80?logo=github&logoColor=white" alt="Starred Repos" />
   <!-- /STARRED_COUNT -->
 </p>
 
@@ -22,32 +22,16 @@
   </a>
 </div>
 
-<div align="center">
-
-[![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=paranjayy&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
+<!-- GitHub Trophies and MonkeyType stats removed as they were not rendering reliably.
+     Official Trophies: https://github.com/ryo-ma/github-profile-trophy
+     Official Metrics (MonkeyType): https://github.com/lowlighter/metrics
+-->
 
 <br>
 
-### 🔗 Find me around the web
-
-<p align="left">
-  <a href="https://gravatar.com/sweetly00638681c8"><img src="https://img.shields.io/badge/Gravatar-Paranjay_Khachar-1e8a4c?style=flat&logo=gravatar&logoColor=white" alt="Gravatar" /></a>
-  <a href="https://www.linkedin.com/in/paranjayy/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://leetcode.com/u/Paranjayy/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
-  <a href="https://www.hackerrank.com/profile/kparanjay245"><img src="https://img.shields.io/badge/HackerRank-00EA64?style=flat&logo=hackerrank&logoColor=black" alt="HackerRank" /></a>
-  <a href="https://www.codewars.com/users/Paranjayy"><img src="https://img.shields.io/badge/Codewars-B1361E?style=flat&logo=codewars&logoColor=white" alt="Codewars" /></a>
-  <a href="https://www.kaggle.com/paranjay"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white" alt="Kaggle" /></a>
-  <a href="https://stackoverflow.com/users/22587473/khachar-paranjay"><img src="https://img.shields.io/badge/Stack%20Overflow-F58025?style=flat&logo=stackoverflow&logoColor=white" alt="Stack Overflow" /></a>
-  <a href="https://hashnode.com/@paranjayy"><img src="https://img.shields.io/badge/Hashnode-2962FF?style=flat&logo=hashnode&logoColor=white" alt="Hashnode" /></a>
-  <a href="https://hub.docker.com/u/paranjay245"><img src="https://img.shields.io/badge/Docker%20Hub-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Hub" /></a>
-  <a href="https://steamcommunity.com/id/paranjayy/"><img src="https://img.shields.io/badge/Steam-171a21?style=flat&logo=steam&logoColor=white" alt="Steam" /></a>
-  <a href="https://x.com/paranjay245"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X / Twitter" /></a>
-  <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://monkeytype.com/profile/Paranjayy"><img src="https://img.shields.io/badge/MonkeyType-E2B714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
-  <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
-</p>
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres,mongodb,mysql,aws,docker,git,linux,postman,figma" />
+</div>
 
 <br>
 
@@ -104,13 +88,6 @@
   </table>
   <br>
   <div align="center">
-    <h4 align="center">⌨️ MonkeyType Stats</h4>
-
-[![MonkeyType Stats](https://monkeytype-readme-stats.vercel.app/api/stats/Paranjayy?theme=tokyonight)](https://monkeytype.com/profile/Paranjayy)
-
-  </div>
-  <br>
-  <div align="center">
     <h4 align="center">🎵 Currently Listening</h4>
     <br>
     <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31rwgyebwncfeffpaavx6o5ygvaq&redirect=true">
@@ -122,27 +99,3 @@
     </a>
   </div>
 </details>
-
-<!--
-<h3 align="right">Tech Stack Reference</h3>
-<table width="100%">
-	<thead>
-		<tr>
-			<th align="left" width="25%">Domain</th>
-			<th align="left" width="25%">Specialization</th>
-			<th align="right">Technologies</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>Core Programming</b></td>
-			<td>Problem Solving</td>
-			<td align="right">
-				<img src="https://img.shields.io/badge/Java-151b23?style=for-the-badge&logo=openjdk&logoColor=ED8B00" alt="Java" />
-				<img src="https://img.shields.io/badge/Python-151b23?style=for-the-badge&logo=python" alt="Python" />
-				<img src="https://img.shields.io/badge/Go-151b23?style=for-the-badge&logo=go" alt="Go" />
-			</td>
-		</tr>
-	</tbody>
-</table>
--->
