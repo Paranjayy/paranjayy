@@ -4,52 +4,75 @@ import os
 
 def update_monkeytype():
     print(f"Syncing Monkeytype Stats...")
+    # Comprehensive stats from user profile screenshot & snapshots
     stats = {
-        "wpm_15": "90", "wpm_30": "92", "wpm_60": "85",
-        "tests": "771", "time": "0h 3m", "xp": "771", "streak": "1"
+        "wpm_15": "-", "wpm_30": "92", "wpm_60": "-", "wpm_120": "-",
+        "tests_started": "6", "tests_completed": "6", 
+        "time_typing": "0h 3m", "xp": "771", "level": "5", 
+        "streak": "1", "joined": "02 Feb 2025"
     }
 
-    # Embedded Logo (User Provided)
-    logo_svg = """<g transform="scale(0.18) translate(0, 0)">
-        <path d="M250,120C255.519,120 260,124.481 260,130C260,135.519 255.519,140 250,140C244.481,140 240,135.519 240,130C240,124.481 244.481,120 250,120Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
-        <path d="M110,120L170,120C175.519,120 180,124.481 180,130C180,135.519 175.519,140 170,140L110,140C104.481,140 100,130C100,124.481 104.481,120 110,120Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
-        <path d="M90,60C95.519,60 100,64.481 100,70L100,90C100,95.519 95.519,100 90,100C84.481,100 80,95.519 80,90L80,70C80,64.481 84.481,60 90,60Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
-        <path d="M40,120C45.519,120 50,124.481 50,130L50,150C50,155.519 45.519,160 40,160C34.481,160 30,155.519 30,150L30,130C30,124.481 34.481,120 40,120Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
-        <path d="M210,120C215.519,120 220,124.481 220,130L220,150C220,155.519 215.519,160 210,160C204.481,160 200,155.519 200,150L200,130C200,124.481 204.481,120 210,120Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
-        <path d="M110,40L130,40C135.519,40 140,44.481 140,50C140,55.519 135.519,60 130,60L110,60C104.481,60 100,55.519 100,50C100,44.481 104.481,40 110,40Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
-        <path d="M150,80L190,80C195.519,80 200,84.481 200,90C200,95.519 195.519,100 190,100L150,100C144.481,100 140,95.519 140,90C140,84.481 144.481,80 150,80Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
+    # Better Monkeytype Logo (Simplified & Premium)
+    # Using a professional geometric representation
+    logo_svg = """<g transform="scale(0.8) translate(5, 5)">
+        <path d="M20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5ZM2 20C2 10.0589 10.0589 2 20 2C29.9411 2 38 10.0589 38 20C38 29.9411 29.9411 38 20 38C10.0589 38 2 29.9411 2 20Z" fill="#E2B714"/>
+        <path d="M15 18C16.6569 18 18 16.6569 18 15C18 13.3431 16.6569 12 15 12C13.3431 12 12 13.3431 12 15C12 16.6569 13.3431 18 15 18Z" fill="#E2B714"/>
+        <path d="M25 18C26.6569 18 28 16.6569 28 15C28 13.3431 26.6569 12 25 12C23.3431 12 22 13.3431 22 15C22 16.6569 23.3431 18 25 18Z" fill="#E2B714"/>
+        <path d="M20 28C24 28 27 25 27 25" stroke="#E2B714" stroke-width="2" stroke-linecap="round"/>
     </g>"""
 
-    svg_content = f"""<svg width="400" height="150" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="150" rx="12" fill="#171A20"/>
-  <rect x="0.5" y="0.5" width="399" height="149" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
+    svg_content = f"""<svg width="450" height="230" viewBox="0 0 450 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="450" height="230" rx="12" fill="#171A20"/>
+  <rect x="0.5" y="0.5" width="449" height="229" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
   
+  <!-- Header -->
   <g transform="translate(20, 20)">
     {logo_svg}
-    <text x="60" y="24" fill="#E2B714" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">Monkeytype Stats</text>
+    <text x="45" y="24" fill="#E2B714" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">Monkeytype Stats</text>
+    <text x="45" y="42" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Joined {stats['joined']}</text>
   </g>
 
-  <g transform="translate(20, 70)">
-    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">15 SEC PB</text>
-    <text x="0" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{stats['wpm_15']} <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
-    <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">30 SEC PB</text>
-    <text x="120" y="20" fill="#E2B714" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{stats['wpm_30']} <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
-    <text x="240" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">60 SEC PB</text>
-    <text x="240" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{stats['wpm_60']} <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
+  <!-- Level & XP -->
+  <g transform="translate(320, 25)">
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">LEVEL</text>
+    <text x="0" y="22" fill="#E2B714" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="24">{stats['level']}</text>
+    <rect x="0" y="30" width="100" height="6" rx="3" fill="#2D333B"/>
+    <rect x="0" y="30" width="45" height="6" rx="3" fill="#E2B714"/>
+    <text x="0" y="48" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">77 / 296 XP</text>
   </g>
 
-  <line x1="20" y1="110" x2="380" y2="110" stroke="#2D333B" stroke-width="1"/>
-  <g transform="translate(20, 132)">
-    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">XP: <tspan fill="#F0F6FC" font-weight="bold">{stats['xp']}</tspan></text>
-    <text x="80" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TESTS: <tspan fill="#F0F6FC" font-weight="bold">{stats['tests']}</tspan></text>
-    <text x="180" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">STREAK: <tspan fill="#E2B714" font-weight="bold">{stats['streak']} DAYS</tspan></text>
+  <!-- PB Grid -->
+  <g transform="translate(20, 90)">
+    <rect width="410" height="60" rx="8" fill="#1C2128" fill-opacity="0.5"/>
+    
+    <g transform="translate(15, 15)">
+      <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">15 SEC PB</text>
+      <text x="0" y="25" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">{stats['wpm_15']}</text>
+      
+      <text x="100" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">30 SEC PB</text>
+      <text x="100" y="25" fill="#E2B714" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="20">{stats['wpm_30']} <tspan font-size="10" font-weight="normal" fill="#8B949E">WPM</tspan></text>
+      
+      <text x="200" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">60 SEC PB</text>
+      <text x="200" y="25" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">{stats['wpm_60']}</text>
+
+      <text x="300" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">120 SEC PB</text>
+      <text x="300" y="25" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">{stats['wpm_120']}</text>
+    </g>
+  </g>
+
+  <!-- Detailed Metrics -->
+  <g transform="translate(20, 180)">
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TESTS: <tspan fill="#F0F6FC" font-weight="bold">{stats['tests_completed']}/{stats['tests_started']}</tspan></text>
+    <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TIME TYPING: <tspan fill="#F0F6FC" font-weight="bold">{stats['time_typing']}</tspan></text>
+    <text x="260" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOTAL XP: <tspan fill="#F0F6FC" font-weight="bold">{stats['xp']}</tspan></text>
+    <text x="360" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">STREAK: <tspan fill="#E2B714" font-weight="bold">{stats['streak']} DAYS</tspan></text>
   </g>
 </svg>"""
 
     os.makedirs("metrics", exist_ok=True)
     with open("metrics/monkeytype-card.svg", "w") as f:
         f.write(svg_content)
-    print("Monkeytype card updated.")
+    print("Monkeytype comprehensive card updated.")
 
 if __name__ == "__main__":
     update_monkeytype()
