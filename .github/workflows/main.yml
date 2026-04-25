@@ -1,58 +1,102 @@
-# Visit https://github.com/lowlighter/metrics#-documentation for full reference
-name: Metrics
+name: Profile Intelligence Hub
+
 on:
-  # Schedule updates (every 3 hours)
-  schedule: [{cron: "0 */3 * * *"}]
-  # Lines below let you run workflow manually and on each commit
+  schedule:
+    - cron: "0 1 * * *"
   workflow_dispatch:
-  push: {branches: ["master", "main"]}
+  push:
+    branches: ["main"]
+
 jobs:
-  github-metrics:
+  # ── Metrics Engine (SVG Cards) ─────────────────────────────────────────────
+  metrics:
+    name: Generate SVG Metrics
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    concurrency:
-      group: metrics-update
-      cancel-in-progress: true
     steps:
-      - name: Cache dependencies
-        uses: actions/cache@v4
+      - name: GitHub Metrics (Steam, WakaTime Full, MonkeyType)
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
         with:
-          path: ~/.cache
-          key: ${{ runner.os }}-cache-${{ hashFiles('**/lockfiles') }}
-      - uses: lowlighter/metrics@latest
-        with:
-          # Your GitHub token
-          # The following scopes are required:
-          #  - public_access (default scope)
-          #  - read:user
-          #  - read:org
-          #  - repo
-          # The following additional scopes may be required:
-          #  - read:org      (for organization related metrics)
-          #  - read:user     (for user related data)
-          #  - read:packages (for some packages related data)
-          #  - repo          (optional, if you want to include private repositories)
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "chore: update visual metrics [skip ci]"
+          base: ""
+          
+          # MonkeyType
+          plugin_monkeytype: yes
+          plugin_monkeytype_user: paranjayy
+          plugin_monkeytype_sections: score, stats
+          
+          # Steam
+          plugin_steam: yes
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: "76561199379635572"
+          plugin_steam_sections: recently-played
+          
+          # WakaTime (Full SVG)
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 180
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, editors-graphs, os, os-graphs
+          plugin_wakatime_limit: 8
 
-          # Options
-          user: paranjayy
-          template: classic
-          base: header, activity, community, repositories, metadata
-          config_timezone: Asia/Calcutta
-          plugin_gists: yes
-          plugin_habits: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_from: 200
-          plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_threshold: 0%
-          plugin_languages_colors: github
-          plugin_languages_sections: most-used
-          plugin_topics: yes
-          plugin_topics_limit: 15
-          plugin_topics_mode: starred
-          plugin_topics_sort: stars
-          plugin_traffic: yes
+  # ── WakaTime ASCII & Star Analytics ────────────────────────────────────────
+  waka-ascii:
+    name: Update ASCII Stats & Analytics
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      
+      # 1. Update ASCII Bars
+      - uses: anmol098/waka-readme-stats@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SHOW_PROJECTS: "True"
+          SHOW_EDITORS: "True"
+          SHOW_LOC_CHART: "True"
+          SHOW_OS: "True"
+          SHOW_LANGUAGE: "True"
+          SHOW_COMMIT_PERSONA: "True"
+          SHOW_DAYS_OF_WEEK: "True"
+          
+      # 2. Advanced Star Analytics
+      - name: Get GitHub Stats
+        id: get_stats
+        run: |
+          RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GH_TOKEN }}" \
+            -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: OWNER) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
+            https://api.github.com/graphql)
+          GIVEN=$(echo $RESULT | jq '.data.user.starredRepositories.totalCount')
+          RECEIVED=$(echo $RESULT | jq '.data.user.repositories.nodes | map(.stargazerCount) | add')
+          if [ -z "$GIVEN" ] || [ "$GIVEN" == "null" ]; then GIVEN=0; fi
+          if [ -z "$RECEIVED" ] || [ "$RECEIVED" == "null" ]; then RECEIVED=0; fi
+          echo "given=$GIVEN" >> "$GITHUB_OUTPUT"
+          echo "received=$RECEIVED" >> "$GITHUB_OUTPUT"
+          
+      - name: Inject Analytics into README
+        run: |
+          # Update Starred Count
+          GIVEN_BADGE='  <img src="https://img.shields.io/badge/Starred-${{ steps.get_stats.outputs.given }}-065f46?logo=github&logoColor=white" alt="Starred Repos" />'
+          sed -i "/<!-- STARRED_COUNT -->/,/<!-- \/STARRED_COUNT -->/{ /<!-- STARRED_COUNT -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
+          sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
+          
+          # Update Total Stars
+          RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-${{ steps.get_stats.outputs.received }}-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />'
+          sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
+          sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
+          
+          # Restore Study Status
+          sed -i "s/.*Not Opted to Hire.*/Currently Learning \& Studying 📚/g" README.md
+          
+      - name: Commit Analytics
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "chore: update profile analytics [skip ci]" || echo "No changes to commit"
+          git push
