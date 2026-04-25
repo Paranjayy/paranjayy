@@ -96,7 +96,7 @@
  > 
 > 🏆 1,162 Contributions in the Year 2026
  > 
-> 🚫 Not Opted to Hire
+Currently Learning & Studying 📚
  > 
 > 📜 22 Public Repositories 
  > 
