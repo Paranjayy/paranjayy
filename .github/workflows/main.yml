@@ -2,10 +2,10 @@ name: Profile Intelligence Hub
 
 on:
   schedule:
-    - cron: "0 1 * * *" # Daily Midnight Sync
-  workflow_dispatch: # Manual Trigger Enabled
+    - cron: "0 0 * * 0" # Weekly Sync (Sunday Midnight)
+  workflow_dispatch:
   push:
-    branches: ["main"] # Automatic Run on Push
+    branches: ["main"]
 
 jobs:
   # ── Metrics Engine (SVG Cards) ─────────────────────────────────────────────
@@ -15,59 +15,43 @@ jobs:
     permissions:
       contents: write
     steps:
-      # 1. MonkeyType Stats
-      - name: MonkeyType Metrics
+      - name: GitHub Metrics (Unified)
         uses: lowlighter/metrics@latest
         continue-on-error: true
         with:
-          filename: metrics.monkeytype.svg
           token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_message: "chore: update monkeytype metrics [skip ci]"
+          committer_message: "chore: update visual metrics [skip ci]"
           base: ""
+          
+          # MonkeyType
           plugin_monkeytype: yes
           plugin_monkeytype_user: paranjayy
           plugin_monkeytype_sections: score, stats
-
-      # 2. Steam Gaming Stats
-      - name: Steam Metrics
-        uses: lowlighter/metrics@latest
-        continue-on-error: true
-        with:
-          filename: metrics.steam.svg
-          token: NOT_NEEDED
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_message: "chore: update steam metrics [skip ci]"
-          base: ""
+          
+          # Steam
           plugin_steam: yes
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam_user: "76561199379635572"
           plugin_steam_sections: recently-played
-
-      # 3. WakaTime Full Detailed SVG
-      - name: WakaTime Full Metrics
-        uses: lowlighter/metrics@latest
-        continue-on-error: true
-        with:
-          filename: metrics.wakatime.full.svg
-          token: NOT_NEEDED
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_message: "chore: update wakatime detailed metrics [skip ci]"
-          base: ""
+          
+          # WakaTime (Full SVG)
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 180
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, editors-graphs, os, os-graphs
           plugin_wakatime_limit: 8
 
-  # ── WakaTime ASCII ───────────────────────────────────────────
-  waka-ascii:
-    name: Update WakaTime ASCII
+  # ── README Updates (ASCII, Stars, Metadata) ────────────────────────────────
+  readme-updates:
+    name: Update README Content
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v3
+      
+      # 1. WakaTime ASCII Bars
       - name: WakaTime ASCII
         uses: athul/waka-readme@master
         with:
@@ -81,3 +65,39 @@ jobs:
           SHOW_TIME: "True"
           SHOW_MASKED_TIME: "False"
           STOP_AT_OTHER: "True"
+
+      # 2. GitHub Stats (Stars Given & Received)
+      - name: Update Star Badges
+        run: |
+          # Fetch counts via GraphQL
+          RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: OWNER) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
+            https://api.github.com/graphql)
+          
+          GIVEN=$(echo $RESULT | jq '.data.user.starredRepositories.totalCount')
+          RECEIVED=$(echo $RESULT | jq '.data.user.repositories.nodes | map(.stargazerCount) | add')
+          
+          if [ -z "$GIVEN" ] || [ "$GIVEN" == "null" ]; then GIVEN=0; fi
+          if [ -z "$RECEIVED" ] || [ "$RECEIVED" == "null" ]; then RECEIVED=0; fi
+          
+          # Update Badges in README.md
+          # Starred (Given) - Emerald Green
+          GIVEN_BADGE='  <img src="https://img.shields.io/badge/Starred-'"$GIVEN"'-10b981?logo=github&logoColor=white" alt="Starred Repos" />'
+          sed -i "/<!-- STARRED_COUNT -->/,/<!-- \/STARRED_COUNT -->/{ /<!-- STARRED_COUNT -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
+          sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
+          
+          # Stars (Received) - Amber
+          RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-'"$RECEIVED"'-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />'
+          sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
+          sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
+
+          # 3. Post-Process ASCII Section (Custom Text)
+          sed -i "s/.*Not Opted to Hire.*/Currently Learning \& Studying 📚/g" README.md
+          
+      - name: Commit & Push README Updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "chore: update readme stats [skip ci]" || echo "No changes to commit"
+          git push

@@ -136,3 +136,8 @@ Other         2 hrs 52 mins         █████░░░░░░░░░�
     </a>
   </div>
 </details>
+<!-- 
+  FUTURE TASK REMINDER: 
+  Fix the 'cursed' commit history (sorting/metadata polish) once the portfolio 
+  and domain redirection (github.io -> custom domain) are fully stable.
+-->
