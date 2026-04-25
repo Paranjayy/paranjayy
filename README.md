@@ -1,12 +1,12 @@
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20Views&color=6366f1&style=flat" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20Views&color=4c1d95&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
 <img src="https://img.shields.io/badge/Stars-10-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
   <!-- /TOTAL_STARS -->
   <!-- STARRED_COUNT -->
-<img src="https://img.shields.io/badge/Starred-3277-10b981?logo=github&logoColor=white" alt="Starred Repos" />
+<img src="https://img.shields.io/badge/Starred-3277-065f46?logo=github&logoColor=white" alt="Starred Repos" />
   <!-- /STARRED_COUNT -->
 </p>
 
@@ -60,7 +60,7 @@
   <br>
   <div align="center">
     <a href="https://monkeytype.com/profile/Paranjayy">
-      <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/metrics/monkeytype-card.svg" alt="MonkeyType Stats" />
+      <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/monkeytype-card.svg" alt="MonkeyType Stats" />
     </a>
   </div>
 </details>
@@ -192,7 +192,7 @@ Svelte                   1 repo              ░░░░░░░░░░░�
     </a>
     <br><br>
     <a href="https://volt.fm/paranjay">
-      <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/metrics/volt-card.svg" alt="Volt.fm Intelligence" />
+      <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/volt-card.svg" alt="Volt.fm Intelligence" />
     </a>
     <br><br>
     <p align="center">

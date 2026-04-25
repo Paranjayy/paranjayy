@@ -1,0 +1,37 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" rx="12" fill="#171A20"/>
+  <rect x="0.5" y="0.5" width="399" height="199" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
+  
+  <!-- Header -->
+  <text x="20" y="35" fill="#F0F6FC" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="bold" font-size="18">Volt.fm Music Intelligence</text>
+  <circle cx="360" cy="30" r="10" fill="#1DB954"/>
+  <path d="M360 25C357.239 25 355 27.2386 355 30C355 32.7614 357.239 35 360 35C362.761 35 365 32.7614 365 30C365 27.2386 362.761 25 360 25ZM363.313 32.5516C363.159 32.7937 362.84 32.8687 362.599 32.7153C361.026 31.7513 358.98 31.5265 356.666 32.0556C356.39 32.119 356.114 31.9472 356.05 31.6716C355.987 31.396 356.159 31.1197 356.434 31.0563C358.969 30.478 361.233 30.738 362.949 31.7884C363.191 31.9423 363.267 32.2612 363.113 32.5029L363.313 32.5516Z" fill="white"/>
+
+  <!-- Stats Grid -->
+  <g transform="translate(20, 60)">
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">PLAYS</text>
+    <text x="0" y="20" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">67.5K</text>
+    
+    <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">MINUTES</text>
+    <text x="120" y="20" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">4227h 39</text>
+    
+    <text x="240" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">SONGS</text>
+    <text x="240" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">11,463</text>
+  </g>
+
+  <g transform="translate(20, 110)">
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">ARTISTS</text>
+    <text x="0" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">5,297</text>
+    
+    <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">ALBUMS</text>
+    <text x="120" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">6,698</text>
+  </g>
+
+  <!-- Top Highlights -->
+  <line x1="20" y1="150" x2="380" y2="150" stroke="#2D333B" stroke-width="1"/>
+  
+  <g transform="translate(20, 175)">
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOP ARTIST: <tspan fill="#F0F6FC" font-weight="bold">Pritam</tspan></text>
+    <text x="220" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOP SONG: <tspan fill="#F0F6FC" font-weight="bold">Agar Tum Saath Ho</tspan></text>
+  </g>
+</svg>
