@@ -84,14 +84,90 @@
   <br>
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-54%20hrs%2020%20mins-blue?style=flat)
 
-```txt
-From: 17 April 2026 - To: 24 April 2026
+![Profile Views](http://img.shields.io/badge/Profile%20Views-1-blue?style=flat)
 
-Markdown      3 hrs 35 mins         ██████▒░░░░░░░░░░░░░░░░░░   24.91 %
-Other         2 hrs 52 mins         █████░░░░░░░░░░░░░░░░░░░░   19.94 %
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-31.83%20million%20lines%20of%20code-blue?style=flat)
+
+**🐱 My GitHub Data** 
+
+> 📦 3.2 MB Used in GitHub's Storage 
+ > 
+> 🏆 1,159 Contributions in the Year 2026
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 22 Public Repositories 
+ > 
+> 🔑 44 Private Repositories 
+ > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                342 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.42 % 
+🌆 Daytime                429 commits         █████░░░░░░░░░░░░░░░░░░░░   20.60 % 
+🌃 Evening                576 commits         ███████░░░░░░░░░░░░░░░░░░   27.65 % 
+🌙 Night                  736 commits         █████████░░░░░░░░░░░░░░░░   35.33 % 
+```
+📅 **I'm Most Productive on Saturday** 
+
+```text
+Monday                   276 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.25 % 
+Tuesday                  313 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.03 % 
+Wednesday                194 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.31 % 
+Thursday                 346 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.61 % 
+Friday                   227 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.90 % 
+Saturday                 469 commits         ██████░░░░░░░░░░░░░░░░░░░   22.52 % 
+Sunday                   258 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.39 % 
 ```
 
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Kolkata
+
+💬 Programming Languages: 
+Markdown                 3 hrs 35 mins       ██████░░░░░░░░░░░░░░░░░░░   24.91 % 
+Other                    2 hrs 52 mins       █████░░░░░░░░░░░░░░░░░░░░   19.94 % 
+JavaScript               2 hrs 49 mins       █████░░░░░░░░░░░░░░░░░░░░   19.57 % 
+TypeScript               2 hrs 14 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.48 % 
+CSS                      53 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.16 % 
+
+🔥 Editors: 
+Antigravity              12 hrs 48 mins      ██████████████████████░░░   88.65 % 
+VS Code                  1 hr 38 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.35 % 
+
+🐱‍💻 Projects: 
+SocialHoardr             3 hrs 28 mins       ██████░░░░░░░░░░░░░░░░░░░   24.10 % 
+ipl-2026-engine          3 hrs 13 mins       ██████░░░░░░░░░░░░░░░░░░░   22.37 % 
+dev                      1 hr 40 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.65 % 
+iftt                     1 hr 19 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   09.21 % 
+Developer                1 hr 12 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.40 % 
+
+💻 Operating System: 
+Mac                      14 hrs 26 mins      █████████████████████████   100.00 % 
+```
+
+**I Mostly Code in TypeScript** 
+
+```text
+TypeScript               28 repos            ████████████░░░░░░░░░░░░░   50.00 % 
+JavaScript               10 repos            ████░░░░░░░░░░░░░░░░░░░░░   17.86 % 
+HTML                     8 repos             ████░░░░░░░░░░░░░░░░░░░░░   14.29 % 
+Svelte                   1 repo              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.79 % 
+Python                   1 repo              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.79 % 
+```
+
+
+
+**Timeline**
+
+![Lines of Code chart](https://raw.githubusercontent.com/Paranjayy/Paranjayy/main/assets/bar_graph.png)
+
+
+ Last Updated on 25/04/2026 07:32:49 UTC
 <!--END_SECTION:waka-->
 
   <br>
