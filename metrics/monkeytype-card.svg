@@ -80,5 +80,5 @@
   
   <!-- Precision Bar -->
   <rect x="25" y="215" width="450" height="4" rx="2" fill="#2c2e31" />
-  <rect x="25" y="215" width="445" height="4" rx="2" fill="#e2b714" />
+  <rect x="25" y="215" width="445.5 />
 </svg>
