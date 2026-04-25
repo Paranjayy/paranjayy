@@ -24,28 +24,27 @@ jobs:
           committer_message: "chore: update visual metrics [skip ci]"
           base: ""
           
-          # MonkeyType (Comprehensive)
+          # MonkeyType
           plugin_monkeytype: yes
           plugin_monkeytype_user: Paranjayy
           plugin_monkeytype_sections: score, stats
           plugin_monkeytype_limit: 10
           
-          # Steam (Full Detail)
+          # Steam
           plugin_steam: yes
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam_user: "76561199379635572"
           plugin_steam_sections: recently-played, most-played
           plugin_steam_games_limit: 5
           
-          # WakaTime (Maximum Detail SVG)
+          # WakaTime
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 180
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, editors-graphs, os, os-graphs
           plugin_wakatime_limit: 10
-          plugin_wakatime_languages_other: yes
 
-  # ── README Updates (The HUGE "Awesome Shit" ASCII) ──────────────────────────
+  # ── README Updates (The HUGE ASCII & Stats) ────────────────────────────────
   readme-updates:
     name: Update README Content
     runs-on: ubuntu-latest
@@ -54,18 +53,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      # 1. WakaTime HUGE ASCII (Full Feature Set)
+      # 1. WakaTime HUGE ASCII (Using Valid Latest Inputs)
       - name: WakaTime Awesome ASCII
         uses: anmol098/waka-readme-stats@master
         continue-on-error: true
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }} # Using PAT for full permissions
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SHOW_OS: "True"
           SHOW_PROJECTS: "True"
           SHOW_EDITORS: "True"
           SHOW_TIMEZONE: "True"
-          SHOW_COMMIT: "True"
+          SHOW_COMMIT: "True" # Shows Morning/Evening/Night charts
           SHOW_LANGUAGE: "True"
           SHOW_LINES_OF_CODE: "True"
           SHOW_LANGUAGE_PER_REPO: "True"
@@ -75,10 +74,7 @@ jobs:
           SHOW_SHORT_INFO: "True"
           SHOW_UPDATED_DATE: "True"
           SHOW_TOTAL_CODE_TIME: "True"
-          SHOW_TIME_OF_DAY: "True"
-          SHOW_COMMIT_PERSONA: "True"
           SECTION_NAME: "waka"
-          SYMBOL_VERSION: "2"
 
       # 2. GitHub Stats (Stars Given & Received)
       - name: Update Star Badges
@@ -98,7 +94,7 @@ jobs:
           sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
           
           RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-'"$RECEIVED"'-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />'
-          sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
+          sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
 
           # 3. Custom Hiring Status
