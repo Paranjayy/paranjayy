@@ -19,7 +19,7 @@
   <a href="https://hub.docker.com/u/paranjayy"><img src="https://img.shields.io/badge/Docker_Hub-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Hub" /></a>
   <a href="https://steamcommunity.com/id/paranjayy/"><img src="https://img.shields.io/badge/Steam-000000?style=flat&logo=steam&logoColor=white" alt="Steam" /></a>
   <a href="https://x.com/paranjayy_"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X" /></a>
-  <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjayy215-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://monkeytype.com/profile/paranjayy"><img src="https://img.shields.io/badge/MonkeyType-e2b714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
   <a href="https://www.youtube.com/@paranjayy_"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
 </div>
