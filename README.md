@@ -84,7 +84,14 @@
   <br>
 
 <!--START_SECTION:waka-->
-Updating ASCII Stats... 🔄
+
+```txt
+From: 17 April 2026 - To: 24 April 2026
+
+Markdown      3 hrs 35 mins         ██████▒░░░░░░░░░░░░░░░░░░   24.91 %
+Other         2 hrs 52 mins         █████░░░░░░░░░░░░░░░░░░░░   19.94 %
+```
+
 <!--END_SECTION:waka-->
 
   <br>
