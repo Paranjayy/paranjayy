@@ -74,7 +74,7 @@
   <br>
   <div align="center">
     <a href="https://monkeytype.com/profile/Paranjayy">
-      <img src="metrics.monkeytype.svg" alt="MonkeyType Stats" />
+      <img src="metrics/monkeytype-card.svg" alt="MonkeyType Stats" />
     </a>
   </div>
 </details>
@@ -164,7 +164,7 @@ Python                   1 repo              ░░░░░░░░░░░�
 
 **Timeline**
 
-![Lines of Code chart](https://raw.githubusercontent.com/Paranjayy/Paranjayy/main/assets/bar_graph.png)
+![Lines of Code chart](https://raw.githubusercontent.com/Paranjayy/Paranjayy/main/metrics/bar_graph.png)
 
 
  Last Updated on 25/04/2026 07:36:20 UTC
@@ -172,7 +172,7 @@ Python                   1 repo              ░░░░░░░░░░░�
 
   <br>
   <div align="center">
-    <img src="metrics.wakatime.full.svg" alt="WakaTime Detailed" />
+    <img src="metrics/metrics.wakatime.full.svg" alt="WakaTime Detailed" />
   </div>
 </details>
 
@@ -185,7 +185,7 @@ Python                   1 repo              ░░░░░░░░░░░�
         <h4 align="center">🎮 Steam activity</h4>
         <p align="center">
           <a href="https://steamcommunity.com/id/paranjayy/">
-            <img src="metrics.steam.svg" alt="Steam metrics" />
+            <img src="metrics/metrics.steam.svg" alt="Steam metrics" />
           </a>
         </p>
       </td>

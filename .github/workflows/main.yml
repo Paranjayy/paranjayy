@@ -15,29 +15,37 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: GitHub Metrics (Unified)
+      - name: GitHub Metrics (Base)
         uses: lowlighter/metrics@latest
         continue-on-error: true
         with:
           token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_message: "chore: update visual metrics [skip ci]"
+          filename: metrics/github-metrics.svg
+          base: header, activity, community, repositories, metadata
+          
+      - name: Steam Metrics
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          filename: metrics/metrics.steam.svg
           base: ""
-          
-          # MonkeyType
-          plugin_monkeytype: yes
-          plugin_monkeytype_user: Paranjayy
-          plugin_monkeytype_sections: score, stats
-          plugin_monkeytype_limit: 10
-          
-          # Steam
           plugin_steam: yes
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam_user: "76561199379635572"
           plugin_steam_sections: recently-played, most-played
           plugin_steam_games_limit: 5
           
-          # WakaTime
+      - name: WakaTime Metrics
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          filename: metrics/metrics.wakatime.full.svg
+          base: ""
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 180
@@ -71,13 +79,13 @@ jobs:
           SHOW_LANGUAGE_PER_REPO: "True"
           SHOW_LOC_CHART: "True"
           SHOW_DAYS_OF_WEEK: "True"
-          SHOW_PROFILE_VIEWS: "False" # Removed as requested
+          SHOW_PROFILE_VIEWS: "False"
           SHOW_SHORT_INFO: "True"
           SHOW_UPDATED_DATE: "True"
           SHOW_TOTAL_CODE_TIME: "True"
           SECTION_NAME: "waka"
 
-      # 2. GitHub Stats
+      # 2. GitHub Stats (Output to metrics/)
       - name: Update Star Badges
         run: |
           RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -98,14 +106,14 @@ jobs:
           sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
 
-          # 3. Custom Hiring Status (With Brackets)
+          # 3. Custom Hiring Status
           sed -i "s/.*Not Opted to Hire.*/🚫 Not Opted to Hire (Currently Studying \& Learning 📚)/g" README.md
           
       - name: Commit & Push README Updates
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md
+          git add README.md metrics/
           git commit -m "chore: update awesome stats [skip ci]" || echo "No changes to commit"
           git pull --rebase origin main
           git push
