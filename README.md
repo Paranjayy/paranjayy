@@ -1,6 +1,6 @@
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=4c1d95&style=flat" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=2e1065&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
   <img src="https://img.shields.io/badge/Stars-17-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
@@ -22,9 +22,10 @@
   </a>
 </div>
 
-<!-- GitHub Trophies and MonkeyType stats removed as they were not rendering reliably.
+<!-- GitHub Trophies and MonkeyType stats links for configuration:
      Official Trophies: https://github.com/ryo-ma/github-profile-trophy
      Official Metrics (MonkeyType): https://github.com/lowlighter/metrics
+     WakaTime ASCII Config: https://github.com/anmol098/waka-readme-stats
 -->
 
 <br>
@@ -76,11 +77,17 @@
   </div>
 </details>
 
-<details>
+<details open>
   <summary>⌨️ Coding Activity (WakaTime)</summary>
   <br>
 
 <!--START_SECTION:waka-->
+```text
+JavaScript   18 hrs 23 mins  ██████████████████░░░░░   72.1 %
+TypeScript    4 hrs 12 mins  ████░░░░░░░░░░░░░░░░░░░   16.5 %
+CSS           1 hr 45 mins   █░░░░░░░░░░░░░░░░░░░░░░   6.8 %
+HTML          1 hr 12 mins   █░░░░░░░░░░░░░░░░░░░░░░   4.6 %
+```
 Currently Learning & Studying 📚
 <!--END_SECTION:waka-->
 
