@@ -2,10 +2,10 @@ name: Profile Intelligence Hub
 
 on:
   schedule:
-    - cron: "0 1 * * *"
-  workflow_dispatch:
+    - cron: "0 1 * * *" # Daily Midnight Sync
+  workflow_dispatch: # Manual Trigger Enabled
   push:
-    branches: ["main"]
+    branches: ["main"] # Automatic Run on Push
 
 jobs:
   # ── Metrics Engine (SVG Cards) ─────────────────────────────────────────────
