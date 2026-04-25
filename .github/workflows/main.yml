@@ -15,31 +15,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: GitHub Metrics (Base)
-        uses: lowlighter/metrics@latest
-        continue-on-error: true
-        with:
-          token: NOT_NEEDED
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          filename: metrics/isocalendar.svg
-          base: ""
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          
-      - name: GitHub Metrics (Habits)
-        uses: lowlighter/metrics@latest
-        continue-on-error: true
-        with:
-          token: NOT_NEEDED
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          filename: metrics/habits.svg
-          base: ""
-          plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          
       - name: Steam Metrics
         uses: lowlighter/metrics@latest
         continue-on-error: true
@@ -76,11 +51,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       # 1. Monkeytype Dynamic Update
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
           
@@ -136,8 +111,6 @@ jobs:
           RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-'"$RECEIVED"'-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />'
           sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
-
-          # Removed sed that was overwriting hiring status
           
       - name: Commit & Push README Updates
         run: |
