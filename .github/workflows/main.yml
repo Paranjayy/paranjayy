@@ -64,6 +64,9 @@ jobs:
         
       - name: Update Monkeytype Card
         run: python scripts/update_monkeytype.py
+        
+      - name: Update Volt.fm Intelligence
+        run: python scripts/update_volt.py
 
       # 2. WakaTime HUGE ASCII
       - name: WakaTime Awesome ASCII

@@ -1,6 +1,6 @@
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=4c1d95&style=flat" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20Views&color=6366f1&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
 <img src="https://img.shields.io/badge/Stars-10-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
@@ -41,6 +41,8 @@
   <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://monkeytype.com/profile/Paranjayy"><img src="https://img.shields.io/badge/MonkeyType-E2B714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
   <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
+  <a href="https://www.last.fm/user/paranjay"><img src="https://img.shields.io/badge/Last.fm-paranjay-D01F3C?style=flat&logo=last.fm&logoColor=white" alt="Last.fm" /></a>
+  <a href="https://stats.fm/paranjay"><img src="https://img.shields.io/badge/Stats.fm-paranjay-1DB954?style=flat&logo=spotify&logoColor=white" alt="Stats.fm" /></a>
 </p>
 
 <br>
@@ -79,15 +81,13 @@
 **🐱 My GitHub Data** 
 
 > 📦 3.2 MB Used in GitHub's Storage 
- > 
 > 🏆 1,193 Contributions in the Year 2026
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 22 Public Repositories 
- > 
-> 🔑 44 Private Repositories 
- > 
+
+> [!NOTE]
+> **Status**: Currently Not Opted to Hire (Currently Studying & Exploring 📚)
+
+> 📜 22 Public Repositories  
+> 🔑 44 Private Repositories
 **I'm a Night 🦉** 
 
 ```text
@@ -192,9 +192,9 @@ Svelte                   1 repo              ░░░░░░░░░░░�
     <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31rwgyebwncfeffpaavx6o5ygvaq&redirect=true">
       <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31rwgyebwncfeffpaavx6o5ygvaq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&profanity=false" alt="Spotify" />
     </a>
-    <br>
+    <br><br>
     <a href="https://volt.fm/paranjay">
-      <img src="https://img.shields.io/badge/Volt.fm-paranjay-1DB954?style=flat&logo=spotify&logoColor=white" alt="Volt.fm" />
+      <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/metrics/volt-card.svg" alt="Volt.fm Intelligence" />
     </a>
   </div>
 </details>
