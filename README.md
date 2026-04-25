@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/badge/Stars-10-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
   <!-- /TOTAL_STARS -->
   <!-- STARRED_COUNT -->
-<img src="https://img.shields.io/badge/Starred-3277-10b981?logo=github&logoColor=white" alt="Starred Repos" />
+<img src="https://img.shields.io/badge/Starred-3277-065f46?logo=github&logoColor=white" alt="Starred Repos" />
   <!-- /STARRED_COUNT -->
 </p>
 
