@@ -1,0 +1,202 @@
+e71452fde109597dea27237eda3ef270f0a55979|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:25:01 2025 +0530|Initial commit
+d9fe73d020abdb74ec86bdef9e1c466d3651f831|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:38:58 2025 +0530|Update README.md
+1372cbc889587f42da15aafca7b2fc9ad7f8ceb3|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:40:24 2025 +0530|Update README.md
+896050f3f4a79a9493ecd012a3c87fb3584a8030|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:58:23 2025 +0530|Update README.md
+216860d3a03dca0462bb8cd2f81e246a9094f4e9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:08:22 2025 +0530|Update README.md
+7edcb7a2b0d2df15e608a42cb67802412b11e770|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:09:53 2025 +0530|Update README.md
+0bcfdca74a4e9dec33df452b25910f6aa992a4d7|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:15:10 2025 +0530|Update README.md
+fd1fa21fb9a825f511415b046d3b491055fc513c|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:16:20 2025 +0530|Update README.md
+a8545ee1011ff257835a98896c33705b007ddbd6|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:17:39 2025 +0530|Update README.md
+38d8320170f3981e518144b228da2e7ce76563c6|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Jun 18 15:10:49 2025 +0530|Update README.md
+a92ff38042b3e4d2c4a15a782f182485643c53be|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:38:09 2025 +0530|Update README.md
+409be8a45d18b0b88e0b2c93da18c595b4af5f63|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:40:51 2025 +0530|Update README.md
+31423ea5ce58960cf6e9dd2e21500a90da88b11f|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:41:48 2025 +0530|Update README.md
+04d43d7ce5abad9cd4d1adbead2b881597980fad|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:42:21 2025 +0530|Update README.md
+9d4a902f3114098bf3532fa604d54bc6e750463e|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:42:49 2025 +0530|Update README.md
+c315070d294ebf5f7c3a34d9a4ac677bbc2d75a3|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jun 20 20:43:28 2025 +0530|Update README.md
+73925bdb2413ecf61237e96e8b62105636a69cc6|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jun 20 20:49:27 2025 +0530|Update README.md
+2491c61a7ffd08d1b86dd9d3e12b1ffba79d8e26|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sun Jun 22 02:09:22 2025 +0530|Update README.md
+44c69bfcc45367546458f6d21c3eb562c7cf9f07|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jun 24 01:21:30 2025 +0530|Update README.md
+b5b5511ecdb6a12777b06cb7291542bc0244dc1d|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jun 24 03:22:22 2025 +0530|Update README.md
+8e9325c787268386261b7541e773d112b3c0c2a7|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 26 13:57:58 2025 +0530|Update README.md
+8d240ed643eb1837097ab525d7517d8b2af37a75|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 26 14:04:31 2025 +0530|Update README.md
+5458e23827a1c487ddb16470e1cf33a33ab09a37|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jul 11 18:40:56 2025 +0530|Update README.md
+d5cf54aea162d5f9a351f6c682bb22a3ebbc6a4c|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:24:20 2025 +0530|No More Flashbangbang : )
+2b0b7c872149fe2ea3810b1b7b69bb6c0b99b171|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:26:01 2025 +0530|Update README.md
+0fb9c28a2e2e63379a0c3366bff6a6708fb4c30b|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:27:41 2025 +0530|Update README.md
+ed07dd36d38e7878e50638070eefd2037104e0bc|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:28:28 2025 +0530|Update README.md
+15cac426ec78695b330cb8d82a39a0b1fb3960fb|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:36:18 2025 +0530|Create main.yml
+940f3b68e2da6f5a99fed44ff7c65f2662d250f5|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:39:04 2025 +0530|Update main.yml
+17412957fbc631c7a074510b9a5c5a5be4048275|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:40:34 2025 +0530|Update main.yml
+8ec0a038e53f0e8bd820a26d7d9e7ee0c9de958c|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:45:34 2025 +0530|Update main.yml
+6597ca6cf4ef53a9287637441d338c5e9f3c2f44|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:48:36 2025 +0530|Update main.yml
+87bcc1c3ef210bafd4d02fd44741c23c391b6b8b|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 18:00:17 2025 +0530|Update README.md
+c6816d27c220cbb7fe9620468e3a0c8fe3ff2db1|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 22:18:20 2025 +0530|Update main.yml
+eb1b4ff06130fc931b2d5a4b80dbf0b845e5cb8a|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Tue Jul 22 23:03:10 2025 +0530|Fix GitHub Actions metrics workflow authentication and EJS template error
+6d9f9a5a0791ec3af1f591c05afad204cd484880|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Tue Jul 22 23:45:08 2025 +0530|Fix workflow dependencies and disable problematic plugins
+f4663b1777b3f990afab69a6bd8352eee5f2d1bf|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:03:40 2025 +0530|Replace workflow with Chris Titus Tech's proven configuration
+a894683f4d140c7569a9b1eb55ae8ea012324d09|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:19:24 2025 +0530|Add gitignore
+750439702cf8d2ad78f5f2cfd852a65ff76f0b39|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:20:36 2025 +0530|Update README to use generated GitHub metrics SVG
+aff16c92ba469d27814e643e5ab3fd0aadd0e00b|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Jul 23 00:29:56 2025 +0530|Update README.md
+caab6b1c5b92644d5ec64e569520238e4c653473|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Jul 23 00:32:03 2025 +0530|Create readme2.md
+52e0bd6ae6e6658a8f8c357ce0c5856972c7ba3a|Paranjay <kparanjay245@gmail.com>|Wed Jul 23 00:37:38 2025 +0530|refactor: remove contribution calendar and starred repos from metrics
+58104dc8f361fa6a7f306596f3109b86fc352525|Paranjay <kparanjay245@gmail.com>|Wed Jul 23 00:49:26 2025 +0530|Latest
+2036d66344a8c8824488d69b90d84f71a2eb32c9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sun Aug 24 00:30:57 2025 +0530|Update README.md
+e4d2e0ae1c033e4f8f613379da741615c177bfe2|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sun Aug 24 00:33:31 2025 +0530|Update README.md
+7f0cdf40bed36fea0728f447abfb05cb19aecc7c|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Sep 19 08:03:52 2025 +0530|Update README.md
+0d18a591bf8d7c2b7ae33029dfe87946d72387f0|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Oct 21 16:52:16 2025 +0530|Clean up README.md by removing links and personal info
+e9f30246cda9b81296091087e0c5e19c2c0d55ec|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Oct 25 15:38:51 2025 +0530|cooler things tryyyyyy
+10edd7dfdadae587717605ce9954e9a9fe56eec0|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Nov 28 06:08:27 2025 +0530|Update README with personal introduction and projects
+331262879144b01d8ec5e4cee3e48277d507552c|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Nov 28 06:28:52 2025 +0530|Revise README for improved presentation and content
+4ad5b2ae7c0b46fc73d23d7bb65347c592f06757|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Feb 2 08:50:08 2026 +0530|Merge pull request #2 from Paranjayy/copilot/add-github-repo-views
+6b63c24c756802123c727b6e4a335d51789787ad|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Mar 18 12:30:22 2026 +0530|Add GitHub Streak badge to profile README
+914fc092ba70442f704079e11a7cb82e19ecf6e7|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Mar 20 23:54:27 2026 +0530|Add GitHub Stars badge to README
+4b9d28e7aa3e62f3e3b49a5c0c4dee3b696e7535|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 01:15:37 2026 +0530|Merge pull request #5 from Paranjayy/copilot/add-github-config-similar-to-steam
+a20b3d3a195f23da473d8f2dc19674997cb9bb44|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 02:10:55 2026 +0530|Merge pull request #6 from Paranjayy/copilot/disable-github-metrics
+6bad0b303a0c7d80ffa9b2616660a41d0f76fcbf|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 02:11:50 2026 +0530|Remove Gravatar profile from README
+254b2cf6a7398451ba24af413487a9442d3218bd|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 02:24:49 2026 +0530|Merge pull request #7 from Paranjayy/copilot/fix-steam-issue
+941982650a6f49256128d4e27b72fe7293844fe6|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:09:22 2026 +0530|Merge pull request #8 from Paranjayy/copilot/fix-steam-api-issues
+bdee70ccd769a60aefc71d19bb5655461651a75e|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:28:26 2026 +0530|Merge pull request #9 from Paranjayy/copilot/combine-broken-functionality
+bf3a873150f4e4a63563fb8a34c83e73181b9f3d|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:43:35 2026 +0530|Merge pull request #10 from Paranjayy/copilot/fix-broken-feature
+dd11dd8a0c9940c5087caf61d7aaf90b790f3fb2|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:46:30 2026 +0530|Update summary section in README.md
+5bf0a0836eee3eeae7fcd70dc0fa6fe16c31c68f|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:54:40 2026 +0530|Merge pull request #11 from Paranjayy/copilot/test-steam-functionality
+528154d5c8be2a1f920c3bfa33f30c90fc9698ab|paranjay <kparanjay245@gmail.com>|Sat Mar 21 04:16:58 2026 +0530|Fix Steam metrics config and add stats cards in toggle
+8b12b6df75725d3c19527ef2b73f0516651c17e6|paranjay <kparanjay245@gmail.com>|Sat Mar 21 04:54:27 2026 +0530|Enhance WakaTime section with full stats card and GIF
+d7b04874da459c08ca00189a7843c100fedd4bb3|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 04:57:41 2026 +0530|Remove coding mode image from README
+6a6222677d6e5a60027b3a07f584c064a261029f|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Mar 23 00:51:20 2026 +0530|Remove social media links from README
+7ecfbf1fac8a2ee60a3274f4af0ccaf026565177|paranjay <kparanjay245@gmail.com>|Fri Apr 24 23:38:52 2026 +0530|🚀 Profile Overhaul: Christina-style stats, Trophies, Skill Icons, and Music integration
+eb6609a061878d540d86e096de5851ca3415c677|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:31:10 2026 +0530|🚀 Final Goated: Slate & Gold theme, fixed hiring status, and bot-free history prep
+1c470e1ec478d99935a652dcb00e93a0b58cdea2|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:31:29 2026 +0530|🚀 Pre-cleanup: Slate & Gold theme
+eff31060eaf37eda47703be0ad59c4c0f0fdb551|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:31:38 2026 +0530|🚀 The Final Goated State
+643bf60501f882c2390603c454ea98512681e0e7|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:38:24 2026 +0530|🚀 The Goated Restoration: Re-integrated history, Deep Indigo theme, and removed broken components
+cd3ce1b1730b96c96e89a6bf6580c814ddc733b4|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:44:11 2026 +0530|index on main: 643bf60 🚀 The Goated Restoration: Re-integrated history, Deep Indigo theme, and removed broken components
+5c348beb0199d85b81c8e9e60fa7cb931398f7dd|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:44:11 2026 +0530|WIP on main: 643bf60 🚀 The Goated Restoration: Re-integrated history, Deep Indigo theme, and removed broken components
+fafa1c70cfa63f60f23174b4c1b9b7bee255bfbb|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:25:01 2025 +0530|Initial commit
+ff4cc409ea1cbcd5a052c3f273020c534ca4766c|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:38:58 2025 +0530|Update README.md
+8e2b1d2a71bece85f77edf4e23c962ebdb307924|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:40:24 2025 +0530|Update README.md
+24da4783c046fa738f9d2e7705eae9adfb7db930|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:58:23 2025 +0530|Update README.md
+6139828a3c1d70bee5195042209867369ec92e2b|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:08:22 2025 +0530|Update README.md
+8271dff206c4bfd9e71cf1dd4ed93460d60df93d|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:09:53 2025 +0530|Update README.md
+e9a892d99a5aaf1c9a566d065db8358727b8aef7|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:15:10 2025 +0530|Update README.md
+94511b7b404880364086277dd63d2e63c38219ff|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:16:20 2025 +0530|Update README.md
+a94cecfbdb93e97f95467a3a66dec2016fec91ef|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:17:39 2025 +0530|Update README.md
+f72bfe2a97a527588df338ecb5e10d7973c1935c|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:40:51 2025 +0530|Update README.md
+957fad30dc2d868980148f092d2460d268d695f6|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:41:48 2025 +0530|Update README.md
+6b6fc943955dadcabbb0217cb7a4cb72c4df1aa4|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:42:21 2025 +0530|Update README.md
+151c08df705d2d2a403ec196389916618d1129f9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:42:49 2025 +0530|Update README.md
+8ea22ecd203ca0dbb86b8166c25392a3708d9898|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jun 20 20:43:28 2025 +0530|Update README.md
+3bb5106b4eb042309810001f075563d09bfa5871|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jun 20 20:49:27 2025 +0530|Update README.md
+aae2a581623ed5e1ae91784bfd2755487287e087|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jul 11 18:40:56 2025 +0530|Update README.md
+3d6a151cf3e2b8aabc88767145c89911ca4ed6d5|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:24:20 2025 +0530|No More Flashbangbang : )
+a8e266b3044d78ac7e00e5997186600aadef7798|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:36:18 2025 +0530|Create main.yml
+52ec992b81c122ed7c1da61a518598ea238c3841|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:39:04 2025 +0530|Update main.yml
+20094b080af8c238a337b96bac176ca7f3f7f943|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:40:34 2025 +0530|Update main.yml
+96d611c4b4fc9258773bd41e2b43a5f87fc9d65b|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:45:34 2025 +0530|Update main.yml
+3b2432d270d891e424e6e2e69f4c66f6b5e008cf|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:48:36 2025 +0530|Update main.yml
+6dceb799da10c985ada678c78a10623fab992105|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Tue Jul 22 23:03:10 2025 +0530|Fix GitHub Actions metrics workflow authentication and EJS template error
+92c05a503a8c213d8231397446b33160a8186945|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Tue Jul 22 23:45:08 2025 +0530|Fix workflow dependencies and disable problematic plugins
+49a19ae1db5f929b2cd0083aa38d04a58b88b369|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:03:40 2025 +0530|Replace workflow with Chris Titus Tech's proven configuration
+05f4306b9c1f93afc3a8e2c4c9d876f409051220|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:19:24 2025 +0530|Add gitignore
+f336fd733dc88a1198038f59387c96449577576d|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Jul 23 00:32:03 2025 +0530|Create readme2.md
+aaf88dd78af557e84ee6ce67a14973a30e391971|Paranjay <kparanjay245@gmail.com>|Wed Jul 23 00:37:38 2025 +0530|refactor: remove contribution calendar and starred repos from metrics
+aa3994b99377b39c0a64b06d8af4824d59bbf772|Paranjay <kparanjay245@gmail.com>|Wed Jul 23 00:49:26 2025 +0530|Latest
+76d87454acaf619baac7bc74a9d5f5d397d8b665|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Mar 18 12:30:22 2026 +0530|Add GitHub Streak badge to profile README
+c5656e10f5b9f5a317118e075be3cfa55b62aa2a|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:25:01 2025 +0530|Initial commit
+e042c787ff562e44c7ff34681749ecc20116295b|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:38:58 2025 +0530|Update README.md
+ebb2e07dbd8f74d1cd68736f24e58aa0857a123e|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:40:24 2025 +0530|Update README.md
+2d090e84d5fad79d9045b6981572db5650bded71|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:58:23 2025 +0530|Update README.md
+c47be2a09a760eae717bfec9342cf782b444fc38|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:08:22 2025 +0530|Update README.md
+e01a4652565d52a9d71f1d4f00079fe6fd47c35c|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:09:53 2025 +0530|Update README.md
+7de694d35e7cd29ebdc76e11c5c184445a00b765|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:15:10 2025 +0530|Update README.md
+72ff09191d5886ad9546301663f99c37547e636e|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:16:20 2025 +0530|Update README.md
+7152a0ea641c9a19269c9036fa72b79329e9b4e9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:17:39 2025 +0530|Update README.md
+9e7fc647655dd22aebe175bc9657cc630cae98ab|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Jun 18 15:10:49 2025 +0530|Update README.md
+2968312986b262908591c17fe97f6e6a0258bd61|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:38:09 2025 +0530|Update README.md
+02c4bfbda1b432df92dcf6ec0f47e75e950a10d3|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:40:51 2025 +0530|Update README.md
+b89a032d8bc94b4be0cec845cabb134ce34836bf|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:41:48 2025 +0530|Update README.md
+d5bbe911bc5986c9f433526518dc0f3168b5f9d4|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:42:21 2025 +0530|Update README.md
+cc53cc91e82dd2d01a42db1f1379eebcf493c844|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:42:49 2025 +0530|Update README.md
+a7cb9b69ded0a74279b2b1bf12515144b0820aa9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jun 20 20:43:28 2025 +0530|Update README.md
+6fe9b044c86c5e4187898f0b261617f4612c7fc7|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jun 20 20:49:27 2025 +0530|Update README.md
+58c573731121dbe8990c5d05bc44c2471befbf2f|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sun Jun 22 02:09:22 2025 +0530|Update README.md
+f4405b485c8496e4c09475ae82c8555a64e1a6b5|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jun 24 01:21:30 2025 +0530|Update README.md
+f6b467d043309a54dae2aa3e52ebc804d3cbb413|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jun 24 03:22:22 2025 +0530|Update README.md
+01d3eedd100332d418e531d5064868f20c649140|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 26 13:57:58 2025 +0530|Update README.md
+1bd92bbc25977a0d02cd0a7588d6471e005c3782|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 26 14:04:31 2025 +0530|Update README.md
+666bae09dd4ae56805cb6fc569b0cabcd090ac54|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jul 11 18:40:56 2025 +0530|Update README.md
+d8c35e51e6468f4b350a1c56791f9f6061a74d1e|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:24:20 2025 +0530|No More Flashbangbang : )
+f1a8830c52f88d43b3f40ac2848ae455366c7f34|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:26:01 2025 +0530|Update README.md
+c280d98d41b7be93438945a0c06ee7e8c1d291b6|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:27:41 2025 +0530|Update README.md
+2370524ef01a201f553a60a676660a19f28bf546|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:28:28 2025 +0530|Update README.md
+046580baeb7f50f711117e87f455ea339f4c4fc2|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:36:18 2025 +0530|Create main.yml
+d4d68e149f44a135d13d0c9b3a879fbc7b9794c9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:39:04 2025 +0530|Update main.yml
+61a51d92e7bdea891751039afc59d23f676086cf|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:40:34 2025 +0530|Update main.yml
+8b8d6cc0f549365c9710b21593d17fa84231b934|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:45:34 2025 +0530|Update main.yml
+4a79a7c3816d763f15ed73915f061d55b2a3eafc|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:48:36 2025 +0530|Update main.yml
+e0302d40683541764499958ca1180f1f4b6089cf|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 18:00:17 2025 +0530|Update README.md
+8b73cb64a17beb797e36f8a84b348ab2767af96b|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Tue Jul 22 23:03:10 2025 +0530|Fix GitHub Actions metrics workflow authentication and EJS template error
+13de3415f0919411587ce7f4925f6cd35506d494|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Tue Jul 22 23:45:08 2025 +0530|Fix workflow dependencies and disable problematic plugins
+0f7a515c7b75792f0bde6f21cbd34204a3666646|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:03:40 2025 +0530|Replace workflow with Chris Titus Tech's proven configuration
+e487214b130fc6ff0b0d2e654887fa64c59ab129|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:19:24 2025 +0530|Add gitignore
+26743ce7cba8097ee79e6047b8c3f9b0dc1f3a10|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:20:36 2025 +0530|Update README to use generated GitHub metrics SVG
+a3179c1d3752aedcd5b850e2cd21ee39d2394cd3|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Jul 23 00:29:56 2025 +0530|Update README.md
+05a6a35d855ca18407dde7f92f159ee1951f6e72|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Jul 23 00:32:03 2025 +0530|Create readme2.md
+1b05a170fdf12c377b4b96e55df357c0b8f68937|Paranjay <kparanjay245@gmail.com>|Wed Jul 23 00:37:38 2025 +0530|refactor: remove contribution calendar and starred repos from metrics
+b448e9d498af2d66d6e912b615a17821a474f4ca|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sun Aug 24 00:30:57 2025 +0530|Update README.md
+bba6dcd2d7dede07cb81a591ab09fc9ce8553651|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sun Aug 24 00:33:31 2025 +0530|Update README.md
+6f72d6cce15ff2e560c72ee4e4b408c84d172ee9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Sep 19 08:03:52 2025 +0530|Update README.md
+f648f7603ebfc3229b35bf49c32d244c0dffff15|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Oct 21 16:52:16 2025 +0530|Clean up README.md by removing links and personal info
+c64dac8c865254a515bb13fb8b9f1763f8a63bc9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Oct 25 15:38:51 2025 +0530|cooler things tryyyyyy
+68374ec0ab5831d021ca6dd2b489f69986e12df2|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Nov 28 06:08:27 2025 +0530|Update README with personal introduction and projects
+454c63e213b783601e9d9da6e22f88510502feae|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Nov 28 06:28:52 2025 +0530|Revise README for improved presentation and content
+12eb23b8ddffaebb969a5fe13c88d01711a5d448|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Feb 2 08:50:08 2026 +0530|Merge pull request #2 from Paranjayy/copilot/add-github-repo-views
+207b5e066fb6ea5c1b50bb37cd31f65bd948006a|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Mar 18 12:30:22 2026 +0530|Add GitHub Streak badge to profile README
+2d5b50d4b56674b6f04b90d14a6455eeba4c0ef0|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Mar 20 23:54:27 2026 +0530|Add GitHub Stars badge to README
+adfa487bde36e8750c217bfb9a4206d7b4cff907|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 01:15:37 2026 +0530|Merge pull request #5 from Paranjayy/copilot/add-github-config-similar-to-steam
+8b4be64dc3d2e2efac2abaa169e38b5313461244|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 02:10:55 2026 +0530|Merge pull request #6 from Paranjayy/copilot/disable-github-metrics
+2445f480fe8670b5df53bbcfb243641bb8c40bd8|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 02:11:50 2026 +0530|Remove Gravatar profile from README
+ef18c0332085211f075eae756786d5385a47c59d|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 02:24:49 2026 +0530|Merge pull request #7 from Paranjayy/copilot/fix-steam-issue
+3eba1a67546533039fdf823dbe2b2b2d90966601|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:09:22 2026 +0530|Merge pull request #8 from Paranjayy/copilot/fix-steam-api-issues
+9cf14b0679ac0fcb649d8d53ebdd2142bc679938|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:28:26 2026 +0530|Merge pull request #9 from Paranjayy/copilot/combine-broken-functionality
+368d37e37cb65ba0b5f1647a79964444f75602b6|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:43:35 2026 +0530|Merge pull request #10 from Paranjayy/copilot/fix-broken-feature
+14c17aaee25557d3a3f85d5463854ca7e965d893|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:46:30 2026 +0530|Update summary section in README.md
+85f967317f0b09efd7fea6297e4216b132eb5639|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 03:54:40 2026 +0530|Merge pull request #11 from Paranjayy/copilot/test-steam-functionality
+85f149aaf33ead30fd0f2622873b844333807467|paranjay <kparanjay245@gmail.com>|Sat Mar 21 04:16:58 2026 +0530|Fix Steam metrics config and add stats cards in toggle
+f3595c95c1700b8a4a1d1457073695e2dc5736d6|paranjay <kparanjay245@gmail.com>|Sat Mar 21 04:54:27 2026 +0530|Enhance WakaTime section with full stats card and GIF
+3f098e3dbf6281962fe37dc1f56c78e5988c9427|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Mar 21 04:57:41 2026 +0530|Remove coding mode image from README
+9374aa311f987c75681e885bd178987b7ec3937f|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Mar 23 00:51:20 2026 +0530|Remove social media links from README
+3c140deb65d44ea36643b993f1c9be9cfe6b0c31|paranjay <kparanjay245@gmail.com>|Fri Apr 24 23:38:52 2026 +0530|🚀 Profile Overhaul: Christina-style stats, Trophies, Skill Icons, and Music integration
+7dbc7b69170269abed211a437fcba3eaca510fd2|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:31:10 2026 +0530|🚀 Final Goated: Slate & Gold theme, fixed hiring status, and bot-free history prep
+b71f98a9ac5c3eccda2bdf24b970bdc4318a4ef7|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:31:29 2026 +0530|🚀 Pre-cleanup: Slate & Gold theme
+c216bee159ee44de7d10d2e885baaec11a003865|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:31:38 2026 +0530|🚀 The Final Goated State
+aa23689edf54e63b2ff2a9a08486e47047acc48b|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:38:24 2026 +0530|🚀 The Goated Restoration: Re-integrated history, Deep Indigo theme, and removed broken components
+ae46a8b9f0242d0105acd28d32607a68d2c660a9|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:44:11 2026 +0530|index on main: 643bf60 🚀 The Goated Restoration: Re-integrated history, Deep Indigo theme, and removed broken components
+ae3f5728f84df4a77819627cd46d7150e81cfa27|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:46:08 2026 +0530|🚀 The Goated Final: Sunset theme & commented skills [skip ci]
+0a6c29b4b8a704134ce7187206f840aca3c6703b|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:25:01 2025 +0530|Initial commit
+110b88a5e51958f0da938f237648188abcdaa163|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:38:58 2025 +0530|Update README.md
+a10ab2b7e3b9f3505011638369df38e8750c4977|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:40:24 2025 +0530|Update README.md
+c972eed53bad4baf36f2474fde888d97086a5cd9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 03:58:23 2025 +0530|Update README.md
+4adac338d0081ef49a580c179a0c6e02b856fcae|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:08:22 2025 +0530|Update README.md
+5499a27dc6a3ea1319c52a409d71a696cf95d5de|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:09:53 2025 +0530|Update README.md
+48c5562bacaca40907925457b4af366974dedcbf|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:15:10 2025 +0530|Update README.md
+23872a154cba0680ab260b436433ed4e54baebd7|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:16:20 2025 +0530|Update README.md
+0cb38f9eb266158e23f31edd391a68bc91ead4a2|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Mon Jun 16 04:17:39 2025 +0530|Update README.md
+b884b4826abadad7be8f3ef3d985ab3530eb8c7a|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:40:51 2025 +0530|Update README.md
+944fbc9fedf83525bc72b96a9ae7f85945d37017|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:41:48 2025 +0530|Update README.md
+ade460f1dd01669cc49ff383d2e738c70d9cb0ae|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:42:21 2025 +0530|Update README.md
+4dba39130358c5a8af90a5dbb2cad8ef71fadf3e|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Thu Jun 19 22:42:49 2025 +0530|Update README.md
+4fa9d0d2e701b533c6ee7e588921c36cacdbcff9|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jun 20 20:43:28 2025 +0530|Update README.md
+da470fcf4a941a20d9b5b965d674544c2c9ac9c4|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jun 20 20:49:27 2025 +0530|Update README.md
+dd69588139ad1463255a078d3f9abb65f9cce2c7|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Fri Jul 11 18:40:56 2025 +0530|Update README.md
+fea1a8cac2ac189eb905acc6c1c94f539fa4e02e|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Sat Jul 19 00:24:20 2025 +0530|No More Flashbangbang : )
+8703c2a7cec29ebef3a5387d14e88c12f4ad943e|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:36:18 2025 +0530|Create main.yml
+9bffd0a585ef24cd9cd6fadad368e5aefad342ca|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:39:04 2025 +0530|Update main.yml
+df824d9d5e41e643bb8e571f7f458a4321ef21ef|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:40:34 2025 +0530|Update main.yml
+4badf6e9c96bab1e062dd58c67f7f841c631ac46|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:45:34 2025 +0530|Update main.yml
+ebd2c839d938216379b3ab8a0b8fc04ae89d14ce|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Tue Jul 22 17:48:36 2025 +0530|Update main.yml
+2f7725d4f02b769b621137c60123b3fa96f717a5|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Tue Jul 22 23:03:10 2025 +0530|Fix GitHub Actions metrics workflow authentication and EJS template error
+00a100149ce640695488bd207f59b68e4bd4a895|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Tue Jul 22 23:45:08 2025 +0530|Fix workflow dependencies and disable problematic plugins
+b95b6b801888e9165130b40bbc647c9c6d952bed|Paranjay Khachar <paranjay@Paranjays-MacBook-Air.local>|Wed Jul 23 00:03:40 2025 +0530|Replace workflow with Chris Titus Tech's proven configuration
+eb109d6dc010f8d7e4da7a87ab073a10b63678e2|Paranjay <kparanjay245@gmail.com>|Wed Jul 23 00:37:38 2025 +0530|refactor: remove contribution calendar and starred repos from metrics
+dd6d0d86479c46436fa4201750afe8e07fab0966|Paranjay <120307516+Paranjayy@users.noreply.github.com>|Wed Mar 18 12:30:22 2026 +0530|Add GitHub Streak badge to profile README
+9c05d9de49850e7734fa0b6d7890ef4ecd2c5c2b|paranjay <kparanjay245@gmail.com>|Sat Apr 25 04:44:43 2026 +0530|index on clean_main: f18388f Update github-metrics.svg - [Skip GitHub Action]
