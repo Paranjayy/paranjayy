@@ -1,1 +1,7 @@
-chatty.md
+.DS_Store
+__pycache__/
+*.pyc
+metrics.json
+node_modules/
+dist/
+.env
