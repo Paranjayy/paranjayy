@@ -18,7 +18,7 @@
 
 <div align="center">
   <a href="https://github.com/paranjayy">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=800&lines=An+Aspiring+SDE;Currently+Learning+%26+Exploring+%F0%9F%93%9A;~54+hrs+22+mins+coded+this+month%20%E2%8C%A8%EF%B8%8F" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=800&lines=An+Aspiring+SDE;Currently+Learning+%26+Exploring+%F0%9F%93%9A;~54+hrs+23+mins+coded+this+month%20%E2%8C%A8%EF%B8%8F" alt="Typing SVG" />
   </a>
 </div>
 
