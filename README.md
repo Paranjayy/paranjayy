@@ -213,7 +213,26 @@ Python                   1 repo              ░░░░░░░░░░░�
   </div>
 </details>
 <!-- 
+  🚀 PORTFOLIO ROADMAP 
+  - Redirection: paranjayy.github.io -> paranjayy.com (Once domain is live)
+  - Portfolio Build: [Link your portfolio repository here when ready]
+-->
+
+<!-- 
+  🛠️ FEATURED PROJECTS 
+  - SocialHoardr: [Short Description]
+  - IPL 2026 Engine: [Short Description]
+  - Nexus Dev Toolbox: [Short Description]
+  - Workout Buddy: [Short Description]
+
+  IDEAS FOR DISPLAY:
+  | Project | Status | Tech Stack | Link |
+  | :--- | :--- | :--- | :--- |
+  | SocialHoardr | 🏗️ In Progress | TypeScript, Next.js | [Link] |
+-->
+
+<!-- 
   FUTURE TASK REMINDER: 
-  Fix the 'cursed' commit history (sorting/metadata polish) once the portfolio 
+  Fix the commit history (sorting/metadata polish) once the portfolio 
   and domain redirection (github.io -> custom domain) are fully stable.
 -->
