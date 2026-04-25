@@ -16,9 +16,15 @@ This is an experimental playground for the next generation of profile telemetry.
 *A section to show current deep-dives and research areas.*
 > Currently exploring: **Agentic Coding, SVG Animation Engines, and Real-time Telemetry.**
 
+### 4. Steam Achievement Pulse
+*Showing the latest/rarest achievements and playtime.*
+<div align="center">
+  <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/steam-card.svg" alt="Steam Pulse" />
+</div>
+
 ---
 
-### 4. LeetCode Intel Pulse
+### 5. LeetCode Intel Pulse
 *Dynamic coding challenge streaks and rank visualization.*
 <div align="center">
   <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/leetcode-card.svg" alt="LeetCode Pulse" />
@@ -28,9 +34,10 @@ This is an experimental playground for the next generation of profile telemetry.
 
 ## 💡 Future Feature Roadmap
 - [ ] **Monkeytype Live Stream**: Integrating actual replay data into the card.
-- [ ] **Steam Achievement Pulse**: Showing the latest/rarest achievements earned.
+- [x] **Steam Achievement Pulse**: Showing the latest/rarest achievements earned. (PROTOTYPE LIVE)
 - [x] **LeetCode Intel**: Dynamic coding challenge streaks and rank visualization. (PROTOTYPE LIVE)
 - [ ] **Personal Design System**: A dedicated page for brand tokens used across all 'paranjay' projects.
+
 
 ---
 

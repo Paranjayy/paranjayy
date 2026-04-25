@@ -43,6 +43,7 @@
       
       <text x="210" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">60 SEC PB</text>
       <text x="210" y="25" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">-</text>
+      <text x="210" y="45" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">TEST TIME: <tspan fill="#F0F6FC">-</tspan></text>
 
       <text x="310" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">WORDS TYPED</text>
       <text x="310" y="25" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">142</text>
@@ -53,9 +54,9 @@
 
   <!-- Footer Metrics -->
   <g transform="translate(20, 210)">
-    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TESTS COMPLETED: <tspan fill="#F0F6FC" font-weight="bold">6</tspan></text>
-    <text x="140" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TIME TYPING: <tspan fill="#F0F6FC" font-weight="bold">0h 3m</tspan></text>
-    <text x="270" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOTAL XP: <tspan fill="#F0F6FC" font-weight="bold">771</tspan></text>
-    <text x="360" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">STREAK: <tspan fill="#E2B714" font-weight="bold">1 DAYS</tspan></text>
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TESTS: <tspan fill="#F0F6FC" font-weight="bold">6/6</tspan></text>
+    <text x="100" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TIME TYPING: <tspan fill="#F0F6FC" font-weight="bold">0h 3m</tspan></text>
+    <text x="225" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOTAL XP: <tspan fill="#F0F6FC" font-weight="bold">771</tspan></text>
+    <text x="315" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">STREAK: <tspan fill="#E2B714" font-weight="bold">1 DAYS</tspan></text>
   </g>
 </svg>

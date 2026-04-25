@@ -1,8 +1,9 @@
+import requests
+import re
 import os
 
 def update_monkeytype():
     print(f"Syncing Monkeytype Stats...")
-    # Comprehensive stats from user profile screenshot & snapshots
     stats = {
         "wpm_15": "-", "wpm_30": "92", "wpm_60": "-", "wpm_120": "-",
         "acc_30": "99%",
@@ -10,10 +11,10 @@ def update_monkeytype():
         "time_typing": "0h 3m", "xp": "771", "level": "5", 
         "streak": "1", "joined": "02 Feb 2025",
         "words_typed": "142", "chars_typed": "710",
-        "consistency": "94%", "cpm": "460"
+        "consistency": "94%", "cpm": "460",
+        "time_60s": "-", "time_120s": "-"
     }
 
-    # User provided Monkeytype Logo
     logo_svg = """<g transform="scale(0.15) translate(0, 0)">
         <path d="M250,120C255.519,120 260,124.481 260,130C260,135.519 255.519,140 250,140C244.481,140 240,135.519 240,130C240,124.481 244.481,120 250,120Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
         <path d="M110,120L170,120C175.519,120 180,124.481 180,130C180,135.519 175.519,140 170,140L110,140C104.481,140 100,135.519 100,130C100,124.481 104.481,120 110,120Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
@@ -61,6 +62,7 @@ def update_monkeytype():
       
       <text x="210" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">60 SEC PB</text>
       <text x="210" y="25" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">{stats['wpm_60']}</text>
+      <text x="210" y="45" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">TEST TIME: <tspan fill="#F0F6FC">{stats['time_60s']}</tspan></text>
 
       <text x="310" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">WORDS TYPED</text>
       <text x="310" y="25" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="18">{stats['words_typed']}</text>
@@ -71,17 +73,17 @@ def update_monkeytype():
 
   <!-- Footer Metrics -->
   <g transform="translate(20, 210)">
-    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TESTS COMPLETED: <tspan fill="#F0F6FC" font-weight="bold">{stats['tests_completed']}</tspan></text>
-    <text x="140" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TIME TYPING: <tspan fill="#F0F6FC" font-weight="bold">{stats['time_typing']}</tspan></text>
-    <text x="270" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOTAL XP: <tspan fill="#F0F6FC" font-weight="bold">{stats['xp']}</tspan></text>
-    <text x="360" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">STREAK: <tspan fill="#E2B714" font-weight="bold">{stats['streak']} DAYS</tspan></text>
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TESTS: <tspan fill="#F0F6FC" font-weight="bold">{stats['tests_completed']}/{stats['tests_started']}</tspan></text>
+    <text x="100" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TIME TYPING: <tspan fill="#F0F6FC" font-weight="bold">{stats['time_typing']}</tspan></text>
+    <text x="225" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOTAL XP: <tspan fill="#F0F6FC" font-weight="bold">{stats['xp']}</tspan></text>
+    <text x="315" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">STREAK: <tspan fill="#E2B714" font-weight="bold">{stats['streak']} DAYS</tspan></text>
   </g>
 </svg>"""
 
     os.makedirs("metrics", exist_ok=True)
     with open("metrics/monkeytype-card.svg", "w") as f:
         f.write(svg_content)
-    print("Monkeytype comprehensive card updated (Original Logo & Fixed Cropping).")
+    print("Monkeytype comprehensive card updated (Fixed Streak Crop & Added details).")
 
 if __name__ == "__main__":
     update_monkeytype()
