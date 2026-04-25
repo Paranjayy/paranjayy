@@ -62,7 +62,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      # 1. WakaTime HUGE ASCII
+      # 1. Monkeytype Dynamic Update
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: pip install requests
+        
+      - name: Update Monkeytype Card
+        run: python scripts/update_monkeytype.py
+
+      # 2. WakaTime HUGE ASCII
       - name: WakaTime Awesome ASCII
         uses: anmol098/waka-readme-stats@master
         continue-on-error: true
@@ -85,7 +97,7 @@ jobs:
           SHOW_TOTAL_CODE_TIME: "True"
           SECTION_NAME: "waka"
 
-      # 2. GitHub Stats (Output to metrics/)
+      # 3. GitHub Stats
       - name: Update Star Badges
         run: |
           RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -106,7 +118,7 @@ jobs:
           sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
 
-          # 3. Custom Hiring Status
+          # 4. Custom Hiring Status
           sed -i "s/.*Not Opted to Hire.*/🚫 Not Opted to Hire (Currently Studying \& Learning 📚)/g" README.md
           
       - name: Commit & Push README Updates
@@ -114,6 +126,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md metrics/
-          git commit -m "chore: update awesome stats [skip ci]" || echo "No changes to commit"
+          git commit -m "chore: update intelligence hub metrics" || echo "No changes to commit"
           git pull --rebase origin main
           git push
