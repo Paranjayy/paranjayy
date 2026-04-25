@@ -6,6 +6,13 @@ on:
   workflow_dispatch:
   push:
     branches: ["main"]
+    paths-ignore:
+      - 'metrics/**'
+      - 'README.md'
+
+concurrency:
+  group: profile-intelligence
+  cancel-in-progress: true
 
 jobs:
   # ── Metrics Engine (SVG Cards) ─────────────────────────────────────────────
@@ -107,7 +114,7 @@ jobs:
           if [ -z "$GIVEN" ] || [ "$GIVEN" == "null" ]; then GIVEN=0; fi
           if [ -z "$RECEIVED" ] || [ "$RECEIVED" == "null" ]; then RECEIVED=0; fi
           
-          GIVEN_BADGE='  <img src="https://img.shields.io/badge/Starred-'"$GIVEN"'-10b981?logo=github&logoColor=white" alt="Starred Repos" />'
+          GIVEN_BADGE='  <img src="https://img.shields.io/badge/Starred-'"$GIVEN"'-065f46?logo=github&logoColor=white" alt="Starred Repos" />'
           sed -i "/<!-- STARRED_COUNT -->/,/<!-- \/STARRED_COUNT -->/{ /<!-- STARRED_COUNT -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
           sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
           
@@ -117,9 +124,9 @@ jobs:
           
       - name: Commit & Push README Updates
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add README.md metrics/
-          git commit -m "chore: update intelligence hub metrics" || echo "No changes to commit"
+          git commit -m "chore: update intelligence hub metrics [skip ci]" || echo "No changes to commit"
           git pull --rebase origin main
           git push

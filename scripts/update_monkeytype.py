@@ -1,102 +1,76 @@
 import requests
-import re
 import os
 
-# --- HOW TO PERSONALIZE ---
-# 1. Change the username in the requests.get() URL below.
-# 2. Ensure your Monkeytype profile is public.
-# 3. This script will automatically update metrics/monkeytype-card.svg.
-# --------------------------
-
 def update_monkeytype():
+    username = "paranjayy"
+    print(f"Fetching Monkeytype stats for {username}...")
+    
     try:
-        # 1. Fetch Latest Stats
-        username = "paranjayy"
         response = requests.get(f"https://api.monkeytype.com/users/{username}/profile")
         response.raise_for_status()
         data = response.json()["data"]
         
-        pbs = data.get("personalBests", {})
-        time_pbs = pbs.get("time", {})
-        word_pbs = pbs.get("words", {})
-        
-        all_time_lbs = data.get("allTimeLbs", {}).get("time", {})
+        # Extract core stats
+        pbs = data.get("personalBests", {}).get("time", {})
+        wpm_15 = round(pbs.get("15", [{}])[0].get("wpm", 0)) if pbs.get("15") else "-"
+        wpm_30 = round(pbs.get("30", [{}])[0].get("wpm", 0)) if pbs.get("30") else "-"
+        wpm_60 = round(pbs.get("60", [{}])[0].get("wpm", 0)) if pbs.get("60") else "-"
         
         typing_stats = data.get("typingStats", {})
-        completed_tests = typing_stats.get("completedTests", 0)
+        tests_completed = typing_stats.get("completedTests", 0)
         time_typing_seconds = typing_stats.get("timeTyping", 0)
+        hours = time_typing_seconds // 3600
+        minutes = (time_typing_seconds % 3600) // 60
+        
         xp = data.get("xp", 0)
         streak = data.get("streak", 0)
-        
-        # Format Time (MM:SS)
-        minutes = time_typing_seconds // 60
-        seconds = time_typing_seconds % 60
-        time_str = f"{minutes:02d}:{seconds:02d}"
-        
-        # 2. Update SVG Template
-        svg_path = "metrics/monkeytype-card.svg"
-        if not os.path.exists(svg_path):
-            print(f"Error: {svg_path} not found.")
-            return
-            
-        with open(svg_path, "r") as f:
-            content = f.read()
-            
-        def get_pb_vals(category, key):
-            mode_data = category.get(str(key))
-            if mode_data:
-                pb = mode_data[0]
-                return round(pb["wpm"]), round(pb["acc"])
-            return "-", "-"
 
-        def get_rank_str(time_key):
-            lb_data = all_time_lbs.get(str(time_key))
-            if lb_data and lb_data.get("rank"):
-                rank = lb_data["rank"]
-                # Add suffix
-                if 11 <= (rank % 100) <= 13:
-                    suffix = "th"
-                else:
-                    suffix = {1: "st", 2: "nd", 3: "rd"}.get(rank % 10, "th")
-                return f"{rank}{suffix}"
-            return "-"
+        # SVG Generation (High Fidelity, Self-Contained)
+        svg_content = f"""<svg width="500" height="200" viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header {{ font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e2b714; }}
+    .stat-label {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #646669; }}
+    .stat-value {{ font: bold 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e2b714; }}
+    .meta-label {{ font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #646669; }}
+    .meta-value {{ font: bold 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #d1d0c5; }}
+  </style>
+  
+  <rect width="500" height="200" rx="12" fill="#171A20"/>
+  <rect x="0.5" y="0.5" width="499" height="199" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
 
-        # Update Time-based PBs & Ranks
-        for t in [15, 30, 60, 120]:
-            wpm, acc = get_pb_vals(time_pbs, t)
-            rank = get_rank_str(t)
-            acc_val = f"{acc}%" if acc != "-" else "-"
-            
-            # Find the specific block for the time value
-            pattern = rf'(<text x="0" y="0" class="stat-label">{t} seconds</text>\s+<text x="0" y="22" class="stat-wpm">).*?(</text>\s+<text x="0" y="38" class="stat-acc">).*?(</text>\s+<text x="0" y="52" class="stat-rank">).*?(</text>)'
-            content = re.sub(pattern, rf'\g<1>{wpm}\g<2>{acc_val}\g<3>{rank}\g<4>', content, flags=re.DOTALL)
+  <text x="25" y="35" class="header">Monkeytype Intelligence</text>
+  
+  <!-- Personal Bests -->
+  <g transform="translate(25, 70)">
+    <text x="0" y="0" class="stat-label">15 SEC PB</text>
+    <text x="0" y="25" class="stat-value">{wpm_15} <tspan font-size="12" font-weight="normal" fill="#646669">WPM</tspan></text>
+    
+    <text x="160" y="0" class="stat-label">30 SEC PB</text>
+    <text x="160" y="25" class="stat-value">{wpm_30} <tspan font-size="12" font-weight="normal" fill="#646669">WPM</tspan></text>
+    
+    <text x="320" y="0" class="stat-label">60 SEC PB</text>
+    <text x="320" y="25" class="stat-value">{wpm_60} <tspan font-size="12" font-weight="normal" fill="#646669">WPM</tspan></text>
+  </g>
 
-        # Update Word-based PBs
-        for w in [10, 25, 50, 100]:
-            wpm, acc = get_pb_vals(word_pbs, w)
-            acc_val = f"{acc}%" if acc != "-" else "-"
-            pattern = rf'(<text x="0" y="0" class="stat-label">{w} words</text>\s+<text x="0" y="22" class="stat-wpm">).*?(</text>\s+<text x="0" y="38" class="stat-acc">).*?(</text>)'
-            content = re.sub(pattern, rf'\g<1>{wpm}\g<2>{acc_val}\g<3>', content, flags=re.DOTALL)
+  <!-- Divider -->
+  <line x1="25" y1="130" x2="475" y2="130" stroke="#2D333B" stroke-width="1"/>
 
-        # Update Footer Stats
-        content = re.sub(r'(tests completed:.*class="meta-value">)\d+(</text>)', rf'\g<1>{completed_tests}\g<2>', content)
-        content = re.sub(r'(typing time:.*class="meta-value">)\d+:\d+(</text>)', rf'\g<1>{time_str}\g<2>', content)
-        content = re.sub(r'(xp earned:.*class="meta-value">)\d+(</text>)', rf'\g<1>{xp}\g<2>', content)
-        content = re.sub(r'(streak:.*class="meta-value">)\d+(</text>)', rf'\g<1>{streak}\g<2>', content)
-        
-        # Accent bar progress
-        main_wpm, _ = get_pb_vals(time_pbs, 30)
-        if main_wpm != "-":
-            progress_width = (float(main_wpm) / 100) * 550
-            content = re.sub(r'(width=")\d+(\.?\d*)(" height="3" rx="1.5" fill="#e2b714")', rf'\g<1>{progress_width}\g<2>', content)
+  <!-- Footer Stats -->
+  <g transform="translate(25, 160)">
+    <text x="0" y="0" class="meta-label">TESTS COMPLETED: <tspan class="meta-value">{tests_completed}</tspan></text>
+    <text x="140" y="0" class="meta-label">TIME TYPING: <tspan class="meta-value">{hours}h {minutes}m</tspan></text>
+    <text x="260" y="0" class="meta-label">XP: <tspan class="meta-value">{xp:,}</tspan></text>
+    <text x="380" y="0" class="meta-label">STREAK: <tspan class="meta-value">{streak} DAYS</tspan></text>
+  </g>
+</svg>"""
 
-        with open(svg_path, "w") as f:
-            f.write(content)
-            
-        print("Successfully updated Hyper-Granular Monkeytype stats with Ranks.")
-        
+        os.makedirs("metrics", exist_ok=True)
+        with open("metrics/monkeytype-card.svg", "w") as f:
+            f.write(svg_content)
+        print("Monkeytype card regenerated successfully.")
+
     except Exception as e:
-        print(f"Failed to update Monkeytype: {e}")
+        print(f"Error updating Monkeytype: {e}")
 
 if __name__ == "__main__":
     update_monkeytype()

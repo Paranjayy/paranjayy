@@ -22,20 +22,21 @@ def update_volt():
                 "top_artist": "Pritam",
                 "top_artist_time": "120h 15",
                 "top_song": "Agar Tum Saath Ho",
-                "top_song_artist": "Alka Yagnik"
+                "top_song_artist": "Alka Yagnik",
+                "monthly_plays": "1.2K",
+                "monthly_minutes": "84h 12"
             }
         else:
             response.raise_for_status()
             html = response.text
             
-            # Extract numbers using specific patterns from the provided DOM
+            # Extract numbers using specific patterns
             plays = re.search(r'text-primary">([\d\.,]+K?)</div>.*?Plays</div>', html, re.S)
             minutes = re.search(r'text-primary">([\d\w\s,]+)</div>.*?Minutes</div>', html, re.S)
             songs = re.search(r'text-primary">([\d,]+)</div>.*?Songs</div>', html, re.S)
             artists = re.search(r'text-primary">([\d,]+)</div>.*?Artists</div>', html, re.S)
             albums = re.search(r'text-primary">([\d,]+)</div>.*?Albums</div>', html, re.S)
             
-            # Extract Top Artist and Top Song
             top_artist = re.search(r'<span class="external-text">([^<]+)</span></a></div><span class="w-6 flex-1 shrink-0"></span><div class="mt-1.5 shrink-0"><button[^>]*><span>([^<]+)</span>', html)
             top_song = re.search(r'<a href="/track/[^"]+" class="link-plain external-text">([^<]+)</a></div><span class="text-gray-100"><a[^>]*>([^<]+)</a>', html)
 
@@ -48,23 +49,25 @@ def update_volt():
                 "top_artist": top_artist.group(1).strip() if top_artist else "Pritam",
                 "top_artist_time": top_artist.group(2).strip() if top_artist else "120h 15",
                 "top_song": top_song.group(1).strip() if top_song else "Agar Tum Saath Ho",
-                "top_song_artist": top_song.group(2).strip() if top_song else "Alka Yagnik"
+                "top_song_artist": top_song.group(2).strip() if top_song else "Alka Yagnik",
+                "monthly_plays": "1.2K", # Placeholder until monthly scraping logic refined
+                "monthly_minutes": "84h 12"
             }
 
         print(f"Extracted Data: {data}")
 
-        # SVG Template (High Fidelity Card)
-        svg_content = f"""<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="200" rx="12" fill="#171A20"/>
-  <rect x="0.5" y="0.5" width="399" height="199" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
+        # SVG Template (High Fidelity Card with Monthly Tab)
+        svg_content = f"""<svg width="400" height="230" viewBox="0 0 400 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="230" rx="12" fill="#171A20"/>
+  <rect x="0.5" y="0.5" width="399" height="229" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
   
   <!-- Header -->
   <text x="20" y="35" fill="#F0F6FC" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="bold" font-size="18">Volt.fm Music Intelligence</text>
-  <circle cx="360" cy="30" r="10" fill="#1DB954"/>
-  <path d="M360 25C357.239 25 355 27.2386 355 30C355 32.7614 357.239 35 360 35C362.761 35 365 32.7614 365 30C365 27.2386 362.761 25 360 25ZM363.313 32.5516C363.159 32.7937 362.84 32.8687 362.599 32.7153C361.026 31.7513 358.98 31.5265 356.666 32.0556C356.39 32.119 356.114 31.9472 356.05 31.6716C355.987 31.396 356.159 31.1197 356.434 31.0563C358.969 30.478 361.233 30.738 362.949 31.7884C363.191 31.9423 363.267 32.2612 363.113 32.5029L363.313 32.5516Z" fill="white"/>
+  <rect x="300" y="18" width="80" height="24" rx="12" fill="#1DB954" fill-opacity="0.1"/>
+  <text x="315" y="34" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="11">ALL TIME</text>
 
-  <!-- Stats Grid -->
-  <g transform="translate(20, 60)">
+  <!-- All-Time Stats -->
+  <g transform="translate(20, 65)">
     <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">PLAYS</text>
     <text x="0" y="20" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['plays']}</text>
     
@@ -75,20 +78,19 @@ def update_volt():
     <text x="240" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['songs']}</text>
   </g>
 
-  <g transform="translate(20, 110)">
-    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">ARTISTS</text>
-    <text x="0" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['artists']}</text>
-    
-    <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">ALBUMS</text>
-    <text x="120" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['albums']}</text>
+  <!-- Monthly Pulse -->
+  <g transform="translate(20, 115)">
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11" font-style="italic">MONTHLY PULSE</text>
+    <text x="0" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="14">{data['monthly_plays']} <tspan fill="#8B949E" font-weight="normal" font-size="10">PLAYS</tspan></text>
+    <text x="120" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="14">{data['monthly_minutes']} <tspan fill="#8B949E" font-weight="normal" font-size="10">MINS</tspan></text>
   </g>
 
   <!-- Top Highlights -->
-  <line x1="20" y1="150" x2="380" y2="150" stroke="#2D333B" stroke-width="1"/>
+  <line x1="20" y1="165" x2="380" y2="165" stroke="#2D333B" stroke-width="1"/>
   
-  <g transform="translate(20, 175)">
+  <g transform="translate(20, 195)">
     <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOP ARTIST: <tspan fill="#F0F6FC" font-weight="bold">{data['top_artist']}</tspan></text>
-    <text x="220" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOP SONG: <tspan fill="#F0F6FC" font-weight="bold">{data['top_song']}</tspan></text>
+    <text x="0" y="15" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOP SONG: <tspan fill="#F0F6FC" font-weight="bold">{data['top_song']}</tspan></text>
   </g>
 </svg>"""
 
