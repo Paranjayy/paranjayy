@@ -9,7 +9,7 @@ def update_monkeytype():
         "tests": "771", "time": "0h 3m", "xp": "771", "streak": "1"
     }
 
-    # Embedded Logo (User Provided) - Premium Scaling
+    # Embedded Logo (User Provided)
     logo_svg = """<g transform="scale(0.18) translate(0, 0)">
         <path d="M250,120C255.519,120 260,124.481 260,130C260,135.519 255.519,140 250,140C244.481,140 240,135.519 240,130C240,124.481 244.481,120 250,120Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
         <path d="M110,120L170,120C175.519,120 180,124.481 180,130C180,135.519 175.519,140 170,140L110,140C104.481,140 100,130C100,124.481 104.481,120 110,120Z" style="fill:rgb(226,183,20);fill-rule:nonzero;"/>
@@ -32,16 +32,13 @@ def update_monkeytype():
   <g transform="translate(20, 70)">
     <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">15 SEC PB</text>
     <text x="0" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{stats['wpm_15']} <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
-    
     <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">30 SEC PB</text>
     <text x="120" y="20" fill="#E2B714" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{stats['wpm_30']} <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
-    
     <text x="240" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">60 SEC PB</text>
     <text x="240" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{stats['wpm_60']} <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
   </g>
 
   <line x1="20" y1="110" x2="380" y2="110" stroke="#2D333B" stroke-width="1"/>
-  
   <g transform="translate(20, 132)">
     <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">XP: <tspan fill="#F0F6FC" font-weight="bold">{stats['xp']}</tspan></text>
     <text x="80" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TESTS: <tspan fill="#F0F6FC" font-weight="bold">{stats['tests']}</tspan></text>
@@ -52,7 +49,7 @@ def update_monkeytype():
     os.makedirs("metrics", exist_ok=True)
     with open("metrics/monkeytype-card.svg", "w") as f:
         f.write(svg_content)
-    print("Monkeytype card updated with Logo.")
+    print("Monkeytype card updated.")
 
 if __name__ == "__main__":
     update_monkeytype()

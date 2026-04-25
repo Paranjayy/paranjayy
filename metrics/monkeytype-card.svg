@@ -18,16 +18,13 @@
   <g transform="translate(20, 70)">
     <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">15 SEC PB</text>
     <text x="0" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">90 <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
-    
     <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">30 SEC PB</text>
     <text x="120" y="20" fill="#E2B714" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">92 <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
-    
     <text x="240" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">60 SEC PB</text>
     <text x="240" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">85 <tspan fill="#8B949E" font-weight="normal" font-size="10">WPM</tspan></text>
   </g>
 
   <line x1="20" y1="110" x2="380" y2="110" stroke="#2D333B" stroke-width="1"/>
-  
   <g transform="translate(20, 132)">
     <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">XP: <tspan fill="#F0F6FC" font-weight="bold">771</tspan></text>
     <text x="80" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TESTS: <tspan fill="#F0F6FC" font-weight="bold">771</tspan></text>

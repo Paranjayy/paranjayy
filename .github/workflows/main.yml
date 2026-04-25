@@ -105,7 +105,7 @@ jobs:
       - name: Update Star Badges
         run: |
           RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: [OWNER, COLLABORATOR]) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
+            -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
             https://api.github.com/graphql)
           
           GIVEN=$(echo $RESULT | jq '.data.user.starredRepositories.totalCount')
@@ -127,6 +127,6 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md metrics/
-          git commit -m "chore: update intelligence hub metrics [skip ci]" || echo "No changes to commit"
+          git commit -m "chore: update intelligence hub metrics" || echo "No changes to commit"
           git pull --rebase origin main
           git push
