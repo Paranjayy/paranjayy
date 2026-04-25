@@ -1,8 +1,13 @@
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
-  <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=%230e75b6" alt="GitHub Repo Views" />
-  <img src="https://img.shields.io/github/stars/paranjayy?style=flat&logo=github&label=Stars&color=%230e75b6" alt="GitHub Stars" />
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=2e1065&style=flat" alt="Profile views" />
+  <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
+  <!-- TOTAL_STARS -->
+  <img src="https://img.shields.io/badge/Stars-17-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
+  <!-- /TOTAL_STARS -->
+  <!-- STARRED_COUNT -->
+  <img src="https://img.shields.io/badge/Starred-3381-065f46?logo=github&logoColor=white" alt="Starred Repos" />
+  <!-- /STARRED_COUNT -->
 </p>
 
 <br>
@@ -10,292 +15,33 @@
 <img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
 
 <h2 align="center" >Hi there✨, I'm Paranjay <img src="https://media.tenor.com/_Utilxgj8RUAAAAj/peach-goma-peach-and-goma.gif" width="60" /></h2>
-<h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=An+Aspiring+SDE" alt="Typing SVG" /></a></h3>
 
-<!--
-**Paranjayy/paranjayy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<div align="center">
+  <a href="https://github.com/paranjayy">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=800&lines=An+Aspiring+SDE;Currently+Learning+%26+Exploring+%F0%9F%93%9A;~52+hrs+coded+this+month+%E2%8C%A8%EF%B8%8F" alt="Typing SVG" />
+  </a>
+</div>
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
----
-
-### 👩‍💻 About Me
-
-- 🔭 Learning full-stack development and solving daily DSA problems  
-- 💡 Participated in coding contests and hackathons like Flipkart Grid 6.0, CodeThon, Hack-ethon, DecoCX  
-- 💼 Member of   
-- 🎖️ Mentee at 0  
-- 🧠 Solved **+ DSA questions** on Hyperskill  
-- 💡 Solved **+ questions** on LeetCode  
-- 🌐 Created  mini-projects and UI-based web apps  
-- 🌸 Contributor at GSOC  
-- 📖 Love Watching Movies & Shows & Listening to banger Songs 🎶
-
--->
-<!--
-<h3 align="right">Tech Stack</h3>
-<table width="100%">
-	<thead>
-		<tr>
-			<th align="left" width="25%">Domain</th>
-			<th align="left" width="25%">Specialization</th>
-			<th align="right">Technologies</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>Core Programming</b></td>
-			<td>Problem Solving</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/Java-151b23?style=for-the-badge&logo=openjdk&logoColor=ED8B00"
-					alt="Java"
-				/>
-				<img
-					src="https://img.shields.io/badge/Python-151b23?style=for-the-badge&logo=python"
-					alt="Python"
-				/>
-				<img
-					src="https://img.shields.io/badge/Go-151b23?style=for-the-badge&logo=go"
-					alt="Go"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td rowspan="3"><b>Frontend Development</b></td>
-			<td>Frameworks & State</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/Next.js-0d1117?style=for-the-badge&logo=nextdotjs"
-					alt="Next.js"
-				/>
-				<img
-					src="https://img.shields.io/badge/React-0d1117?style=for-the-badge&logo=react"
-					alt="React"
-				/>
-				<img
-					src="https://img.shields.io/badge/React%20Query-0d1117?style=for-the-badge&logo=reactquery&logoColor=FF4154"
-					alt="React Query"
-				/>
-				<img
-					src="https://img.shields.io/badge/React_Router-0d1117?style=for-the-badge&logo=react-router"
-					alt="React Router"
-				/>
-				<img
-					src="https://img.shields.io/badge/Redux-0d1117?style=for-the-badge&logo=redux&logoColor=593D88"
-					alt="Redux"
-				/>
-				<img
-					src="https://img.shields.io/badge/Zod-0d1117?style=for-the-badge&logo=zod&logoColor=3068B7"
-					alt="Zod"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td>UI Libraries & Styling</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/TailwindCSS-151b23?style=for-the-badge&logo=tailwindcss"
-					alt="Tailwind CSS"
-				/>
-				<img
-					src="https://img.shields.io/badge/shadcn-151b23?style=for-the-badge&logo=shadcnui"
-					alt="ShadCN"
-				/>
-				<img
-					src="https://img.shields.io/badge/MUI-151b23?style=for-the-badge&logo=mui"
-					alt="MUI"
-				/>
-				<img
-					src="https://img.shields.io/badge/bootstrap-151b23?style=for-the-badge&logo=bootstrap"
-					alt="Bootstrap"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td>Animation</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/Framer-0d1117?style=for-the-badge&logo=framer&logoColor=blue"
-					alt="Framer"
-				/>
-				<img
-					src="https://img.shields.io/badge/GSAP-0d1117?style=for-the-badge&logo=gsap"
-					alt="GSAP"
-				/>
-				<img
-					src="https://img.shields.io/badge/Lottie-0d1117?style=for-the-badge&logo=lottiefiles&logoColor=00DDB3"
-					alt="Lottie"
-				/>
-				<img
-					src="https://img.shields.io/badge/p5.js-0d1117?style=for-the-badge&logo=p5.js&logoColor=ED225D"
-					alt="p5"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td rowspan="3"><b>Backend & Data</b></td>
-			<td>Frameworks & APIs</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/SpringBoot-151b23?style=for-the-badge&logo=springboot"
-					alt="Spring Boot"
-				/>
-				<img
-					src="https://img.shields.io/badge/Node.js-151b23?style=for-the-badge&logo=node.js"
-					alt="Node.js"
-				/>
-				<img
-					src="https://img.shields.io/badge/Express.js-151b23.svg?style=for-the-badge&logo=express"
-					alt="Express.js"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td>Databases and ORMs</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/PostgreSQL-0d1117?style=for-the-badge&logo=postgresql"
-					alt="PostgreSQL"
-				/>
-				<img
-					src="https://img.shields.io/badge/MongoDB-0d1117?style=for-the-badge&logo=mongodb"
-					alt="MongoDB"
-				/>
-				<img
-					src="https://img.shields.io/badge/MySQL-0d1117?style=for-the-badge&logo=mysql"
-					alt="MySQL"
-				/>
-				<img
-					src="https://img.shields.io/badge/SQLite-0d1117?style=for-the-badge&logo=sqlite"
-					alt="SQLite"
-				/>
-				<img
-					src="https://img.shields.io/badge/Prisma-0d1117?style=for-the-badge&logo=prisma"
-					alt="Prisma"
-				/>
-				<img
-					src="https://img.shields.io/badge/Drizzle-0d1117?style=for-the-badge&logo=drizzle"
-					alt="Drizzle"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td>BaaS / SaaS</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/Firebase-151b23.svg?style=for-the-badge&logo=firebase&logoColor=ffca28"
-					alt="Firebase"
-				/>
-				<img
-					src="https://img.shields.io/badge/Supabase-151b23?style=for-the-badge&logo=supabase"
-					alt="Supabase"
-				/>
-				<img
-					src="https://img.shields.io/badge/AppWrite-151b23?style=for-the-badge&logo=appwrite"
-					alt="AppWrite"
-				/>
-				<img
-					src="https://img.shields.io/badge/Convex-151b23?style=for-the-badge&logo=convex&logoColor=white"
-					alt="Convex"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td><b>Authentication</b></td>
-			<td>Identity Management</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/JWT-0d1117?style=for-the-badge&logo=JSON%20web%20tokens"
-					alt="JWT"
-				/>
-				<img
-					src="https://img.shields.io/badge/BetterAuth-0d1117?style=for-the-badge&logo=betterauth&logoColor=white"
-					alt="BetterAuth"
-				/>
-				<img
-					src="https://img.shields.io/badge/NextAuth.js-0d1117?style=for-the-badge&logo=next.js"
-					alt="NextAuth.js"
-				/>
-				<img
-					src="https://img.shields.io/badge/Clerk-0d1117?logo=clerk&style=for-the-badge&logoColor=654bf6"
-					alt="Clerk"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td rowspan="3"><b>DevOps & Web Tools</b></td>
-			<td>CI/CD</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/GitHub%20Actions-151b23?style=for-the-badge&logo=githubactions&logoColor=white"
-					alt="GitHub Actions"
-				/>
-				<img
-					src="https://img.shields.io/badge/Vercel-0d1117.svg?style=for-the-badge&logo=vercel&logoColor=white"
-					alt="Vercel CI"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td>Deployment</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/Netlify-0d1117.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7"
-					alt="Netlify"
-				/>
-				<img
-					src="https://img.shields.io/badge/Render-0d1117.svg?style=for-the-badge&logo=render&logoColor=white"
-					alt="Render"
-				/>
-				<img
-					src="https://img.shields.io/badge/GitHub%20Pages-0d1117?style=for-the-badge&logo=github&logoColor=white"
-					alt="GitHub Pages"
-				/>
-			</td>
-		</tr>
-		<tr>
-			<td>API & Dev Tools</td>
-			<td align="right">
-				<img
-					src="https://img.shields.io/badge/Postman-151b23?style=for-the-badge&logo=postman"
-					alt="Postman"
-				/>
-				<img
-					src="https://img.shields.io/badge/Swagger-151b23?style=for-the-badge&logo=swagger"
-					alt="Swagger"
-				/>
-				<img
-					src="https://img.shields.io/badge/OpenAPI-151b23?style=for-the-badge&logo=openapiinitiative"
-					alt="OpenAPI"
-				/>
-				<img
-					src="https://img.shields.io/badge/Figma-151b23.svg?style=for-the-badge&logo=figma"
-					alt="Figma"
-				/>
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-
+<!-- GitHub Trophies and MonkeyType stats links for configuration:
+     Official Trophies: https://github.com/ryo-ma/github-profile-trophy
+     Official Metrics (MonkeyType): https://github.com/lowlighter/metrics
+     WakaTime ASCII Config: https://github.com/anmol098/waka-readme-stats
 -->
 
-
+<br>
 
 ### 🔗 Find me around the web
 
 <p align="left">
   <a href="https://gravatar.com/sweetly00638681c8"><img src="https://img.shields.io/badge/Gravatar-Paranjay_Khachar-1e8a4c?style=flat&logo=gravatar&logoColor=white" alt="Gravatar" /></a>
+  <a href="https://www.linkedin.com/in/paranjayy/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://leetcode.com/u/Paranjayy/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
+  <a href="https://www.hackerrank.com/profile/kparanjay245"><img src="https://img.shields.io/badge/HackerRank-00EA64?style=flat&logo=hackerrank&logoColor=black" alt="HackerRank" /></a>
+  <a href="https://www.codewars.com/users/Paranjayy"><img src="https://img.shields.io/badge/Codewars-B1361E?style=flat&logo=codewars&logoColor=white" alt="Codewars" /></a>
+  <a href="https://www.kaggle.com/paranjay"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white" alt="Kaggle" /></a>
+  <a href="https://stackoverflow.com/users/22587473/khachar-paranjay"><img src="https://img.shields.io/badge/Stack%20Overflow-F58025?style=flat&logo=stackoverflow&logoColor=white" alt="Stack Overflow" /></a>
+  <a href="https://hashnode.com/@paranjayy"><img src="https://img.shields.io/badge/Hashnode-2962FF?style=flat&logo=hashnode&logoColor=white" alt="Hashnode" /></a>
+  <a href="https://hub.docker.com/u/paranjay245"><img src="https://img.shields.io/badge/Docker%20Hub-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Hub" /></a>
   <a href="https://steamcommunity.com/id/paranjayy/"><img src="https://img.shields.io/badge/Steam-171a21?style=flat&logo=steam&logoColor=white" alt="Steam" /></a>
   <a href="https://x.com/paranjay245"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X / Twitter" /></a>
   <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
@@ -305,76 +51,79 @@ Here are some ideas to get you started:
 
 <br>
 
+<!-- Skills hidden while learning - uncomment when ready to showcase!
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres,mongodb,mysql,aws,docker,git,linux,postman,figma" />
+</div>
+-->
 
-
-<details>
-<summary>🎮 Steam · 💬 Discord · ⌨️ WakaTime · 📊 GitHub Stats</summary>
 <br>
 
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&langs_count=8&theme=tokyonight" alt="Top languages" />
-</div>
+---
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
-</div>
-
-<table>
-  <tr>
-    <td valign="top" width="50%">
-
-**🎮 Steam**
-
-[![Steam metrics](metrics.steam.svg)](https://steamcommunity.com/id/paranjayy/)
-
-  </td>
-    <td valign="top" width="50%">
-
-**💬 Discord**
-
-[![Discord Presence](https://lanyard.cnrad.dev/api/999432437740347486)](https://discord.com/users/999432437740347486)
-
-  </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-
-**⌨️ WakaTime**
-
-[![WakaTime metrics](metrics.wakatime.svg)](https://wakatime.com)
-
-<div align="center">
-  <img src="metrics.wakatime.full.svg" alt="WakaTime full stats" />
-</div>
-
-  </td>
-  </tr>
-</table>
-
+<details>
+  <summary>📊 GitHub Analytics & Streak</summary>
+  <br>
+  <div align="center">
+    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub stats" />
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&langs_count=8&theme=tokyonight" alt="Top languages" />
+  </div>
+  <div align="center">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
+  </div>
+  <br>
+  <div align="center">
+    <img src="metrics.monkeytype.svg" alt="MonkeyType Stats" />
+  </div>
 </details>
 
-<!--
-  === FUTURE IMPROVEMENT IDEAS ===
+<details open>
+  <summary>⌨️ Coding Activity (WakaTime)</summary>
+  <br>
 
-  1. CIRCULAR AVATAR: Implemented via `avatar-circle.svg` — a local SVG with a circular clipPath
-     that wraps the GitHub avatar. If GitHub ever strips external `<image>` hrefs from SVGs,
-     the fallback is to bake a pre-cropped circular PNG into the repo.
+<!--START_SECTION:waka-->
+Updating ASCII Stats... 🔄
+<!--END_SECTION:waka-->
 
-  2. SKILLS GRID: Replace or supplement the commented-out Tech Stack table with
-     https://skillicons.dev icons (rounded-square style, looks great):
-     <img src="https://skillicons.dev/icons?i=java,python,go,react,nextjs,tailwind,nodejs,postgres" />
+  <br>
+  <div align="center">
+    <img src="metrics.wakatime.full.svg" alt="WakaTime Detailed" />
+  </div>
+</details>
 
-  3. GITHUB STATS CARDS: Add https://github-readme-stats.vercel.app cards for streak and
-     language stats — they have rounded corners and look clean:
-     ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=paranjayy&theme=tokyonight&hide_border=true&border_radius=10)
-
-  4. WAKATIME / CODING ACTIVITY: Add a WakaTime weekly coding stats card once you set up the
-     WakaTime extension in your editor.
-
-  5. SPOTIFY NOW PLAYING: Add a Spotify "now playing" card with
-     https://github.com/novatorem/novatorem for a fun personal touch.
-
-  6. TROPHY SHOWCASE: https://github.com/ryo-ma/github-profile-trophy shows GitHub trophies
-     with rounded card styling.
--->
+<details>
+  <summary>🎮 Social Presence (Steam, Discord, Spotify & Volt)</summary>
+  <br>
+  <table width="100%">
+    <tr>
+      <td width="50%" valign="top">
+        <h4 align="center">🎮 Steam activity</h4>
+        <p align="center">
+          <a href="https://steamcommunity.com/id/paranjayy/">
+            <img src="metrics.steam.svg" alt="Steam metrics" />
+          </a>
+        </p>
+      </td>
+      <td width="50%" valign="top">
+        <h4 align="center">💬 Discord Status</h4>
+        <p align="center">
+          <a href="https://discord.com/users/999432437740347486">
+            <img src="https://lanyard.cnrad.dev/api/999432437740347486" alt="Discord Status" />
+          </a>
+        </p>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <div align="center">
+    <h4 align="center">🎵 Currently Listening</h4>
+    <br>
+    <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31rwgyebwncfeffpaavx6o5ygvaq&redirect=true">
+      <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31rwgyebwncfeffpaavx6o5ygvaq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&profanity=false" alt="Spotify" />
+    </a>
+    <br>
+    <a href="https://volt.fm/paranjay">
+      <img src="https://img.shields.io/badge/Volt.fm-paranjay-1DB954?style=flat&logo=spotify&logoColor=white" alt="Volt.fm" />
+    </a>
+  </div>
+</details>

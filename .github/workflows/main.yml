@@ -1,0 +1,64 @@
+name: Profile Intelligence Hub
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+jobs:
+  # ── Metrics Engine (SVG Cards) ─────────────────────────────────────────────
+  metrics:
+    name: Generate SVG Metrics
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: GitHub Metrics (Steam, WakaTime Full, MonkeyType)
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "chore: update visual metrics [skip ci]"
+          base: ""
+          
+          # MonkeyType
+          plugin_monkeytype: yes
+          plugin_monkeytype_user: paranjayy
+          plugin_monkeytype_sections: score, stats
+          
+          # Steam
+          plugin_steam: yes
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: "76561199379635572"
+          plugin_steam_sections: recently-played
+          
+          # WakaTime (Full SVG)
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 180
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, editors-graphs, os, os-graphs
+          plugin_wakatime_limit: 8
+
+  # ── WakaTime ASCII ───────────────────────────────────────────
+  waka-ascii:
+    name: Update WakaTime ASCII
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHOW_TITLE: "True"
+          SECTION_NAME: "waka"
+          BLOCKS: "░▒▓█"
+          TIME_RANGE: "last_7_days"
+          LANG_COUNT: "10"
+          SHOW_TIME: "True"
+          SHOW_MASKED_TIME: "False"
+          STOP_AT_OTHER: "True"
