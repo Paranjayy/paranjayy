@@ -3,7 +3,7 @@
   <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20Views&color=2e1065&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
-<img src="https://img.shields.io/badge/Stars-10-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
+<img src="https://img.shields.io/badge/Stars-11-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
   <!-- /TOTAL_STARS -->
   <!-- STARRED_COUNT -->
 <img src="https://img.shields.io/badge/Starred-3277-065f46?logo=github&logoColor=white" alt="Starred Repos" />
@@ -18,7 +18,7 @@
 
 <div align="center">
   <a href="https://github.com/paranjayy">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=800&lines=An+Aspiring+SDE;Currently+Learning+%26+Exploring+%F0%9F%93%9A;~54+hrs+49+mins+coded+this+month%20%E2%8C%A8%EF%B8%8F" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=800&lines=An+Aspiring+SDE;Currently+Learning+%26+Exploring+%F0%9F%93%9A;~54+hrs+56+mins+coded+this+month%20%E2%8C%A8%EF%B8%8F" alt="Typing SVG" />
   </a>
 </div>
 
