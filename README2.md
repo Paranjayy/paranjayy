@@ -18,10 +18,18 @@ This is an experimental playground for the next generation of profile telemetry.
 
 ---
 
+### 4. LeetCode Intel Pulse
+*Dynamic coding challenge streaks and rank visualization.*
+<div align="center">
+  <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/leetcode-card.svg" alt="LeetCode Pulse" />
+</div>
+
+---
+
 ## 💡 Future Feature Roadmap
 - [ ] **Monkeytype Live Stream**: Integrating actual replay data into the card.
 - [ ] **Steam Achievement Pulse**: Showing the latest/rarest achievements earned.
-- [ ] **LeetCode Intel**: Dynamic coding challenge streaks and rank visualization.
+- [x] **LeetCode Intel**: Dynamic coding challenge streaks and rank visualization. (PROTOTYPE LIVE)
 - [ ] **Personal Design System**: A dedicated page for brand tokens used across all 'paranjay' projects.
 
 ---
