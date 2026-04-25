@@ -23,6 +23,8 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           filename: metrics/github-metrics.svg
           base: header, activity, community, repositories, metadata
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
           
       - name: Steam Metrics
         uses: lowlighter/metrics@latest
@@ -91,7 +93,7 @@ jobs:
           SHOW_LANGUAGE_PER_REPO: "True"
           SHOW_LOC_CHART: "True"
           SHOW_DAYS_OF_WEEK: "True"
-          SHOW_PROFILE_VIEWS: "False"
+          SHOW_PROFILE_VIEWS: "True"
           SHOW_SHORT_INFO: "True"
           SHOW_UPDATED_DATE: "True"
           SHOW_TOTAL_CODE_TIME: "True"
@@ -118,8 +120,7 @@ jobs:
           sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
 
-          # 4. Custom Hiring Status
-          sed -i "s/.*Not Opted to Hire.*/🚫 Not Opted to Hire (Currently Studying \& Learning 📚)/g" README.md
+          # Removed sed that was overwriting hiring status
           
       - name: Commit & Push README Updates
         run: |
