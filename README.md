@@ -70,15 +70,19 @@
   <div align="center">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
   </div>
+  <br>
+  <div align="center">
+    <img src="metrics.monkeytype.svg" alt="MonkeyType Stats" />
+  </div>
 </details>
 
 <details>
   <summary>⌨️ Coding Activity (WakaTime)</summary>
   <br>
 
-  <!--START_SECTION:waka-->
-  Currently Learning & Studying 📚
-  <!--END_SECTION:waka-->
+<!--START_SECTION:waka-->
+Currently Learning & Studying 📚
+<!--END_SECTION:waka-->
 
   <br>
   <div align="center">
