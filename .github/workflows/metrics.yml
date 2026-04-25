@@ -39,6 +39,7 @@ jobs:
 
           token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "chore: update metrics [skip ci]"
           base: ""
 
           plugin_steam: yes
@@ -77,6 +78,7 @@ jobs:
 
           token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "chore: update metrics [skip ci]"
           base: ""
 
           plugin_wakatime: yes
@@ -96,6 +98,7 @@ jobs:
 
           token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "chore: update metrics [skip ci]"
           base: ""
 
           plugin_wakatime: yes
