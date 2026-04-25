@@ -1,6 +1,6 @@
 <p align="left">
   <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20Views&color=4c1d95&style=flat" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20Views&color=2e1065&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
 <img src="https://img.shields.io/badge/Stars-10-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
@@ -191,9 +191,17 @@ Svelte                   1 repo              ░░░░░░░░░░░�
       <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31rwgyebwncfeffpaavx6o5ygvaq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&profanity=false" alt="Spotify" />
     </a>
     <br><br>
-    <a href="https://volt.fm/paranjay">
-      <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/volt-card.svg" alt="Volt.fm Intelligence" />
-    </a>
+  <!-- Volt.fm Tabbed Stats -->
+  <details open>
+    <summary><b>📅 Volt.fm Music Stats (Last 30 Days)</b></summary>
+    <br/>
+    <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/volt-monthly.svg" alt="Volt.fm Monthly Stats" />
+  </details>
+  <details>
+    <summary><b>🎵 Volt.fm Music Stats (All-Time)</b></summary>
+    <br/>
+    <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/volt-alltime.svg" alt="Volt.fm All-Time Stats" />
+  </details>
     <br><br>
     <p align="center">
       <a href="https://www.last.fm/user/paranjay"><img src="https://img.shields.io/badge/Last.fm-paranjay-D01F3C?style=for-the-badge&logo=last.fm&logoColor=white" alt="Last.fm" /></a>

@@ -3,104 +3,83 @@ import re
 import os
 
 def update_volt():
-    url = "https://volt.fm/paranjay"
+    # Fetch data for All-Time and Last 30 Days
+    url_all = "https://volt.fm/paranjay"
+    url_month = "https://volt.fm/paranjay?time_frame=last-30-d"
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"
     }
     
-    print(f"Fetching Volt.fm stats from {url}...")
+    print(f"Syncing Volt.fm Music Profile...")
+    data = {
+        "plays": "67.5K", "minutes": "4227h 39", "songs": "11,463", "artists": "5,297", "albums": "6,698",
+        "top_artist": "Pritam", "top_song": "Agar Tum Saath Ho",
+        "m_plays": "1.3K", "m_minutes": "82h 23", "m_songs": "911", "m_artists": "651"
+    }
+
     try:
-        response = requests.get(url, headers=headers)
-        if response.status_code == 403:
-            print("Volt.fm returned 403 Forbidden. Using fallback data.")
-            data = {
-                "plays": "67.5K",
-                "minutes": "4227h 39",
-                "songs": "11,463",
-                "artists": "5,297",
-                "albums": "6,698",
-                "top_artist": "Pritam",
-                "top_artist_time": "120h 15",
-                "top_song": "Agar Tum Saath Ho",
-                "top_song_artist": "Alka Yagnik",
-                "monthly_plays": "1.2K",
-                "monthly_minutes": "84h 12"
-            }
-        else:
-            response.raise_for_status()
-            html = response.text
-            
-            # Extract numbers using specific patterns
+        res_all = requests.get(url_all, headers=headers)
+        if res_all.status_code == 200:
+            html = res_all.text
             plays = re.search(r'text-primary">([\d\.,]+K?)</div>.*?Plays</div>', html, re.S)
             minutes = re.search(r'text-primary">([\d\w\s,]+)</div>.*?Minutes</div>', html, re.S)
             songs = re.search(r'text-primary">([\d,]+)</div>.*?Songs</div>', html, re.S)
             artists = re.search(r'text-primary">([\d,]+)</div>.*?Artists</div>', html, re.S)
-            albums = re.search(r'text-primary">([\d,]+)</div>.*?Albums</div>', html, re.S)
-            
-            top_artist = re.search(r'<span class="external-text">([^<]+)</span></a></div><span class="w-6 flex-1 shrink-0"></span><div class="mt-1.5 shrink-0"><button[^>]*><span>([^<]+)</span>', html)
-            top_song = re.search(r'<a href="/track/[^"]+" class="link-plain external-text">([^<]+)</a></div><span class="text-gray-100"><a[^>]*>([^<]+)</a>', html)
+            if plays: data["plays"] = plays.group(1).strip()
+            if minutes: data["minutes"] = minutes.group(1).strip()
+            if songs: data["songs"] = songs.group(1).strip()
+            if artists: data["artists"] = artists.group(1).strip()
 
-            data = {
-                "plays": plays.group(1).strip() if plays else "67.5K",
-                "minutes": minutes.group(1).strip() if minutes else "4227h 39",
-                "songs": songs.group(1).strip() if songs else "11,463",
-                "artists": artists.group(1).strip() if artists else "5,297",
-                "albums": albums.group(1).strip() if albums else "6,698",
-                "top_artist": top_artist.group(1).strip() if top_artist else "Pritam",
-                "top_artist_time": top_artist.group(2).strip() if top_artist else "120h 15",
-                "top_song": top_song.group(1).strip() if top_song else "Agar Tum Saath Ho",
-                "top_song_artist": top_song.group(2).strip() if top_song else "Alka Yagnik",
-                "monthly_plays": "1.2K", # Placeholder until monthly scraping logic refined
-                "monthly_minutes": "84h 12"
-            }
+        res_month = requests.get(url_month, headers=headers)
+        if res_month.status_code == 200:
+            html_m = res_month.text
+            mp = re.search(r'text-primary">([\d\.,]+K?)</div>.*?Plays</div>', html_m, re.S)
+            mm = re.search(r'text-primary">([\d\w\s,]+)</div>.*?Minutes</div>', html_m, re.S)
+            ms = re.search(r'text-primary">([\d,]+)</div>.*?Songs</div>', html_m, re.S)
+            ma = re.search(r'text-primary">([\d,]+)</div>.*?Artists</div>', html_m, re.S)
+            if mp: data["m_plays"] = mp.group(1).strip()
+            if mm: data["m_minutes"] = mm.group(1).strip()
+            if ms: data["m_songs"] = ms.group(1).strip()
+            if ma: data["m_artists"] = ma.group(1).strip()
 
-        print(f"Extracted Data: {data}")
+        os.makedirs("metrics", exist_ok=True)
 
-        # SVG Template (High Fidelity Card with Monthly Tab)
-        svg_content = f"""<svg width="400" height="230" viewBox="0 0 400 230" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="230" rx="12" fill="#171A20"/>
-  <rect x="0.5" y="0.5" width="399" height="229" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
-  
-  <!-- Header -->
-  <text x="20" y="35" fill="#F0F6FC" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="bold" font-size="18">Volt.fm Music Intelligence</text>
-  <rect x="300" y="18" width="80" height="24" rx="12" fill="#1DB954" fill-opacity="0.1"/>
-  <text x="315" y="34" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="11">ALL TIME</text>
-
-  <!-- All-Time Stats -->
-  <g transform="translate(20, 65)">
+        # 1. All-Time SVG
+        svg_all = f"""<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="120" rx="12" fill="#171A20"/>
+  <rect x="0.5" y="0.5" width="399" height="119" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
+  <text x="20" y="35" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">Volt.fm - All Time</text>
+  <g transform="translate(20, 70)">
     <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">PLAYS</text>
     <text x="0" y="20" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['plays']}</text>
-    
     <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">MINUTES</text>
     <text x="120" y="20" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['minutes']}</text>
-    
     <text x="240" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">SONGS</text>
     <text x="240" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['songs']}</text>
   </g>
+</svg>"""
 
-  <!-- Monthly Pulse -->
-  <g transform="translate(20, 115)">
-    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11" font-style="italic">MONTHLY PULSE</text>
-    <text x="0" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="14">{data['monthly_plays']} <tspan fill="#8B949E" font-weight="normal" font-size="10">PLAYS</tspan></text>
-    <text x="120" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="14">{data['monthly_minutes']} <tspan fill="#8B949E" font-weight="normal" font-size="10">MINS</tspan></text>
-  </g>
-
-  <!-- Top Highlights -->
-  <line x1="20" y1="165" x2="380" y2="165" stroke="#2D333B" stroke-width="1"/>
-  
-  <g transform="translate(20, 195)">
-    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOP ARTIST: <tspan fill="#F0F6FC" font-weight="bold">{data['top_artist']}</tspan></text>
-    <text x="0" y="15" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">TOP SONG: <tspan fill="#F0F6FC" font-weight="bold">{data['top_song']}</tspan></text>
+        # 2. Monthly SVG
+        svg_month = f"""<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="120" rx="12" fill="#171A20"/>
+  <rect x="0.5" y="0.5" width="399" height="119" rx="11.5" stroke="#2D333B" stroke-opacity="0.5"/>
+  <text x="20" y="35" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">Volt.fm - Last 30 Days</text>
+  <g transform="translate(20, 70)">
+    <text x="0" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">PLAYS</text>
+    <text x="0" y="20" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['m_plays']}</text>
+    <text x="120" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">MINUTES</text>
+    <text x="120" y="20" fill="#1DB954" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['m_minutes']}</text>
+    <text x="240" y="0" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="12">ARTISTS</text>
+    <text x="240" y="20" fill="#F0F6FC" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="16">{data['m_artists']}</text>
   </g>
 </svg>"""
 
-        os.makedirs("metrics", exist_ok=True)
-        with open("metrics/volt-card.svg", "w") as f:
-            f.write(svg_content)
-        print("Volt.fm card updated successfully.")
+        with open("metrics/volt-alltime.svg", "w") as f: f.write(svg_all)
+        with open("metrics/volt-monthly.svg", "w") as f: f.write(svg_month)
+        print("Volt.fm SVGs generated (Tab-ready).")
 
     except Exception as e:
-        print(f"Error updating Volt.fm card: {e}")
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     update_volt()
