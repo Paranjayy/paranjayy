@@ -2,7 +2,7 @@ name: Profile Intelligence Hub
 
 on:
   schedule:
-    - cron: "0 0 * * 0" # Weekly Sync (Sunday Midnight)
+    - cron: "0 0 * * 0"
   workflow_dispatch:
   push:
     branches: ["main"]
@@ -24,9 +24,9 @@ jobs:
           committer_message: "chore: update visual metrics [skip ci]"
           base: ""
           
-          # MonkeyType
+          # MonkeyType (Fixed User Case)
           plugin_monkeytype: yes
-          plugin_monkeytype_user: paranjayy
+          plugin_monkeytype_user: Paranjayy
           plugin_monkeytype_sections: score, stats
           
           # Steam
@@ -42,7 +42,7 @@ jobs:
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, editors-graphs, os, os-graphs
           plugin_wakatime_limit: 8
 
-  # ── README Updates (ASCII, Stars, Metadata) ────────────────────────────────
+  # ── README Updates (Huge ASCII, Stars, Metadata) ───────────────────────────
   readme-updates:
     name: Update README Content
     runs-on: ubuntu-latest
@@ -51,25 +51,31 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      # 1. WakaTime ASCII Bars
-      - name: WakaTime ASCII
-        uses: athul/waka-readme@master
+      # 1. WakaTime HUGE ASCII Stats (Detailed)
+      - name: WakaTime Huge ASCII
+        uses: anmol098/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHOW_TITLE: "True"
+          SHOW_OS: "True"
+          SHOW_PROJECTS: "True"
+          SHOW_EDITORS: "True"
+          SHOW_TIMEZONE: "True"
+          SHOW_COMMIT: "True"
+          SHOW_LANGUAGE: "True"
+          SHOW_LINES_OF_CODE: "True"
+          SHOW_LANGUAGE_PER_REPO: "True"
+          SHOW_LOC_CHART: "True"
+          SHOW_DAYS_OF_WEEK: "True"
+          SHOW_PROFILE_VIEWS: "False"
+          SHOW_SHORT_INFO: "True"
+          SHOW_UPDATED_DATE: "True"
+          SHOW_TOTAL_CODE_TIME: "True"
           SECTION_NAME: "waka"
-          BLOCKS: "░▒▓█"
-          TIME_RANGE: "last_7_days"
-          LANG_COUNT: "10"
-          SHOW_TIME: "True"
-          SHOW_MASKED_TIME: "False"
-          STOP_AT_OTHER: "True"
 
       # 2. GitHub Stats (Stars Given & Received)
       - name: Update Star Badges
         run: |
-          # Fetch counts via GraphQL
           RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
             -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: OWNER) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
             https://api.github.com/graphql)
@@ -80,18 +86,15 @@ jobs:
           if [ -z "$GIVEN" ] || [ "$GIVEN" == "null" ]; then GIVEN=0; fi
           if [ -z "$RECEIVED" ] || [ "$RECEIVED" == "null" ]; then RECEIVED=0; fi
           
-          # Update Badges in README.md
-          # Starred (Given) - Emerald Green
           GIVEN_BADGE='  <img src="https://img.shields.io/badge/Starred-'"$GIVEN"'-10b981?logo=github&logoColor=white" alt="Starred Repos" />'
           sed -i "/<!-- STARRED_COUNT -->/,/<!-- \/STARRED_COUNT -->/{ /<!-- STARRED_COUNT -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
           sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
           
-          # Stars (Received) - Amber
           RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-'"$RECEIVED"'-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />'
           sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
 
-          # 3. Post-Process ASCII Section (Custom Text)
+          # 3. Post-Process Hiring Status (Only if default found)
           sed -i "s/.*Not Opted to Hire.*/Currently Learning \& Studying 📚/g" README.md
           
       - name: Commit & Push README Updates
