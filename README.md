@@ -59,8 +59,8 @@
   </div>
   <br>
   <div align="center">
-    <a href="https://monkeytype.com/profile/Paranjayy">
-      <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/monkeytype-card.svg" alt="MonkeyType Stats" />
+    <a href="https://monkeytype.com/profile/paranjay245">
+      <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/monkeytype-card.svg" alt="Monkeytype Stats" />
     </a>
   </div>
 </details>
@@ -190,18 +190,9 @@ Svelte                   1 repo              ░░░░░░░░░░░�
     <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31rwgyebwncfeffpaavx6o5ygvaq&redirect=true">
       <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31rwgyebwncfeffpaavx6o5ygvaq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&profanity=false" alt="Spotify" />
     </a>
-    <br><br>
-  <!-- Volt.fm Tabbed Stats -->
-  <details open>
-    <summary><b>📅 Volt.fm Music Stats (Last 30 Days)</b></summary>
-    <br/>
-    <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/volt-monthly.svg" alt="Volt.fm Monthly Stats" />
-  </details>
-  <details>
-    <summary><b>🎵 Volt.fm Music Stats (All-Time)</b></summary>
-    <br/>
-    <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/volt-alltime.svg" alt="Volt.fm All-Time Stats" />
-  </details>
+    <a href="https://volt.fm/paranjay">
+      <img src="https://raw.githubusercontent.com/paranjayy/paranjayy/main/metrics/volt-card.svg" alt="Volt.fm Music Stats" />
+    </a>
     <br><br>
     <p align="center">
       <a href="https://www.last.fm/user/paranjay"><img src="https://img.shields.io/badge/Last.fm-paranjay-D01F3C?style=for-the-badge&logo=last.fm&logoColor=white" alt="Last.fm" /></a>
