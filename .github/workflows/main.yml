@@ -24,25 +24,28 @@ jobs:
           committer_message: "chore: update visual metrics [skip ci]"
           base: ""
           
-          # MonkeyType (Fixed User Case)
+          # MonkeyType (Comprehensive)
           plugin_monkeytype: yes
           plugin_monkeytype_user: Paranjayy
           plugin_monkeytype_sections: score, stats
+          plugin_monkeytype_limit: 10
           
-          # Steam
+          # Steam (Full Detail)
           plugin_steam: yes
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam_user: "76561199379635572"
-          plugin_steam_sections: recently-played
+          plugin_steam_sections: recently-played, most-played
+          plugin_steam_games_limit: 5
           
-          # WakaTime (Full SVG)
+          # WakaTime (Maximum Detail SVG)
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 180
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, editors-graphs, os, os-graphs
-          plugin_wakatime_limit: 8
+          plugin_wakatime_limit: 10
+          plugin_wakatime_languages_other: yes
 
-  # ── README Updates (Huge ASCII, Stars, Metadata) ───────────────────────────
+  # ── README Updates (The HUGE "Awesome Shit" ASCII) ──────────────────────────
   readme-updates:
     name: Update README Content
     runs-on: ubuntu-latest
@@ -51,12 +54,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      # 1. WakaTime HUGE ASCII Stats (Detailed)
-      - name: WakaTime Huge ASCII
+      # 1. WakaTime HUGE ASCII (Full Feature Set)
+      - name: WakaTime Awesome ASCII
         uses: anmol098/waka-readme-stats@master
+        continue-on-error: true
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }} # Using PAT for full permissions
           SHOW_OS: "True"
           SHOW_PROJECTS: "True"
           SHOW_EDITORS: "True"
@@ -67,11 +71,14 @@ jobs:
           SHOW_LANGUAGE_PER_REPO: "True"
           SHOW_LOC_CHART: "True"
           SHOW_DAYS_OF_WEEK: "True"
-          SHOW_PROFILE_VIEWS: "False"
+          SHOW_PROFILE_VIEWS: "True"
           SHOW_SHORT_INFO: "True"
           SHOW_UPDATED_DATE: "True"
           SHOW_TOTAL_CODE_TIME: "True"
+          SHOW_TIME_OF_DAY: "True"
+          SHOW_COMMIT_PERSONA: "True"
           SECTION_NAME: "waka"
+          SYMBOL_VERSION: "2"
 
       # 2. GitHub Stats (Stars Given & Received)
       - name: Update Star Badges
@@ -91,10 +98,10 @@ jobs:
           sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
           
           RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-'"$RECEIVED"'-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />'
-          sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
+          sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
 
-          # 3. Post-Process Hiring Status (Only if default found)
+          # 3. Custom Hiring Status
           sed -i "s/.*Not Opted to Hire.*/Currently Learning \& Studying 📚/g" README.md
           
       - name: Commit & Push README Updates
@@ -102,5 +109,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "chore: update readme stats [skip ci]" || echo "No changes to commit"
+          git commit -m "chore: update awesome stats [skip ci]" || echo "No changes to commit"
           git push
