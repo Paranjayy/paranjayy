@@ -15,27 +15,45 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: GitHub Metrics (Steam, WakaTime Full, MonkeyType)
+      # 1. MonkeyType Stats
+      - name: MonkeyType Metrics
         uses: lowlighter/metrics@latest
         continue-on-error: true
         with:
+          filename: metrics.monkeytype.svg
           token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_message: "chore: update visual metrics [skip ci]"
+          committer_message: "chore: update monkeytype metrics [skip ci]"
           base: ""
-          
-          # MonkeyType
           plugin_monkeytype: yes
           plugin_monkeytype_user: paranjayy
           plugin_monkeytype_sections: score, stats
-          
-          # Steam
+
+      # 2. Steam Gaming Stats
+      - name: Steam Metrics
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: metrics.steam.svg
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "chore: update steam metrics [skip ci]"
+          base: ""
           plugin_steam: yes
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam_user: "76561199379635572"
           plugin_steam_sections: recently-played
-          
-          # WakaTime (Full SVG)
+
+      # 3. WakaTime Full Detailed SVG
+      - name: WakaTime Full Metrics
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: metrics.wakatime.full.svg
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "chore: update wakatime detailed metrics [skip ci]"
+          base: ""
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 180
@@ -50,7 +68,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v3
-      - uses: athul/waka-readme@master
+      - name: WakaTime ASCII
+        uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

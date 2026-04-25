@@ -73,22 +73,18 @@
   </div>
   <br>
   <div align="center">
-    <img src="metrics.monkeytype.svg" alt="MonkeyType Stats" />
+    <a href="https://monkeytype.com/profile/Paranjayy">
+      <img src="metrics.monkeytype.svg" alt="MonkeyType Stats" />
+    </a>
   </div>
 </details>
 
-<details open>
+<details>
   <summary>⌨️ Coding Activity (WakaTime)</summary>
   <br>
 
 <!--START_SECTION:waka-->
-```text
-JavaScript   18 hrs 23 mins  ██████████████████░░░░░   72.1 %
-TypeScript    4 hrs 12 mins  ████░░░░░░░░░░░░░░░░░░░   16.5 %
-CSS           1 hr 45 mins   █░░░░░░░░░░░░░░░░░░░░░░   6.8 %
-HTML          1 hr 12 mins   █░░░░░░░░░░░░░░░░░░░░░░   4.6 %
-```
-Currently Learning & Studying 📚
+Updating ASCII Stats... 🔄
 <!--END_SECTION:waka-->
 
   <br>
