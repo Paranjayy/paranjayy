@@ -15,6 +15,12 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: GitHub Metrics (Base)
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          token: NOT_NEEDED
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
           filename: metrics/isocalendar.svg
           base: ""
           plugin_isocalendar: yes
@@ -106,6 +112,9 @@ jobs:
           SHOW_UPDATED_DATE: "True"
           SHOW_TOTAL_CODE_TIME: "True"
           SECTION_NAME: "waka"
+
+      - name: Update Typing SVG with WakaTime Stats
+        run: python scripts/update_typing.py
 
       # 3. GitHub Stats
       - name: Update Star Badges

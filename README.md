@@ -1,49 +1,66 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/assets/bar_graph.png" width="100%" alt="Tech Banner" />
-</div>
+<p align="left">
+  <img src="https://img.shields.io/github/followers/paranjayy?label=Followers&style=social" alt="GitHub followers" />
+  <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20views&color=4c1d95&style=flat" alt="Profile views" />
+  <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
+  <!-- TOTAL_STARS -->
+  <img src="https://img.shields.io/badge/Stars-10-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
+  <!-- /TOTAL_STARS -->
+  <!-- STARRED_COUNT -->
+  <img src="https://img.shields.io/badge/Starred-3276-10b981?logo=github&logoColor=white" alt="Starred Repos" />
+  <!-- /STARRED_COUNT -->
+</p>
+
+<br>
+
+<img width="2000" height="400" alt="header" src="https://github.com/user-attachments/assets/2ba9ad56-102c-4c62-ab7a-fbf192688e28" />
+
+<h2 align="center">Hi there✨, I'm Paranjay <img src="https://media.tenor.com/_Utilxgj8RUAAAAj/peach-goma-peach-and-goma.gif" width="60" /></h2>
 
 <div align="center">
-  <h1>Hi there✨, I'm Paranjay <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmhtZzR6NHR6NHR6NHR6NHR6NHR6NHR6NHR6NHR6NHR6NHR6NHR6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/EFu7K5r85bUqO7nJ3a/giphy.gif" width="35"></h1>
-  <h3><font color="#00e5ff">An Aspiring SDE</font></h3>
+  <a href="https://github.com/paranjayy">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=800&lines=An+Aspiring+SDE;Currently+Learning+%26+Exploring+%F0%9F%93%9A;~54+hrs+coded+this+month+%E2%8C%A8%EF%B8%8F" alt="Typing SVG" />
+  </a>
 </div>
 
 <br>
 
-<div align="center">
-  <a href="mailto:paranjayy215@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" alt="Gmail" /></a>
+### 🔗 Find me around the web
+
+<p align="left">
+  <a href="https://gravatar.com/sweetly00638681c8"><img src="https://img.shields.io/badge/Gravatar-Paranjay_Khachar-1e8a4c?style=flat&logo=gravatar&logoColor=white" alt="Gravatar" /></a>
   <a href="https://www.linkedin.com/in/paranjayy/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://leetcode.com/u/paranjayy/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=white" alt="LeetCode" /></a>
-  <a href="https://www.hackerrank.com/profile/paranjayy215"><img src="https://img.shields.io/badge/HackerRank-2EC866?style=flat&logo=hackerrank&logoColor=white" alt="HackerRank" /></a>
-  <a href="https://www.codewars.com/users/paranjayy"><img src="https://img.shields.io/badge/Codewars-B1361E?style=flat&logo=codewars&logoColor=white" alt="Codewars" /></a>
+  <a href="https://leetcode.com/u/Paranjayy/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
+  <a href="https://www.hackerrank.com/profile/kparanjay245"><img src="https://img.shields.io/badge/HackerRank-00EA64?style=flat&logo=hackerrank&logoColor=black" alt="HackerRank" /></a>
+  <a href="https://www.codewars.com/users/Paranjayy"><img src="https://img.shields.io/badge/Codewars-B1361E?style=flat&logo=codewars&logoColor=white" alt="Codewars" /></a>
   <a href="https://www.kaggle.com/paranjayy"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white" alt="Kaggle" /></a>
-  <a href="https://stackoverflow.com/users/20914603/paranjay-khacher"><img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=flat&logo=stack-overflow&logoColor=white" alt="Stack Overflow" /></a>
+  <a href="https://stackoverflow.com/users/22587473/khachar-paranjay"><img src="https://img.shields.io/badge/Stack%20Overflow-F58025?style=flat&logo=stackoverflow&logoColor=white" alt="Stack Overflow" /></a>
   <a href="https://hashnode.com/@paranjayy"><img src="https://img.shields.io/badge/Hashnode-2962FF?style=flat&logo=hashnode&logoColor=white" alt="Hashnode" /></a>
-  <br>
-  <a href="https://hub.docker.com/u/paranjayy"><img src="https://img.shields.io/badge/Docker_Hub-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Hub" /></a>
-  <a href="https://steamcommunity.com/id/paranjayy/"><img src="https://img.shields.io/badge/Steam-000000?style=flat&logo=steam&logoColor=white" alt="Steam" /></a>
-  <a href="https://x.com/paranjayy_"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://hub.docker.com/u/paranjay245"><img src="https://img.shields.io/badge/Docker%20Hub-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Hub" /></a>
+  <a href="https://steamcommunity.com/id/paranjayy/"><img src="https://img.shields.io/badge/Steam-171a21?style=flat&logo=steam&logoColor=white" alt="Steam" /></a>
+  <a href="https://x.com/paranjay245"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X / Twitter" /></a>
   <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://monkeytype.com/profile/paranjayy"><img src="https://img.shields.io/badge/MonkeyType-e2b714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
-  <a href="https://www.youtube.com/@paranjayy_"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
-</div>
+  <a href="https://monkeytype.com/profile/Paranjayy"><img src="https://img.shields.io/badge/MonkeyType-E2B714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
+  <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
+</p>
+
+<br>
 
 ---
 
 <details open>
-  <summary>📊 GitHub Analytics & Streak & Monkeytype ⌨️</summary>
+  <summary>📊 Github Analytics, Streak & Monkeytype ⌨️</summary>
   <br>
   <div align="center">
     <img height="180em" src="https://github-readme-stats.vercel.app/api?username=paranjayy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub stats" />
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&theme=tokyonight&hide_langs_below=1" alt="Top Languages" />
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=paranjayy&layout=compact&langs_count=8&theme=tokyonight" alt="Top languages" />
+  </div>
+  <div align="center">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="GitHub Streak" />
   </div>
   <br>
   <div align="center">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=paranjayy&theme=tokyonight" alt="Streak Stats" />
-  </div>
-  <br>
-  <div align="center">
-    <a href="https://monkeytype.com/profile/paranjayy">
-      <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/metrics/monkeytype-card.svg" alt="Monkeytype Profile" />
+    <a href="https://monkeytype.com/profile/Paranjayy">
+      <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/metrics/monkeytype-card.svg" alt="MonkeyType Stats" />
     </a>
   </div>
   <br>
@@ -64,7 +81,7 @@
 **🐱 My GitHub Data** 
 
 > 📦 3.2 MB Used in GitHub's Storage 
-> 🏆 1,159 Contributions in the Year 2026
+> 🏆 1,162 Contributions in the Year 2026
 > 👁️ ![Profile Views](https://komarev.com/ghpvc/?username=paranjayy&color=blue&style=flat)
 
 > [!IMPORTANT]
@@ -76,21 +93,21 @@
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                342 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.36 % 
-🌆 Daytime                444 commits         █████░░░░░░░░░░░░░░░░░░░░   21.16 % 
-🌃 Evening                576 commits         ███████░░░░░░░░░░░░░░░░░░   27.45 % 
-🌙 Night                  736 commits         █████████░░░░░░░░░░░░░░░░   35.03 % 
+🌞 Morning                342 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.41 % 
+🌆 Daytime                430 commits         █████░░░░░░░░░░░░░░░░░░░░   20.63 % 
+🌃 Evening                576 commits         ███████░░░░░░░░░░░░░░░░░░   27.64 % 
+🌙 Night                  736 commits         █████████░░░░░░░░░░░░░░░░   35.32 % 
 ```
 📅 **I'm Most Productive on Saturday** 
 
 ```text
-Monday                   276 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.16 % 
-Tuesday                  313 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.92 % 
-Wednesday                194 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.25 % 
-Thursday                 346 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.49 % 
-Friday                   227 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.82 % 
-Saturday                 480 commits         ██████░░░░░░░░░░░░░░░░░░░   22.88 % 
-Sunday                   262 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.49 % 
+Monday                   276 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.24 % 
+Tuesday                  313 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.02 % 
+Wednesday                194 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.31 % 
+Thursday                 346 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.60 % 
+Friday                   227 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.89 % 
+Saturday                 470 commits         ██████░░░░░░░░░░░░░░░░░░░   22.55 % 
+Sunday                   258 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.38 % 
 ```
 
 
@@ -193,33 +210,6 @@ Svelte                   1 repo              ░░░░░░░░░░░�
 </div>
 
 <!--
-**Paranjayy/paranjayy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
----
-
-### 👩💻 About Me
-
-- 🔭 Learning full-stack development and solving daily DSA problems  
-- 💡 Participated in coding contests and hackathons like Flipkart Grid 6.0, CodeThon, Hack-ethon, DecoCX  
-- 💼 Member of   
-- 🎖️ Mentee at 0  
-- 🧠 Solved **+ DSA questions** on Hyperskill  
-- 💡 Solved **+ questions** on LeetCode  
-- 🌐 Created  mini-projects and UI-based web apps  
-- 🌸 Contributor at   
-- 📖 Love Watching Movies & Shows & Listening to banger Songs 🎶
-
 ---
 
 ### 🧠 Sovereign Intelligence Roadmap
@@ -228,40 +218,10 @@ Here are some ideas to get you started:
 - [ ] **The Tech Stack Stack**: A high-fidelity, 3D-styled grid of all mastered technologies.
 - [ ] **Dynamic Quote Engine**: Injects a daily dose of signal-rich wisdom into the hub.
 - [x] **3D Activity Vault**: Integrated GitHub Skyline 3D link.
-
----
-
-### 🎨 How to Personalize Your Intelligence Hub
-
-Others can replicate this high-fidelity setup:
-1. **Fork this repository**.
-2. **Monkeytype Sync**: Update `scripts/update_monkeytype.py` with your username.
-3. **WakaTime Sync**: Configure the WakaTime GitHub Action with your API Key.
-4. **Deploy**: Watch your metrics evolve autonomously.
-
 -->
 
 <!-- 
   🚀 PORTFOLIO ROADMAP 
   - Redirection: paranjayy.github.io -> paranjayy.com (Once domain is live)
   - Portfolio Build: [Link your portfolio repository here when ready]
--->
-
-<!-- 
-  🛠️ FEATURED PROJECTS 
-  - SocialHoardr: [Short Description]
-  - IPL 2026 Engine: [Short Description]
-  - Nexus Dev Toolbox: [Short Description]
-  - Workout Buddy: [Short Description]
-
-  IDEAS FOR DISPLAY:
-  | Project | Status | Tech Stack | Link |
-  | :--- | :--- | :--- | :--- |
-  | SocialHoardr | 🏗️ In Progress | TypeScript, Next.js | [Link] |
--->
-
-<!-- 
-  FUTURE TASK REMINDER: 
-  Fix the commit history (sorting/metadata polish) once the portfolio 
-  and domain redirection (github.io -> custom domain) are fully stable.
 -->
