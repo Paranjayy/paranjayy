@@ -85,7 +85,7 @@ jobs:
           SHOW_LANGUAGE_PER_REPO: "True"
           SHOW_LOC_CHART: "True"
           SHOW_DAYS_OF_WEEK: "True"
-          SHOW_PROFILE_VIEWS: "True"
+          SHOW_PROFILE_VIEWS: "False"
           SHOW_SHORT_INFO: "True"
           SHOW_UPDATED_DATE: "True"
           SHOW_TOTAL_CODE_TIME: "True"
@@ -98,7 +98,7 @@ jobs:
       - name: Update Star Badges
         run: |
           RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: OWNER) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
+            -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: [OWNER, COLLABORATOR]) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
             https://api.github.com/graphql)
           
           GIVEN=$(echo $RESULT | jq '.data.user.starredRepositories.totalCount')
