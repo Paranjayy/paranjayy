@@ -12,9 +12,11 @@ Based on recent industry shifts and the "vibe-coding" workflow, these are the es
 - **[jscpd](https://jscpd.org/)**: Detects copy-pasted code blocks across your repositories.
 - **[ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)**: The standard for keeping code style consistent and catching logical errors before they ship.
 
-### 🧪 Observability & Stability
-- **[Sentry](https://sentry.io/)**: Real-time error tracking to see exactly where your apps are failing in production.
-- **[PostHog](https://posthog.com/)**: Open-source product analytics. Essential for understanding how people actually use what you build.
+### 🎨 UI & UX (Unslopified Components)
+- **[Shadcn UI](https://ui.shadcn.com/)**: The modern standard for building high-quality, accessible React components without the "AI slop" look.
+- **[Lucide React](https://lucide.dev/)**: Clean, consistent, and lightweight iconography.
+- **[Tiptap](https://tiptap.dev/)**: For when you need a professional, head-less rich text editor that isn't a mess of legacy code.
+- **[Framer Motion](https://www.framer.com/motion/)**: The gold standard for smooth, declarative animations in React.
 
 ### 📦 Infrastructure & Workflow
 - **[Docker](https://www.docker.com/)**: Containerization to ensure "it works on my machine" translates to "it works everywhere."
