@@ -1,7 +1,7 @@
 import os
 import subprocess
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import defaultdict
 
 ROOT_DIR = '/Users/paranjay'
@@ -35,6 +35,7 @@ def is_code_file(filename):
 def get_project_stats(dir_path, is_git):
     loc_by_lang = defaultdict(int)
     latest_mtime = 0
+    largest_file = {"path": "", "loc": 0}
     
     for root, dirs, files in os.walk(dir_path):
         dirs[:] = [d for d in dirs if d not in SKIP_DIRS and not d.startswith('.')]
@@ -51,11 +52,25 @@ def get_project_stats(dir_path, is_git):
                     with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
                         lines = sum(1 for line in file if line.strip())
                         loc_by_lang[CODE_EXTENSIONS[ext]] += lines
+                        
+                        if lines > largest_file["loc"]:
+                            largest_file = {"path": full_path, "loc": lines}
                 except:
                     pass
                     
     total_loc = sum(loc_by_lang.values())
-    return loc_by_lang, total_loc, latest_mtime
+    return loc_by_lang, total_loc, latest_mtime, largest_file
+
+def get_recent_commits(dir_path):
+    try:
+        # Get commits in the last 7 days
+        out = subprocess.check_output(
+            ['git', 'log', '--since="7 days ago"', '--oneline'], 
+            cwd=dir_path, stderr=subprocess.DEVNULL
+        ).decode('utf-8')
+        return len([line for line in out.split('\n') if line.strip()])
+    except:
+        return 0
 
 def scan_for_projects(current_dir, depth):
     if depth > MAX_DEPTH:
@@ -72,7 +87,7 @@ def scan_for_projects(current_dir, depth):
     is_non_git_project = not is_git and any(marker in entries for marker in PROJECT_MARKERS)
     
     if is_git or is_non_git_project:
-        loc_by_lang, total_loc, last_mtime = get_project_stats(current_dir, is_git)
+        loc_by_lang, total_loc, last_mtime, largest_file = get_project_stats(current_dir, is_git)
         
         status_info = {
             'path': current_dir,
@@ -80,6 +95,7 @@ def scan_for_projects(current_dir, depth):
             'total_loc': total_loc,
             'loc_breakdown': dict(loc_by_lang),
             'last_modified': last_mtime,
+            'largest_file': largest_file
         }
         
         if is_git:
@@ -87,6 +103,8 @@ def scan_for_projects(current_dir, depth):
             uncommitted = 0
             remote_url = ''
             unpushed = 0
+            recent_commits = get_recent_commits(current_dir)
+            
             try:
                 branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8').strip()
                 status_out = subprocess.check_output(['git', 'status', '--porcelain'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8')
@@ -102,7 +120,8 @@ def scan_for_projects(current_dir, depth):
                 'branch': branch,
                 'uncommitted': uncommitted,
                 'unpushed': unpushed,
-                'remote_url': remote_url
+                'remote_url': remote_url,
+                'recent_commits': recent_commits
             })
             
         return [status_info]
@@ -133,9 +152,14 @@ def format_lang_breakdown(loc_dict):
     if not loc_dict:
         return "None"
     sorted_langs = sorted(loc_dict.items(), key=lambda x: -x[1])
-    # Take top 3
     top = sorted_langs[:3]
     return "<br>".join([f"**{lang}**: {lines:,}" for lang, lines in top])
+
+def generate_ascii_bar(value, total, width=20):
+    if total == 0:
+        return ""
+    filled = int((value / total) * width)
+    return "█" * filled + "░" * (width - filled)
 
 def get_risk_score(s):
     if s.get('uncommitted', 0) > 20:
@@ -145,7 +169,7 @@ def get_risk_score(s):
     elif s['is_git'] and not s.get('remote_url'):
         return "🟠 Warning (No Remote)"
     elif not s['is_git']:
-        return "⚪ Unversioned (Local Only)"
+        return "⚪ Unversioned (Local)"
     else:
         return "🟢 Safe"
 
@@ -159,12 +183,18 @@ def main():
     
     total_loc = 0
     total_uncommitted = 0
+    total_7d_commits = 0
     global_loc_by_lang = defaultdict(int)
+    
+    mac_largest_file = {"path": "", "loc": 0}
     
     for p in projects:
         total_loc += p['total_loc']
         for lang, lines in p['loc_breakdown'].items():
             global_loc_by_lang[lang] += lines
+            
+        if p['largest_file']['loc'] > mac_largest_file['loc']:
+            mac_largest_file = p['largest_file']
             
         p['rel_path'] = os.path.relpath(p['path'], ROOT_DIR)
         mod_str, is_active = format_time_diff(p['last_modified'])
@@ -172,6 +202,8 @@ def main():
         
         if p.get('uncommitted', 0) > 0:
             total_uncommitted += p['uncommitted']
+            
+        total_7d_commits += p.get('recent_commits', 0)
             
         if is_active:
             active_projects.append(p)
@@ -181,9 +213,15 @@ def main():
     active_projects.sort(key=lambda x: -x['total_loc'])
     inactive_projects.sort(key=lambda x: -x['total_loc'])
 
-    # Format global languages
-    sorted_global_langs = sorted(global_loc_by_lang.items(), key=lambda x: -x[1])[:5]
-    global_langs_str = ", ".join([f"**{lang}** ({lines:,})" for lang, lines in sorted_global_langs])
+    # Build ASCII Language Chart
+    sorted_global_langs = sorted(global_loc_by_lang.items(), key=lambda x: -x[1])[:10]
+    lang_chart_lines = []
+    for lang, lines in sorted_global_langs:
+        pct = (lines / total_loc) * 100 if total_loc > 0 else 0
+        bar = generate_ascii_bar(lines, total_loc, width=25)
+        lang_chart_lines.append(f"`{lang.ljust(12)} {bar} {pct:4.1f}% ({lines:,} LOC)`")
+        
+    lang_chart_str = "  \n".join(lang_chart_lines)
 
     readme_lines = [
         "Hi, I'm Paranjay 👋",
@@ -196,9 +234,12 @@ def main():
         "### 📊 Global Mac Intelligence",
         f"- **Total Projects Discovered**: {len(projects)}",
         f"- **Total Lines of Code Handled**: {total_loc:,}",
-        f"- **Top Languages**: {global_langs_str}",
         f"- **Unsaved Changes Across Mac**: {total_uncommitted} files waiting to be committed.",
-        f"- **Active Projects (30 days)**: {len(active_projects)}",
+        f"- **7-Day Local Commit Pulse**: 🔥 {total_7d_commits} commits in the past week.",
+        f"- **Biggest Monolith File**: `{os.path.basename(mac_largest_file['path'])}` ({mac_largest_file['loc']:,} LOC)",
+        "",
+        "#### 🧬 Language DNA Breakdown",
+        lang_chart_str,
         "",
         "---",
         "",
@@ -216,6 +257,9 @@ def main():
         breakdown = format_lang_breakdown(s['loc_breakdown']) or "0"
             
         name = f"**{s['rel_path']}**"
+        if s.get('recent_commits', 0) > 0:
+            name += f" 🔥"
+            
         mod = s['mod_str']
         
         return f"| {name} | {p_type} | `{branch}` | {risk} | {breakdown} | {mod} |"
