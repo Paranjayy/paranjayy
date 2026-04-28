@@ -2,27 +2,24 @@ import os
 import subprocess
 import time
 from datetime import datetime
+from collections import defaultdict
 
 ROOT_DIR = '/Users/paranjay'
-MAX_DEPTH = 5
+MAX_DEPTH = 7
 
 SKIP_DIRS = {
     'Library', 'Applications', 'Pictures', 'Music', 'Movies', '.Trash', 
     'node_modules', '.venv', 'venv', 'env', 'site-packages', 'build', 
-    'dist', '.vscode', '.next', '.cache', 'Public', 'opt', 'Downloads'
+    'dist', '.vscode', '.next', '.cache', 'Public', 'opt'
 }
 
-# Only check inside /Users/paranjay/Downloads/2work or similar if we want to, 
-# but let's allow Downloads for now but skip the root Downloads files unless it's a project folder?
-# Actually, the user's dev folder is in Downloads/2work/dev. We must NOT skip Downloads!
-# So I will REMOVE 'Downloads' from SKIP_DIRS.
-
-SKIP_DIRS.discard('Downloads')
-
 CODE_EXTENSIONS = {
-    '.py', '.js', '.ts', '.tsx', '.jsx', '.html', '.css', '.scss', 
-    '.rs', '.go', '.c', '.cpp', '.h', '.java', '.sh', '.mjs', '.md', 
-    '.json', '.yml', '.yaml', '.toml', '.swift'
+    '.py': 'Python', '.js': 'JavaScript', '.ts': 'TypeScript', '.tsx': 'React TS', 
+    '.jsx': 'React JS', '.html': 'HTML', '.css': 'CSS', '.scss': 'SCSS', 
+    '.rs': 'Rust', '.go': 'Go', '.c': 'C', '.cpp': 'C++', '.h': 'C Header', 
+    '.java': 'Java', '.sh': 'Shell', '.mjs': 'Node JS', '.md': 'Markdown', 
+    '.json': 'JSON', '.yml': 'YAML', '.yaml': 'YAML', '.toml': 'TOML', 
+    '.swift': 'Swift', '.sql': 'SQL', '.graphql': 'GraphQL', '.vue': 'Vue'
 }
 
 PROJECT_MARKERS = {
@@ -32,17 +29,19 @@ PROJECT_MARKERS = {
 }
 
 def is_code_file(filename):
-    return any(filename.endswith(ext) for ext in CODE_EXTENSIONS)
+    ext = os.path.splitext(filename)[1].lower()
+    return ext in CODE_EXTENSIONS
 
 def get_project_stats(dir_path, is_git):
-    loc = 0
+    loc_by_lang = defaultdict(int)
     latest_mtime = 0
     
     for root, dirs, files in os.walk(dir_path):
         dirs[:] = [d for d in dirs if d not in SKIP_DIRS and not d.startswith('.')]
         
         for f in files:
-            if is_code_file(f):
+            ext = os.path.splitext(f)[1].lower()
+            if ext in CODE_EXTENSIONS:
                 full_path = os.path.join(root, f)
                 try:
                     mtime = os.path.getmtime(full_path)
@@ -50,11 +49,13 @@ def get_project_stats(dir_path, is_git):
                         latest_mtime = mtime
                     
                     with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
-                        loc += sum(1 for line in file if line.strip())
+                        lines = sum(1 for line in file if line.strip())
+                        loc_by_lang[CODE_EXTENSIONS[ext]] += lines
                 except:
                     pass
                     
-    return loc, latest_mtime
+    total_loc = sum(loc_by_lang.values())
+    return loc_by_lang, total_loc, latest_mtime
 
 def scan_for_projects(current_dir, depth):
     if depth > MAX_DEPTH:
@@ -68,17 +69,16 @@ def scan_for_projects(current_dir, depth):
         return []
         
     is_git = '.git' in entries and os.path.isdir(os.path.join(current_dir, '.git'))
-    
-    # Check for project markers to identify a non-git project
     is_non_git_project = not is_git and any(marker in entries for marker in PROJECT_MARKERS)
     
     if is_git or is_non_git_project:
-        loc, last_mtime = get_project_stats(current_dir, is_git)
+        loc_by_lang, total_loc, last_mtime = get_project_stats(current_dir, is_git)
         
         status_info = {
             'path': current_dir,
             'is_git': is_git,
-            'loc': loc,
+            'total_loc': total_loc,
+            'loc_breakdown': dict(loc_by_lang),
             'last_modified': last_mtime,
         }
         
@@ -107,7 +107,6 @@ def scan_for_projects(current_dir, depth):
             
         return [status_info]
 
-    # Recurse
     for entry in entries:
         if entry in SKIP_DIRS or entry.startswith('.'):
             continue
@@ -130,6 +129,26 @@ def format_time_diff(mtime):
     else:
         return f"{int(days)}d ago", active
 
+def format_lang_breakdown(loc_dict):
+    if not loc_dict:
+        return "None"
+    sorted_langs = sorted(loc_dict.items(), key=lambda x: -x[1])
+    # Take top 3
+    top = sorted_langs[:3]
+    return "<br>".join([f"**{lang}**: {lines:,}" for lang, lines in top])
+
+def get_risk_score(s):
+    if s.get('uncommitted', 0) > 20:
+        return "🔴 High (Backup ASAP!)"
+    elif s.get('uncommitted', 0) > 5 or s.get('unpushed', 0) > 0:
+        return "🟡 Moderate (Needs Push)"
+    elif s['is_git'] and not s.get('remote_url'):
+        return "🟠 Warning (No Remote)"
+    elif not s['is_git']:
+        return "⚪ Unversioned (Local Only)"
+    else:
+        return "🟢 Safe"
+
 def main():
     print(f"🔍 Scanning {ROOT_DIR} for projects (Max depth {MAX_DEPTH})...")
     projects = scan_for_projects(ROOT_DIR, 0)
@@ -140,9 +159,13 @@ def main():
     
     total_loc = 0
     total_uncommitted = 0
+    global_loc_by_lang = defaultdict(int)
     
     for p in projects:
-        total_loc += p['loc']
+        total_loc += p['total_loc']
+        for lang, lines in p['loc_breakdown'].items():
+            global_loc_by_lang[lang] += lines
+            
         p['rel_path'] = os.path.relpath(p['path'], ROOT_DIR)
         mod_str, is_active = format_time_diff(p['last_modified'])
         p['mod_str'] = mod_str
@@ -155,8 +178,12 @@ def main():
         else:
             inactive_projects.append(p)
             
-    active_projects.sort(key=lambda x: -x['loc'])
-    inactive_projects.sort(key=lambda x: -x['loc'])
+    active_projects.sort(key=lambda x: -x['total_loc'])
+    inactive_projects.sort(key=lambda x: -x['total_loc'])
+
+    # Format global languages
+    sorted_global_langs = sorted(global_loc_by_lang.items(), key=lambda x: -x[1])[:5]
+    global_langs_str = ", ".join([f"**{lang}** ({lines:,})" for lang, lines in sorted_global_langs])
 
     readme_lines = [
         "Hi, I'm Paranjay 👋",
@@ -166,10 +193,11 @@ def main():
         "",
         "Currently experimenting, vibe-coding, and orchestrating ideas across multiple domains.",
         "",
-        "### 📊 Global Stats",
-        f"- **Total Projects Tracked**: {len(projects)}",
-        f"- **Total Lines of Code Tracked**: {total_loc:,}",
-        f"- **Unsaved Changes Across Mac**: {total_uncommitted} files",
+        "### 📊 Global Mac Intelligence",
+        f"- **Total Projects Discovered**: {len(projects)}",
+        f"- **Total Lines of Code Handled**: {total_loc:,}",
+        f"- **Top Languages**: {global_langs_str}",
+        f"- **Unsaved Changes Across Mac**: {total_uncommitted} files waiting to be committed.",
         f"- **Active Projects (30 days)**: {len(active_projects)}",
         "",
         "---",
@@ -177,34 +205,20 @@ def main():
         "### 🟢 Active Projects & Orchestration Dashboard",
         "*(Modified within the last 30 days)*",
         "",
-        "| Project | Type | Branch | Status | LOC | Last Modified |",
+        "| Project | Type | Branch | Data Risk | LOC Breakdown | Last Modified |",
         "| :--- | :--- | :--- | :--- | :--- | :--- |"
     ]
 
     def render_project_row(s):
-        if s['is_git']:
-            status_str = "✅ Synced"
-            if s['uncommitted'] > 0 and s['unpushed'] > 0:
-                status_str = f"⚠️ {s['uncommitted']} uncommitted, {s['unpushed']} unpushed"
-            elif s['uncommitted'] > 0:
-                status_str = f"📝 {s['uncommitted']} uncommitted"
-            elif s['unpushed'] > 0:
-                status_str = f"⬆️ {s['unpushed']} ahead"
-            elif not s['remote_url']:
-                status_str = "🌐 Local Only"
-            
-            p_type = "Git 🐙"
-            branch = s['branch'] or 'None'
-        else:
-            status_str = "📁 Unversioned"
-            p_type = "Folder 📁"
-            branch = "-"
+        p_type = "Git 🐙" if s['is_git'] else "Folder 📁"
+        branch = s.get('branch', '') or '-'
+        risk = get_risk_score(s)
+        breakdown = format_lang_breakdown(s['loc_breakdown']) or "0"
             
         name = f"**{s['rel_path']}**"
-        loc = f"{s['loc']:,}"
         mod = s['mod_str']
         
-        return f"| {name} | {p_type} | `{branch}` | {status_str} | {loc} | {mod} |"
+        return f"| {name} | {p_type} | `{branch}` | {risk} | {breakdown} | {mod} |"
 
     for p in active_projects:
         readme_lines.append(render_project_row(p))
@@ -214,7 +228,7 @@ def main():
         "### 💤 Inactive Projects Archive",
         "*(No modifications in >30 days. Consider archiving or syncing.)*",
         "",
-        "| Project | Type | Branch | Status | LOC | Last Modified |",
+        "| Project | Type | Branch | Data Risk | LOC Breakdown | Last Modified |",
         "| :--- | :--- | :--- | :--- | :--- | :--- |"
     ])
     
