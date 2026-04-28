@@ -5,23 +5,27 @@ Hi, I'm Paranjay 👋
 
 Currently experimenting, vibe-coding, and orchestrating ideas across multiple domains.
 
-### 📊 Global Mac Intelligence
+### 📊 Global Mac Intelligence & Vibe Analysis
 - **Total Projects Discovered**: 26
-- **Total Lines of Code Handled**: 20,966,878
-- **Unsaved Changes Across Mac**: 100 files waiting to be committed.
-- **7-Day Local Commit Pulse**: 🔥 407 commits in the past week.
+- **Total Lines of Code**: 20,967,018
+- **Unsaved Changes**: 100 files waiting to be committed
+- **7-Day Local Commit Pulse**: 🔥 400 commits
+- **Tech Debt Score**: 🐛 76 `TODO/FIXME`s across your mac
+- **Dead/Orphan Branches**: 🍂 0 branches haven't been touched in >6 months
+- **Top Dependencies Used**: `@types/react` (28), `react` (27), `typescript` (27), `react-dom` (26), `@types/react-dom` (26)
+- **Primary Coding Rhythm**: Morning Bird 🌅
 - **Biggest Monolith File**: `conversations_truncated.json` (1,591,896 LOC)
 
 #### 🧬 Language DNA Breakdown
-`JSON         ██████████░░░░░░░░░░░░░░░ 40.9% (8,578,601 LOC)`  
+`JSON         ██████████░░░░░░░░░░░░░░░ 40.9% (8,578,607 LOC)`  
 `HTML         ███████░░░░░░░░░░░░░░░░░░ 31.8% (6,659,693 LOC)`  
-`Markdown     ████░░░░░░░░░░░░░░░░░░░░░ 16.4% (3,428,313 LOC)`  
+`Markdown     ████░░░░░░░░░░░░░░░░░░░░░ 16.4% (3,428,325 LOC)`  
 `JavaScript   ██░░░░░░░░░░░░░░░░░░░░░░░  8.3% (1,729,848 LOC)`  
 `Swift        ░░░░░░░░░░░░░░░░░░░░░░░░░  1.4% (291,812 LOC)`  
 `React TS     ░░░░░░░░░░░░░░░░░░░░░░░░░  0.5% (105,206 LOC)`  
 `TypeScript   ░░░░░░░░░░░░░░░░░░░░░░░░░  0.2% (43,050 LOC)`  
 `CSS          ░░░░░░░░░░░░░░░░░░░░░░░░░  0.2% (32,394 LOC)`  
-`Python       ░░░░░░░░░░░░░░░░░░░░░░░░░  0.1% (30,124 LOC)`  
+`Python       ░░░░░░░░░░░░░░░░░░░░░░░░░  0.1% (30,246 LOC)`  
 `C Header     ░░░░░░░░░░░░░░░░░░░░░░░░░  0.1% (26,707 LOC)`
 
 ---
@@ -29,40 +33,40 @@ Currently experimenting, vibe-coding, and orchestrating ideas across multiple do
 ### 🟢 Active Projects & Orchestration Dashboard
 *(Modified within the last 30 days)*
 
-| Project | Type | Branch | Data Risk | LOC Breakdown | Last Modified |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Developer** | Git 🐙 | `main` | 🔴 High (Backup ASAP!) | **JSON**: 7,848,493<br>**HTML**: 6,625,351<br>**Markdown**: 3,252,739 | Today |
-| **Downloads/2work/dev/Web_Apps/ipl-2026-engine** 🔥 | Git 🐙 | `main` | 🟢 Safe | **JSON**: 649,662<br>**React TS**: 13,660<br>**TypeScript**: 10,610 | Yesterday |
-| **Desktop/Organised Screenshots/Misc** | Folder 📁 | `-` | ⚪ Unversioned (Local) | **Markdown**: 139,939<br>**Python**: 22,744<br>**JSON**: 22,602 | 20d ago |
-| **Downloads/2work/dev/_learning/CodexBar** 🔥 | Git 🐙 | `main` | 🟢 Safe | **Swift**: 132,728<br>**Markdown**: 6,612<br>**Shell**: 1,671 | 6d ago |
-| **Downloads/2work/dev/getfive-pms-mb** | Git 🐙 | `v4.0` | 🟡 Moderate (Needs Push) | **JSON**: 13,421<br>**React TS**: 9,063<br>**SQL**: 1,057 | 15d ago |
-| **Downloads/2work/dev/Extensions/chatgpt-exporter** | Git 🐙 | `main` | 🟡 Moderate (Needs Push) | **Markdown**: 5,662<br>**JavaScript**: 3,158<br>**CSS**: 806 | 6d ago |
-| **Downloads/2work/dev/getfive-merchant-banking-pms** | Git 🐙 | `main` | 🟢 Safe | **JSON**: 3,418<br>**JavaScript**: 3,347<br>**CSS**: 947 | 15d ago |
-| **Downloads/2work/dev/ln4-react** | Git 🐙 | `main` | 🟠 Warning (No Remote) | **JSON**: 3,331<br>**CSS**: 1,860<br>**React JS**: 1,733 | 12d ago |
-| **Downloads/2work/dev/lando-site** | Git 🐙 | `main` | 🟠 Warning (No Remote) | **JSON**: 3,895<br>**React TS**: 1,909<br>**CSS**: 100 | 12d ago |
-| **Downloads/2work/dev/ln4** | Folder 📁 | `-` | ⚪ Unversioned (Local) | **JSON**: 2,677<br>**CSS**: 1,471<br>**React JS**: 1,150 | 12d ago |
-| **Downloads/2work/dev/Web_Apps/gemini-design-palace** 🔥 | Git 🐙 | `main` | 🟢 Safe | **JSON**: 2,907<br>**React TS**: 855<br>**CSS**: 562 | 2d ago |
-| **Downloads/2work/dev/chess-analytics-extension** 🔥 | Git 🐙 | `main` | 🟡 Moderate (Needs Push) | **JavaScript**: 2,786<br>**CSS**: 332<br>**JSON**: 40 | Yesterday |
-| **Downloads/2work/dev/ai-trading-aws-vercel** | Git 🐙 | `main` | 🟢 Safe | **React TS**: 2,229<br>**TypeScript**: 281<br>**CSS**: 125 | 15d ago |
-| **Downloads/2work/dev/Web_Apps/antigravity-quota-hub** 🔥 | Git 🐙 | `main` | 🟢 Safe | **JavaScript**: 899<br>**CSS**: 761<br>**Python**: 206 | 6d ago |
-| **Downloads/2work/dev/Web_Apps/word-vibe** | Folder 📁 | `-` | ⚪ Unversioned (Local) | **JSON**: 916<br>**CSS**: 641<br>**JavaScript**: 383 | 2d ago |
-| **Downloads/2work/dev/Web_Apps/paranjayy** 🔥 | Git 🐙 | `feature/portfolio-dashboard` | 🟢 Safe | **Python**: 534<br>**Markdown**: 259<br>**Node JS**: 107 | Today |
-| **Downloads/2work/dev/openai.rip** 🔥 | Git 🐙 | `main` | 🟢 Safe | **CSS**: 425<br>**TypeScript**: 288<br>**JSON**: 53 | Yesterday |
-| **Downloads/2work/dev/Web_Apps/paranjay-site** | Git 🐙 | `main` | 🟢 Safe | **CSS**: 142<br>**JSON**: 76<br>**TypeScript**: 49 | 26d ago |
-| **Downloads/2work/dev/Archive_Utils/test-bun** | Folder 📁 | `-` | ⚪ Unversioned (Local) | **Markdown**: 97<br>**JSON**: 38<br>**TypeScript**: 1 | 26d ago |
+| Project | Data Risk | Tech Debt | Top Languages | Last Modified |
+| :--- | :--- | :--- | :--- | :--- |
+| **Developer** | 🔴 High (Backup ASAP) | 🔨 22 | **JSON**: 7,848,499<br>**HTML**: 6,625,351 | Today |
+| **Downloads/2work/dev/Web_Apps/ipl-2026-engine** 🔥 | 🟢 Safe | ✨ Clean | **JSON**: 649,662<br>**React TS**: 13,660 | Yesterday |
+| **Desktop/Organised Screenshots/Misc** | ⚪ Unversioned | 🔨 42 | **Markdown**: 139,939<br>**Python**: 22,744 | 20d ago |
+| **Downloads/2work/dev/_learning/CodexBar** | 🟢 Safe | 🔨 3 | **Swift**: 132,728<br>**Markdown**: 6,612 | 7d ago |
+| **Downloads/2work/dev/getfive-pms-mb** | 🟡 Mod (Needs Push) | ✨ Clean | **JSON**: 13,421<br>**React TS**: 9,063 | 15d ago |
+| **Downloads/2work/dev/Extensions/chatgpt-exporter** | 🟡 Mod (Needs Push) | 🔨 1 | **Markdown**: 5,662<br>**JavaScript**: 3,158 | 6d ago |
+| **Downloads/2work/dev/getfive-merchant-banking-pms** | 🟢 Safe | ✨ Clean | **JSON**: 3,418<br>**JavaScript**: 3,347 | 15d ago |
+| **Downloads/2work/dev/ln4-react** | 🟠 Warn (No Remote) | ✨ Clean | **JSON**: 3,331<br>**CSS**: 1,860 | 12d ago |
+| **Downloads/2work/dev/lando-site** | 🟠 Warn (No Remote) | ✨ Clean | **JSON**: 3,895<br>**React TS**: 1,909 | 12d ago |
+| **Downloads/2work/dev/ln4** | ⚪ Unversioned | ✨ Clean | **JSON**: 2,677<br>**CSS**: 1,471 | 12d ago |
+| **Downloads/2work/dev/Web_Apps/gemini-design-palace** 🔥 | 🟢 Safe | ✨ Clean | **JSON**: 2,907<br>**React TS**: 855 | 2d ago |
+| **Downloads/2work/dev/chess-analytics-extension** 🔥 | 🟡 Mod (Needs Push) | 🔨 3 | **JavaScript**: 2,786<br>**CSS**: 332 | Yesterday |
+| **Downloads/2work/dev/ai-trading-aws-vercel** | 🟢 Safe | ✨ Clean | **React TS**: 2,229<br>**TypeScript**: 281 | 15d ago |
+| **Downloads/2work/dev/Web_Apps/antigravity-quota-hub** 🔥 | 🟢 Safe | ✨ Clean | **JavaScript**: 899<br>**CSS**: 761 | 6d ago |
+| **Downloads/2work/dev/Web_Apps/word-vibe** | ⚪ Unversioned | ✨ Clean | **JSON**: 916<br>**CSS**: 641 | 2d ago |
+| **Downloads/2work/dev/Web_Apps/paranjayy** 🔥 | 🟢 Safe | 🔨 1 | **Python**: 656<br>**Markdown**: 270 | Today |
+| **Downloads/2work/dev/openai.rip** 🔥 | 🟢 Safe | ✨ Clean | **CSS**: 425<br>**TypeScript**: 288 | Yesterday |
+| **Downloads/2work/dev/Web_Apps/paranjay-site** | 🟢 Safe | ✨ Clean | **CSS**: 142<br>**JSON**: 76 | 26d ago |
+| **Downloads/2work/dev/Archive_Utils/test-bun** | ⚪ Unversioned | ✨ Clean | **Markdown**: 97<br>**JSON**: 38 | 26d ago |
 
 ### 💤 Inactive Projects Archive
 *(No modifications in >30 days. Consider archiving or syncing.)*
 
-| Project | Type | Branch | Data Risk | LOC Breakdown | Last Modified |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **homebrew** | Git 🐙 | `stable` | 🟢 Safe | **HTML**: 33,079<br>**C Header**: 26,597<br>**Markdown**: 21,287 | 32d ago |
-| **Downloads/2work/dev/System_Tools/omniwm** | Git 🐙 | `main` | 🟢 Safe | **Swift**: 65,630<br>**Markdown**: 293<br>**Shell**: 50 | 31d ago |
-| **Downloads/2work/dev/Archive_Utils/scratch** | Git 🐙 | `main` | 🔴 High (Backup ASAP!) | **JSON**: 17,423<br>**React TS**: 12,669<br>**Rust**: 3,772 | 32d ago |
-| **Downloads/2work/dev/Archive_Utils/QuickNotes** | Folder 📁 | `-` | ⚪ Unversioned (Local) | **JSON**: 7,440<br>**JavaScript**: 256<br>**Swift**: 58 | 32d ago |
-| **Desktop/Organised Screenshots/bloat/hermes-agent** | Git 🐙 | `-` | 🟠 Warning (No Remote) | None | Unknown |
-| **Downloads/2work/dev/chatgpt-exporter** | Git 🐙 | `-` | 🟠 Warning (No Remote) | None | Unknown |
-| **root and config/test-gpg** | Git 🐙 | `main` | 🟢 Safe | None | Unknown |
+| Project | Data Risk | Tech Debt | Top Languages | Last Modified |
+| :--- | :--- | :--- | :--- | :--- |
+| **homebrew** | 🟢 Safe | 🔨 4 | **HTML**: 33,079<br>**C Header**: 26,597 | 32d ago |
+| **Downloads/2work/dev/System_Tools/omniwm** | 🟢 Safe | ✨ Clean | **Swift**: 65,630<br>**Markdown**: 293 | 32d ago |
+| **Downloads/2work/dev/Archive_Utils/scratch** | 🔴 High (Backup ASAP) | ✨ Clean | **JSON**: 17,423<br>**React TS**: 12,669 | 32d ago |
+| **Downloads/2work/dev/Archive_Utils/QuickNotes** | ⚪ Unversioned | ✨ Clean | **JSON**: 7,440<br>**JavaScript**: 256 | 32d ago |
+| **Desktop/Organised Screenshots/bloat/hermes-agent** | 🟠 Warn (No Remote) | ✨ Clean | None | Unknown |
+| **Downloads/2work/dev/chatgpt-exporter** | 🟠 Warn (No Remote) | ✨ Clean | None | Unknown |
+| **root and config/test-gpg** | 🟢 Safe | ✨ Clean | None | Unknown |
 
 ---
 
