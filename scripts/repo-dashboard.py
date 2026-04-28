@@ -7,12 +7,12 @@ from datetime import datetime, timedelta
 from collections import defaultdict, Counter
 
 ROOT_DIR = '/Users/paranjay'
-MAX_DEPTH = 7
+MAX_DEPTH = 12
 
 SKIP_DIRS = {
     'Library', 'Applications', 'Pictures', 'Music', 'Movies', '.Trash', 
     'node_modules', '.venv', 'venv', 'env', 'site-packages', 'build', 
-    'dist', '.vscode', '.next', '.cache', 'Public', 'opt'
+    'dist', '.vscode', '.next', '.cache', 'Public', 'opt', 'Pods', 'vendor'
 }
 
 CODE_EXTENSIONS = {
@@ -66,17 +66,45 @@ def get_project_stats(dir_path, is_git):
     tech_debt_count = 0
     extracted_todos = []
     dependencies = []
+    has_license = False
+    env_exposed = False
+    proj_type = "Project"
     
+    # Check for gitignore content if it exists
+    ignored_patterns = set()
+    gitignore_path = os.path.join(dir_path, '.gitignore')
+    if os.path.exists(gitignore_path):
+        try:
+            with open(gitignore_path, 'r') as f:
+                ignored_patterns = {line.strip() for line in f if line.strip() and not line.startswith('#')}
+        except:
+            pass
+
     for root, dirs, files in os.walk(dir_path):
         dirs[:] = [d for d in dirs if d not in SKIP_DIRS and not d.startswith('.')]
         
         for f in files:
             full_path = os.path.join(root, f)
             
+            if f.lower() in ['license', 'license.md', 'license.txt']:
+                has_license = True
+            
+            # Check for exposed .env files
+            if f == '.env' and is_git:
+                # If .env is present, check if it's in gitignore
+                if '.env' not in ignored_patterns:
+                    env_exposed = True
+
             if f == 'package.json':
                 dependencies.extend(parse_package_json(full_path))
-            elif f == 'requirements.txt':
+                proj_type = "Web App"
+            elif f == 'requirements.txt' or f == 'pyproject.toml':
                 dependencies.extend(parse_requirements_txt(full_path))
+                proj_type = "Python Tool"
+            elif f == 'manifest.json' and 'Extension' not in proj_type:
+                proj_type = "Browser Extension"
+            elif f == 'Dockerfile':
+                proj_type += " (Dockerized)"
                 
             ext = os.path.splitext(f)[1].lower()
             if ext in CODE_EXTENSIONS:
@@ -109,7 +137,7 @@ def get_project_stats(dir_path, is_git):
                     pass
                     
     total_loc = sum(loc_by_lang.values())
-    return loc_by_lang, total_loc, latest_mtime, largest_file, tech_debt_count, extracted_todos, dependencies
+    return loc_by_lang, total_loc, latest_mtime, largest_file, tech_debt_count, extracted_todos, dependencies, has_license, env_exposed, proj_type
 
 def get_git_analytics(dir_path):
     analytics = {
@@ -207,7 +235,7 @@ def scan_for_projects(current_dir, depth):
     is_non_git_project = not is_git and any(marker in entries for marker in PROJECT_MARKERS)
     
     if is_git or is_non_git_project:
-        loc_by_lang, total_loc, last_mtime, largest_file, tech_debt_count, extracted_todos, dependencies = get_project_stats(current_dir, is_git)
+        loc_by_lang, total_loc, last_mtime, largest_file, tech_debt_count, extracted_todos, dependencies, has_license, env_exposed, proj_type = get_project_stats(current_dir, is_git)
         
         status_info = {
             'path': current_dir,
@@ -218,7 +246,10 @@ def scan_for_projects(current_dir, depth):
             'largest_file': largest_file,
             'tech_debt_count': tech_debt_count,
             'todos_sample': extracted_todos,
-            'dependencies': dependencies
+            'dependencies': dependencies,
+            'has_license': has_license,
+            'env_exposed': env_exposed,
+            'proj_type': proj_type
         }
         
         if is_git:
@@ -291,7 +322,9 @@ def generate_ascii_bar(value, total, width=20):
     return "█" * filled + "░" * (width - filled)
 
 def get_risk_score(s):
-    if s.get('uncommitted', 0) > 20:
+    if s.get('env_exposed', False):
+        return "🔥 CRITICAL (.env Exposed)"
+    elif s.get('uncommitted', 0) > 20:
         return "🔴 High (Backup ASAP)"
     elif s.get('uncommitted', 0) > 5 or s.get('unpushed', 0) > 0:
         return "🟡 Mod (Needs Push)"
@@ -459,8 +492,8 @@ def main():
         "### 🟢 Active Projects Dashboard",
         "*(Modified within the last 30 days)*",
         "",
-        "| Project | Data Risk | Tech Debt | Top Languages | Last Modified |",
-        "| :--- | :--- | :--- | :--- | :--- |"
+        "| Project | Type | Data Risk | Tech Debt | Top Languages | Last Modified |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- |"
     ]
 
     def render_project_row(s):
@@ -470,6 +503,10 @@ def main():
         
         name = f"**{s['rel_path']}**"
         
+        # Add license badge if present
+        if s.get('has_license'):
+            name += " 📜"
+            
         # Format age if available
         age = s.get('age_days', 0)
         age_str = f" ({age}d old)" if age > 0 else ""
@@ -479,8 +516,9 @@ def main():
             
         name += age_str
         mod = s['mod_str']
+        p_type = s.get('proj_type', 'Project')
         
-        return f"| {name} | {risk} | {debt} | {breakdown} | {mod} |"
+        return f"| {name} | {p_type} | {risk} | {debt} | {breakdown} | {mod} |"
 
     for p in active_projects:
         readme_lines.append(render_project_row(p))
@@ -490,8 +528,8 @@ def main():
         "### 💤 Inactive Projects Archive",
         "*(No modifications in >30 days.)*",
         "",
-        "| Project | Data Risk | Tech Debt | Top Languages | Last Modified |",
-        "| :--- | :--- | :--- | :--- | :--- |"
+        "| Project | Type | Data Risk | Tech Debt | Top Languages | Last Modified |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- |"
     ])
     
     for p in inactive_projects:

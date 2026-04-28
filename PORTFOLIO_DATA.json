@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-04-29T01:16:40.332305",
+  "generated_at": "2026-04-29T02:00:01.888833",
   "stats": {
     "projects_count": 26,
-    "total_loc": 20973346,
+    "total_loc": 20979117,
     "uncommitted_files": 100,
     "commits_7d": 398,
-    "tech_debt_items": 245,
+    "tech_debt_items": 248,
     "orphan_branches": 0,
     "primary_coding_time": "Morning (5AM - 12PM)",
-    "weekend_commit_pct": 39.4
+    "weekend_commit_pct": 39.1
   },
   "top_commit_words": [
     {
       "word": "feat",
-      "count": 94
+      "count": 95
     },
     {
       "word": "metrics",
-      "count": 83
+      "count": 82
     },
     {
       "word": "with",
@@ -25,7 +25,7 @@
     },
     {
       "word": "skip",
-      "count": 62
+      "count": 61
     },
     {
       "word": "from",
@@ -36,14 +36,14 @@
   "top_dependencies": [
     {
       "name": "@types/react",
-      "count": 28
-    },
-    {
-      "name": "react",
-      "count": 27
+      "count": 30
     },
     {
       "name": "typescript",
+      "count": 29
+    },
+    {
+      "name": "react",
       "count": 27
     },
     {
@@ -58,7 +58,7 @@
   "language_distribution": [
     {
       "language": "JSON",
-      "loc": 8584856
+      "loc": 8588685
     },
     {
       "language": "HTML",
@@ -66,7 +66,7 @@
     },
     {
       "language": "Markdown",
-      "loc": 3428339
+      "loc": 3428454
     },
     {
       "language": "JavaScript",
@@ -78,11 +78,11 @@
     },
     {
       "language": "React TS",
-      "loc": 105206
+      "loc": 106208
     },
     {
       "language": "TypeScript",
-      "loc": 43050
+      "loc": 43809
     },
     {
       "language": "CSS",
@@ -90,7 +90,7 @@
     },
     {
       "language": "Python",
-      "loc": 30311
+      "loc": 30345
     },
     {
       "language": "C Header",
@@ -101,20 +101,20 @@
     {
       "path": "/Users/paranjay/Developer",
       "is_git": true,
-      "total_loc": 19692660,
+      "total_loc": 19698360,
       "loc_breakdown": {
-        "Markdown": 3252749,
+        "Markdown": 3252833,
         "HTML": 6625351,
-        "JSON": 7848356,
-        "TypeScript": 30234,
-        "React TS": 64821,
+        "JSON": 7852179,
+        "TypeScript": 30993,
+        "React TS": 65823,
         "CSS": 22152,
         "JavaScript": 1718567,
         "Python": 6448,
         "Shell": 1226,
         "TOML": 27,
         "YAML": 17919,
-        "Node JS": 1024,
+        "Node JS": 1056,
         "Rust": 1018,
         "SCSS": 1780,
         "React JS": 7484,
@@ -122,7 +122,7 @@
         "C": 1,
         "C Header": 107
       },
-      "last_modified": 1777405558.840919,
+      "last_modified": 1777408172.504354,
       "largest_file": {
         "path": "/Users/paranjay/Developer/chatgpt jsoon convert 725b5b46f52f107eaaf17868d7645173c81064fbacfc9f36f3b5d47c352fa31f-2025-06-13-17-18-03-9fc014d316c24704aefd943b0829ea95/conversations_truncated.json",
         "loc": 1591896
@@ -179,6 +179,28 @@
         "react",
         "react-dom",
         "@types/node-fetch",
+        "@raycast/eslint-config",
+        "@types/node",
+        "@types/react",
+        "eslint",
+        "prettier",
+        "typescript",
+        "@raycast/api",
+        "@raycast/utils",
+        "@types/cheerio",
+        "axios",
+        "cheerio",
+        "@raycast/eslint-config",
+        "@types/node",
+        "@types/react",
+        "eslint",
+        "prettier",
+        "typescript",
+        "@raycast/api",
+        "@raycast/utils",
+        "@types/cheerio",
+        "axios",
+        "cheerio",
         "@raycast/eslint-config",
         "@types/node",
         "@types/react",
@@ -671,6 +693,9 @@
         "typescript-eslint",
         "vite"
       ],
+      "has_license": true,
+      "env_exposed": false,
+      "proj_type": "Browser Extension",
       "branch": "main",
       "uncommitted": 42,
       "unpushed": 0,
@@ -727,6 +752,9 @@
         "'(?<!^\\{.*|^!/.*)ruby': Ruby  FIXME: https:github.com/errata-ai/vale/issues/818"
       ],
       "dependencies": [],
+      "has_license": true,
+      "env_exposed": false,
+      "proj_type": "Project (Dockerized)",
       "branch": "stable",
       "uncommitted": 0,
       "unpushed": 0,
@@ -1482,9 +1510,110 @@
         "python-telegram-bot[webhooks]",
         "discord.py",
         "aiohttp",
+        "[build-system]",
+        "requires",
+        "build-backend",
+        "[project]",
+        "name",
+        "version",
+        "description",
+        "readme",
+        "requires-python",
+        "authors",
+        "license",
+        "dependencies",
+        "\"openai",
+        "\"anthropic",
+        "\"python-dotenv",
+        "\"fire",
+        "\"httpx",
+        "\"rich",
+        "\"tenacity",
+        "\"pyyaml",
+        "\"requests",
+        "\"jinja2",
+        "\"pydantic",
+        "\"prompt_toolkit",
+        "\"exa-py",
+        "\"firecrawl-py",
+        "\"parallel-web",
+        "\"fal-client",
+        "\"edge-tts",
+        "\"PyJWT[crypto]",
+        "]",
+        "[project.optional-dependencies]",
+        "modal",
+        "daytona",
+        "dev",
+        "messaging",
+        "cron",
+        "slack",
+        "matrix",
+        "cli",
+        "tts-premium",
+        "voice",
+        "\"faster-whisper",
+        "\"sounddevice",
+        "\"numpy",
+        "]",
+        "pty",
+        "\"ptyprocess",
+        "\"pywinpty",
+        "]",
+        "honcho",
+        "mcp",
+        "homeassistant",
+        "sms",
+        "acp",
+        "dingtalk",
+        "feishu",
+        "rl",
+        "\"atroposlib @ git+https://github.com/NousResearch/atropos.git\",",
+        "\"tinker @ git+https://github.com/thinking-machines-lab/tinker.git\",",
+        "\"fastapi",
+        "\"uvicorn[standard]",
+        "\"wandb",
+        "]",
+        "yc-bench",
+        "all",
+        "\"hermes-agent[modal]\",",
+        "\"hermes-agent[daytona]\",",
+        "\"hermes-agent[messaging]\",",
+        "\"hermes-agent[cron]\",",
+        "\"hermes-agent[cli]\",",
+        "\"hermes-agent[dev]\",",
+        "\"hermes-agent[tts-premium]\",",
+        "\"hermes-agent[slack]\",",
+        "\"hermes-agent[pty]\",",
+        "\"hermes-agent[honcho]\",",
+        "\"hermes-agent[mcp]\",",
+        "\"hermes-agent[homeassistant]\",",
+        "\"hermes-agent[sms]\",",
+        "\"hermes-agent[acp]\",",
+        "\"hermes-agent[voice]\",",
+        "\"hermes-agent[dingtalk]\",",
+        "\"hermes-agent[feishu]\",",
+        "]",
+        "[project.scripts]",
+        "hermes",
+        "hermes-agent",
+        "hermes-acp",
+        "[tool.setuptools]",
+        "py-modules",
+        "[tool.setuptools.packages.find]",
+        "include",
+        "[tool.pytest.ini_options]",
+        "testpaths",
+        "markers",
+        "\"integration: marks tests requiring external services (API keys, Modal, etc.)\",",
+        "]",
+        "addopts",
         "agent-browser",
         "@askjo/camoufox-browser"
       ],
+      "has_license": true,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "rel_path": "Desktop/Organised Screenshots/Misc",
       "mod_str": "20d ago"
     },
@@ -1501,6 +1630,9 @@
       "tech_debt_count": 0,
       "todos_sample": [],
       "dependencies": [],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Project",
       "branch": "",
       "uncommitted": 0,
       "unpushed": 0,
@@ -1536,6 +1668,9 @@
         "TODO: order of enumerated properties in header object is not"
       ],
       "dependencies": [],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Browser Extension",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 1,
@@ -1571,7 +1706,7 @@
       ],
       "age_days": 2,
       "rel_path": "Downloads/2work/dev/chess-analytics-extension",
-      "mod_str": "Yesterday"
+      "mod_str": "2d ago"
     },
     {
       "path": "/Users/paranjay/Downloads/2work/dev/_learning/CodexBar",
@@ -1599,6 +1734,9 @@
         "TODO: Confirm usedRatio contract (0.0-1.0 vs 0.0-100.0) and tighten this fallback."
       ],
       "dependencies": [],
+      "has_license": true,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 0,
@@ -1640,6 +1778,9 @@
       "dependencies": [
         "@types/bun"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "rel_path": "Downloads/2work/dev/Archive_Utils/test-bun",
       "mod_str": "26d ago"
     },
@@ -1669,6 +1810,9 @@
         "react-native",
         "react-native-reanimated"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "rel_path": "Downloads/2work/dev/Archive_Utils/QuickNotes",
       "mod_str": "32d ago"
     },
@@ -1743,6 +1887,9 @@
         "typescript",
         "vite"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 27,
       "unpushed": 0,
@@ -2284,6 +2431,9 @@
         "typescript-eslint",
         "vite"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 0,
@@ -2349,6 +2499,9 @@
         "oxfmt",
         "oxlint"
       ],
+      "has_license": true,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 0,
@@ -2426,6 +2579,9 @@
         "entries+=(\"TODO: Add changelog entry\")"
       ],
       "dependencies": [],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Browser Extension",
       "branch": "main",
       "uncommitted": 15,
       "unpushed": 0,
@@ -2822,6 +2978,9 @@
       "tech_debt_count": 0,
       "todos_sample": [],
       "dependencies": [],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Project",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 0,
@@ -2895,6 +3054,9 @@
         "typescript",
         "vite"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 1,
       "unpushed": 0,
@@ -2922,19 +3084,19 @@
     {
       "path": "/Users/paranjay/Downloads/2work/dev/Web_Apps/paranjayy",
       "is_git": true,
-      "total_loc": 7495,
+      "total_loc": 7566,
       "loc_breakdown": {
-        "Markdown": 275,
-        "JSON": 6392,
-        "Python": 721,
+        "Markdown": 306,
+        "JSON": 6398,
+        "Python": 755,
         "Node JS": 107
       },
-      "last_modified": 1777405567.7291262,
+      "last_modified": 1777408181.41696,
       "largest_file": {
         "path": "/Users/paranjay/Downloads/2work/dev/Web_Apps/paranjayy/PORTFOLIO_DATA.json",
-        "loc": 6392
+        "loc": 6398
       },
-      "tech_debt_count": 25,
+      "tech_debt_count": 28,
       "todos_sample": [
         "\"longestStreak: streak,  TODO: track historical longest\",",
         "\"templatesUsed: 0,  TODO: track\",",
@@ -2943,12 +3105,17 @@
         "\"\\\"content\\\": \\\"===\\\\nifked up - but also kinda reading the room/vibe\\\\n10. How to Support Others in Sadness or Depression\\\\nBe present: Listen without \\\\u201cfixing\\\\u201d or judging.\\\\nDon\\\\u2019t offer clich\\\\u00e9s (\\\\u201ccheer up!\\\\u201d \\\\u201cothers have it worse\\\\u201d).\\\\nAsk: \\\\u201cWhat do you need right now?\\\\u201d \\\\u201cCan I just sit with you?\\\\u201d\\\\nCheck in regularly, especially after a crisis or loss.\\\\nIf worried about safety, ask directly about self-harm; offer help seeking professional support.\\\\n\\\\u2014-\\\\nrelated\\\\n5. Clarifying the Bystander Effect (Good catch!)\\\\nFull Definition:\\\\nThe bystander effect is a social psychology phenomenon where individuals are less likely to offer help to a victim when other people are present.\\\\nReason: Everyone assumes \\\\u201csomeone else will help,\\\\u201d so nobody does anything.\\\\nKey Point: The more people watching, the less responsibility anyone feels.\\\\nLife hack: If you ever need help in a crowd, call out a single person: \\\\u201cYOU in the red shirt, call for help!\\\\u201d\\\\nThis breaks the effect and makes someone responsible.\\\\n===\\\\n storytime\\\\ni used to ask every my friend about their father job or thing or their family state to know them nicely and one of the person i asked in 8th grade(shifted from village because his father passed away the year before he joined) - anyways i didnt knew his history and asked him and he said he passed away also he had no friends so i felt to ask and once i was informed told classmates to not do weird things with him and try to cheer him up or have fun and more\\\\n- sadly i lost touch too him also after covid era or idk i probably lost my friends number even that pubg aman guy/ he btw ig catfished me idk still & or i might have deleted the number of him accidently\\\\n- his father was a farmer and sadly passed away from electricity tower or something now his father's blood brother gave him house in hariom society he is builder and takes care of expenses of him since 8th grade\\\\n- also he wanted to become doctor and sadly bro was smart and also from gujarati medium iircc and in javiya became as english medium or early years idk but something like it \\\\u2014- currenty ig he is studdying from junagadh school\\\\n- also neet toppers like 600/720 ish marks ppl get AIMS RAJKOT (rajkot is shit kinda not a metropolitic city) not him\\\\n- most farmers who would be working on someone else farm would never be able to have a nice life and only if their childrens make like builder surviour thingy then they could also no insaurance and many things too and the sole people for the reason all of us are surviving\\\\n- also i hated farm/village ingeneral since childhood due to trauma or want to play games or pc use and more but also oppression of farmers and sad poverty\\\\n- [Nar Rutvik (@rutvik1.2) \\\\u2022 Instagram photos and videos](https:www.instagram.com/rutvik1.2/) the guy\\\\n- also i tried being a nice guy not an asshole rude ever tried to be compassionate kind polite to everyone without looking down on ppl(kinda exceptions but still ) & never abused either (only in valo due to loss of temper but that too not anymore also in this chat abusses are just for intensifiers here)\\\\n- hopin to rekindle once i get my shit together and be better and not ghost or do bad things and more : )\\\\n====\\\\nalso i had many other friends but only 2 best friends and soo many toppers and great friends junior/senior in goatest thread message as i said most of them got nice college and i fkedup lol\\\\nanyways would turn around quickly\\\\n===\\\\nalso feels weird to yap some things like it feels likee i am trying to collect brownie points\\\\nfeels super odd weirdd\\\\nKinda embrassed chatgpt huge generic-ish talks\\\\nmy friend story end; rutwik happy now atleast when i was with him currently he friends with my other mutual friends\\\\nAvoid succession spoiler if you read completely or skim\\\"\""
       ],
       "dependencies": [],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Project",
       "branch": "feature/portfolio-dashboard",
       "uncommitted": 2,
       "unpushed": 0,
       "remote_url": "https://github.com/Paranjayy/paranjayy.git",
-      "recent_commits": 140,
+      "recent_commits": 142,
       "commit_hours": [
+        1,
+        1,
         0,
         23,
         23,
@@ -3046,14 +3213,25 @@
         7,
         7,
         7,
-        7,
-        12,
         7
       ],
-      "weekend_commits": 94,
+      "weekend_commits": 92,
       "total_commits_checked": 100,
       "orphan_branches": [],
       "commit_words": [
+        "docs",
+        "developer",
+        "toolkit",
+        "anti",
+        "slop",
+        "recommendations",
+        "feat",
+        "tracking",
+        "favorite",
+        "commit",
+        "emojis",
+        "refining",
+        "tone",
         "feat",
         "project",
         "age",
@@ -3578,18 +3756,7 @@
         "updated",
         "with",
         "dev",
-        "metrics",
-        "intelligence",
-        "hub",
-        "race",
-        "condition",
-        "resolution",
-        "sequential",
-        "jobs",
-        "chore",
-        "visual",
-        "metrics",
-        "skip"
+        "metrics"
       ],
       "age_days": 4,
       "rel_path": "Downloads/2work/dev/Web_Apps/paranjayy",
@@ -3646,11 +3813,14 @@
         "typescript-eslint",
         "vite"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Browser Extension",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 0,
       "remote_url": "https://github.com/Paranjayy/ipl-2026-engine.git",
-      "recent_commits": 244,
+      "recent_commits": 242,
       "commit_hours": [
         1,
         20,
@@ -4618,7 +4788,7 @@
       ],
       "age_days": 9,
       "rel_path": "Downloads/2work/dev/Web_Apps/ipl-2026-engine",
-      "mod_str": "Yesterday"
+      "mod_str": "2d ago"
     },
     {
       "path": "/Users/paranjay/Downloads/2work/dev/Web_Apps/gemini-design-palace",
@@ -4657,6 +4827,9 @@
         "typescript-eslint",
         "vite"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 0,
@@ -4739,6 +4912,9 @@
       "dependencies": [
         "vite"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "rel_path": "Downloads/2work/dev/Web_Apps/word-vibe",
       "mod_str": "2d ago"
     },
@@ -4760,6 +4936,9 @@
       "tech_debt_count": 0,
       "todos_sample": [],
       "dependencies": [],
+      "has_license": true,
+      "env_exposed": false,
+      "proj_type": "Project",
       "branch": "main",
       "uncommitted": 1,
       "unpushed": 0,
@@ -5425,6 +5604,9 @@
       "tech_debt_count": 0,
       "todos_sample": [],
       "dependencies": [],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Project",
       "branch": "",
       "uncommitted": 0,
       "unpushed": 0,
@@ -5493,6 +5675,9 @@
         "tw-animate-css",
         "typescript"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "v4.0",
       "uncommitted": 7,
       "unpushed": 0,
@@ -6116,6 +6301,9 @@
         "globals",
         "vite"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "rel_path": "Downloads/2work/dev/ln4",
       "mod_str": "13d ago"
     },
@@ -6161,6 +6349,9 @@
         "tailwindcss",
         "typescript"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 0,
@@ -6272,6 +6463,9 @@
         "firebase-admin",
         "firebase-functions"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 4,
       "unpushed": 0,
@@ -6335,6 +6529,9 @@
         "globals",
         "vite"
       ],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Web App",
       "branch": "main",
       "uncommitted": 0,
       "unpushed": 0,
@@ -6374,6 +6571,9 @@
       "tech_debt_count": 0,
       "todos_sample": [],
       "dependencies": [],
+      "has_license": false,
+      "env_exposed": false,
+      "proj_type": "Project",
       "branch": "main",
       "uncommitted": 1,
       "unpushed": 0,
