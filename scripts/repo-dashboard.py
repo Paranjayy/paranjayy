@@ -1,78 +1,162 @@
 import os
 import subprocess
+import time
+from datetime import datetime
 
-ROOT_DIR = '/Users/paranjay/Downloads/2work/dev'
+ROOT_DIR = '/Users/paranjay'
+MAX_DEPTH = 5
 
-def get_repos(dir_path, depth=0, max_depth=3):
-    if depth > max_depth:
+SKIP_DIRS = {
+    'Library', 'Applications', 'Pictures', 'Music', 'Movies', '.Trash', 
+    'node_modules', '.venv', 'venv', 'env', 'site-packages', 'build', 
+    'dist', '.vscode', '.next', '.cache', 'Public', 'opt', 'Downloads'
+}
+
+# Only check inside /Users/paranjay/Downloads/2work or similar if we want to, 
+# but let's allow Downloads for now but skip the root Downloads files unless it's a project folder?
+# Actually, the user's dev folder is in Downloads/2work/dev. We must NOT skip Downloads!
+# So I will REMOVE 'Downloads' from SKIP_DIRS.
+
+SKIP_DIRS.discard('Downloads')
+
+CODE_EXTENSIONS = {
+    '.py', '.js', '.ts', '.tsx', '.jsx', '.html', '.css', '.scss', 
+    '.rs', '.go', '.c', '.cpp', '.h', '.java', '.sh', '.mjs', '.md', 
+    '.json', '.yml', '.yaml', '.toml', '.swift'
+}
+
+PROJECT_MARKERS = {
+    'package.json', 'requirements.txt', 'Cargo.toml', 'Makefile', 
+    'pom.xml', 'build.gradle', 'go.mod', 'docker-compose.yml', 'CMakeLists.txt',
+    'setup.py', 'gemfile', 'pyproject.toml'
+}
+
+def is_code_file(filename):
+    return any(filename.endswith(ext) for ext in CODE_EXTENSIONS)
+
+def get_project_stats(dir_path, is_git):
+    loc = 0
+    latest_mtime = 0
+    
+    for root, dirs, files in os.walk(dir_path):
+        dirs[:] = [d for d in dirs if d not in SKIP_DIRS and not d.startswith('.')]
+        
+        for f in files:
+            if is_code_file(f):
+                full_path = os.path.join(root, f)
+                try:
+                    mtime = os.path.getmtime(full_path)
+                    if mtime > latest_mtime:
+                        latest_mtime = mtime
+                    
+                    with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
+                        loc += sum(1 for line in file if line.strip())
+                except:
+                    pass
+                    
+    return loc, latest_mtime
+
+def scan_for_projects(current_dir, depth):
+    if depth > MAX_DEPTH:
         return []
-    repos = []
+        
+    projects = []
+    
     try:
-        entries = os.listdir(dir_path)
+        entries = os.listdir(current_dir)
     except PermissionError:
         return []
+        
+    is_git = '.git' in entries and os.path.isdir(os.path.join(current_dir, '.git'))
+    
+    # Check for project markers to identify a non-git project
+    is_non_git_project = not is_git and any(marker in entries for marker in PROJECT_MARKERS)
+    
+    if is_git or is_non_git_project:
+        loc, last_mtime = get_project_stats(current_dir, is_git)
+        
+        status_info = {
+            'path': current_dir,
+            'is_git': is_git,
+            'loc': loc,
+            'last_modified': last_mtime,
+        }
+        
+        if is_git:
+            branch = ''
+            uncommitted = 0
+            remote_url = ''
+            unpushed = 0
+            try:
+                branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8').strip()
+                status_out = subprocess.check_output(['git', 'status', '--porcelain'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8')
+                uncommitted = len([line for line in status_out.split('\n') if line.strip()])
+                remote_url = subprocess.check_output(['git', 'config', '--get', 'remote.origin.url'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8').strip()
+                if branch and remote_url:
+                    unpushed_out = subprocess.check_output(['git', 'rev-list', f'HEAD...origin/{branch}', '--count'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8').strip()
+                    unpushed = int(unpushed_out) if unpushed_out.isdigit() else 0
+            except:
+                pass
+                
+            status_info.update({
+                'branch': branch,
+                'uncommitted': uncommitted,
+                'unpushed': unpushed,
+                'remote_url': remote_url
+            })
+            
+        return [status_info]
 
-    if '.git' in entries and os.path.isdir(os.path.join(dir_path, '.git')):
-        return [dir_path]
-
+    # Recurse
     for entry in entries:
-        if entry == 'node_modules' or entry.startswith('.'):
+        if entry in SKIP_DIRS or entry.startswith('.'):
             continue
-        full_path = os.path.join(dir_path, entry)
+        full_path = os.path.join(current_dir, entry)
         if os.path.isdir(full_path):
-            repos.extend(get_repos(full_path, depth + 1, max_depth))
-    return repos
+            projects.extend(scan_for_projects(full_path, depth + 1))
+            
+    return projects
 
-def get_repo_status(repo_path):
-    rel_path = os.path.relpath(repo_path, ROOT_DIR)
-    if rel_path == '.':
-        rel_path = 'dev'
-        
-    branch = ''
-    try:
-        branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=repo_path, stderr=subprocess.DEVNULL).decode('utf-8').strip()
-    except:
-        pass
-        
-    uncommitted = 0
-    try:
-        status_out = subprocess.check_output(['git', 'status', '--porcelain'], cwd=repo_path, stderr=subprocess.DEVNULL).decode('utf-8')
-        uncommitted = len([line for line in status_out.split('\n') if line.strip()])
-    except:
-        pass
-
-    remote_url = ''
-    try:
-        remote_url = subprocess.check_output(['git', 'config', '--get', 'remote.origin.url'], cwd=repo_path, stderr=subprocess.DEVNULL).decode('utf-8').strip()
-    except:
-        pass
-
-    unpushed = 0
-    if branch and remote_url:
-        try:
-            unpushed_out = subprocess.check_output(['git', 'rev-list', f'HEAD...origin/{branch}', '--count'], cwd=repo_path, stderr=subprocess.DEVNULL).decode('utf-8').strip()
-            unpushed = int(unpushed_out) if unpushed_out.isdigit() else 0
-        except:
-            pass
-
-    return {
-        'path': rel_path,
-        'branch': branch,
-        'uncommitted': uncommitted,
-        'unpushed': unpushed,
-        'remote_url': remote_url
-    }
+def format_time_diff(mtime):
+    if not mtime:
+        return "Unknown", False
+    diff = time.time() - mtime
+    days = diff / (3600 * 24)
+    active = days < 30
+    if days < 1:
+        return "Today", active
+    elif days < 2:
+        return "Yesterday", active
+    else:
+        return f"{int(days)}d ago", active
 
 def main():
-    print("🔍 Scanning for git repositories...")
-    repos = get_repos(ROOT_DIR)
-    print(f"Found {len(repos)} repositories. Checking status...")
+    print(f"🔍 Scanning {ROOT_DIR} for projects (Max depth {MAX_DEPTH})...")
+    projects = scan_for_projects(ROOT_DIR, 0)
+    print(f"Found {len(projects)} projects. Generating dashboard...")
 
-    stats = []
-    for repo in repos:
-        stats.append(get_repo_status(repo))
-
-    stats.sort(key=lambda x: (-x['uncommitted'], -x['unpushed'], x['path']))
+    active_projects = []
+    inactive_projects = []
+    
+    total_loc = 0
+    total_uncommitted = 0
+    
+    for p in projects:
+        total_loc += p['loc']
+        p['rel_path'] = os.path.relpath(p['path'], ROOT_DIR)
+        mod_str, is_active = format_time_diff(p['last_modified'])
+        p['mod_str'] = mod_str
+        
+        if p.get('uncommitted', 0) > 0:
+            total_uncommitted += p['uncommitted']
+            
+        if is_active:
+            active_projects.append(p)
+        else:
+            inactive_projects.append(p)
+            
+    active_projects.sort(key=lambda x: -x['loc'])
+    inactive_projects.sort(key=lambda x: -x['loc'])
 
     readme_lines = [
         "Hi, I'm Paranjay 👋",
@@ -82,32 +166,60 @@ def main():
         "",
         "Currently experimenting, vibe-coding, and orchestrating ideas across multiple domains.",
         "",
-        "### 🛠️ Current Status & Active Orchestration",
-        "*A unified dashboard to monitor project sync states, preventing data loss and keeping ideas consolidated.*",
+        "### 📊 Global Stats",
+        f"- **Total Projects Tracked**: {len(projects)}",
+        f"- **Total Lines of Code Tracked**: {total_loc:,}",
+        f"- **Unsaved Changes Across Mac**: {total_uncommitted} files",
+        f"- **Active Projects (30 days)**: {len(active_projects)}",
         "",
-        "| Repository | Branch | Remote | Status |",
-        "| :--- | :--- | :--- | :--- |"
+        "---",
+        "",
+        "### 🟢 Active Projects & Orchestration Dashboard",
+        "*(Modified within the last 30 days)*",
+        "",
+        "| Project | Type | Branch | Status | LOC | Last Modified |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- |"
     ]
 
-    for s in stats:
-        status_str = "✅ Clean & Synced"
-        if s['uncommitted'] > 0 and s['unpushed'] > 0:
-            status_str = f"⚠️ {s['uncommitted']} uncommitted, {s['unpushed']} unpushed"
-        elif s['uncommitted'] > 0:
-            status_str = f"📝 {s['uncommitted']} uncommitted changes"
-        elif s['unpushed'] > 0:
-            status_str = f"⬆️ {s['unpushed']} commits ahead of remote"
-        elif not s['remote_url']:
-            status_str = "🌐 No remote set (Local only)"
-
-        remote_link = 'None'
-        if s['remote_url']:
-            url = s['remote_url'].replace('.git', '') if s['remote_url'].startswith('http') else s['remote_url']
-            remote_link = f"[origin]({url})"
+    def render_project_row(s):
+        if s['is_git']:
+            status_str = "✅ Synced"
+            if s['uncommitted'] > 0 and s['unpushed'] > 0:
+                status_str = f"⚠️ {s['uncommitted']} uncommitted, {s['unpushed']} unpushed"
+            elif s['uncommitted'] > 0:
+                status_str = f"📝 {s['uncommitted']} uncommitted"
+            elif s['unpushed'] > 0:
+                status_str = f"⬆️ {s['unpushed']} ahead"
+            elif not s['remote_url']:
+                status_str = "🌐 Local Only"
             
-        branch_disp = s['branch'] if s['branch'] else 'None'
+            p_type = "Git 🐙"
+            branch = s['branch'] or 'None'
+        else:
+            status_str = "📁 Unversioned"
+            p_type = "Folder 📁"
+            branch = "-"
+            
+        name = f"**{s['rel_path']}**"
+        loc = f"{s['loc']:,}"
+        mod = s['mod_str']
         
-        readme_lines.append(f"| **{s['path']}** | `{branch_disp}` | {remote_link} | {status_str} |")
+        return f"| {name} | {p_type} | `{branch}` | {status_str} | {loc} | {mod} |"
+
+    for p in active_projects:
+        readme_lines.append(render_project_row(p))
+        
+    readme_lines.extend([
+        "",
+        "### 💤 Inactive Projects Archive",
+        "*(No modifications in >30 days. Consider archiving or syncing.)*",
+        "",
+        "| Project | Type | Branch | Status | LOC | Last Modified |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- |"
+    ])
+    
+    for p in inactive_projects:
+        readme_lines.append(render_project_row(p))
 
     readme_lines.extend([
         "",
