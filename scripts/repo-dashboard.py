@@ -52,7 +52,6 @@ def parse_requirements_txt(filepath):
             for line in f:
                 line = line.strip()
                 if line and not line.startswith('#'):
-                    # e.g. requests==2.25.1 -> requests
                     pkg = re.split(r'[=<>~!]', line)[0].strip()
                     if pkg:
                         deps.append(pkg)
@@ -64,7 +63,8 @@ def get_project_stats(dir_path, is_git):
     loc_by_lang = defaultdict(int)
     latest_mtime = 0
     largest_file = {"path": "", "loc": 0}
-    tech_debt = 0
+    tech_debt_count = 0
+    extracted_todos = []
     dependencies = []
     
     for root, dirs, files in os.walk(dir_path):
@@ -73,7 +73,6 @@ def get_project_stats(dir_path, is_git):
         for f in files:
             full_path = os.path.join(root, f)
             
-            # Extract dependencies
             if f == 'package.json':
                 dependencies.extend(parse_package_json(full_path))
             elif f == 'requirements.txt':
@@ -92,9 +91,15 @@ def get_project_stats(dir_path, is_git):
                             line_str = line.strip()
                             if line_str:
                                 lines += 1
-                                # Tech Debt counter
-                                if "TODO:" in line_str or "FIXME:" in line_str or "HACK:" in line_str:
-                                    tech_debt += 1
+                                # Search for actionable tech debt
+                                upper_line = line_str.upper()
+                                if "TODO:" in upper_line or "FIXME:" in upper_line or "HACK:" in upper_line:
+                                    tech_debt_count += 1
+                                    # Store a few sample TODOs for the JSON payload
+                                    if len(extracted_todos) < 5:
+                                        clean_todo = line_str.replace('//', '').replace('/*', '').replace('#', '').strip()
+                                        if clean_todo:
+                                            extracted_todos.append(clean_todo)
                                     
                         loc_by_lang[CODE_EXTENSIONS[ext]] += lines
                         
@@ -104,36 +109,51 @@ def get_project_stats(dir_path, is_git):
                     pass
                     
     total_loc = sum(loc_by_lang.values())
-    return loc_by_lang, total_loc, latest_mtime, largest_file, tech_debt, dependencies
+    return loc_by_lang, total_loc, latest_mtime, largest_file, tech_debt_count, extracted_todos, dependencies
 
 def get_git_analytics(dir_path):
     analytics = {
         'recent_commits': 0,
         'commit_hours': [],
-        'orphan_branches': []
+        'weekend_commits': 0,
+        'total_commits_checked': 0,
+        'orphan_branches': [],
+        'commit_words': [],
+        'age_days': 0
     }
     try:
-        # Get 7-day commits
+        # Get 7-day commits count
         out = subprocess.check_output(
             ['git', 'log', '--since="7 days ago"', '--oneline'], 
             cwd=dir_path, stderr=subprocess.DEVNULL
         ).decode('utf-8')
         analytics['recent_commits'] = len([line for line in out.split('\n') if line.strip()])
         
-        # Get commit hours for time-of-day tracking (last 100 commits to be fast)
-        hours_out = subprocess.check_output(
-            ['git', 'log', '-n', '100', '--format=%aI'], 
+        # Analyze last 100 commits for habits (time, weekend, words)
+        log_out = subprocess.check_output(
+            ['git', 'log', '-n', '100', '--format=%aI|%s'], 
             cwd=dir_path, stderr=subprocess.DEVNULL
         ).decode('utf-8')
         
-        for iso_date in hours_out.split('\n'):
-            if iso_date.strip():
-                # e.g. 2026-04-28T23:56:57+05:30
+        stopwords = {'merge', 'branch', 'into', 'and', 'the', 'to', 'for', 'a', 'in', 'of', 'fix', 'update', 'add', 'added'}
+        
+        for line in log_out.split('\n'):
+            if '|' in line:
+                analytics['total_commits_checked'] += 1
+                iso_date, msg = line.split('|', 1)
+                
+                # Analyze time and day
                 try:
-                    hour = int(iso_date[11:13])
-                    analytics['commit_hours'].append(hour)
+                    dt = datetime.fromisoformat(iso_date)
+                    analytics['commit_hours'].append(dt.hour)
+                    if dt.weekday() >= 5: # Saturday=5, Sunday=6
+                        analytics['weekend_commits'] += 1
                 except:
                     pass
+                    
+                # Analyze words (ignore common boring words)
+                words = re.findall(r'\b[a-zA-Z]{3,}\b', msg.lower())
+                analytics['commit_words'].extend([w for w in words if w not in stopwords])
                     
         # Check for old/orphan local branches (> 6 months old)
         six_months_ago = int((datetime.now() - timedelta(days=180)).timestamp())
@@ -148,6 +168,15 @@ def get_git_analytics(dir_path):
                 if ts.strip().isdigit() and int(ts) < six_months_ago:
                     analytics['orphan_branches'].append(b_name.strip())
                     
+        # Get project age (first commit date)
+        first_commit = subprocess.check_output(
+            ['git', 'log', '--reverse', '--format=%aI'], 
+            cwd=dir_path, stderr=subprocess.DEVNULL
+        ).decode('utf-8').split('\n')[0]
+        if first_commit:
+            dt = datetime.fromisoformat(first_commit)
+            analytics['age_days'] = (datetime.now(dt.tzinfo) - dt).days
+
     except:
         pass
         
@@ -168,7 +197,7 @@ def scan_for_projects(current_dir, depth):
     is_non_git_project = not is_git and any(marker in entries for marker in PROJECT_MARKERS)
     
     if is_git or is_non_git_project:
-        loc_by_lang, total_loc, last_mtime, largest_file, tech_debt, dependencies = get_project_stats(current_dir, is_git)
+        loc_by_lang, total_loc, last_mtime, largest_file, tech_debt_count, extracted_todos, dependencies = get_project_stats(current_dir, is_git)
         
         status_info = {
             'path': current_dir,
@@ -177,7 +206,8 @@ def scan_for_projects(current_dir, depth):
             'loc_breakdown': dict(loc_by_lang),
             'last_modified': last_mtime,
             'largest_file': largest_file,
-            'tech_debt': tech_debt,
+            'tech_debt_count': tech_debt_count,
+            'todos_sample': extracted_todos,
             'dependencies': dependencies
         }
         
@@ -206,7 +236,11 @@ def scan_for_projects(current_dir, depth):
                 'remote_url': remote_url,
                 'recent_commits': git_analytics['recent_commits'],
                 'commit_hours': git_analytics['commit_hours'],
-                'orphan_branches': git_analytics['orphan_branches']
+                'weekend_commits': git_analytics['weekend_commits'],
+                'total_commits_checked': git_analytics['total_commits_checked'],
+                'orphan_branches': git_analytics['orphan_branches'],
+                'commit_words': git_analytics['commit_words'],
+                'age_days': git_analytics['age_days']
             })
             
         return [status_info]
@@ -237,7 +271,7 @@ def format_lang_breakdown(loc_dict):
     if not loc_dict:
         return "None"
     sorted_langs = sorted(loc_dict.items(), key=lambda x: -x[1])
-    top = sorted_langs[:2] # Reduced to 2 to save table space
+    top = sorted_langs[:2] 
     return "<br>".join([f"**{lang}**: {lines:,}" for lang, lines in top])
 
 def generate_ascii_bar(value, total, width=20):
@@ -263,13 +297,13 @@ def resolve_time_of_day(hours):
         return "Unknown"
     most_common_hour = Counter(hours).most_common(1)[0][0]
     if 5 <= most_common_hour < 12:
-        return "Morning Bird 🌅"
+        return "Morning (5AM - 12PM)"
     elif 12 <= most_common_hour < 18:
-        return "Afternoon Hustler ☀️"
+        return "Afternoon (12PM - 6PM)"
     elif 18 <= most_common_hour < 23:
-        return "Evening Coder 🌆"
+        return "Evening (6PM - 11PM)"
     else:
-        return "Night Owl 🦉"
+        return "Night Owl (11PM - 5AM)"
 
 def main():
     print(f"🔍 Scanning {ROOT_DIR} for projects (Max depth {MAX_DEPTH})...")
@@ -286,13 +320,16 @@ def main():
     global_loc_by_lang = defaultdict(int)
     global_dependencies = Counter()
     global_commit_hours = []
+    global_commit_words = Counter()
     total_orphan_branches = 0
+    total_weekend_commits = 0
+    total_commits_checked = 0
     
     mac_largest_file = {"path": "", "loc": 0}
     
     for p in projects:
         total_loc += p['total_loc']
-        total_tech_debt += p.get('tech_debt', 0)
+        total_tech_debt += p.get('tech_debt_count', 0)
         
         for lang, lines in p['loc_breakdown'].items():
             global_loc_by_lang[lang] += lines
@@ -302,6 +339,13 @@ def main():
             
         if p.get('commit_hours'):
             global_commit_hours.extend(p['commit_hours'])
+            
+        if p.get('commit_words'):
+            for w in p['commit_words']:
+                global_commit_words[w] += 1
+                
+        total_weekend_commits += p.get('weekend_commits', 0)
+        total_commits_checked += p.get('total_commits_checked', 0)
             
         total_orphan_branches += len(p.get('orphan_branches', []))
             
@@ -338,10 +382,14 @@ def main():
     top_deps = global_dependencies.most_common(5)
     deps_str = ", ".join([f"`{pkg}` ({count})" for pkg, count in top_deps]) if top_deps else "None detected"
     
-    # Vibe Coding metrics
+    # Format commit words
+    top_words = global_commit_words.most_common(5)
+    words_str = ", ".join([f"`{word}` ({count})" for word, count in top_words]) if top_words else "Not enough history"
+
+    weekend_pct = (total_weekend_commits / total_commits_checked * 100) if total_commits_checked > 0 else 0
     time_of_day_vibe = resolve_time_of_day(global_commit_hours)
 
-    # Save to JSON for future web UI consumption
+    # Save to JSON for web consumption
     with open('PORTFOLIO_DATA.json', 'w') as f:
         json.dump({
             "generated_at": datetime.now().isoformat(),
@@ -352,8 +400,10 @@ def main():
                 "commits_7d": total_7d_commits,
                 "tech_debt_items": total_tech_debt,
                 "orphan_branches": total_orphan_branches,
-                "coding_vibe": time_of_day_vibe
+                "primary_coding_time": time_of_day_vibe,
+                "weekend_commit_pct": round(weekend_pct, 1)
             },
+            "top_commit_words": [{"word": k, "count": v} for k, v in top_words],
             "top_dependencies": [{"name": k, "count": v} for k, v in top_deps],
             "language_distribution": [{"language": k, "loc": v} for k, v in sorted_global_langs],
             "projects": projects
@@ -364,27 +414,28 @@ def main():
         "Hi, I'm Paranjay 👋",
         "===================",
         "",
-        "📍 Developer | 🤖 AI Enthusiast | 🚀 Tinkerer",
+        "📍 Developer | 🤖 Tinker | 🚀 Code Explorer",
         "",
-        "Currently experimenting, vibe-coding, and orchestrating ideas across multiple domains.",
+        "A space to track projects, capture ideas, and monitor repository health across my local machine.",
         "",
-        "### 📊 Global Mac Intelligence & Vibe Analysis",
-        f"- **Total Projects Discovered**: {len(projects)}",
+        "### 📊 Dashboard Metrics",
+        f"- **Projects Discovered**: {len(projects)}",
         f"- **Total Lines of Code**: {total_loc:,}",
         f"- **Unsaved Changes**: {total_uncommitted} files waiting to be committed",
-        f"- **7-Day Local Commit Pulse**: 🔥 {total_7d_commits} commits",
-        f"- **Tech Debt Score**: 🐛 {total_tech_debt:,} `TODO/FIXME`s across your mac",
-        f"- **Dead/Orphan Branches**: 🍂 {total_orphan_branches} branches haven't been touched in >6 months",
-        f"- **Top Dependencies Used**: {deps_str}",
-        f"- **Primary Coding Rhythm**: {time_of_day_vibe}",
-        f"- **Biggest Monolith File**: `{os.path.basename(mac_largest_file['path'])}` ({mac_largest_file['loc']:,} LOC)",
+        f"- **7-Day Commit Pulse**: 🔥 {total_7d_commits} commits",
+        f"- **Tech Debt Markers**: 🐛 {total_tech_debt:,} (`TODO`, `FIXME`, or `HACK` tags found in code files)",
+        f"- **Forgotten Branches**: 🍂 {total_orphan_branches} local branches untouched in >6 months",
+        f"- **Top Dependencies**: {deps_str}",
+        f"- **Most Used Commit Words**: {words_str}",
+        f"- **Coding Hours**: Mostly {time_of_day_vibe} ({weekend_pct:.1f}% on weekends)",
+        f"- **Largest Monolith File**: `{os.path.basename(mac_largest_file['path'])}` ({mac_largest_file['loc']:,} LOC)",
         "",
-        "#### 🧬 Language DNA Breakdown",
+        "#### 🧬 Language Breakdown",
         lang_chart_str,
         "",
         "---",
         "",
-        "### 🟢 Active Projects & Orchestration Dashboard",
+        "### 🟢 Active Projects Dashboard",
         "*(Modified within the last 30 days)*",
         "",
         "| Project | Data Risk | Tech Debt | Top Languages | Last Modified |",
@@ -394,12 +445,18 @@ def main():
     def render_project_row(s):
         risk = get_risk_score(s)
         breakdown = format_lang_breakdown(s['loc_breakdown']) or "0"
-        debt = f"🔨 {s.get('tech_debt', 0)}" if s.get('tech_debt', 0) > 0 else "✨ Clean"
+        debt = f"🔨 {s.get('tech_debt_count', 0)}" if s.get('tech_debt_count', 0) > 0 else "✨ Clean"
         
         name = f"**{s['rel_path']}**"
+        
+        # Format age if available
+        age = s.get('age_days', 0)
+        age_str = f" ({age}d old)" if age > 0 else ""
+        
         if s.get('recent_commits', 0) > 0:
             name += f" 🔥"
             
+        name += age_str
         mod = s['mod_str']
         
         return f"| {name} | {risk} | {debt} | {breakdown} | {mod} |"
@@ -410,7 +467,7 @@ def main():
     readme_lines.extend([
         "",
         "### 💤 Inactive Projects Archive",
-        "*(No modifications in >30 days. Consider archiving or syncing.)*",
+        "*(No modifications in >30 days.)*",
         "",
         "| Project | Data Risk | Tech Debt | Top Languages | Last Modified |",
         "| :--- | :--- | :--- | :--- | :--- |"
@@ -423,18 +480,18 @@ def main():
         "",
         "---",
         "",
-        "### 🎨 The Aesthetic / Portfolio Idea",
-        "*(Draft based on modern profiles - inspired by steipete)*",
+        "### 🎨 About this Repository",
+        "*(Draft based on modern profiles)*",
         "",
-        "**Tech Stack**: `TypeScript` `React` `Node.js` `Python` `AI Agents`",
+        "**Tech Stack**: `TypeScript` `React` `Node.js` `Python`",
         "",
         "**Recent Highlights**:",
-        "- 🌌 **The Ideaverse Portfolio**: Modernizing scholarly portfolios with high-end aesthetic.",
+        "- 🌌 **The Ideaverse Portfolio**: Modernizing scholarly portfolios.",
         "- 🎮 **Gravity Hub**: IFTTT Gaming integrations for Windows to Mac telemetry.",
-        "- ⚡ **Webdev Toolbox**: Powerful developer extensions built for God mode.",
+        "- ⚡ **Webdev Toolbox**: Powerful developer extensions.",
         "- 🏰 **Gemini Design Palace**: Unslopified, premium reactive UI systems.",
         "",
-        "> *“Ship beats perfect. But if it doesn’t look like Stripe Press, is it even worth shipping?”*"
+        "> *“Ship beats perfect.”*"
     ])
 
     with open('PORTFOLIO_DASHBOARD.md', 'w') as f:
