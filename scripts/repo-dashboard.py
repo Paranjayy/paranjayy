@@ -129,13 +129,16 @@ def get_git_analytics(dir_path):
         ).decode('utf-8')
         analytics['recent_commits'] = len([line for line in out.split('\n') if line.strip()])
         
-        # Analyze last 100 commits for habits (time, weekend, words)
+        # Analyze last 100 commits for habits (time, weekend, words, emojis)
         log_out = subprocess.check_output(
             ['git', 'log', '-n', '100', '--format=%aI|%s'], 
             cwd=dir_path, stderr=subprocess.DEVNULL
         ).decode('utf-8')
         
         stopwords = {'merge', 'branch', 'into', 'and', 'the', 'to', 'for', 'a', 'in', 'of', 'fix', 'update', 'add', 'added'}
+        
+        # Simple regex to catch common emojis
+        emoji_pattern = re.compile(r'[\U00010000-\U0010ffff]', flags=re.UNICODE)
         
         for line in log_out.split('\n'):
             if '|' in line:
@@ -154,6 +157,13 @@ def get_git_analytics(dir_path):
                 # Analyze words (ignore common boring words)
                 words = re.findall(r'\b[a-zA-Z]{3,}\b', msg.lower())
                 analytics['commit_words'].extend([w for w in words if w not in stopwords])
+                
+                # Analyze emojis
+                emojis_found = emoji_pattern.findall(msg)
+                if emojis_found:
+                    if 'commit_emojis' not in analytics:
+                        analytics['commit_emojis'] = []
+                    analytics['commit_emojis'].extend(emojis_found)
                     
         # Check for old/orphan local branches (> 6 months old)
         six_months_ago = int((datetime.now() - timedelta(days=180)).timestamp())
@@ -321,6 +331,7 @@ def main():
     global_dependencies = Counter()
     global_commit_hours = []
     global_commit_words = Counter()
+    global_commit_emojis = Counter()
     total_orphan_branches = 0
     total_weekend_commits = 0
     total_commits_checked = 0
@@ -343,6 +354,10 @@ def main():
         if p.get('commit_words'):
             for w in p['commit_words']:
                 global_commit_words[w] += 1
+                
+        if p.get('commit_emojis'):
+            for e in p['commit_emojis']:
+                global_commit_emojis[e] += 1
                 
         total_weekend_commits += p.get('weekend_commits', 0)
         total_commits_checked += p.get('total_commits_checked', 0)
@@ -386,6 +401,10 @@ def main():
     top_words = global_commit_words.most_common(5)
     words_str = ", ".join([f"`{word}` ({count})" for word, count in top_words]) if top_words else "Not enough history"
 
+    # Format commit emojis
+    top_emojis = global_commit_emojis.most_common(5)
+    emojis_str = " ".join([f"{emoji}" for emoji, count in top_emojis]) if top_emojis else "No emojis used"
+
     weekend_pct = (total_weekend_commits / total_commits_checked * 100) if total_commits_checked > 0 else 0
     time_of_day_vibe = resolve_time_of_day(global_commit_hours)
 
@@ -404,6 +423,7 @@ def main():
                 "weekend_commit_pct": round(weekend_pct, 1)
             },
             "top_commit_words": [{"word": k, "count": v} for k, v in top_words],
+            "top_commit_emojis": [{"emoji": k, "count": v} for k, v in top_emojis],
             "top_dependencies": [{"name": k, "count": v} for k, v in top_deps],
             "language_distribution": [{"language": k, "loc": v} for k, v in sorted_global_langs],
             "projects": projects
@@ -427,6 +447,7 @@ def main():
         f"- **Forgotten Branches**: 🍂 {total_orphan_branches} local branches untouched in >6 months",
         f"- **Top Dependencies**: {deps_str}",
         f"- **Most Used Commit Words**: {words_str}",
+        f"- **Favorite Commit Emojis**: {emojis_str}",
         f"- **Coding Hours**: Mostly {time_of_day_vibe} ({weekend_pct:.1f}% on weekends)",
         f"- **Largest Monolith File**: `{os.path.basename(mac_largest_file['path'])}` ({mac_largest_file['loc']:,} LOC)",
         "",

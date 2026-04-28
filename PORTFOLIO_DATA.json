@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-04-29T00:50:07.796356",
+  "generated_at": "2026-04-29T01:16:40.332305",
   "stats": {
     "projects_count": 26,
-    "total_loc": 20969373,
+    "total_loc": 20973346,
     "uncommitted_files": 100,
     "commits_7d": 398,
-    "tech_debt_items": 222,
+    "tech_debt_items": 245,
     "orphan_branches": 0,
     "primary_coding_time": "Morning (5AM - 12PM)",
-    "weekend_commit_pct": 39.5
+    "weekend_commit_pct": 39.4
   },
   "top_commit_words": [
     {
       "word": "feat",
-      "count": 93
+      "count": 94
     },
     {
       "word": "metrics",
@@ -32,6 +32,7 @@
       "count": 56
     }
   ],
+  "top_commit_emojis": [],
   "top_dependencies": [
     {
       "name": "@types/react",
@@ -57,7 +58,7 @@
   "language_distribution": [
     {
       "language": "JSON",
-      "loc": 8580905
+      "loc": 8584856
     },
     {
       "language": "HTML",
@@ -65,7 +66,7 @@
     },
     {
       "language": "Markdown",
-      "loc": 3428334
+      "loc": 3428339
     },
     {
       "language": "JavaScript",
@@ -89,7 +90,7 @@
     },
     {
       "language": "Python",
-      "loc": 30294
+      "loc": 30311
     },
     {
       "language": "C Header",
@@ -100,11 +101,11 @@
     {
       "path": "/Users/paranjay/Developer",
       "is_git": true,
-      "total_loc": 19692869,
+      "total_loc": 19692660,
       "loc_breakdown": {
-        "Markdown": 3252745,
+        "Markdown": 3252749,
         "HTML": 6625351,
-        "JSON": 7848569,
+        "JSON": 7848356,
         "TypeScript": 30234,
         "React TS": 64821,
         "CSS": 22152,
@@ -121,7 +122,7 @@
         "C": 1,
         "C Header": 107
       },
-      "last_modified": 1777403968.6387608,
+      "last_modified": 1777405558.840919,
       "largest_file": {
         "path": "/Users/paranjay/Developer/chatgpt jsoon convert 725b5b46f52f107eaaf17868d7645173c81064fbacfc9f36f3b5d47c352fa31f-2025-06-13-17-18-03-9fc014d316c24704aefd943b0829ea95/conversations_truncated.json",
         "loc": 1591896
@@ -2921,30 +2922,34 @@
     {
       "path": "/Users/paranjay/Downloads/2work/dev/Web_Apps/paranjayy",
       "is_git": true,
-      "total_loc": 3313,
+      "total_loc": 7495,
       "loc_breakdown": {
-        "Markdown": 274,
-        "JSON": 2228,
-        "Python": 704,
+        "Markdown": 275,
+        "JSON": 6392,
+        "Python": 721,
         "Node JS": 107
       },
-      "last_modified": 1777403984.877158,
+      "last_modified": 1777405567.7291262,
       "largest_file": {
         "path": "/Users/paranjay/Downloads/2work/dev/Web_Apps/paranjayy/PORTFOLIO_DATA.json",
-        "loc": 2228
+        "loc": 6392
       },
-      "tech_debt_count": 2,
+      "tech_debt_count": 25,
       "todos_sample": [
-        "if \"TODO:\" in upper_line or \"FIXME:\" in upper_line or \"HACK:\" in upper_line:",
-        "if clean_todo:"
+        "\"longestStreak: streak,  TODO: track historical longest\",",
+        "\"templatesUsed: 0,  TODO: track\",",
+        "\"===<br><br>ifked up - but also kinda reading the room/vibe<br><br>10. How to Support Others in Sadness or Depression<br>Be present: Listen without \\u201cfixing\\u201d or judging.<br><br>Don\\u2019t offer clich\\u00e9s (\\u201ccheer up!\\u201d \\u201cothers have it worse\\u201d).<br><br>Ask: \\u201cWhat do you need right now?\\u201d \\u201cCan I just sit with you?\\u201d<br><br>Check in regularly, especially after a crisis or loss.<br><br>If worried about safety, ask directly about self-harm; offer help seeking professional support.<br><br>\\u2014-<br>related<br><br>5. Clarifying the Bystander Effect (Good catch!)<br>Full Definition:<br><br>The bystander effect is a social psychology phenomenon where individuals are less likely to offer help to a victim when other people are present.<br><br>Reason: Everyone assumes \\u201csomeone else will help,\\u201d so nobody does anything.<br><br>Key Point: The more people watching, the less responsibility anyone feels.<br><br>Life hack: If you ever need help in a crowd, call out a single person: \\u201cYOU in the red shirt, call for help!\\u201d<br><br>This breaks the effect and makes someone responsible.<br><br><br>=== <br> storytime<br><br><br>i used to ask every my friend about their father job or thing or their family state to know them nicely and one of the person i asked in 8th grade(shifted from village because his father passed away the year before he joined) - anyways i didnt knew his history and asked him and he said he passed away also he had no friends so i felt to ask and once i was informed told classmates to not do weird things with him and try to cheer him up or have fun and more <br><br>- sadly i lost touch too him also after covid era or idk i probably lost my friends number even that pubg aman guy/ he btw ig catfished me idk still &amp; or i might have deleted the number of him accidently<br><br>- his father was a farmer and sadly passed away from electricity tower or something now his father&apos;s blood brother gave him house in hariom society he is builder and takes care of expenses of him since 8th grade <br><br>- also he wanted to become doctor and sadly bro was smart and also from gujarati medium iircc and in javiya became as english medium or early years idk but something like it \\u2014- currenty ig he is studdying from junagadh school<br><br>- also neet toppers like 600/720 ish marks ppl get AIMS RAJKOT (rajkot is shit kinda not a metropolitic city) not him<br><br><br><br>- most farmers who would be working on someone else farm would never be able to have a nice life and only if their childrens make like builder surviour thingy then they could also no insaurance and many things too and the sole people for the reason all of us are surviving <br><br>- also i hated farm/village ingeneral since childhood due to trauma or want to play games or pc use and more but also oppression of farmers and sad poverty<br><br>- [Nar Rutvik (<a href=\\\"https:t.me/rutvik1\\\">@rutvik1</a>.2) \\u2022 Instagram photos and videos](<a href=\\\"https:www.instagram.com/rutvik1.2/\\\">https:www.instagram.com/rutvik1.2/</a>) the guy <br> <br><br>- also i tried being a nice guy not an asshole rude ever tried to be compassionate kind polite to everyone without looking down on ppl(kinda exceptions but still ) &amp; never abused either (only in valo due to loss of temper but that too not anymore also in this chat abusses are just for intensifiers here)<br><br>- hopin to rekindle once i get my shit together and be better and not ghost or do bad things and more : )<br>====<br><br>also i had many other friends but only 2 best friends and soo many toppers and great friends junior/senior in goatest thread message as i said most of them got nice college and i fkedup lol <br><br>anyways would turn around quickly<br><br><br>===<br><br>also feels weird to yap some things like it feels likee i am trying to collect brownie points <br><br><br>feels super odd weirdd<br><br>Kinda embrassed chatgpt huge generic-ish talks<br><br>my friend story end; rutwik happy now atleast when i was with him currently he friends with my other mutual friends<br><br><br>Avoid succession spoiler if you read completely or skim\",",
+        "\"\\\"content\\\": \\\"===\\\\nifked up - but also kinda reading the room/vibe\\\\n10. How to Support Others in Sadness or Depression\\\\nBe present: Listen without \\\\u201cfixing\\\\u201d or judging.\\\\nDon\\\\u2019t offer clich\\\\u00e9s (\\\\u201ccheer up!\\\\u201d \\\\u201cothers have it worse\\\\u201d).\\\\nAsk: \\\\u201cWhat do you need right now?\\\\u201d \\\\u201cCan I just sit with you?\\\\u201d\\\\nCheck in regularly, especially after a crisis or loss.\\\\nIf worried about safety, ask directly about self-harm; offer help seeking professional support.\\\\n\\\\u2014-\\\\nrelated\\\\n5. Clarifying the Bystander Effect (Good catch!)\\\\nFull Definition:\\\\nThe bystander effect is a social psychology phenomenon where individuals are less likely to offer help to a victim when other people are present.\\\\nReason: Everyone assumes \\\\u201csomeone else will help,\\\\u201d so nobody does anything.\\\\nKey Point: The more people watching, the less responsibility anyone feels.\\\\nLife hack: If you ever need help in a crowd, call out a single person: \\\\u201cYOU in the red shirt, call for help!\\\\u201d\\\\nThis breaks the effect and makes someone responsible.\\\\n===\\\\n storytime\\\\ni used to ask every my friend about their father job or thing or their family state to know them nicely and one of the person i asked in 8th grade(shifted from village because his father passed away the year before he joined) - anyways i didnt knew his history and asked him and he said he passed away also he had no friends so i felt to ask and once i was informed told classmates to not do weird things with him and try to cheer him up or have fun and more\\\\n- sadly i lost touch too him also after covid era or idk i probably lost my friends number even that pubg aman guy/ he btw ig catfished me idk still & or i might have deleted the number of him accidently\\\\n- his father was a farmer and sadly passed away from electricity tower or something now his father's blood brother gave him house in hariom society he is builder and takes care of expenses of him since 8th grade\\\\n- also he wanted to become doctor and sadly bro was smart and also from gujarati medium iircc and in javiya became as english medium or early years idk but something like it \\\\u2014- currenty ig he is studdying from junagadh school\\\\n- also neet toppers like 600/720 ish marks ppl get AIMS RAJKOT (rajkot is shit kinda not a metropolitic city) not him\\\\n- most farmers who would be working on someone else farm would never be able to have a nice life and only if their childrens make like builder surviour thingy then they could also no insaurance and many things too and the sole people for the reason all of us are surviving\\\\n- also i hated farm/village ingeneral since childhood due to trauma or want to play games or pc use and more but also oppression of farmers and sad poverty\\\\n- [Nar Rutvik (@rutvik1.2) \\\\u2022 Instagram photos and videos](https:www.instagram.com/rutvik1.2/) the guy\\\\n- also i tried being a nice guy not an asshole rude ever tried to be compassionate kind polite to everyone without looking down on ppl(kinda exceptions but still ) & never abused either (only in valo due to loss of temper but that too not anymore also in this chat abusses are just for intensifiers here)\\\\n- hopin to rekindle once i get my shit together and be better and not ghost or do bad things and more : )\\\\n====\\\\nalso i had many other friends but only 2 best friends and soo many toppers and great friends junior/senior in goatest thread message as i said most of them got nice college and i fkedup lol\\\\nanyways would turn around quickly\\\\n===\\\\nalso feels weird to yap some things like it feels likee i am trying to collect brownie points\\\\nfeels super odd weirdd\\\\nKinda embrassed chatgpt huge generic-ish talks\\\\nmy friend story end; rutwik happy now atleast when i was with him currently he friends with my other mutual friends\\\\nAvoid succession spoiler if you read completely or skim\\\"\",",
+        "\"\\\"content\\\": \\\"===\\\\nifked up - but also kinda reading the room/vibe\\\\n10. How to Support Others in Sadness or Depression\\\\nBe present: Listen without \\\\u201cfixing\\\\u201d or judging.\\\\nDon\\\\u2019t offer clich\\\\u00e9s (\\\\u201ccheer up!\\\\u201d \\\\u201cothers have it worse\\\\u201d).\\\\nAsk: \\\\u201cWhat do you need right now?\\\\u201d \\\\u201cCan I just sit with you?\\\\u201d\\\\nCheck in regularly, especially after a crisis or loss.\\\\nIf worried about safety, ask directly about self-harm; offer help seeking professional support.\\\\n\\\\u2014-\\\\nrelated\\\\n5. Clarifying the Bystander Effect (Good catch!)\\\\nFull Definition:\\\\nThe bystander effect is a social psychology phenomenon where individuals are less likely to offer help to a victim when other people are present.\\\\nReason: Everyone assumes \\\\u201csomeone else will help,\\\\u201d so nobody does anything.\\\\nKey Point: The more people watching, the less responsibility anyone feels.\\\\nLife hack: If you ever need help in a crowd, call out a single person: \\\\u201cYOU in the red shirt, call for help!\\\\u201d\\\\nThis breaks the effect and makes someone responsible.\\\\n===\\\\n storytime\\\\ni used to ask every my friend about their father job or thing or their family state to know them nicely and one of the person i asked in 8th grade(shifted from village because his father passed away the year before he joined) - anyways i didnt knew his history and asked him and he said he passed away also he had no friends so i felt to ask and once i was informed told classmates to not do weird things with him and try to cheer him up or have fun and more\\\\n- sadly i lost touch too him also after covid era or idk i probably lost my friends number even that pubg aman guy/ he btw ig catfished me idk still & or i might have deleted the number of him accidently\\\\n- his father was a farmer and sadly passed away from electricity tower or something now his father's blood brother gave him house in hariom society he is builder and takes care of expenses of him since 8th grade\\\\n- also he wanted to become doctor and sadly bro was smart and also from gujarati medium iircc and in javiya became as english medium or early years idk but something like it \\\\u2014- currenty ig he is studdying from junagadh school\\\\n- also neet toppers like 600/720 ish marks ppl get AIMS RAJKOT (rajkot is shit kinda not a metropolitic city) not him\\\\n- most farmers who would be working on someone else farm would never be able to have a nice life and only if their childrens make like builder surviour thingy then they could also no insaurance and many things too and the sole people for the reason all of us are surviving\\\\n- also i hated farm/village ingeneral since childhood due to trauma or want to play games or pc use and more but also oppression of farmers and sad poverty\\\\n- [Nar Rutvik (@rutvik1.2) \\\\u2022 Instagram photos and videos](https:www.instagram.com/rutvik1.2/) the guy\\\\n- also i tried being a nice guy not an asshole rude ever tried to be compassionate kind polite to everyone without looking down on ppl(kinda exceptions but still ) & never abused either (only in valo due to loss of temper but that too not anymore also in this chat abusses are just for intensifiers here)\\\\n- hopin to rekindle once i get my shit together and be better and not ghost or do bad things and more : )\\\\n====\\\\nalso i had many other friends but only 2 best friends and soo many toppers and great friends junior/senior in goatest thread message as i said most of them got nice college and i fkedup lol\\\\nanyways would turn around quickly\\\\n===\\\\nalso feels weird to yap some things like it feels likee i am trying to collect brownie points\\\\nfeels super odd weirdd\\\\nKinda embrassed chatgpt huge generic-ish talks\\\\nmy friend story end; rutwik happy now atleast when i was with him currently he friends with my other mutual friends\\\\nAvoid succession spoiler if you read completely or skim\\\"\""
       ],
       "dependencies": [],
       "branch": "feature/portfolio-dashboard",
       "uncommitted": 2,
       "unpushed": 0,
       "remote_url": "https://github.com/Paranjayy/paranjayy.git",
-      "recent_commits": 139,
+      "recent_commits": 140,
       "commit_hours": [
+        0,
         23,
         23,
         23,
@@ -3043,13 +3048,21 @@
         7,
         7,
         12,
-        7,
-        12
+        7
       ],
-      "weekend_commits": 95,
+      "weekend_commits": 94,
       "total_commits_checked": 100,
       "orphan_branches": [],
       "commit_words": [
+        "feat",
+        "project",
+        "age",
+        "weekend",
+        "stats",
+        "most",
+        "used",
+        "commit",
+        "words",
         "feat",
         "integrate",
         "advanced",
@@ -3576,14 +3589,7 @@
         "chore",
         "visual",
         "metrics",
-        "skip",
-        "intelligence",
-        "hub",
-        "unified",
-        "awesome",
-        "config",
-        "error",
-        "resolution"
+        "skip"
       ],
       "age_days": 4,
       "rel_path": "Downloads/2work/dev/Web_Apps/paranjayy",
@@ -3644,7 +3650,7 @@
       "uncommitted": 0,
       "unpushed": 0,
       "remote_url": "https://github.com/Paranjayy/ipl-2026-engine.git",
-      "recent_commits": 245,
+      "recent_commits": 244,
       "commit_hours": [
         1,
         20,
@@ -6111,7 +6117,7 @@
         "vite"
       ],
       "rel_path": "Downloads/2work/dev/ln4",
-      "mod_str": "12d ago"
+      "mod_str": "13d ago"
     },
     {
       "path": "/Users/paranjay/Downloads/2work/dev/ai-trading-aws-vercel",
