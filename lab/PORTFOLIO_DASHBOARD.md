@@ -5,9 +5,9 @@
 | Language | Percent | Total LOC |
 | :--- | :--- | :--- |
 | Markdown | 46.7% | 996,296 |
-| JSON | 21.8% | 465,859 |
+| JSON | 21.8% | 465,052 |
 | Swift | 15.5% | 331,366 |
-| React TS | 5.8% | 123,983 |
+| React TS | 5.8% | 124,131 |
 | HTML | 3.2% | 67,786 |
 | TypeScript | 2.4% | 50,192 |
 | CSS | 1.1% | 23,773 |
@@ -19,9 +19,9 @@
 
 | Project | Health | Pulse (7d) | Naming | Commits | Pending | Last Modified |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **web**<br><small>A digital interface focused on config, plugins, tailwindcss.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 23:01 |
+| **iftt**<br><small>High-complexity a browser-level utility orchestrating gravity, build, cortex workflows.</small> | 🟢 90% | `░░███░█` | 🐫 Camel | 43 | 🟠 0↑ 🟡 2± | 2026-04-29 23:01 |
 | **ipl-2026-engine**<br><small>High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.</small> | 🟡 80% | `███████` | 🐫 Camel | 262 | 🟠 0↑ 🟡 7± | 2026-04-29 22:59 |
-| **iftt**<br><small>High-complexity a browser-level utility orchestrating gravity, build, cortex workflows.</small> | 🟢 90% | `░░███░█` | 🐫 Camel | 43 | 🟠 0↑ 🟡 2± | 2026-04-29 22:58 |
-| **web**<br><small>A digital interface focused on config, plugins, tailwindcss.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 22:54 |
 | **raycast-ext**<br><small>High-complexity a digital interface focused on bash, required, parameters.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 19:38 |
 | **ideaverse**<br><small>An automation engine built for generatedat, summary, active tasks.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 11:47 |
 | **instagram-media-hub**<br><small>A digital interface focused on reference, types, raycast.</small> | 🟡 80% | `░░░░░░█` | 🐍 Snake | 1 | 🟠 0↑ 🟡 4± | 2026-04-29 11:22 |
