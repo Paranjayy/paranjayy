@@ -30,7 +30,7 @@ def find_all_repos():
     return repos
 
 SCAN_DIRS = find_all_repos()
-MAX_DEPTH = 10 # Deeper for nested projects
+MAX_DEPTH = 20 # Maximum Saturation Depth
 
 SKIP_DIRS = {
     'Library', 'Applications', 'Pictures', 'Music', 'Movies', '.Trash', 
@@ -355,11 +355,33 @@ def main():
         
         md_content += f"| **{name}**<br><small>{p['narrative']}</small> | {health_emoji} {p['health']}% | `{pulse}` | {naming_vibe} | {recent} | {pending} | {last_mod} |\n"
     
-    with open('lab/PORTFOLIO_DASHBOARD.md', 'w') as f:
-        f.write(md_content)
+    # Global Stats
+    global_langs = Counter()
+    total_ecosystem_loc = 0
     
-    # Also save JSON for the web hub
+    for p in all_projects:
+        total_ecosystem_loc += p['total_loc']
+        for lang, loc in p['loc_breakdown'].items():
+            global_langs[lang] += loc
+
+    # Normalize Langs for Portfolio Matrix
+    skills_matrix = {lang: (loc/total_ecosystem_loc)*100 for lang, loc in global_langs.items() if (loc/total_ecosystem_loc) > 0.01}
+    
+    # Sort Skills by proficiency
+    skills_matrix = dict(sorted(skills_matrix.items(), key=lambda item: item[1], reverse=True))
+
+    all_stats = {
+        "generated_at": datetime.now().isoformat(),
+        "total_projects": len(all_projects),
+        "total_loc": total_ecosystem_loc,
+        "skills_matrix": skills_matrix,
+        "projects": all_projects
+    }
+    
+    with open('lab/PORTFOLIO_DASHBOARD.md', 'w') as f:
+        f.write(report)
+        
     with open('lab/PORTFOLIO_DATA.json', 'w') as f:
-        json.dump({"generated_at": datetime.now().isoformat(), "projects": all_projects}, f, indent=2)
+        json.dump(all_stats, f, indent=2)
 
 if __name__ == '__main__': main()
