@@ -9,29 +9,28 @@ from collections import defaultdict, Counter
 def find_all_repos():
     home = os.path.expanduser('~')
     print(f"📡 Initializing Global Search across {home}...")
-    try:
-        # Dynamic discovery of all git repos excluding system junk
-        cmd = [
-            'find', home, 
-            '-name', '.git', '-type', 'd', 
-            '-prune', 
-            '!', '-path', f'*/Library/*', 
-            '!', '-path', f'*/Pictures/*', 
-            '!', '-path', f'*/Music/*', 
-            '!', '-path', f'*/Movies/*', 
-            '!', '-path', f'*/.Trash/*',
-            '!', '-path', '*/node_modules/*'
-        ]
-        result = subprocess.check_output(cmd, stderr=subprocess.DEVNULL).decode('utf-8')
-        repos = [os.path.dirname(line) for line in result.splitlines() if line]
-        print(f"✅ Discovered {len(repos)} independent orbits.")
-        return repos
-    except Exception as e:
-        print(f"⚠️ Discovery Error: {e}")
-        return ['/Users/paranjay/Developer']
+    repos = []
+    
+    # Aggressive skip list for performance and safety
+    skip_set = {
+        'Library', 'Pictures', 'Music', 'Movies', 'Public', '.Trash', 
+        'node_modules', '.next', '.cache', 'venv', '.venv', 'dist', 'build'
+    }
+    
+    for root, dirs, files in os.walk(home, topdown=True):
+        # Modify dirs in-place to skip unwanted branches
+        dirs[:] = [d for d in dirs if d not in skip_set and not d.startswith('.')]
+        
+        if '.git' in dirs:
+            repos.append(root)
+            # Don't recurse into found git repos to save time (prune)
+            dirs.remove('.git')
+            
+    print(f"✅ Discovered {len(repos)} independent orbits.")
+    return repos
 
 SCAN_DIRS = find_all_repos()
-MAX_DEPTH = 8 # Deeper scan for nested sub-repos
+MAX_DEPTH = 10 # Deeper for nested projects
 
 SKIP_DIRS = {
     'Library', 'Applications', 'Pictures', 'Music', 'Movies', '.Trash', 

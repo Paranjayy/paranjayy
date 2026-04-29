@@ -202,7 +202,8 @@ export default function IdeaverseDashboard() {
     const totalLoc = projects.reduce((acc, p) => acc + p.total_loc, 0);
     const criticalRepos = projects.filter(p => p.env_exposed).length;
     const pendingRepos = projects.filter(p => (p.uncommitted || 0) > 0 || (p.unpushed || 0) > 0).length;
-    return { totalLoc, criticalRepos, pendingRepos, count: projects.length };
+    const highRoiRepos = projects.filter(p => ((p.recent_commits * 100) / (p.total_loc / 1000 + 1)) > 50).length;
+    return { totalLoc, criticalRepos, pendingRepos, count: projects.length, highRoiRepos };
   }, [projects]);
 
   const filteredProjects = projects
@@ -214,6 +215,11 @@ export default function IdeaverseDashboard() {
     .sort((a, b) => {
       if (sortBy === 'modified') return b.last_modified - a.last_modified;
       if (sortBy === 'loc') return b.total_loc - a.total_loc;
+      if (sortBy === 'roi') {
+        const roiA = (a.recent_commits * 100) / (a.total_loc / 1000 + 1);
+        const roiB = (b.recent_commits * 100) / (b.total_loc / 1000 + 1);
+        return roiB - roiA;
+      }
       return 0;
     });
 
@@ -288,6 +294,7 @@ export default function IdeaverseDashboard() {
              <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-[10px] font-black uppercase focus:outline-none">
                <option value="modified">Recency</option>
                <option value="loc">Volume</option>
+               <option value="roi">Velocity ROI</option>
              </select>
              <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className="bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-[10px] font-black uppercase focus:outline-none">
                <option value="all">All Clusters</option>
