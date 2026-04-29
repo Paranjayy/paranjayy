@@ -190,30 +190,51 @@ def get_project_stats(project_path, is_git):
     narrative = get_narrative(proj_type, keywords, total_loc)
     suggested_tool = suggest_tool(loc_by_lang, tech_debt_count)
     
-    # Internal Dependency Detection
     project_names = [os.path.basename(p) for p in SCAN_DIRS] # Simplified
     internal_deps = []
     
     # We'll populate this in a second pass in main()
     
+    largest_files = []
+    deepest_dir = project_path
+    max_depth_found = 0
+
+    for root, dirs, files in os.walk(project_path):
+        current_depth = root.count(os.sep)
+        if current_depth > max_depth_found:
+            max_depth_found = current_depth
+            deepest_dir = root
+
+        for f in files:
+            full_path = os.path.join(root, f)
+            try:
+                size = os.path.getsize(full_path)
+                largest_files.append({"name": f, "size": size})
+            except: continue
+
+    largest_files = sorted(largest_files, key=lambda x: x['size'], reverse=True)[:3]
+
     return {
-        "loc_breakdown": dict(loc_by_lang),
+        "path": project_path,
+        "is_git": is_git,
         "total_loc": total_loc,
+        "loc_breakdown": dict(loc_by_lang),
         "last_modified": last_mtime,
-        "largest_file": largest_file,
         "tech_debt_count": tech_debt_count,
         "dependencies": list(set(dependencies)),
         "has_license": has_license,
         "env_exposed": env_exposed,
         "proj_type": proj_type,
-        "keywords": dict(keywords.most_common(10)),
+        "keywords": dict(keywords),
         "readme_words": readme_words,
         "naming": naming,
-        "narrative": narrative,
-        "suggested_tool": suggested_tool,
+        "internal_deps": list(set(internal_deps)),
+        "narrative": get_narrative(proj_type, keywords, total_loc),
+        "suggested_tool": suggest_tool(loc_by_lang, tech_debt_count),
+        "largest_files": largest_files,
+        "deepest_dir": deepest_dir.replace(project_path, ""),
         "preview_image": os.path.basename(preview_image) if preview_image else None,
-        "full_preview_path": preview_image,
-        "internal_deps": [] # To be filled
+        "full_preview_path": preview_image
     }
 
 def get_git_analytics(dir_path):

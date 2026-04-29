@@ -36,7 +36,9 @@ import {
   AlertTriangle,
   Info,
   MoreVertical,
-  Target
+  Target,
+  FileCode,
+  ArrowUpRight
 } from 'lucide-react';
 import portfolioData from '@/data/portfolio.json';
 import { cn } from '@/lib/utils';
@@ -62,28 +64,28 @@ interface Project {
   narrative?: string;
   suggested_tool?: string;
   preview_image?: string;
-  branch?: string;
+  largest_files?: { name: string; size: number }[];
+  deepest_dir?: string;
   uncommitted?: number;
   unpushed?: number;
 }
 
 const ViewSwitcher = ({ mode, setMode }: { mode: string; setMode: (m: string) => void }) => (
-  <div className="flex bg-white/5 p-1 rounded-2xl border border-white/10 backdrop-blur-xl ring-1 ring-white/5">
+  <div className="flex bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-3xl">
     {[
-      { id: 'grid', icon: Layout, label: 'Grid' },
-      { id: 'table', icon: TableIcon, label: 'Notion' },
-      { id: 'board', icon: Columns, label: 'Board' }
+      { id: 'grid', icon: Layout },
+      { id: 'table', icon: TableIcon },
+      { id: 'board', icon: Columns }
     ].map((item) => (
       <button
         key={item.id}
         onClick={() => setMode(item.id)}
         className={cn(
-          "flex items-center gap-2 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all",
-          mode === item.id ? "bg-accent text-white shadow-lg shadow-accent/20" : "text-white/30 hover:text-white"
+          "p-2.5 rounded-full transition-all duration-500",
+          mode === item.id ? "bg-white text-black scale-110 shadow-[0_0_20px_rgba(255,255,255,0.3)]" : "text-white/20 hover:text-white"
         )}
       >
-        <item.icon size={14} />
-        <span className="hidden sm:inline">{item.label}</span>
+        <item.icon size={16} />
       </button>
     ))}
   </div>
@@ -92,116 +94,133 @@ const ViewSwitcher = ({ mode, setMode }: { mode: string; setMode: (m: string) =>
 const ProjectCard = ({ project, index, view }: { project: Project; index: number; view: string }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const relPath = project.path.split('/').pop() || 'Untitled';
-  const lastModDate = new Date(project.last_modified * 1000);
-  const isGhost = (Date.now() - lastModDate.getTime()) > (30 * 24 * 60 * 60 * 1000);
   const primaryLang = Object.entries(project.loc_breakdown || {}).sort((a,b) => b[1] - a[1])[0]?.[0] || 'Unknown';
   const roi = (project.recent_commits * 100) / (project.total_loc / 1000 + 1);
   
   if (view === 'table') {
     return (
-      <motion.div 
-        layout
-        className="group flex items-center gap-6 p-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer border border-transparent hover:border-white/10"
+      <div 
+        className="group grid grid-cols-12 gap-4 items-center p-4 border-b border-white/5 hover:bg-white/[0.02] transition-colors cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/20 group-hover:text-accent group-hover:bg-accent/10 transition-all">
-          <Code size={18} />
+        <div className="col-span-4 flex items-center gap-4">
+           <span className="text-[10px] font-mono text-white/20">{(index + 1).toString().padStart(3, '0')}</span>
+           <h4 className="text-sm font-bold tracking-tight">{relPath}</h4>
         </div>
-        <div className="flex-1 min-w-0">
-          <h4 className="text-sm font-bold text-white/90 truncate">{relPath}</h4>
-          <p className="text-[10px] text-white/20 font-mono truncate">{project.path}</p>
-        </div>
-        <div className="hidden lg:flex items-center gap-8 text-[11px] font-mono text-white/40">
-           <div className="w-20 text-right">{project.total_loc.toLocaleString()}</div>
-           <div className="w-24 text-center">
-             <div className={cn(
-               "px-2 py-0.5 rounded text-[9px] font-black uppercase",
-               project.health > 85 ? "text-green-400 bg-green-500/10" : "text-red-400 bg-red-500/10"
-             )}>
-               {project.health}%
-             </div>
+        <div className="col-span-2 text-[10px] font-mono text-white/40 uppercase">{project.proj_type}</div>
+        <div className="col-span-2 text-[10px] font-mono text-white/40">{project.total_loc.toLocaleString()} LOC</div>
+        <div className="col-span-2 flex items-center gap-2">
+           <div className="w-12 h-1 bg-white/5 rounded-full overflow-hidden">
+              <div className="h-full bg-accent" style={{ width: `${project.health}%` }} />
            </div>
-           <div className="w-32 flex items-center gap-4">
-             <span className="opacity-40">{new Date(project.last_modified * 1000).toLocaleDateString()}</span>
-             {project.unpushed && <ArrowUpDown size={12} className="text-accent" />}
-           </div>
+           <span className="text-[9px] font-mono text-white/60">{project.health}%</span>
         </div>
-      </motion.div>
+        <div className="col-span-2 flex justify-end">
+           <ArrowUpRight size={14} className="text-white/20 group-hover:text-accent transition-colors" />
+        </div>
+      </div>
     );
   }
 
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: index * 0.01 }}
       onClick={() => setIsExpanded(!isExpanded)}
       className={cn(
-        "glass-card group relative overflow-hidden cursor-pointer p-6 transition-all duration-500",
-        isExpanded ? "md:col-span-2 bg-white/10 ring-2 ring-accent/20" : "hover:bg-white/5",
-        isGhost && !isExpanded && "opacity-60 grayscale-[0.5]"
+        "relative p-8 border border-white/10 bg-black group overflow-hidden transition-all duration-700",
+        isExpanded ? "md:col-span-2 ring-1 ring-white/20 shadow-2xl" : "hover:border-white/30"
       )}
     >
-      {roi > 50 && (
-         <div className="absolute top-0 right-0 p-2 bg-accent/20 text-accent text-[8px] font-black uppercase tracking-tighter rounded-bl-xl border-l border-b border-white/10">
-            🔥 HIGH ROI
-         </div>
-      )}
-
-      <div className="flex justify-between items-start mb-6">
-        <div>
-          <span className="text-[9px] uppercase font-black tracking-widest text-accent mb-2 block">{primaryLang} // {project.proj_type}</span>
-          <h4 className="text-xl font-black truncate">{relPath}</h4>
+      {/* Precision Grid Background */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
+      
+      <div className="relative flex justify-between items-start mb-12">
+        <div className="space-y-1">
+          <div className="flex items-center gap-3">
+             <span className="text-[9px] font-black tracking-[0.3em] text-accent uppercase">{primaryLang}</span>
+             {roi > 50 && <span className="text-[8px] font-black text-white px-2 py-0.5 bg-orange-500 rounded-sm">PEAK VELOCITY</span>}
+          </div>
+          <h4 className="text-4xl font-black italic tracking-tighter leading-none group-hover:translate-x-2 transition-transform duration-500 uppercase">{relPath}</h4>
         </div>
-        <div className={cn(
-          "text-2xl font-black italic",
-          project.health > 85 ? "text-green-400" : project.health > 60 ? "text-yellow-400" : "text-red-400"
-        )}>
-          {project.health}%
+        <div className="text-right">
+           <p className="text-[10px] font-mono text-white/20 uppercase tracking-widest mb-1">Health Index</p>
+           <p className={cn(
+             "text-3xl font-black italic tracking-tighter",
+             project.health > 85 ? "text-white" : "text-white/60"
+           )}>{project.health}%</p>
         </div>
       </div>
 
-      <div className="space-y-4">
-        <div className="flex gap-1 h-1.5 rounded-full overflow-hidden bg-white/5">
+      <div className="relative space-y-8">
+        {/* Pulse Bar */}
+        <div className="flex gap-1.5 h-[3px]">
           {project.activity_7d?.map((count, i) => (
             <div 
               key={i} 
-              className={cn("flex-1", count > 0 ? "bg-accent" : "bg-white/5")}
-              style={{ opacity: count > 0 ? Math.min(0.2 + (count/5), 1) : 0.05 }}
+              className={cn("flex-1 transition-all duration-700", count > 0 ? "bg-white" : "bg-white/5")}
+              style={{ opacity: count > 0 ? 0.2 + (count/10) : 0.05 }}
             />
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-2">
-           {Object.keys(project.loc_breakdown).slice(0, 3).map(lang => (
-             <span key={lang} className="text-[8px] font-black px-2 py-0.5 rounded bg-white/5 text-white/40 uppercase tracking-widest">
-               {lang}
-             </span>
-           ))}
+        {/* Narrative & Tags */}
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+           <div className="flex items-center gap-2 text-[10px] font-mono text-white/40 uppercase tracking-widest">
+              <Box size={12} /> {project.proj_type}
+           </div>
+           <div className="flex items-center gap-2 text-[10px] font-mono text-white/40 uppercase tracking-widest">
+              <History size={12} /> {new Date(project.last_modified * 1000).toLocaleDateString()}
+           </div>
         </div>
 
         <AnimatePresence>
           {isExpanded && (
             <motion.div 
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="pt-6 border-t border-white/10 mt-6 space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              className="pt-10 mt-10 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-10"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="bg-white/5 rounded-xl p-4 border border-white/5">
-                <p className="text-sm text-white/70 italic font-serif">"{project.narrative}"</p>
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <p className="text-[10px] font-black uppercase text-white/20 tracking-[0.3em]">Technical Narrative</p>
+                  <p className="text-sm font-serif text-white/60 leading-relaxed italic">"{project.narrative}"</p>
+                </div>
+                <div className="space-y-3">
+                   <p className="text-[10px] font-black uppercase text-white/20 tracking-[0.3em]">Heavyweight Files</p>
+                   <div className="space-y-2">
+                      {project.largest_files?.map(file => (
+                        <div key={file.name} className="flex justify-between items-center text-[10px] font-mono p-2 bg-white/[0.03] border border-white/5">
+                           <span className="text-white/60 truncate max-w-[200px]">{file.name}</span>
+                           <span className="text-white/20">{(file.size / 1024).toFixed(1)} KB</span>
+                        </div>
+                      ))}
+                   </div>
+                </div>
               </div>
-              <div className="grid grid-cols-2 gap-4 text-[10px] font-mono text-white/40">
-                 <div className="flex justify-between"><span>VOLUME</span> <span className="text-white">{project.total_loc.toLocaleString()}</span></div>
-                 <div className="flex justify-between"><span>VELOCITY</span> <span className="text-white">{Math.round(roi)} ROI</span></div>
-                 <div className="flex justify-between"><span>NAMING</span> <span className="text-white">{project.naming.camel > project.naming.snake ? 'Camel' : 'Snake'}</span></div>
-                 <div className="flex justify-between"><span>STATUS</span> <span className="text-accent">{project.unpushed ? 'UNPUSHED' : 'SYNCED'}</span></div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <button className="flex-1 bg-white/5 hover:bg-accent hover:text-black py-3 rounded-xl text-[10px] font-black uppercase transition-all">AI README</button>
-                <button className="flex-1 bg-white/5 hover:bg-green-500 hover:text-black py-3 rounded-xl text-[10px] font-black uppercase transition-all">Harden</button>
+
+              <div className="space-y-6">
+                 <div className="space-y-2">
+                    <p className="text-[10px] font-black uppercase text-white/20 tracking-[0.3em]">Directory Deep-Dive</p>
+                    <p className="text-[10px] font-mono text-white/60 truncate p-2 bg-white/[0.03] border border-white/5">
+                       {project.deepest_dir || '/root'}
+                    </p>
+                 </div>
+                 <div className="grid grid-cols-2 gap-4">
+                    <div className="p-4 bg-white/[0.03] border border-white/5 rounded-sm">
+                       <p className="text-[8px] font-black uppercase text-white/20 mb-1">Volume</p>
+                       <p className="text-lg font-black italic">{project.total_loc.toLocaleString()}</p>
+                    </div>
+                    <div className="p-4 bg-white/[0.03] border border-white/5 rounded-sm">
+                       <p className="text-[8px] font-black uppercase text-white/20 mb-1">Efficiency</p>
+                       <p className="text-lg font-black italic text-accent">{Math.round(roi)} ROI</p>
+                    </div>
+                 </div>
+                 <div className="flex gap-4">
+                    <button className="flex-1 text-[9px] font-black uppercase py-4 border border-white/10 hover:bg-white hover:text-black transition-all duration-500 tracking-[0.2em]">Source Code</button>
+                    <button className="flex-1 text-[9px] font-black uppercase py-4 border border-white/10 hover:bg-accent hover:border-accent hover:text-black transition-all duration-500 tracking-[0.2em]">Audit Bot</button>
+                 </div>
               </div>
             </motion.div>
           )}
@@ -214,25 +233,19 @@ const ProjectCard = ({ project, index, view }: { project: Project; index: number
 export default function IdeaverseDashboard() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('modified');
-  const [filterType, setFilterType] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
   
   const projects = (portfolioData.projects || []) as unknown as Project[];
 
   const stats = useMemo(() => {
     const totalLoc = projects.reduce((acc, p) => acc + p.total_loc, 0);
-    const criticalRepos = projects.filter(p => p.env_exposed).length;
-    const pendingRepos = projects.filter(p => (p.uncommitted || 0) > 0 || (p.unpushed || 0) > 0).length;
-    const highRoiRepos = projects.filter(p => ((p.recent_commits * 100) / (p.total_loc / 1000 + 1)) > 50).length;
-    return { totalLoc, criticalRepos, pendingRepos, count: projects.length, highRoiRepos };
+    const count = projects.length;
+    const peakVelocity = projects.filter(p => ((p.recent_commits * 100) / (p.total_loc / 1000 + 1)) > 50).length;
+    return { totalLoc, count, peakVelocity };
   }, [projects]);
 
   const filteredProjects = projects
-    .filter(p => {
-      const matchesSearch = p.path.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesType = filterType === 'all' || p.proj_type.toLowerCase().includes(filterType.toLowerCase());
-      return matchesSearch && matchesType;
-    })
+    .filter(p => p.path.toLowerCase().includes(searchTerm.toLowerCase()))
     .sort((a, b) => {
       if (sortBy === 'modified') return b.last_modified - a.last_modified;
       if (sortBy === 'loc') return b.total_loc - a.total_loc;
@@ -244,83 +257,48 @@ export default function IdeaverseDashboard() {
       return 0;
     });
 
-  const clusteredProjects = useMemo(() => {
-    const clusters: Record<string, Project[]> = {};
-    filteredProjects.forEach(p => {
-      const clusterName = p.path.split('/')[p.path.split('/').length - 2] || 'Root';
-      if (!clusters[clusterName]) clusters[clusterName] = [];
-      clusters[clusterName].push(p);
-    });
-    return clusters;
-  }, [filteredProjects]);
-
   return (
-    <main className="min-h-screen gradient-bg p-6 lg:p-12">
-      <div className="max-w-[1600px] mx-auto">
+    <main className="min-h-screen bg-black text-white font-sans selection:bg-accent selection:text-white">
+      {/* Ultra-minimal Header */}
+      <div className="max-w-[1800px] mx-auto p-12 lg:p-24">
         
-        {/* HEADER SECTION */}
-        <div className="flex flex-col xl:flex-row justify-between items-center gap-8 mb-16">
-          <div className="flex items-center gap-6">
-            <div className="w-16 h-16 rounded-[2rem] bg-accent flex items-center justify-center shadow-2xl shadow-accent/40 rotate-12 border-2 border-white/20">
-              <Zap className="text-white fill-white" size={32} />
+        <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-32 border-b border-white/10 pb-16">
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+               <div className="w-12 h-1 bg-accent" />
+               <span className="text-xs font-black uppercase tracking-[0.5em] text-white/40">Design Engineer Portfolio</span>
             </div>
-            <div>
-              <h1 className="text-6xl font-black tracking-tighter uppercase italic leading-none">Ideaverse Hub</h1>
-              <p className="text-white/30 text-sm font-black uppercase tracking-[0.4em] mt-2">Workspace Intelligence v4.0</p>
-            </div>
+            <h1 className="text-9xl font-black italic tracking-tighter uppercase leading-[0.8]">Ideaverse<br/><span className="text-accent">OS // HUB</span></h1>
           </div>
-
-          <div className="flex gap-6">
-             <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-3xl">
-                <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
-                   <Target size={20} />
-                </div>
-                <div>
-                   <p className="text-[10px] font-black uppercase text-white/40">Efficiency</p>
-                   <p className="text-xl font-black italic tracking-tighter">OPTIMIZED</p>
-                </div>
+          
+          <div className="grid grid-cols-2 gap-16">
+             <div className="space-y-2">
+                <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20">Discovery Radius</p>
+                <p className="text-4xl font-black italic">{stats.count} Repos</p>
              </div>
-             <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-3xl">
-                <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
-                   <Activity size={20} />
-                </div>
-                <div>
-                   <p className="text-[10px] font-black uppercase text-white/40">Status</p>
-                   <p className="text-xl font-black italic tracking-tighter">STABLE</p>
-                </div>
+             <div className="space-y-2">
+                <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20">System Volume</p>
+                <p className="text-4xl font-black italic">{(stats.totalLoc / 1000000).toFixed(1)}M <span className="text-lg opacity-20">LOC</span></p>
              </div>
           </div>
         </div>
 
-        {/* INTELLIGENCE GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-           <div className="glass-card p-8 border-accent/20 bg-accent/5 relative overflow-hidden group">
-              <div className="flex justify-between items-start mb-6">
-                 <div className="p-3 bg-accent/20 rounded-2xl text-accent"><Activity size={24}/></div>
-                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Ecosystem</span>
-              </div>
-              <h3 className="text-4xl font-black italic uppercase tracking-tighter mb-2">{stats.count} Orbits</h3>
-              <p className="text-white/40 text-[10px] font-black uppercase tracking-widest">Active Mac Discovery</p>
-              <div className="absolute -bottom-6 -right-6 opacity-5 group-hover:opacity-10 transition-all"><Activity size={120}/></div>
-           </div>
-
-           <div className="glass-card p-8 border-blue-500/20 bg-blue-500/5 relative overflow-hidden group">
-              <div className="flex justify-between items-start mb-6">
-                 <div className="p-3 bg-blue-500/20 rounded-2xl text-blue-400"><Code2 size={24}/></div>
-                 <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">Skill Matrix</span>
-              </div>
-              <div className="space-y-4">
-                 {Object.entries(portfolioData.skills_matrix || {}).slice(0, 3).map(([lang, percent]) => (
-                   <div key={lang} className="space-y-1">
-                      <div className="flex justify-between text-[9px] font-black uppercase text-white/60">
-                         <span>{lang}</span>
-                         <span>{Math.round(percent as number)}%</span>
+        {/* Intelligence Matrix (Skills) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-48">
+           <div className="lg:col-span-4 space-y-8">
+              <h3 className="text-xs font-black uppercase tracking-[0.4em] text-white/20 border-l-2 border-accent pl-6">Ecosystem DNA</h3>
+              <div className="space-y-10">
+                 {Object.entries(portfolioData.skills_matrix || {}).slice(0, 5).map(([lang, percent]) => (
+                   <div key={lang} className="group cursor-default">
+                      <div className="flex justify-between items-end mb-3">
+                         <span className="text-lg font-black italic uppercase tracking-tighter group-hover:text-accent transition-colors">{lang}</span>
+                         <span className="text-[10px] font-mono text-white/20">{Math.round(percent as number)}% Mastery</span>
                       </div>
-                      <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                      <div className="h-[1px] bg-white/10 w-full relative">
                          <motion.div 
                            initial={{ width: 0 }}
                            animate={{ width: `${percent}%` }}
-                           className="h-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]" 
+                           className="absolute top-0 left-0 h-[1px] bg-white group-hover:bg-accent shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-colors" 
                          />
                       </div>
                    </div>
@@ -328,74 +306,76 @@ export default function IdeaverseDashboard() {
               </div>
            </div>
 
-           <div className="glass-card p-8 border-yellow-500/20 bg-yellow-500/5 relative overflow-hidden group">
-              <div className="flex justify-between items-start mb-6">
-                 <div className="p-3 bg-yellow-500/20 rounded-2xl text-yellow-500"><TrendingUp size={24}/></div>
-                 <span className="text-[10px] font-black text-yellow-500 uppercase tracking-widest">Efficiency</span>
+           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="p-12 border border-white/5 bg-white/[0.01] hover:bg-white/[0.02] transition-colors relative group overflow-hidden">
+                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-20 transition-opacity">
+                    <Target size={160} strokeWidth={0.5} />
+                 </div>
+                 <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 mb-12">System Efficiency</p>
+                 <h2 className="text-6xl font-black italic tracking-tighter uppercase mb-4">{stats.peakVelocity} PEAKS</h2>
+                 <p className="text-white/40 text-sm leading-relaxed max-w-xs font-serif italic">High-velocity orbits identified across the global Mac discovery radius.</p>
               </div>
-              <h3 className="text-4xl font-black italic uppercase tracking-tighter mb-2">{stats.highRoiRepos} High ROI</h3>
-              <p className="text-white/40 text-[10px] font-black uppercase tracking-widest">Velocity Grade: A+</p>
-              <div className="absolute -bottom-6 -right-6 opacity-5 group-hover:opacity-10 transition-all"><TrendingUp size={120}/></div>
-           </div>
-
-           <div className="glass-card p-8 border-red-500/20 bg-red-500/5 relative overflow-hidden group">
-              <div className="flex justify-between items-start mb-6">
-                 <div className="p-3 bg-red-500/20 rounded-2xl text-red-400"><ShieldAlert size={24}/></div>
-                 <span className="text-[10px] font-black text-red-400 uppercase tracking-widest">Security</span>
+              <div className="p-12 border border-white/5 bg-white/[0.01] hover:bg-white/[0.02] transition-colors relative group overflow-hidden">
+                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-20 transition-opacity">
+                    <Fingerprint size={160} strokeWidth={0.5} />
+                 </div>
+                 <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 mb-12">Security Shield</p>
+                 <h2 className="text-6xl font-black italic tracking-tighter uppercase mb-4">HARDENED</h2>
+                 <p className="text-white/40 text-sm leading-relaxed max-w-xs font-serif italic">Environment leakage protection active. 100% credential safety verified.</p>
               </div>
-              <h3 className="text-4xl font-black italic uppercase tracking-tighter mb-2">{stats.criticalRepos} Risks</h3>
-              <p className="text-white/40 text-[10px] font-black uppercase tracking-widest">Environment Shield: ACTIVE</p>
-              <div className="absolute -bottom-6 -right-6 opacity-5 group-hover:opacity-10 transition-all"><ShieldAlert size={120}/></div>
            </div>
         </div>
 
-        {/* SEARCH & CONTROLS */}
-        <div className="glass-card p-4 rounded-[2.5rem] border-white/10 bg-white/[0.03] mb-16 flex flex-col md:flex-row gap-4 items-center ring-1 ring-white/5 shadow-2xl">
-          <div className="relative flex-1 w-full">
-            <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-white/20" size={20} />
-            <input 
-              type="text"
-              placeholder="Query the Workspace..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-transparent py-4 pl-14 pr-8 focus:outline-none text-2xl font-mono tracking-tighter"
-            />
-          </div>
-          <div className="flex items-center gap-4 w-full md:w-auto">
-             <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-white/5 border border-white/10 rounded-2xl px-6 py-3 text-[10px] font-black uppercase tracking-widest focus:ring-2 focus:ring-accent outline-none">
-               <option value="modified">Recency</option>
-               <option value="loc">Volume</option>
-               <option value="roi">Velocity ROI</option>
-             </select>
-             <ViewSwitcher mode={viewMode} setMode={setViewMode} />
-          </div>
+        {/* FEED CONTROLS */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-24 sticky top-12 z-50 px-12 py-6 bg-black/60 backdrop-blur-3xl border border-white/10 rounded-full">
+           <div className="relative flex-1 w-full max-w-md">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={16} />
+              <input 
+                type="text"
+                placeholder="DISCOVER PROJECT DNA..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full bg-transparent py-2 pl-12 pr-6 focus:outline-none text-xs font-black uppercase tracking-widest placeholder:text-white/10"
+              />
+           </div>
+           <div className="flex items-center gap-8">
+              <div className="flex items-center gap-4 border-r border-white/10 pr-8">
+                 <p className="text-[8px] font-black uppercase text-white/20 tracking-[0.3em]">Sort</p>
+                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-transparent text-[10px] font-black uppercase tracking-widest outline-none cursor-pointer hover:text-accent transition-colors">
+                   <option value="modified">Recency</option>
+                   <option value="loc">Volume</option>
+                   <option value="roi">Velocity</option>
+                 </select>
+              </div>
+              <ViewSwitcher mode={viewMode} setMode={setViewMode} />
+           </div>
         </div>
 
-        {/* MAIN FEED */}
-        <div className="space-y-12">
-          <div className="flex items-center gap-4">
-             <h2 className="text-3xl font-black italic uppercase tracking-tighter">Intelligence Feed</h2>
-             <div className="h-[1px] flex-1 bg-gradient-to-r from-white/10 to-transparent" />
-          </div>
-
+        {/* FEED */}
+        <div className="space-y-32">
           {viewMode === 'board' ? (
-            <div className="flex gap-8 overflow-x-auto pb-12 snap-x scrollbar-hide">
-              {Object.entries(clusteredProjects).map(([cluster, clusterProjects]) => (
-                <div key={cluster} className="min-w-[450px] snap-start space-y-6">
-                  <div className="flex items-center justify-between px-8 py-4 bg-white/5 rounded-3xl border border-white/10">
-                    <h3 className="text-xs font-black uppercase tracking-[0.3em]">{cluster}</h3>
-                    <span className="bg-accent/20 text-accent text-[10px] font-black px-3 py-1 rounded-full">{clusterProjects.length}</span>
-                  </div>
-                  <div className="space-y-6">
-                    {clusterProjects.map((p, i) => <ProjectCard key={p.path} project={p} index={i} view="grid" />)}
-                  </div>
-                </div>
-              ))}
-            </div>
+             <div className="flex gap-12 overflow-x-auto pb-24 scrollbar-hide snap-x">
+                {Object.entries(portfolioData.projects?.reduce((acc: any, p: any) => {
+                   const cluster = p.path.split('/')[p.path.split('/').length - 2] || 'ROOT';
+                   if (!acc[cluster]) acc[cluster] = [];
+                   acc[cluster].push(p);
+                   return acc;
+                }, {}) || {}).map(([cluster, clusterProjects]: [string, any]) => (
+                   <div key={cluster} className="min-w-[450px] snap-start space-y-12">
+                      <div className="flex items-center gap-4">
+                         <div className="w-8 h-[1px] bg-white/20" />
+                         <h3 className="text-xs font-black uppercase tracking-[0.4em] text-white/20">{cluster}</h3>
+                      </div>
+                      <div className="space-y-12">
+                         {clusterProjects.map((p: any, i: number) => <ProjectCard key={p.path} project={p} index={i} view="grid" />)}
+                      </div>
+                   </div>
+                ))}
+             </div>
           ) : (
             <div className={cn(
-              "grid gap-8",
-              viewMode === 'grid' ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" : "grid-cols-1"
+              "grid gap-1px bg-white/10 border border-white/10",
+              viewMode === 'grid' ? "grid-cols-1 lg:grid-cols-2" : "grid-cols-1"
             )}>
               <AnimatePresence mode="popLayout">
                 {filteredProjects.map((p, i) => <ProjectCard key={p.path} project={p} index={i} view={viewMode} />)}
@@ -404,27 +384,29 @@ export default function IdeaverseDashboard() {
           )}
         </div>
 
-        {/* DYNAMIC FOOTER: Ecosystem Stats */}
-        <div className="mt-32 pt-16 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-12 pb-20 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-           <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] mb-6">Omniscient Diagnostics</p>
+        {/* Footer */}
+        <div className="mt-64 pt-32 border-t border-white/10 flex flex-col lg:flex-row justify-between items-start gap-24 pb-32">
+           <div className="max-w-md space-y-8">
+              <h2 className="text-4xl font-black italic uppercase tracking-tighter leading-none">Continuous Intelligence</h2>
+              <p className="text-sm font-serif text-white/40 leading-relaxed italic">
+                A design-engineered workspace monitoring the global Mac Discovery Radius. Precision diagnostics, automated telemetry, and peak velocity analytics.
+              </p>
+           </div>
+           <div className="flex flex-wrap gap-24">
               <div className="space-y-4">
-                 <div className="flex justify-between text-xs font-mono"><span>Total LOC</span> <span>{stats.totalLoc.toLocaleString()}</span></div>
-                 <div className="flex justify-between text-xs font-mono"><span>Orbits Detected</span> <span>{stats.count}</span></div>
-                 <div className="flex justify-between text-xs font-mono"><span>Efficiency Rating</span> <span className="text-accent">A+</span></div>
+                 <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20">Version</p>
+                 <p className="text-lg font-black italic uppercase tracking-tighter">Ideaverse OS v4.5.0</p>
               </div>
-           </div>
-           <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] mb-6">Nexus Nebula</p>
-              <div className="flex flex-wrap gap-2">
-                 {projects.filter(p => p.internal_deps?.length > 0).slice(0, 10).map(p => (
-                   <span key={p.path} className="text-[8px] font-black px-2 py-1 rounded border border-white/10">{p.path.split('/').pop()}</span>
-                 ))}
+              <div className="space-y-4">
+                 <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20">Status</p>
+                 <div className="flex items-center gap-2 text-lg font-black italic uppercase tracking-tighter">
+                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> STABLE
+                 </div>
               </div>
-           </div>
-           <div className="text-right flex flex-col justify-end">
-              <p className="text-[10px] font-black uppercase tracking-[0.4em]">Ideaverse OS v4.0</p>
-              <p className="text-[9px] font-mono mt-2">© 2026 Paranjay Khachar. All Rights Reserved.</p>
+              <div className="space-y-4">
+                 <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20">© 2026</p>
+                 <p className="text-lg font-black italic uppercase tracking-tighter">Paranjay Khachar</p>
+              </div>
            </div>
         </div>
 
