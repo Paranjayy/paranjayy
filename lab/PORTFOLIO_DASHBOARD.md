@@ -1,16 +1,16 @@
-# Ideaverse Dashboard (2026-04-29)
+# Ideaverse Dashboard (2026-04-30)
 
 ### 🧬 Core Language DNA
 
 | Language | Percent | Total LOC |
 | :--- | :--- | :--- |
-| Markdown | 46.7% | 996,296 |
-| JSON | 21.8% | 465,052 |
+| Markdown | 46.6% | 996,409 |
+| JSON | 21.9% | 467,968 |
 | Swift | 15.5% | 331,366 |
-| React TS | 5.8% | 124,131 |
+| React TS | 5.8% | 124,829 |
 | HTML | 3.2% | 67,786 |
-| TypeScript | 2.4% | 50,192 |
-| CSS | 1.1% | 23,773 |
+| TypeScript | 2.3% | 50,174 |
+| CSS | 1.1% | 24,187 |
 | YAML | 1.1% | 22,543 |
 
 ---
@@ -19,17 +19,17 @@
 
 | Project | Health | Pulse (7d) | Naming | Commits | Pending | Last Modified |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **web**<br><small>A digital interface focused on config, plugins, tailwindcss.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 23:01 |
-| **iftt**<br><small>High-complexity a browser-level utility orchestrating gravity, build, cortex workflows.</small> | 🟢 90% | `░░███░█` | 🐫 Camel | 43 | 🟠 0↑ 🟡 2± | 2026-04-29 23:01 |
-| **ipl-2026-engine**<br><small>High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.</small> | 🟡 80% | `███████` | 🐫 Camel | 262 | 🟠 0↑ 🟡 7± | 2026-04-29 22:59 |
+| **Praduman Khachar**<br><small>High-complexity a browser-level utility orchestrating gemini, update, claude workflows.</small> | 🟡 80% | `░░░██░█` | 🐫 Camel | 31 | 🟠 0↑ 🟡 2± | 2026-04-30 05:20 |
+| **web**<br><small>A digital interface focused on config, plugins, tailwindcss.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-30 05:20 |
+| **ipl-2026-engine**<br><small>High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.</small> | 🟢 90% | `███████` | 🐫 Camel | 256 | 🟠 0↑ 🟡 0± | 2026-04-30 05:18 |
+| **iftt**<br><small>High-complexity a browser-level utility orchestrating gravity, build, cortex workflows.</small> | 🟢 90% | `░░██░██` | 🐫 Camel | 43 | 🟠 0↑ 🟡 2± | 2026-04-30 04:36 |
 | **raycast-ext**<br><small>High-complexity a digital interface focused on bash, required, parameters.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 19:38 |
 | **ideaverse**<br><small>An automation engine built for generatedat, summary, active tasks.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 11:47 |
-| **instagram-media-hub**<br><small>A digital interface focused on reference, types, raycast.</small> | 🟡 80% | `░░░░░░█` | 🐍 Snake | 1 | 🟠 0↑ 🟡 4± | 2026-04-29 11:22 |
-| **Praduman Khachar**<br><small>High-complexity a browser-level utility orchestrating gemini, update, claude workflows.</small> | 🟡 80% | `░░░███░` | 🐫 Camel | 29 | 🟠 0↑ 🟡 11± | 2026-04-29 08:12 |
-| **instagram-downloader-ref**<br><small>A digital interface focused on schema, https, raycast.</small> | 🟢 90% | `░░░░░░█` | 🐫 Camel | 1 | 🟠 0↑ 🟡 1± | 2026-04-29 02:26 |
-| **instagram-downloader-ref**<br><small>A digital interface focused on schema, https, raycast.</small> | 🟢 90% | `░░░░░░█` | 🐫 Camel | 1 | 🟠 0↑ 🟡 1± | 2026-04-29 02:26 |
+| **instagram-media-hub**<br><small>A digital interface focused on reference, types, raycast.</small> | 🟡 80% | `░░░░░█░` | 🐍 Snake | 1 | 🟠 0↑ 🟡 4± | 2026-04-29 11:22 |
+| **instagram-downloader-ref**<br><small>A digital interface focused on schema, https, raycast.</small> | 🟢 90% | `░░░░░█░` | 🐫 Camel | 1 | 🟠 0↑ 🟡 1± | 2026-04-29 02:26 |
+| **instagram-downloader-ref**<br><small>A digital interface focused on schema, https, raycast.</small> | 🟢 90% | `░░░░░█░` | 🐫 Camel | 1 | 🟠 0↑ 🟡 1± | 2026-04-29 02:26 |
 | **instagram-media-downloader**<br><small>A digital interface focused on instagram, media, downloader.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 02:26 |
-| **antigravity-token-analyzer**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟡 80% | `░░░██░░` | 🐫 Camel | 22 | 🟠 0↑ 🟡 3± | 2026-04-28 17:52 |
+| **antigravity-token-analyzer**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟡 80% | `░░░█░░░` | 🐫 Camel | 22 | 🟠 0↑ 🟡 3± | 2026-04-28 17:52 |
 | **Design Palace Deepseek**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟡 80% | `░░░░░█░` | 🐫 Camel | 4 | 🟠 0↑ 🟡 22± | 2026-04-28 17:25 |
 | **openai.rip**<br><small>A digital interface focused on schema, https, openapi.</small> | 🟢 100% | `░░░░█░░` | 🐫 Camel | 4 | 🟠 0↑ 🟡 0± | 2026-04-27 12:04 |
 | **gemini-design-palace**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟢 90% | `░░░█░░░` | 🐫 Camel | 6 | 🟠 0↑ 🟡 0± | 2026-04-26 09:43 |
