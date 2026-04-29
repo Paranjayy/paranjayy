@@ -6,7 +6,15 @@ import re
 from datetime import datetime, timedelta
 from collections import defaultdict, Counter
 
-SCAN_DIRS = ['/Users/paranjay/Developer', '/Users/paranjay/Downloads/2work/dev/Web_Apps']
+SCAN_DIRS = [
+    '/Users/paranjay/Developer', 
+    '/Users/paranjay/Downloads/2work/dev/Web_Apps',
+    '/Users/paranjay/Downloads/2work/dev/extensions or testing',
+    '/Users/paranjay/Downloads/2work/dev/rn building',
+    '/Users/paranjay/Downloads/2work/dev/archive',
+    '/Users/paranjay/Downloads/2work/dev/misc',
+    '/Users/paranjay/Downloads/2work/dev/travel shit lol'
+]
 MAX_DEPTH = 6
 
 SKIP_DIRS = {
@@ -332,11 +340,11 @@ def main():
         
         md_content += f"| **{name}**<br><small>{p['narrative']}</small> | {health_emoji} {p['health']}% | `{pulse}` | {naming_vibe} | {recent} | {pending} | {last_mod} |\n"
     
-    with open('PORTFOLIO_DASHBOARD.md', 'w') as f:
+    with open('lab/PORTFOLIO_DASHBOARD.md', 'w') as f:
         f.write(md_content)
     
     # Also save JSON for the web hub
-    with open('PORTFOLIO_DATA.json', 'w') as f:
+    with open('lab/PORTFOLIO_DATA.json', 'w') as f:
         json.dump({"generated_at": datetime.now().isoformat(), "projects": all_projects}, f, indent=2)
 
 if __name__ == '__main__': main()
