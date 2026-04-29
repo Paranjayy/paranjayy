@@ -4,14 +4,14 @@
 
 | Language | Percent | Total LOC |
 | :--- | :--- | :--- |
-| JSON | 65.7% | 51,885 |
-| React TS | 11.8% | 9,314 |
-| CSS | 7.5% | 5,954 |
-| Rust | 5.5% | 4,347 |
-| TypeScript | 3.1% | 2,436 |
-| Python | 2.1% | 1,691 |
-| Markdown | 1.6% | 1,225 |
-| JavaScript | 1.3% | 1,024 |
+| JSON | 70.4% | 64,362 |
+| React TS | 10.2% | 9,361 |
+| CSS | 6.5% | 5,954 |
+| Rust | 4.8% | 4,347 |
+| TypeScript | 2.7% | 2,436 |
+| Python | 1.8% | 1,691 |
+| Markdown | 1.3% | 1,225 |
+| JavaScript | 1.1% | 1,024 |
 
 ---
 
@@ -19,7 +19,7 @@
 
 | Project | Health | Pulse (7d) | Naming | Commits | Pending | Last Modified |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **web**<br><small>A digital interface focused on config, plugins, tailwindcss.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 20:52 |
+| **web**<br><small>High-complexity a digital interface focused on config, plugins, tailwindcss.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 21:06 |
 | **raycast-ext**<br><small>High-complexity a digital interface focused on bash, required, parameters.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 19:38 |
 | **raycast-ext**<br><small>High-complexity a digital interface focused on bash, required, parameters.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 19:38 |
 | **ideaverse**<br><small>An automation engine built for generatedat, summary, active tasks.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 11:47 |
