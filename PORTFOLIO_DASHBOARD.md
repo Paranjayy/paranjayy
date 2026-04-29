@@ -1,13 +1,23 @@
 # Ideaverse Dashboard (2026-04-29)
 
+### 🚀 ipl-2026-engine
+- **Vibe**: High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.
+- **Health**: 90% | **LOC**: 682858
+- **Suggested Tool**: `Ruff (Fast Linting)`
+
+### 🚀 paranjayy
+- **Vibe**: High-complexity an automation engine built for paranjay, experimental, intelligence tasks.
+- **Health**: 90% | **LOC**: 15411
+- **Suggested Tool**: `Ruff (Fast Linting)`
+
+### 🚀 web
+- **Vibe**: High-complexity a digital interface focused on config, plugins, tailwindcss.
+- **Health**: 70% | **LOC**: 10895
+- **Suggested Tool**: `ESLint + Prettier`
+
 ### 🚀 ideaverse
 - **Vibe**: An automation engine built for generatedat, summary, active tasks.
 - **Health**: 70% | **LOC**: 5360
-- **Suggested Tool**: `Ruff (Fast Linting)`
-
-### 🚀 ipl-2026-engine
-- **Vibe**: High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.
-- **Health**: 90% | **LOC**: 296056
 - **Suggested Tool**: `Ruff (Fast Linting)`
 
 ### 🚀 iftt
@@ -15,37 +25,27 @@
 - **Health**: 100% | **LOC**: 25459
 - **Suggested Tool**: `ESLint + Prettier`
 
-### 🚀 paranjayy
-- **Vibe**: High-complexity an automation engine built for paranjay, experimental, intelligence tasks.
-- **Health**: 90% | **LOC**: 25332
-- **Suggested Tool**: `Ruff (Fast Linting)`
-
 ### 🚀 instagram-media-hub
 - **Vibe**: A digital interface focused on reference, types, raycast.
 - **Health**: 90% | **LOC**: 4714
 - **Suggested Tool**: `ESLint + Prettier`
+
+### 🚀 Developer
+- **Vibe**: High-complexity a browser-level utility orchestrating build, brainstorming, vault workflows.
+- **Health**: 90% | **LOC**: 24489033
+- **Suggested Tool**: `Ruff (Fast Linting)`
 
 ### 🚀 Praduman Khachar
 - **Vibe**: High-complexity a browser-level utility orchestrating gemini, update, claude workflows.
 - **Health**: 90% | **LOC**: 14424
 - **Suggested Tool**: `ESLint + Prettier`
 
-### 🚀 antigravity-token-analyzer
-- **Vibe**: A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.
-- **Health**: 90% | **LOC**: 9823
+### 🚀 raycast-ext
+- **Vibe**: High-complexity a digital interface focused on bash, required, parameters.
+- **Health**: 80% | **LOC**: 10198
 - **Suggested Tool**: `ESLint + Prettier`
 
-### 🚀 Design Palace Deepseek
-- **Vibe**: A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.
-- **Health**: 90% | **LOC**: 7747
+### 🚀 instagram-downloader-ref
+- **Vibe**: A digital interface focused on schema, https, raycast.
+- **Health**: 100% | **LOC**: 5058
 - **Suggested Tool**: `ESLint + Prettier`
-
-### 🚀 boot.dev
-- **Vibe**: A browser-level utility orchestrating boot, design, analysis workflows.
-- **Health**: 90% | **LOC**: 6499
-- **Suggested Tool**: `Ruff (Fast Linting)`
-
-### 🚀 Antigravity-Dev-Vault
-- **Vibe**: A browser-level utility orchestrating document, navigation, foreach workflows.
-- **Health**: 90% | **LOC**: 6444
-- **Suggested Tool**: `Sentry (Monitoring)`
