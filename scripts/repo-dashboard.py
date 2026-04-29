@@ -379,7 +379,7 @@ def main():
     }
     
     with open('lab/PORTFOLIO_DASHBOARD.md', 'w') as f:
-        f.write(report)
+        f.write(md_content)
         
     with open('lab/PORTFOLIO_DATA.json', 'w') as f:
         json.dump(all_stats, f, indent=2)
