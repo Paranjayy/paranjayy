@@ -6,13 +6,14 @@ import re
 from datetime import datetime, timedelta
 from collections import defaultdict, Counter
 
-ROOT_DIR = '/Users/paranjay'
-MAX_DEPTH = 12
+SCAN_DIRS = ['/Users/paranjay/Developer', '/Users/paranjay/Downloads/2work/dev/Web_Apps']
+MAX_DEPTH = 6
 
 SKIP_DIRS = {
     'Library', 'Applications', 'Pictures', 'Music', 'Movies', '.Trash', 
     'node_modules', '.venv', 'venv', 'env', 'site-packages', 'build', 
-    'dist', '.vscode', '.next', '.cache', 'Public', 'opt', 'Pods', 'vendor'
+    'dist', '.vscode', '.next', '.cache', 'Public', 'opt', 'Pods', 'vendor',
+    'target', 'out', '__pycache__', '.gradle', '.idea', '.terraform', '.git'
 }
 
 CODE_EXTENSIONS = {
@@ -42,46 +43,86 @@ def analyze_naming_vibe(text):
     snake = len(re.findall(r'\b[a-z]+(?:_[a-z]+)+\b', text))
     return camel, snake
 
-def get_project_stats(dir_path, is_git):
+def get_narrative(proj_type, keywords, total_loc):
+    main_keys = [k for k in keywords.keys() if k not in {'import', 'export', 'const', 'async', 'await'}][:3]
+    vibe = "Unknown Identity"
+    if not main_keys: main_keys = ["Logic", "Data", "Source"]
+    
+    if 'web app' in proj_type.lower():
+        vibe = f"A digital interface focused on {', '.join(main_keys)}."
+    elif 'extension' in proj_type.lower():
+        vibe = f"A browser-level utility orchestrating {', '.join(main_keys)} workflows."
+    elif 'python' in proj_type.lower() or 'script' in proj_type.lower():
+        vibe = f"An automation engine built for {', '.join(main_keys)} tasks."
+    else:
+        vibe = f"A technical workspace centered on {', '.join(main_keys)} architecture."
+    
+    if total_loc > 10000:
+        vibe = "High-complexity " + vibe.lower()
+    return vibe
+
+def suggest_tool(loc_breakdown, tech_debt):
+    if 'Python' in loc_breakdown: return "Ruff (Fast Linting)"
+    if 'TypeScript' in loc_breakdown or 'React TS' in loc_breakdown:
+        if tech_debt > 10: return "Knip (Unused Code)"
+        return "ESLint + Prettier"
+    if 'CSS' in loc_breakdown: return "Tailwind Config Viewer"
+    return "Sentry (Monitoring)"
+
+def get_project_stats(project_path, is_git):
     loc_by_lang = defaultdict(int)
-    latest_mtime = 0
+    total_loc = 0
+    last_mtime = 0
     largest_file = {"path": "", "loc": 0}
     tech_debt_count = 0
-    extracted_todos = []
     dependencies = []
     has_license = False
     env_exposed = False
-    proj_type = "Project"
     keywords = Counter()
-    readme_word_count = 0
-    naming_styles = {"camel": 0, "snake": 0}
+    readme_words = 0
+    naming = {'camel': 0, 'snake': 0}
+    preview_image = None
+
+    is_web = os.path.exists(os.path.join(project_path, 'package.json'))
+    is_next = os.path.exists(os.path.join(project_path, 'next.config.js')) or os.path.exists(os.path.join(project_path, 'next.config.mjs'))
+    is_ext = 'extension' in project_path.lower() or os.path.exists(os.path.join(project_path, 'manifest.json'))
+    
+    proj_type = "Script"
+    if is_next: proj_type = "Web App (Next.js)"
+    elif is_web: proj_type = "Web App"
+    elif is_ext: proj_type = "Browser Extension"
     
     ignored_patterns = set()
-    gitignore_path = os.path.join(dir_path, '.gitignore')
+    gitignore_path = os.path.join(project_path, '.gitignore')
     if os.path.exists(gitignore_path):
         try:
             with open(gitignore_path, 'r') as f:
                 ignored_patterns = {line.strip() for line in f if line.strip() and not line.startswith('#')}
         except: pass
 
-    for root, dirs, files in os.walk(dir_path):
+    for root, dirs, files in os.walk(project_path):
         dirs[:] = [d for d in dirs if d not in SKIP_DIRS and not d.startswith('.')]
         
         for f in files:
             full_path = os.path.join(root, f)
+            
+            # Preview Image Detection (First suitable image)
+            if not preview_image and f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')):
+                if any(x in f.lower() for x in ['screenshot', 'banner', 'logo', 'preview', 'cover']):
+                    preview_image = full_path
+
             if f.lower() in ['license', 'license.md', 'license.txt']: has_license = True
             
             if f.lower() == 'readme.md':
                 try:
                     with open(full_path, 'r', errors='ignore') as rf:
-                        readme_word_count = len(rf.read().split())
+                        readme_words = len(rf.read().split())
                 except: pass
 
             if f == '.env' and is_git:
                 if '.env' not in ignored_patterns: env_exposed = True
 
             if f == 'package.json':
-                proj_type = "Web App"
                 try:
                     with open(full_path, 'r') as pjf:
                         data = json.load(pjf)
@@ -91,31 +132,30 @@ def get_project_stats(dir_path, is_git):
             elif f == 'requirements.txt' or f == 'pyproject.toml':
                 proj_type = "Python Tool"
             elif f == 'manifest.json': proj_type = "Browser Extension"
-            elif f == 'Dockerfile': proj_type += " (Dockerized)"
                 
             ext = os.path.splitext(f)[1].lower()
             if ext in CODE_EXTENSIONS:
                 try:
+                    # Skip massive files
+                    if os.path.getsize(full_path) > 1024 * 1024: continue
+                    
                     mtime = os.path.getmtime(full_path)
-                    if mtime > latest_mtime: latest_mtime = mtime
+                    if mtime > last_mtime: last_mtime = mtime
                     
                     with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
                         content = file.read()
                         lines = content.count('\n')
                         loc_by_lang[CODE_EXTENSIONS[ext]] += lines
                         
-                        # Naming Vibe
                         c, s = analyze_naming_vibe(content)
-                        naming_styles["camel"] += c
-                        naming_styles["snake"] += s
+                        naming["camel"] += c
+                        naming["snake"] += s
                         
-                        # Keywords
                         words = re.findall(r'\b[a-zA-Z]{4,15}\b', content)
                         for w in words:
-                            if w.lower() in {'async', 'await', 'export', 'import', 'const', 'function', 'interface', 'class', 'return'}:
+                            if w.lower() not in {'async', 'await', 'export', 'import', 'const', 'function', 'interface', 'class', 'return'}:
                                 keywords[w.lower()] += 1
 
-                        # Tech Debt
                         if any(x in content.upper() for x in ["TODO:", "FIXME:", "HACK:"]):
                             tech_debt_count += 1
                                     
@@ -124,11 +164,38 @@ def get_project_stats(dir_path, is_git):
                 except: pass
                     
     total_loc = sum(loc_by_lang.values())
-    return loc_by_lang, total_loc, latest_mtime, largest_file, tech_debt_count, extracted_todos, dependencies, has_license, env_exposed, proj_type, keywords, readme_word_count, naming_styles
+    narrative = get_narrative(proj_type, keywords, total_loc)
+    suggested_tool = suggest_tool(loc_by_lang, tech_debt_count)
+    
+    return {
+        "loc_breakdown": dict(loc_by_lang),
+        "total_loc": total_loc,
+        "last_modified": last_mtime,
+        "largest_file": largest_file,
+        "tech_debt_count": tech_debt_count,
+        "dependencies": list(set(dependencies)),
+        "has_license": has_license,
+        "env_exposed": env_exposed,
+        "proj_type": proj_type,
+        "keywords": dict(keywords.most_common(10)),
+        "readme_words": readme_words,
+        "naming": naming,
+        "narrative": narrative,
+        "suggested_tool": suggested_tool,
+        "preview_image": os.path.basename(preview_image) if preview_image else None,
+        "full_preview_path": preview_image
+    }
 
 def get_git_analytics(dir_path):
-    analytics = {'recent_commits': 0, 'commit_hours': [], 'weekend_commits': 0, 'total_commits_checked': 0, 'orphan_branches': [], 'commit_words': [], 'commit_lengths': [], 'commit_emojis': [], 'age_days': 0, 'activity_7d': [0]*7}
+    analytics = {
+        'recent_commits': 0, 
+        'activity_7d': [0]*7, 
+        'commit_lengths': [],
+        'unpushed': 0,
+        'uncommitted': 0
+    }
     try:
+        # Activity
         for i in range(7):
             day_start = (datetime.now() - timedelta(days=i+1)).strftime("%Y-%m-%d")
             day_end = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
@@ -136,32 +203,22 @@ def get_git_analytics(dir_path):
             analytics['activity_7d'][6-i] = len([l for l in out.split('\n') if l.strip()])
         
         analytics['recent_commits'] = sum(analytics['activity_7d'])
-        log_out = subprocess.check_output(['git', 'log', '-n', '100', '--format=%aI|%s'], cwd=dir_path, stderr=subprocess.DEVNULL).decode('utf-8')
-        emoji_pattern = re.compile(r'[\U00010000-\U0010ffff]', flags=re.UNICODE)
         
-        for line in log_out.split('\n'):
-            if '|' in line:
-                analytics['total_commits_checked'] += 1
-                iso_date, msg = line.split('|', 1)
-                analytics['commit_lengths'].append(len(msg.split()))
-                try:
-                    dt = datetime.fromisoformat(iso_date)
-                    analytics['commit_hours'].append(dt.hour)
-                    if dt.weekday() >= 5: analytics['weekend_commits'] += 1
-                except: pass
-                analytics['commit_emojis'].extend(emoji_pattern.findall(msg))
-                    
-        branches_out = subprocess.check_output(['git', 'for-each-ref', '--format=%(refname:short)|%(committerdate:unix)', 'refs/heads/'], cwd=dir_path, stderr=subprocess.DEVNULL).decode('utf-8')
-        six_months_ago = int((datetime.now() - timedelta(days=180)).timestamp())
-        for line in branches_out.split('\n'):
-            if '|' in line:
-                b_name, ts = line.split('|')
-                if ts.strip().isdigit() and int(ts) < six_months_ago: analytics['orphan_branches'].append(b_name.strip())
-                    
-        first_commit = subprocess.check_output(['git', 'log', '--reverse', '--format=%aI'], cwd=dir_path, stderr=subprocess.DEVNULL).decode('utf-8').split('\n')[0]
-        if first_commit:
-            dt = datetime.fromisoformat(first_commit)
-            analytics['age_days'] = (datetime.now(dt.tzinfo) - dt).days
+        # Commit lengths
+        log_out = subprocess.check_output(['git', 'log', '-n', '50', '--format=%s'], cwd=dir_path, stderr=subprocess.DEVNULL).decode('utf-8')
+        for msg in log_out.split('\n'):
+            if msg.strip(): analytics['commit_lengths'].append(len(msg.split()))
+
+        # Unpushed
+        try:
+            unpushed_out = subprocess.check_output(['git', 'log', '@{u}..', '--oneline'], cwd=dir_path, stderr=subprocess.DEVNULL).decode('utf-8')
+            analytics['unpushed'] = len([l for l in unpushed_out.split('\n') if l.strip()])
+        except: pass
+
+        # Uncommitted
+        status_out = subprocess.check_output(['git', 'status', '--porcelain'], cwd=dir_path, stderr=subprocess.DEVNULL).decode('utf-8')
+        analytics['uncommitted'] = len([l for l in status_out.split('\n') if l.strip()])
+
     except: pass
     return analytics
 
@@ -170,7 +227,8 @@ def calculate_health(p):
     if p.get('env_exposed'): score -= 40
     if not p.get('is_git'): score -= 20
     if not p.get('has_license'): score -= 10
-    if p.get('unpushed', 0) > 0: score -= 10
+    if p.get('unpushed', 0) > 0: score -= 15
+    if p.get('uncommitted', 0) > 0: score -= 10
     if p.get('tech_debt_count', 0) > 10: score -= 10
     return max(0, score)
 
@@ -178,120 +236,62 @@ def scan_for_projects(current_dir, depth):
     if depth > MAX_DEPTH: return []
     projects = []
     try: entries = os.listdir(current_dir)
-    except PermissionError: return []
+    except: return []
         
     is_git = '.git' in entries and os.path.isdir(os.path.join(current_dir, '.git'))
     is_non_git_project = not is_git and any(marker in entries for marker in PROJECT_MARKERS)
     
-    if is_git or is_non_git_project:
-        res = get_project_stats(current_dir, is_git)
-        loc_by_lang, total_loc, last_mtime, largest_file, tech_debt_count, extracted_todos, dependencies, has_license, env_exposed, proj_type, keywords, readme_words, naming = res
-        
-        status_info = {
-            'path': current_dir, 'is_git': is_git, 'total_loc': total_loc, 'loc_breakdown': dict(loc_by_lang), 'last_modified': last_mtime, 'largest_file': largest_file, 'tech_debt_count': tech_debt_count, 'dependencies': dependencies, 'has_license': has_license, 'env_exposed': env_exposed, 'proj_type': proj_type, 'keywords': dict(keywords), 'readme_words': readme_words, 'naming': naming
-        }
+    # Don't process the scan root itself as a project if it's in SCAN_DIRS
+    is_root = current_dir in SCAN_DIRS
+    
+    if (is_git or is_non_git_project) and not is_root:
+        print(f"    - Processing: {current_dir}")
+        stats = get_project_stats(current_dir, is_git)
+        stats.update({'path': current_dir, 'is_git': is_git})
         
         if is_git:
             git_analytics = get_git_analytics(current_dir)
             try:
                 branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8').strip()
-                status_out = subprocess.check_output(['git', 'status', '--porcelain'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8')
-                uncommitted = len([line for line in status_out.split('\n') if line.strip()])
-                remote_url = subprocess.check_output(['git', 'config', '--get', 'remote.origin.url'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8').strip()
-                unpushed = 0
-                if branch and remote_url:
-                    unpushed_out = subprocess.check_output(['git', 'rev-list', f'HEAD...origin/{branch}', '--count'], cwd=current_dir, stderr=subprocess.DEVNULL).decode('utf-8').strip()
-                    unpushed = int(unpushed_out) if unpushed_out.isdigit() else 0
-                status_info.update({'branch': branch, 'uncommitted': uncommitted, 'unpushed': unpushed, 'remote_url': remote_url})
+                stats.update({'branch': branch})
             except: pass
-            status_info.update(git_analytics)
+            stats.update(git_analytics)
             
-        status_info['health'] = calculate_health(status_info)
-        return [status_info]
+        stats['health'] = calculate_health(stats)
+        if stats['total_loc'] > 0 or is_git:
+            projects.append(stats)
+        
+        # If it's a git repo, don't look for nested projects inside it
+        if is_git: return projects
 
     for entry in entries:
         if entry in SKIP_DIRS or entry.startswith('.'): continue
         full_path = os.path.join(current_dir, entry)
-        if os.path.isdir(full_path): projects.extend(scan_for_projects(full_path, depth + 1))
+        if os.path.isdir(full_path):
+            projects.extend(scan_for_projects(full_path, depth + 1))
     return projects
 
 def main():
-    print(f"🔍 Deep Scanning {ROOT_DIR} (Depth {MAX_DEPTH})...")
-    projects = scan_for_projects(ROOT_DIR, 0)
+    all_projects = []
+    print(f"🔍 Deep Scanning {len(SCAN_DIRS)} high-value orbits...")
+    for target in SCAN_DIRS:
+        print(f"  -> Auditing: {target}")
+        all_projects.extend(scan_for_projects(target, 0))
     
-    total_loc = sum(p['total_loc'] for p in projects)
-    global_langs = defaultdict(int)
-    global_keywords = Counter()
-    global_commit_lengths = []
-    global_naming = {"camel": 0, "snake": 0}
-    quick_wins = []
-    today = datetime.now().date()
-    files_today = []
+    with open('PORTFOLIO_DATA.json', 'w') as f:
+        json.dump({"generated_at": datetime.now().isoformat(), "projects": all_projects}, f, indent=2)
 
-    # Local Network Detection
-    project_names = {os.path.basename(p['path']) for p in projects}
-    for p in projects:
-        p['internal_deps'] = [d for d in p['dependencies'] if d in project_names]
-        global_naming["camel"] += p['naming']["camel"]
-        global_naming["snake"] += p['naming']["snake"]
-        global_commit_lengths.extend(p.get('commit_lengths', []))
-        global_keywords.update(p.get('keywords', {}))
-        for l, count in p['loc_breakdown'].items(): global_langs[l] += count
-        
-        rel = os.path.relpath(p['path'], ROOT_DIR)
-        if p.get('env_exposed'): quick_wins.append(f"🔒 **Security**: Secure `.env` in `{rel}`")
-        if p.get('uncommitted', 0) > 15: quick_wins.append(f"📦 **Git**: Commit {p['uncommitted']} files in `{rel}`")
-        if not p.get('has_license'): quick_wins.append(f"📜 **Docs**: Add LICENSE to `{rel}`")
-        
-        m_date = datetime.fromtimestamp(p['last_modified']).date()
-        if m_date == today: files_today.append(p)
-
-    # Coding Persona & Vibe
-    naming_vibe = "Pascal/CamelCase Architect" if global_naming["camel"] > global_naming["snake"] else "Snake_Case Pragmatist"
-    avg_commit_len = sum(global_commit_lengths)/len(global_commit_lengths) if global_commit_lengths else 0
-    coding_persona = "Punchy Vibe-Coder" if avg_commit_len < 6 else "Deep Systems Engineer"
-    
-    # Export
-    with open('PORTFOLIO_DATA.json', 'w') as f: json.dump({"generated_at": datetime.now().isoformat(), "projects": projects}, f, indent=2)
-
-    # Markdown
-    md = [
-        "Hi, I'm Paranjay 👋",
-        "===================",
-        "",
-        "📍 Developer | 🤖 Tinker | 🚀 Code Explorer",
-        "",
-        "### ⚡ The " + coding_persona + "'s Quick Wins",
-        "  \n".join(quick_wins[:5]) if quick_wins else "✨ All projects are in elite shape!",
-        "",
-        "### 📊 Ideaverse Intelligence",
-        f"- **Total Projects Discovered**: {len(projects)}",
-        f"- **Naming Signature**: `{naming_vibe}`",
-        f"- **Machine Weight**: {total_loc:,} LOC across {len(global_langs)} languages",
-        f"- **Communication Score**: {sum(p.get('readme_words', 0) for p in projects):,} words of documentation",
-        f"- **Internal Network**: {sum(len(p.get('internal_deps', [])) for p in projects)} local cross-project links detected",
-        "",
-        "#### 🧬 Core Language DNA",
-        "\n".join([f"`{l.ljust(12)} { (count/total_loc*100):4.1f}% ({count:,} LOC)`" for l, count in sorted(global_langs.items(), key=lambda x:-x[1])[:8]]),
-        "",
-        "---",
-        "",
-        "### 🟢 Active Orbit Dashboard",
-        "| Project | Health | Pulse (7d) | Internal Links | Tech Debt | Last Modified |",
-        "| :--- | :--- | :--- | :--- | :--- | :--- |"
-    ]
-
-    for p in sorted(projects, key=lambda x: -x['last_modified'])[:15]:
-        if (time.time() - p['last_modified']) > 30*24*3600: continue
-        rel = os.path.relpath(p['path'], ROOT_DIR)
-        spark = get_sparkline(p.get('activity_7d', [0]*7))
-        h_color = "🟢" if p['health'] > 85 else "🟡" if p['health'] > 60 else "🔴"
-        links = f"🔗 {len(p['internal_deps'])}" if p['internal_deps'] else "—"
-        debt = f"🔨 {p['tech_debt_count']}" if p['tech_debt_count'] > 0 else "✨ Clean"
-        mod = datetime.fromtimestamp(p['last_modified']).strftime('%Y-%m-%d %H:%M')
-        md.append(f"| **{rel}** | {h_color} {p['health']}% | `{spark}` | {links} | {debt} | {mod} |")
+    # Simplified Markdown Dashboard
+    md = [f"# Ideaverse Dashboard ({datetime.now().strftime('%Y-%m-%d')})", ""]
+    for p in sorted(all_projects, key=lambda x: -x['last_modified'])[:10]:
+        rel = os.path.basename(p['path'])
+        md.append(f"### 🚀 {rel}")
+        md.append(f"- **Vibe**: {p.get('narrative')}")
+        md.append(f"- **Health**: {p['health']}% | **LOC**: {p['total_loc']}")
+        md.append(f"- **Suggested Tool**: `{p.get('suggested_tool')}`")
+        md.append("")
 
     with open('PORTFOLIO_DASHBOARD.md', 'w') as f: f.write("\n".join(md))
-    print("✅ 100% Saturation Reached. Dashboard updated!")
+    print(f"✅ Saturation: 100%. Found {len(all_projects)} projects.")
 
 if __name__ == '__main__': main()
