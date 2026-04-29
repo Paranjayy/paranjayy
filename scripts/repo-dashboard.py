@@ -6,16 +6,32 @@ import re
 from datetime import datetime, timedelta
 from collections import defaultdict, Counter
 
-SCAN_DIRS = [
-    '/Users/paranjay/Developer', 
-    '/Users/paranjay/Downloads/2work/dev/Web_Apps',
-    '/Users/paranjay/Downloads/2work/dev/extensions or testing',
-    '/Users/paranjay/Downloads/2work/dev/rn building',
-    '/Users/paranjay/Downloads/2work/dev/archive',
-    '/Users/paranjay/Downloads/2work/dev/misc',
-    '/Users/paranjay/Downloads/2work/dev/travel shit lol'
-]
-MAX_DEPTH = 6
+def find_all_repos():
+    home = os.path.expanduser('~')
+    print(f"📡 Initializing Global Search across {home}...")
+    try:
+        # Dynamic discovery of all git repos excluding system junk
+        cmd = [
+            'find', home, 
+            '-name', '.git', '-type', 'd', 
+            '-prune', 
+            '!', '-path', f'*/Library/*', 
+            '!', '-path', f'*/Pictures/*', 
+            '!', '-path', f'*/Music/*', 
+            '!', '-path', f'*/Movies/*', 
+            '!', '-path', f'*/.Trash/*',
+            '!', '-path', '*/node_modules/*'
+        ]
+        result = subprocess.check_output(cmd, stderr=subprocess.DEVNULL).decode('utf-8')
+        repos = [os.path.dirname(line) for line in result.splitlines() if line]
+        print(f"✅ Discovered {len(repos)} independent orbits.")
+        return repos
+    except Exception as e:
+        print(f"⚠️ Discovery Error: {e}")
+        return ['/Users/paranjay/Developer']
+
+SCAN_DIRS = find_all_repos()
+MAX_DEPTH = 8 # Deeper scan for nested sub-repos
 
 SKIP_DIRS = {
     'Library', 'Applications', 'Pictures', 'Music', 'Movies', '.Trash', 
