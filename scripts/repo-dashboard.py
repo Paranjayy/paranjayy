@@ -18,13 +18,13 @@ def find_all_repos():
     }
     
     for root, dirs, files in os.walk(home, topdown=True):
-        # Modify dirs in-place to skip unwanted branches
-        dirs[:] = [d for d in dirs if d not in skip_set and not d.startswith('.')]
+        # Skip system junk but KEEP .git for discovery
+        dirs[:] = [d for d in dirs if d not in skip_set and (not d.startswith('.') or d == '.git')]
         
         if '.git' in dirs:
             repos.append(root)
-            # Don't recurse into found git repos to save time (prune)
-            dirs.remove('.git')
+            # Prune: don't search inside found repos
+            if '.git' in dirs: dirs.remove('.git')
             
     print(f"✅ Discovered {len(repos)} independent orbits.")
     return repos
