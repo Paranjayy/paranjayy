@@ -4,14 +4,10 @@
 
 | Language | Percent | Total LOC |
 | :--- | :--- | :--- |
-| JSON | 70.4% | 64,362 |
-| React TS | 10.2% | 9,361 |
-| CSS | 6.5% | 5,954 |
-| Rust | 4.8% | 4,347 |
-| TypeScript | 2.7% | 2,436 |
-| Python | 1.8% | 1,691 |
-| Markdown | 1.3% | 1,225 |
-| JavaScript | 1.1% | 1,024 |
+| JavaScript | 81.2% | 1,111 |
+| Markdown | 12.3% | 169 |
+| Python | 3.9% | 54 |
+| JSON | 2.6% | 35 |
 
 ---
 
@@ -19,20 +15,4 @@
 
 | Project | Health | Pulse (7d) | Naming | Commits | Pending | Last Modified |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **web**<br><small>High-complexity a digital interface focused on config, plugins, tailwindcss.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 21:06 |
-| **raycast-ext**<br><small>High-complexity a digital interface focused on bash, required, parameters.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 19:38 |
-| **raycast-ext**<br><small>High-complexity a digital interface focused on bash, required, parameters.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 19:38 |
-| **ideaverse**<br><small>An automation engine built for generatedat, summary, active tasks.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 11:47 |
-| **instagram-media-downloader**<br><small>A digital interface focused on instagram, media, downloader.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 02:26 |
-| **instagram-media-downloader**<br><small>A digital interface focused on instagram, media, downloader.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 02:26 |
-| **instagram-media-downloader**<br><small>A digital interface focused on instagram, media, downloader.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 02:26 |
-| **functions**<br><small>A digital interface focused on functions, require, firebase.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-13 06:46 |
-| **dashboard**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-10 23:23 |
-| **src-tauri**<br><small>An automation engine built for package, name, version tasks.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-10 21:10 |
-| **src-tauri**<br><small>High-complexity an automation engine built for package, name, scratch tasks.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-03-27 05:01 |
-| **test_install**<br><small>A digital interface focused on name, learning, version.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-03-16 17:38 |
-| **test_install**<br><small>A digital interface focused on name, learning, version.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-03-16 17:38 |
-| **learning-ui**<br><small>A digital interface focused on reference, types, next.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-03-13 14:37 |
-| **learning-ui**<br><small>A digital interface focused on reference, types, next.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-03-13 14:37 |
-| **web**<br><small>A digital interface focused on reference, types, next.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-03-13 12:50 |
-| **web**<br><small>A digital interface focused on reference, types, next.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-03-13 12:50 |
+| **Extension to scrape**<br><small>A browser-level utility orchestrating create, context, menu workflows.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 1± | 2025-06-24 20:01 |
