@@ -1,13 +1,13 @@
 # Ideaverse Dashboard (2026-04-29)
 
-### 🚀 instagram-media-hub
-- **Vibe**: A digital interface focused on reference, types, raycast.
-- **Health**: 80% | **LOC**: 4684
-- **Suggested Tool**: `ESLint + Prettier`
-
 ### 🚀 paranjayy
 - **Vibe**: High-complexity an automation engine built for paranjay, experimental, intelligence tasks.
-- **Health**: 80% | **LOC**: 15496
+- **Health**: 80% | **LOC**: 15569
+- **Suggested Tool**: `Ruff (Fast Linting)`
+
+### 🚀 ipl-2026-engine
+- **Vibe**: High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.
+- **Health**: 80% | **LOC**: 296109
 - **Suggested Tool**: `Ruff (Fast Linting)`
 
 ### 🚀 iftt
@@ -15,10 +15,10 @@
 - **Health**: 90% | **LOC**: 25867
 - **Suggested Tool**: `ESLint + Prettier`
 
-### 🚀 ipl-2026-engine
-- **Vibe**: High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.
-- **Health**: 90% | **LOC**: 296078
-- **Suggested Tool**: `Ruff (Fast Linting)`
+### 🚀 instagram-media-hub
+- **Vibe**: A digital interface focused on reference, types, raycast.
+- **Health**: 80% | **LOC**: 4684
+- **Suggested Tool**: `ESLint + Prettier`
 
 ### 🚀 ideaverse
 - **Vibe**: An automation engine built for generatedat, summary, active tasks.
