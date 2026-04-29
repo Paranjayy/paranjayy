@@ -5,12 +5,12 @@
 | Language | Percent | Total LOC |
 | :--- | :--- | :--- |
 | HTML | 73.1% | 5,813,820 |
-| Markdown | 17.3% | 1,377,107 |
-| JSON | 5.0% | 394,244 |
+| Markdown | 17.3% | 1,377,157 |
+| JSON | 5.0% | 394,259 |
 | Swift | 1.3% | 106,820 |
-| React TS | 1.1% | 89,588 |
-| JavaScript | 0.6% | 50,693 |
-| TypeScript | 0.6% | 45,698 |
+| React TS | 1.1% | 89,715 |
+| JavaScript | 0.6% | 50,933 |
+| TypeScript | 0.6% | 45,828 |
 | CSS | 0.3% | 27,386 |
 
 ---
@@ -19,23 +19,23 @@
 
 | Project | Health | Pulse (7d) | Naming | Commits | Pending | Last Modified |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **iftt**<br><small>High-complexity a browser-level utility orchestrating gravity, build, cortex workflows.</small> | 🟢 90% | `░░███░█` | 🐫 Camel | 42 | 🟠 0↑ 🟡 1± | 2026-04-29 11:19 |
-| **paranjayy**<br><small>High-complexity an automation engine built for paranjay, experimental, intelligence tasks.</small> | 🟡 80% | `░░███░█` | 🐍 Snake | 157 | 🟠 0↑ 🟡 2± | 2026-04-29 11:19 |
-| **ipl-2026-engine**<br><small>High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.</small> | 🟢 90% | `███████` | 🐫 Camel | 257 | 🟠 0↑ 🟡 0± | 2026-04-29 11:18 |
-| **instagram-media-hub**<br><small>A digital interface focused on reference, types, raycast.</small> | 🟡 80% | `░░░░░░█` | 🐍 Snake | 1 | 🟠 0↑ 🟡 4± | 2026-04-29 11:13 |
-| **ideaverse**<br><small>An automation engine built for generatedat, summary, active tasks.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 10:30 |
+| **ipl-2026-engine**<br><small>High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.</small> | 🟢 90% | `███████` | 🐫 Camel | 267 | 🟠 0↑ 🟡 0± | 2026-04-29 19:49 |
+| **paranjayy**<br><small>High-complexity an automation engine built for paranjay, experimental, intelligence tasks.</small> | 🟡 80% | `░░█░█░█` | 🐍 Snake | 159 | 🟠 0↑ 🟡 1± | 2026-04-29 19:48 |
+| **iftt**<br><small>High-complexity a browser-level utility orchestrating gravity, build, cortex workflows.</small> | 🟢 90% | `░░███░█` | 🐫 Camel | 42 | 🟠 0↑ 🟡 6± | 2026-04-29 19:48 |
+| **ideaverse**<br><small>An automation engine built for generatedat, summary, active tasks.</small> | 🟡 70% | `░░░░░░░` | 🐍 Snake | 0 | 🟠 0↑ 🟡 0± | 2026-04-29 11:47 |
+| **instagram-media-hub**<br><small>A digital interface focused on reference, types, raycast.</small> | 🟡 80% | `░░░░░░█` | 🐍 Snake | 1 | 🟠 0↑ 🟡 4± | 2026-04-29 11:22 |
 | **Praduman Khachar**<br><small>High-complexity a browser-level utility orchestrating gemini, update, claude workflows.</small> | 🟡 80% | `░░░███░` | 🐫 Camel | 29 | 🟠 0↑ 🟡 11± | 2026-04-29 08:12 |
 | **antigravity-token-analyzer**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟡 80% | `░░░██░░` | 🐫 Camel | 22 | 🟠 0↑ 🟡 3± | 2026-04-28 17:52 |
-| **Design Palace Deepseek**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟡 80% | `░░░░░░█` | 🐫 Camel | 4 | 🟠 0↑ 🟡 22± | 2026-04-28 17:25 |
-| **boot.dev**<br><small>A browser-level utility orchestrating boot, design, analysis workflows.</small> | 🟢 90% | `░░░░░░█` | 🐫 Camel | 1 | 🟠 0↑ 🟡 0± | 2026-04-28 14:09 |
-| **Antigravity-Dev-Vault**<br><small>A browser-level utility orchestrating document, navigation, foreach workflows.</small> | 🟡 65% | `░░███░░` | 🐫 Camel | 28 | 🟠 6↑ 🟡 5± | 2026-04-27 02:22 |
+| **Design Palace Deepseek**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟡 80% | `░░░░░█░` | 🐫 Camel | 4 | 🟠 0↑ 🟡 22± | 2026-04-28 17:25 |
+| **boot.dev**<br><small>A browser-level utility orchestrating boot, design, analysis workflows.</small> | 🟢 90% | `░░░░░█░` | 🐫 Camel | 1 | 🟠 0↑ 🟡 0± | 2026-04-28 14:09 |
+| **Antigravity-Dev-Vault**<br><small>A browser-level utility orchestrating document, navigation, foreach workflows.</small> | 🟡 65% | `░████░░` | 🐫 Camel | 28 | 🟠 6↑ 🟡 5± | 2026-04-27 02:22 |
 | **gemini-design-palace**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟢 90% | `░░░█░░░` | 🐫 Camel | 6 | 🟠 0↑ 🟡 0± | 2026-04-26 09:43 |
-| **svgl-raycast**<br><small>A digital interface focused on reference, types, raycast.</small> | 🟡 80% | `░░░█░░░` | 🐍 Snake | 1 | 🟠 0↑ 🟡 3± | 2026-04-26 09:21 |
-| **7tv-raycast**<br><small>A digital interface focused on changelog, added, initial.</small> | 🟡 80% | `░░░█░░░` | 🐍 Snake | 19 | 🟠 0↑ 🟡 2± | 2026-04-26 09:21 |
+| **svgl-raycast**<br><small>A digital interface focused on reference, types, raycast.</small> | 🟡 80% | `░░█░░░░` | 🐍 Snake | 1 | 🟠 0↑ 🟡 3± | 2026-04-26 09:21 |
+| **7tv-raycast**<br><small>A digital interface focused on changelog, added, initial.</small> | 🟡 80% | `░░█░░░░` | 🐍 Snake | 19 | 🟠 0↑ 🟡 2± | 2026-04-26 09:21 |
 | **word-vibe**<br><small>A digital interface focused on doctype, html, lang.</small> | 🟡 70% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-26 09:11 |
 | **Design Palace**<br><small>A digital interface focused on compileroptions, tsbuildinfofile, tsconfig.</small> | 🟡 80% | `░█░░░░░` | 🐫 Camel | 1 | 🟠 0↑ 🟡 1± | 2026-04-25 17:38 |
 | **design-palace-kimi**<br><small>High-complexity a digital interface focused on config, plugins, tailwindcss.</small> | 🟢 90% | `░█░░░░░` | 🐫 Camel | 3 | 🟠 0↑ 🟡 0± | 2026-04-24 10:05 |
-| **Workout buddy**<br><small>A browser-level utility orchestrating doctype, html, lang workflows.</small> | 🟡 80% | `██░░░░░` | 🐫 Camel | 19 | 🟠 0↑ 🟡 11± | 2026-04-24 06:22 |
+| **Workout buddy**<br><small>A browser-level utility orchestrating doctype, html, lang workflows.</small> | 🟡 80% | `█░░░░░░` | 🐫 Camel | 19 | 🟠 0↑ 🟡 11± | 2026-04-24 06:22 |
 | **SocialHoardr**<br><small>High-complexity a browser-level utility orchestrating switching, safe, error workflows.</small> | 🟡 65% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 2↑ 🟡 5± | 2026-04-22 22:59 |
 | **IIT Madras Extension**<br><small>High-complexity a browser-level utility orchestrating strict, console, iitm workflows.</small> | 🟡 80% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 2± | 2026-04-22 08:53 |
 | **antigravity-quota-hub**<br><small>An automation engine built for native, antigravity, quota tasks.</small> | 🟢 90% | `░░░░░░░` | 🐫 Camel | 0 | 🟠 0↑ 🟡 0± | 2026-04-22 03:57 |
