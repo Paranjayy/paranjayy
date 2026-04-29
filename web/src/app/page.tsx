@@ -27,7 +27,11 @@ import {
   ChevronRight,
   GitBranch,
   GitCommit,
-  HardDrive
+  HardDrive,
+  FileText,
+  Shield,
+  Trash2,
+  ExternalLink
 } from 'lucide-react';
 import portfolioData from '@/data/portfolio.json';
 import { cn } from '@/lib/utils';
@@ -59,7 +63,7 @@ interface Project {
 }
 
 const ViewToggle = ({ mode, setMode }: { mode: string; setMode: (m: string) => void }) => (
-  <div className="flex bg-white/5 p-1 rounded-xl border border-white/10 backdrop-blur-md">
+  <div className="flex bg-white/5 p-1 rounded-2xl border border-white/10 backdrop-blur-xl shadow-2xl">
     {[
       { id: 'grid', icon: Layout, label: 'Grid' },
       { id: 'table', icon: TableIcon, label: 'Table' },
@@ -69,11 +73,11 @@ const ViewToggle = ({ mode, setMode }: { mode: string; setMode: (m: string) => v
         key={item.id}
         onClick={() => setMode(item.id)}
         className={cn(
-          "flex items-center gap-2 px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all",
-          mode === item.id ? "bg-accent text-black shadow-lg shadow-accent/20" : "text-white/40 hover:text-white"
+          "flex items-center gap-2 px-6 py-3 rounded-xl text-[11px] font-black uppercase tracking-widest transition-all",
+          mode === item.id ? "bg-accent text-black shadow-lg shadow-accent/20 scale-105" : "text-white/40 hover:text-white hover:bg-white/5"
         )}
       >
-        <item.icon size={14} />
+        <item.icon size={16} />
         {item.label}
       </button>
     ))}
@@ -84,7 +88,6 @@ const ProjectCard = ({ project, index, view }: { project: Project; index: number
   const [isExpanded, setIsExpanded] = useState(false);
   const relPath = project.path.split('/').pop() || 'Untitled';
   const lastModDate = new Date(project.last_modified * 1000);
-  const lastMod = lastModDate.toLocaleDateString();
   const isGhost = (Date.now() - lastModDate.getTime()) > (30 * 24 * 60 * 60 * 1000);
   const primaryLang = Object.entries(project.loc_breakdown || {}).sort((a,b) => b[1] - a[1])[0]?.[0] || 'Unknown';
   
@@ -126,7 +129,7 @@ const ProjectCard = ({ project, index, view }: { project: Project; index: number
       layout
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: index * 0.02 }}
+      transition={{ delay: index * 0.01 }}
       onClick={() => setIsExpanded(!isExpanded)}
       className={cn(
         "glass-card group relative overflow-hidden cursor-pointer p-5 transition-all duration-500",
@@ -172,7 +175,7 @@ const ProjectCard = ({ project, index, view }: { project: Project; index: number
           <div className="flex gap-2">
             {project.uncommitted && project.uncommitted > 0 && (
               <span className="text-[9px] text-yellow-400 font-bold flex items-center gap-1">
-                <AlertCircle size={10} /> {project.uncommitted} dirty
+                <AlertCircle size={10} /> {project.uncommitted} pending
               </span>
             )}
             {project.unpushed && project.unpushed > 0 && (
@@ -203,6 +206,7 @@ const ProjectCard = ({ project, index, view }: { project: Project; index: number
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               className="pt-4 border-t border-white/10 mt-4 space-y-4"
+              onClick={(e) => e.stopPropagation()}
             >
               {project.preview_image && (
                 <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10 mb-4 group/img">
@@ -239,6 +243,18 @@ const ProjectCard = ({ project, index, view }: { project: Project; index: number
                   </div>
                 </div>
               </div>
+
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+                <button className="flex-1 flex items-center justify-center gap-2 bg-white/5 hover:bg-accent hover:text-black py-2 rounded-lg text-[10px] font-black uppercase transition-all">
+                  <FileText size={12} /> AI README
+                </button>
+                <button className="flex-1 flex items-center justify-center gap-2 bg-white/5 hover:bg-green-500 hover:text-black py-2 rounded-lg text-[10px] font-black uppercase transition-all">
+                  <Shield size={12} /> Harden
+                </button>
+                <button className="flex-1 flex items-center justify-center gap-2 bg-white/5 hover:bg-red-500 hover:text-black py-2 rounded-lg text-[10px] font-black uppercase transition-all">
+                  <Trash2 size={12} /> Archive
+                </button>
+              </div>
               
               <div className="space-y-2">
                 <p className="text-[10px] text-white/40 uppercase">Ecosystem Path</p>
@@ -264,28 +280,19 @@ export default function IdeaverseDashboard() {
     const totalLoc = projects.reduce((acc, p) => acc + p.total_loc, 0);
     const totalTechDebt = projects.reduce((acc, p) => acc + p.tech_debt_count, 0);
     const criticalRepos = projects.filter(p => p.env_exposed).length;
-    const dirtyRepos = projects.filter(p => (p.uncommitted || 0) > 0 || (p.unpushed || 0) > 0).length;
+    const pendingRepos = projects.filter(p => (p.uncommitted || 0) > 0 || (p.unpushed || 0) > 0).length;
     
     const totalCamel = projects.reduce((acc, p) => acc + (p.naming?.camel || 0), 0);
     const totalSnake = projects.reduce((acc, p) => acc + (p.naming?.snake || 0), 0);
     const personality = totalCamel > totalSnake ? "Modern Architect" : "Legacy Explorer";
 
-    const globalKeywords: Record<string, number> = {};
-    projects.forEach(p => {
-      Object.entries(p.keywords || {}).forEach(([word, count]) => {
-        globalKeywords[word] = (globalKeywords[word] || 0) + (count as number);
-      });
-    });
-    const sortedKeywords = Object.entries(globalKeywords).sort((a, b) => b[1] - a[1]);
-
     return { 
       totalLoc, 
       totalTechDebt, 
       criticalRepos, 
-      dirtyRepos,
+      pendingRepos,
       count: projects.length, 
-      personality,
-      globalKeywords: Object.fromEntries(sortedKeywords)
+      personality
     };
   }, [projects]);
 
@@ -351,34 +358,35 @@ export default function IdeaverseDashboard() {
         </motion.div>
       </div>
 
-      <div className="max-w-7xl mx-auto mb-12 flex flex-col md:flex-row gap-6 items-end justify-between">
-        <div className="flex-1 space-y-4">
+      <div className="max-w-7xl mx-auto mb-12 flex flex-col xl:flex-row gap-8 items-center justify-between">
+        <div className="flex-1 w-full space-y-4">
           <div className="relative group">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 group-focus-within:text-accent transition-colors" size={18} />
+            <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-white/30 group-focus-within:text-accent transition-colors" size={24} />
             <input 
               type="text"
-              placeholder="Search the Ideaverse..."
+              placeholder="Query the Ideaverse (Project, Path, Language)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all backdrop-blur-xl text-lg font-mono"
+              className="w-full bg-white/5 border border-white/10 rounded-[32px] py-6 pl-16 pr-8 focus:outline-none focus:ring-4 focus:ring-accent/20 transition-all backdrop-blur-2xl text-xl font-mono shadow-2xl"
             />
           </div>
           <div className="flex flex-wrap gap-4">
-             <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-2">
-               <ArrowUpDown size={14} className="text-white/40" />
-               <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-transparent text-[10px] font-black uppercase focus:outline-none">
+             <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-6 py-3 hover:bg-white/10 transition-colors cursor-pointer">
+               <ArrowUpDown size={18} className="text-accent" />
+               <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-transparent text-[11px] font-black uppercase focus:outline-none cursor-pointer">
                  <option value="modified">Recency</option>
                  <option value="loc">LOC</option>
-                 <option value="health">Health</option>
-                 <option value="debt">Debt</option>
+                 <option value="health">Health Score</option>
+                 <option value="debt">Tech Debt</option>
                </select>
              </div>
-             <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-2">
-               <Filter size={14} className="text-white/40" />
-               <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className="bg-transparent text-[10px] font-black uppercase focus:outline-none">
+             <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-6 py-3 hover:bg-white/10 transition-colors cursor-pointer">
+               <Filter size={18} className="text-accent" />
+               <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className="bg-transparent text-[11px] font-black uppercase focus:outline-none cursor-pointer">
                  <option value="all">All Clusters</option>
-                 <option value="web app">Web Apps</option>
-                 <option value="extension">Extensions</option>
+                 <option value="web app">Web Applications</option>
+                 <option value="extension">Browser Extensions</option>
+                 <option value="script">Automation Scripts</option>
                </select>
              </div>
           </div>
@@ -388,72 +396,87 @@ export default function IdeaverseDashboard() {
 
       {/* Dependency Nebula */}
       <div className="max-w-7xl mx-auto mb-16">
-        <div className="glass-card p-8 border-accent-secondary/10 bg-accent-secondary/[0.02]">
-          <h3 className="text-sm font-black uppercase tracking-[0.2em] text-white/40 mb-8 flex items-center gap-3">
-            <Network size={16} className="text-accent-secondary" />
-            Dependency Nebula (Nexus)
+        <div className="glass-card p-10 border-accent-secondary/20 bg-accent-secondary/[0.03] relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-8 opacity-10">
+            <Network size={200} />
+          </div>
+          <h3 className="text-sm font-black uppercase tracking-[0.4em] text-accent-secondary mb-10 flex items-center gap-4">
+            <div className="w-2 h-2 bg-accent-secondary rounded-full animate-ping" />
+            Nexus: Internal Dependency Nebula
           </h3>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-6">
             {projects.filter(p => p.internal_deps?.length > 0).map(p => (
-              <div key={p.path} className="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/5 group hover:border-accent-secondary/30 transition-all">
-                <div className="w-8 h-8 rounded-lg bg-accent-secondary/10 flex items-center justify-center text-accent-secondary">
-                  <Box size={16} />
+              <motion.div 
+                whileHover={{ scale: 1.05, y: -5 }}
+                key={p.path} 
+                className="flex items-center gap-4 bg-black/40 p-5 rounded-2xl border border-white/5 group hover:border-accent-secondary/50 transition-all shadow-xl"
+              >
+                <div className="w-12 h-12 rounded-xl bg-accent-secondary/20 flex items-center justify-center text-accent-secondary">
+                  <Box size={24} />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black text-white/80 uppercase">{p.path.split('/').pop()}</p>
-                  <div className="flex gap-2 mt-1">
+                  <p className="text-xs font-black text-white uppercase tracking-tighter">{p.path.split('/').pop()}</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
                     {p.internal_deps.map(dep => (
-                      <span key={dep} className="text-[8px] text-accent-secondary font-bold flex items-center gap-1">
-                        <ChevronRight size={8} /> {dep}
+                      <span key={dep} className="px-2 py-0.5 rounded-full bg-accent-secondary/10 text-[9px] text-accent-secondary font-bold flex items-center gap-1 border border-accent-secondary/20">
+                        <ChevronRight size={10} /> {dep}
                       </span>
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-        <div className="glass-card p-6 border-accent/20 bg-accent/5">
-          <p className="text-[10px] text-accent font-black uppercase mb-1">Orbiters</p>
-          <div className="text-3xl font-black italic">{stats.count}</div>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+        <div className="glass-card p-8 border-accent/20 bg-accent/5">
+          <p className="text-[11px] text-accent font-black uppercase mb-2 tracking-widest">Active Orbiters</p>
+          <div className="text-4xl font-black italic">{stats.count}</div>
         </div>
-        <div className="glass-card p-6 border-white/5">
-          <p className="text-[10px] text-white/40 font-black uppercase mb-1">Ecosystem LOC</p>
-          <div className="text-3xl font-black italic">{Math.round(stats.totalLoc/1000)}k</div>
+        <div className="glass-card p-8 border-white/5">
+          <p className="text-[11px] text-white/40 font-black uppercase mb-2 tracking-widest">Ecosystem LOC</p>
+          <div className="text-4xl font-black italic">{Math.round(stats.totalLoc/1000)}k</div>
         </div>
-        <div className={cn("glass-card p-6 border-yellow-500/20", stats.dirtyRepos > 0 && "bg-yellow-500/5")}>
-          <p className="text-[10px] text-yellow-500 font-black uppercase mb-1">Dirty Repos</p>
-          <div className="text-3xl font-black italic">{stats.dirtyRepos}</div>
+        <div className={cn("glass-card p-8 border-yellow-500/20", stats.pendingRepos > 0 && "bg-yellow-500/5")}>
+          <p className="text-[11px] text-yellow-500 font-black uppercase mb-2 tracking-widest">Pending Backlog</p>
+          <div className="text-4xl font-black italic">{stats.pendingRepos}</div>
         </div>
-        <div className={cn("glass-card p-6 border-red-500/20", stats.criticalRepos > 0 && "bg-red-500/5")}>
-          <p className="text-[10px] text-red-500 font-black uppercase mb-1">Risks</p>
-          <div className="text-3xl font-black italic">{stats.criticalRepos}</div>
+        <div className={cn("glass-card p-8 border-red-500/20", stats.criticalRepos > 0 && "bg-red-500/5")}>
+          <p className="text-[11px] text-red-500 font-black uppercase mb-2 tracking-widest">Security Risks</p>
+          <div className="text-4xl font-black italic">{stats.criticalRepos}</div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-black uppercase tracking-tighter italic flex items-center gap-3">
-            <Activity size={28} className="text-accent" />
+        <div className="flex items-center justify-between mb-10 border-b border-white/5 pb-6">
+          <h2 className="text-3xl font-black uppercase tracking-tighter italic flex items-center gap-4">
+            <Activity size={32} className="text-accent" />
             Intelligence Feed
           </h2>
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold text-white/30 uppercase tracking-widest">{stats.count} active signals</span>
+            <div className="flex gap-1">
+               <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+               <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse [animation-delay:200ms]" />
+               <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse [animation-delay:400ms]" />
+            </div>
+          </div>
         </div>
 
         {viewMode === 'board' ? (
-          <div className="flex gap-6 overflow-x-auto pb-8 snap-x">
+          <div className="flex gap-8 overflow-x-auto pb-12 snap-x">
             {Object.entries(clusteredProjects).map(([cluster, clusterProjects]) => (
-              <div key={cluster} className="min-w-[350px] snap-start space-y-4">
-                <div className="flex items-center justify-between px-2">
-                  <h3 className="text-xs font-black uppercase tracking-widest text-white/60 flex items-center gap-2">
-                    <Layers size={14} className="text-accent" />
+              <div key={cluster} className="min-w-[400px] snap-start space-y-6">
+                <div className="flex items-center justify-between px-4 py-3 bg-white/5 rounded-2xl border border-white/10">
+                  <h3 className="text-sm font-black uppercase tracking-widest text-white/80 flex items-center gap-3">
+                    <Layers size={18} className="text-accent" />
                     {cluster}
                   </h3>
-                  <span className="text-[10px] font-bold text-white/20">{clusterProjects.length}</span>
+                  <span className="text-xs font-black text-accent bg-accent/10 px-2.5 py-1 rounded-lg">{clusterProjects.length}</span>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {clusterProjects.map((project, i) => (
                     <ProjectCard key={project.path} project={project} index={i} view="grid" />
                   ))}
@@ -463,7 +486,7 @@ export default function IdeaverseDashboard() {
           </div>
         ) : (
           <div className={cn(
-            "grid gap-6",
+            "grid gap-8",
             viewMode === 'grid' ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
           )}>
             <AnimatePresence mode="popLayout">

@@ -315,8 +315,8 @@ def main():
     
     # Active Orbit Dashboard
     md_content += "### 🟢 Active Orbit Dashboard\n\n"
-    md_content += "| Project | Health | Pulse (7d) | Internal Links | Tech Debt | Last Modified |\n"
-    md_content += "| :--- | :--- | :--- | :--- | :--- | :--- |\n"
+    md_content += "| Project | Health | Pulse (7d) | Naming | Commits | Pending | Last Modified |\n"
+    md_content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
     
     for p in sorted(all_projects, key=lambda x: x['last_modified'], reverse=True):
         name = os.path.basename(p['path'])
@@ -325,11 +325,12 @@ def main():
         # Simple Pulse representation
         pulse = "".join(["█" if c > 0 else "░" for c in p.get('activity_7d', [0]*7)])
         
-        links = ", ".join(p.get('internal_deps', [])) or "—"
-        debt = f"✨ Clean" if p['tech_debt_count'] == 0 else f"⚒️ {p['tech_debt_count']}"
+        naming_vibe = "🐫 Camel" if p['naming']['camel'] > p['naming']['snake'] else "🐍 Snake"
+        recent = p.get('recent_commits', 0)
+        pending = f"🟠 {p.get('unpushed', 0)}↑ 🟡 {p.get('uncommitted', 0)}±"
         last_mod = datetime.fromtimestamp(p['last_modified']).strftime('%Y-%m-%d %H:%M')
         
-        md_content += f"| **{name}**<br><small>{p['narrative']}</small> | {health_emoji} {p['health']}% | `{pulse}` | {links} | {debt} | {last_mod} |\n"
+        md_content += f"| **{name}**<br><small>{p['narrative']}</small> | {health_emoji} {p['health']}% | `{pulse}` | {naming_vibe} | {recent} | {pending} | {last_mod} |\n"
     
     with open('PORTFOLIO_DASHBOARD.md', 'w') as f:
         f.write(md_content)
