@@ -167,6 +167,12 @@ def get_project_stats(project_path, is_git):
     narrative = get_narrative(proj_type, keywords, total_loc)
     suggested_tool = suggest_tool(loc_by_lang, tech_debt_count)
     
+    # Internal Dependency Detection
+    project_names = [os.path.basename(p) for p in SCAN_DIRS] # Simplified
+    internal_deps = []
+    
+    # We'll populate this in a second pass in main()
+    
     return {
         "loc_breakdown": dict(loc_by_lang),
         "total_loc": total_loc,
@@ -183,7 +189,8 @@ def get_project_stats(project_path, is_git):
         "narrative": narrative,
         "suggested_tool": suggested_tool,
         "preview_image": os.path.basename(preview_image) if preview_image else None,
-        "full_preview_path": preview_image
+        "full_preview_path": preview_image,
+        "internal_deps": [] # To be filled
     }
 
 def get_git_analytics(dir_path):
@@ -278,20 +285,57 @@ def main():
         print(f"  -> Auditing: {target}")
         all_projects.extend(scan_for_projects(target, 0))
     
+    # Second Pass: Map Internal Dependencies
+    proj_names = {os.path.basename(p['path']): p['path'] for p in all_projects}
+    for p in all_projects:
+        for name in proj_names:
+            if name != os.path.basename(p['path']):
+                if name.lower() in p['path'].lower() or any(name.lower() in dep.lower() for dep in p['dependencies']):
+                    p['internal_deps'].append(name)
+    
+    # --- Markdown Generation (High Fidelity) ---
+    md_content = f"# Ideaverse Dashboard ({datetime.now().strftime('%Y-%m-%d')})\n\n"
+    
+    # Core Language DNA
+    global_loc = {}
+    for p in all_projects:
+        for lang, loc in p['loc_breakdown'].items():
+            global_loc[lang] = global_loc.get(lang, 0) + loc
+    
+    total_global_loc = sum(global_loc.values())
+    sorted_loc = sorted(global_loc.items(), key=lambda x: x[1], reverse=True)
+    
+    md_content += "### 🧬 Core Language DNA\n\n"
+    md_content += "| Language | Percent | Total LOC |\n"
+    md_content += "| :--- | :--- | :--- |\n"
+    for lang, loc in sorted_loc[:8]:
+        perc = (loc / total_global_loc) * 100
+        md_content += f"| {lang} | {perc:.1f}% | {loc:,} |\n"
+    md_content += "\n---\n\n"
+    
+    # Active Orbit Dashboard
+    md_content += "### 🟢 Active Orbit Dashboard\n\n"
+    md_content += "| Project | Health | Pulse (7d) | Internal Links | Tech Debt | Last Modified |\n"
+    md_content += "| :--- | :--- | :--- | :--- | :--- | :--- |\n"
+    
+    for p in sorted(all_projects, key=lambda x: x['last_modified'], reverse=True):
+        name = os.path.basename(p['path'])
+        health_emoji = "🟢" if p['health'] > 85 else "🟡" if p['health'] > 60 else "🔴"
+        
+        # Simple Pulse representation
+        pulse = "".join(["█" if c > 0 else "░" for c in p.get('activity_7d', [0]*7)])
+        
+        links = ", ".join(p.get('internal_deps', [])) or "—"
+        debt = f"✨ Clean" if p['tech_debt_count'] == 0 else f"⚒️ {p['tech_debt_count']}"
+        last_mod = datetime.fromtimestamp(p['last_modified']).strftime('%Y-%m-%d %H:%M')
+        
+        md_content += f"| **{name}**<br><small>{p['narrative']}</small> | {health_emoji} {p['health']}% | `{pulse}` | {links} | {debt} | {last_mod} |\n"
+    
+    with open('PORTFOLIO_DASHBOARD.md', 'w') as f:
+        f.write(md_content)
+    
+    # Also save JSON for the web hub
     with open('PORTFOLIO_DATA.json', 'w') as f:
         json.dump({"generated_at": datetime.now().isoformat(), "projects": all_projects}, f, indent=2)
-
-    # Simplified Markdown Dashboard
-    md = [f"# Ideaverse Dashboard ({datetime.now().strftime('%Y-%m-%d')})", ""]
-    for p in sorted(all_projects, key=lambda x: -x['last_modified'])[:10]:
-        rel = os.path.basename(p['path'])
-        md.append(f"### 🚀 {rel}")
-        md.append(f"- **Vibe**: {p.get('narrative')}")
-        md.append(f"- **Health**: {p['health']}% | **LOC**: {p['total_loc']}")
-        md.append(f"- **Suggested Tool**: `{p.get('suggested_tool')}`")
-        md.append("")
-
-    with open('PORTFOLIO_DASHBOARD.md', 'w') as f: f.write("\n".join(md))
-    print(f"✅ Saturation: 100%. Found {len(all_projects)} projects.")
 
 if __name__ == '__main__': main()

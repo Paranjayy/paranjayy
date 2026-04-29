@@ -386,6 +386,35 @@ export default function IdeaverseDashboard() {
         <ViewToggle mode={viewMode} setMode={setViewMode} />
       </div>
 
+      {/* Dependency Nebula */}
+      <div className="max-w-7xl mx-auto mb-16">
+        <div className="glass-card p-8 border-accent-secondary/10 bg-accent-secondary/[0.02]">
+          <h3 className="text-sm font-black uppercase tracking-[0.2em] text-white/40 mb-8 flex items-center gap-3">
+            <Network size={16} className="text-accent-secondary" />
+            Dependency Nebula (Nexus)
+          </h3>
+          <div className="flex flex-wrap gap-4 justify-center">
+            {projects.filter(p => p.internal_deps?.length > 0).map(p => (
+              <div key={p.path} className="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/5 group hover:border-accent-secondary/30 transition-all">
+                <div className="w-8 h-8 rounded-lg bg-accent-secondary/10 flex items-center justify-center text-accent-secondary">
+                  <Box size={16} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-black text-white/80 uppercase">{p.path.split('/').pop()}</p>
+                  <div className="flex gap-2 mt-1">
+                    {p.internal_deps.map(dep => (
+                      <span key={dep} className="text-[8px] text-accent-secondary font-bold flex items-center gap-1">
+                        <ChevronRight size={8} /> {dep}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
         <div className="glass-card p-6 border-accent/20 bg-accent/5">
           <p className="text-[10px] text-accent font-black uppercase mb-1">Orbiters</p>
