@@ -1,29 +1,29 @@
 # Ideaverse Dashboard (2026-04-29)
 
-### 🚀 ipl-2026-engine
-- **Vibe**: High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.
-- **Health**: 80% | **LOC**: 296077
-- **Suggested Tool**: `Ruff (Fast Linting)`
+### 🚀 instagram-media-hub
+- **Vibe**: A digital interface focused on reference, types, raycast.
+- **Health**: 80% | **LOC**: 4684
+- **Suggested Tool**: `ESLint + Prettier`
 
 ### 🚀 paranjayy
 - **Vibe**: High-complexity an automation engine built for paranjay, experimental, intelligence tasks.
-- **Health**: 80% | **LOC**: 15368
+- **Health**: 80% | **LOC**: 15496
 - **Suggested Tool**: `Ruff (Fast Linting)`
 
 ### 🚀 iftt
 - **Vibe**: High-complexity a browser-level utility orchestrating gravity, build, cortex workflows.
-- **Health**: 90% | **LOC**: 25809
+- **Health**: 90% | **LOC**: 25867
 - **Suggested Tool**: `ESLint + Prettier`
+
+### 🚀 ipl-2026-engine
+- **Vibe**: High-complexity a browser-level utility orchestrating compileroptions, tsbuildinfofile, tsconfig workflows.
+- **Health**: 90% | **LOC**: 296078
+- **Suggested Tool**: `Ruff (Fast Linting)`
 
 ### 🚀 ideaverse
 - **Vibe**: An automation engine built for generatedat, summary, active tasks.
-- **Health**: 70% | **LOC**: 5360
+- **Health**: 70% | **LOC**: 5393
 - **Suggested Tool**: `Ruff (Fast Linting)`
-
-### 🚀 instagram-media-hub
-- **Vibe**: A digital interface focused on reference, types, raycast.
-- **Health**: 80% | **LOC**: 4714
-- **Suggested Tool**: `ESLint + Prettier`
 
 ### 🚀 Praduman Khachar
 - **Vibe**: High-complexity a browser-level utility orchestrating gemini, update, claude workflows.
