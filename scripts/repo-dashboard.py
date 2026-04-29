@@ -6,25 +6,35 @@ import re
 from datetime import datetime, timedelta
 from collections import defaultdict, Counter
 
+PROJECT_MARKERS = {
+    'package.json', 'requirements.txt', 'Cargo.toml', 'Makefile', 
+    'pom.xml', 'build.gradle', 'go.mod', 'docker-compose.yml', 'CMakeLists.txt',
+    'setup.py', 'gemfile', 'pyproject.toml'
+}
+
 def find_all_repos():
     home = os.path.expanduser('~')
     print(f"📡 Initializing Global Search across {home}...")
     repos = []
     
-    # Aggressive skip list for performance and safety
+    # Only skip truly system/junk folders
     skip_set = {
-        'Library', 'Pictures', 'Music', 'Movies', 'Public', '.Trash', 
-        'node_modules', '.next', '.cache', 'venv', '.venv', 'dist', 'build'
+        'Library', '.Trash', '.DS_Store', 'node_modules', '.next', '.cache', 
+        'venv', '.venv', 'dist', 'build', 'opt', 'Caches'
     }
     
     for root, dirs, files in os.walk(home, topdown=True):
-        # Skip system junk but KEEP .git for discovery
-        dirs[:] = [d for d in dirs if d not in skip_set and (not d.startswith('.') or d == '.git')]
+        # Filter directories to skip system junk
+        dirs[:] = [d for d in dirs if d not in skip_set and not d.startswith('.')]
         
-        if '.git' in dirs:
+        # Check for Git or Project Markers
+        is_repo = '.git' in dirs
+        is_proj = any(f in files for f in PROJECT_MARKERS)
+        
+        if is_repo or is_proj:
             repos.append(root)
-            # Prune: don't search inside found repos
-            if '.git' in dirs: dirs.remove('.git')
+            if is_repo and '.git' in dirs:
+                dirs.remove('.git')
             
     print(f"✅ Discovered {len(repos)} independent orbits.")
     return repos
@@ -46,12 +56,6 @@ CODE_EXTENSIONS = {
     '.java': 'Java', '.sh': 'Shell', '.mjs': 'Node JS', '.md': 'Markdown', 
     '.json': 'JSON', '.yml': 'YAML', '.yaml': 'YAML', '.toml': 'TOML', 
     '.swift': 'Swift', '.sql': 'SQL', '.graphql': 'GraphQL', '.vue': 'Vue'
-}
-
-PROJECT_MARKERS = {
-    'package.json', 'requirements.txt', 'Cargo.toml', 'Makefile', 
-    'pom.xml', 'build.gradle', 'go.mod', 'docker-compose.yml', 'CMakeLists.txt',
-    'setup.py', 'gemfile', 'pyproject.toml'
 }
 
 def get_sparkline(counts):
@@ -193,14 +197,20 @@ def get_project_stats(project_path, is_git):
     project_names = [os.path.basename(p) for p in SCAN_DIRS] # Simplified
     internal_deps = []
     
-    # We'll populate this in a second pass in main()
+    is_system = any(s in project_path for s in SKIP_DIRS)
     
     largest_files = []
     deepest_dir = project_path
     max_depth_found = 0
+    total_dirs = 0
+    total_files = 0
 
     for root, dirs, files in os.walk(project_path):
+        dirs[:] = [d for d in dirs if d not in SKIP_DIRS and not d.startswith('.')]
         current_depth = root.count(os.sep)
+        total_dirs += len(dirs)
+        total_files += len(files)
+        
         if current_depth > max_depth_found:
             max_depth_found = current_depth
             deepest_dir = root
@@ -212,11 +222,16 @@ def get_project_stats(project_path, is_git):
                 largest_files.append({"name": f, "size": size})
             except: continue
 
-    largest_files = sorted(largest_files, key=lambda x: x['size'], reverse=True)[:3]
+    largest_files = sorted(largest_files, key=lambda x: x['size'], reverse=True)[:5]
+    
+    # Code Hygiene
+    hygiene_tags = {"TODO": 0, "FIXME": 0, "HACK": 0, "DEBUG": 0}
+    # (Simplified: reused tech_debt_count but could be more granular)
 
     return {
         "path": project_path,
         "is_git": is_git,
+        "is_system": is_system,
         "total_loc": total_loc,
         "loc_breakdown": dict(loc_by_lang),
         "last_modified": last_mtime,
@@ -233,6 +248,7 @@ def get_project_stats(project_path, is_git):
         "suggested_tool": suggest_tool(loc_by_lang, tech_debt_count),
         "largest_files": largest_files,
         "deepest_dir": deepest_dir.replace(project_path, ""),
+        "arch_weight": {"dirs": total_dirs, "files": total_files},
         "preview_image": os.path.basename(preview_image) if preview_image else None,
         "full_preview_path": preview_image
     }
@@ -295,7 +311,7 @@ def scan_for_projects(current_dir, depth):
     # Don't process the scan root itself as a project if it's in SCAN_DIRS
     is_root = current_dir in SCAN_DIRS
     
-    if (is_git or is_non_git_project) and not is_root:
+    if (is_git or is_non_git_project):
         print(f"    - Processing: {current_dir}")
         stats = get_project_stats(current_dir, is_git)
         stats.update({'path': current_dir, 'is_git': is_git})
