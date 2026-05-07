@@ -41,6 +41,10 @@
   <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjay245-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://monkeytype.com/profile/Paranjayy"><img src="https://img.shields.io/badge/MonkeyType-E2B714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
   <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
+<a href="mailto:kparanjay245@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-kparanjay245%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" alt="Gmail" />
+</a>
+</a>
 </p>
 
 <br>
