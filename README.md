@@ -43,6 +43,13 @@
   <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
 <a href="mailto:kparanjay245@gmail.com">
   <img src="https://img.shields.io/badge/Gmail-kparanjay245%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" alt="Gmail" />
+<a href="https://huggingface.co/paranjay">
+  <img src="https://img.shields.io/badge/Hugging%20Face-FFCA28?style=flat&logo=huggingface&logoColor=black" alt="Hugging Face" />
+</a>
+
+<a href="https://codepen.io/paranjayy">
+  <img src="https://img.shields.io/badge/CodePen-FFFFFF?style=flat&logo=codepen&logoColor=black" alt="CodePen" />
+</a>
 </a>
 </a>
 </p>
