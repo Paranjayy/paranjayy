@@ -83,40 +83,40 @@
   <br>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-112%20hrs%2041%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-160%20hrs%2021%20mins-blue?style=flat)
 
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-53.27%20million%20lines%20of%20code-blue?style=flat)
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-53.32%20million%20lines%20of%20code-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
 > 📦 6.5 MB Used in GitHub's Storage 
  > 
-> 🏆 3,232 Contributions in the Year 2026
+> 🏆 3,386 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
-> 📜 65 Public Repositories 
+> 📜 70 Public Repositories 
  > 
-> 🔑 66 Private Repositories 
+> 🔑 68 Private Repositories 
  > 
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                923 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.19 % 
-🌆 Daytime                1187 commits        █████░░░░░░░░░░░░░░░░░░░░   20.82 % 
-🌃 Evening                1763 commits        ████████░░░░░░░░░░░░░░░░░   30.92 % 
-🌙 Night                  1829 commits        ████████░░░░░░░░░░░░░░░░░   32.08 % 
+🌞 Morning                994 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.89 % 
+🌆 Daytime                1210 commits        █████░░░░░░░░░░░░░░░░░░░░   20.56 % 
+🌃 Evening                1802 commits        ████████░░░░░░░░░░░░░░░░░   30.62 % 
+🌙 Night                  1880 commits        ████████░░░░░░░░░░░░░░░░░   31.94 % 
 ```
 📅 **I'm Most Productive on Saturday** 
 
 ```text
-Monday                   722 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.66 % 
-Tuesday                  707 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.40 % 
-Wednesday                721 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.64 % 
-Thursday                 683 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.98 % 
-Friday                   637 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.17 % 
-Saturday                 1324 commits        ██████░░░░░░░░░░░░░░░░░░░   23.22 % 
-Sunday                   908 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.92 % 
+Monday                   727 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.35 % 
+Tuesday                  714 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.13 % 
+Wednesday                731 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.42 % 
+Thursday                 689 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.71 % 
+Friday                   674 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.45 % 
+Saturday                 1374 commits        ██████░░░░░░░░░░░░░░░░░░░   23.34 % 
+Sunday                   977 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.60 % 
 ```
 
 
@@ -126,37 +126,35 @@ Sunday                   908 commits         ████░░░░░░░�
 🕑︎ Time Zone: Asia/Kolkata
 
 💬 Programming Languages: 
-TypeScript               4 hrs 46 mins       ████████████░░░░░░░░░░░░░   46.49 % 
-Markdown                 1 hr 49 mins        ████░░░░░░░░░░░░░░░░░░░░░   17.80 % 
-Bash                     42 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.84 % 
-JavaScript               39 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.35 % 
-shell script             33 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   05.48 % 
+TypeScript               2 hrs 39 mins       ███████░░░░░░░░░░░░░░░░░░   28.89 % 
+JSON                     1 hr 59 mins        █████░░░░░░░░░░░░░░░░░░░░   21.62 % 
+shell script             1 hr 31 mins        ████░░░░░░░░░░░░░░░░░░░░░   16.54 % 
+Markdown                 1 hr 20 mins        ████░░░░░░░░░░░░░░░░░░░░░   14.56 % 
+JavaScript               1 hr 13 mins        ███░░░░░░░░░░░░░░░░░░░░░░   13.37 % 
 
 🔥 Editors: 
-Zed                      4 hrs 2 mins        ██████████░░░░░░░░░░░░░░░   39.33 % 
-VS Code                  3 hrs 19 mins       ████████░░░░░░░░░░░░░░░░░   32.36 % 
-Claude Code              2 hrs 51 mins       ███████░░░░░░░░░░░░░░░░░░   27.83 % 
-Unknown Editor           2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.48 % 
+Zed                      7 hrs 33 mins       █████████████████████░░░░   82.21 % 
+VS Code                  1 hr 38 mins        ████░░░░░░░░░░░░░░░░░░░░░   17.79 % 
 
 🐱‍💻 Projects: 
-media hub cc             2 hrs 51 mins       ███████░░░░░░░░░░░░░░░░░░   27.83 % 
-chanhdai.com2            1 hr 36 mins        ████░░░░░░░░░░░░░░░░░░░░░   15.63 % 
-Inbox Zero               1 hr 30 mins        ████░░░░░░░░░░░░░░░░░░░░░   14.66 % 
-paranjay                 50 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   08.19 % 
-the-odyssey              34 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   05.59 % 
+iftt                     3 hrs 49 mins       ██████████░░░░░░░░░░░░░░░   41.63 % 
+politik                  1 hr 48 mins        █████░░░░░░░░░░░░░░░░░░░░   19.74 % 
+media hub sol            1 hr 15 mins        ███░░░░░░░░░░░░░░░░░░░░░░   13.62 % 
+IIT Madras Extension     48 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   08.80 % 
+yt notes                 34 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.28 % 
 
 💻 Operating System: 
-Mac                      10 hrs 16 mins      █████████████████████████   100.00 % 
+Mac                      9 hrs 12 mins       █████████████████████████   100.00 % 
 ```
 
 **I Mostly Code in TypeScript** 
 
 ```text
-TypeScript               65 repos            ███████████████░░░░░░░░░░   59.09 % 
-JavaScript               20 repos            █████░░░░░░░░░░░░░░░░░░░░   18.18 % 
-HTML                     11 repos            ██░░░░░░░░░░░░░░░░░░░░░░░   10.00 % 
-Python                   2 repos             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.82 % 
-Swift                    2 repos             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.82 % 
+TypeScript               68 repos            ███████████████░░░░░░░░░░   59.65 % 
+JavaScript               20 repos            ████░░░░░░░░░░░░░░░░░░░░░   17.54 % 
+HTML                     12 repos            ███░░░░░░░░░░░░░░░░░░░░░░   10.53 % 
+Python                   2 repos             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.75 % 
+Swift                    2 repos             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.75 % 
 ```
 
 
@@ -166,7 +164,7 @@ Swift                    2 repos             ░░░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/Paranjayy/Paranjayy/main/assets/bar_graph.png)
 
 
- Last Updated on 19/07/2026 02:23:14 UTC
+ Last Updated on 26/07/2026 02:13:22 UTC
 <!--END_SECTION:waka-->
 
   <br>
