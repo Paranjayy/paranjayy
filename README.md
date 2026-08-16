@@ -91,7 +91,7 @@
 
 **🐱 My GitHub Data** 
 
-> 📦 6.6 MB Used in GitHub's Storage 
+> 📦 6.5 MB Used in GitHub's Storage 
  > 
 > 🏆 3,947 Contributions in the Year 2026
  > 
@@ -163,7 +163,7 @@ PHP                      3 repos             █░░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/Paranjayy/Paranjayy/main/assets/bar_graph.png)
 
 
- Last Updated on 16/08/2026 02:55:19 UTC
+ Last Updated on 16/08/2026 03:21:02 UTC
 <!--END_SECTION:waka-->
 
   <br>
