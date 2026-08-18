@@ -1,142 +1,74 @@
-name: Profile Intelligence Hub
+name: Profile Sync
 
 on:
-  schedule:
-    - cron: "0 0 * * 0"
-  workflow_dispatch:
   push:
     branches: ["main"]
     paths-ignore:
       - 'metrics/**'
+      - 'README.md'
+  workflow_dispatch:
 
 concurrency:
-  group: profile-intelligence
+  group: profile-sync
   cancel-in-progress: true
 
 jobs:
-  # ── Metrics Engine (SVG Cards) ─────────────────────────────────────────────
-  metrics:
-    name: Generate SVG Metrics
+  readme:
+    name: Update README
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    steps:
-      - name: Steam Metrics
-        uses: lowlighter/metrics@latest
-        continue-on-error: true
-        with:
-          token: NOT_NEEDED
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          filename: metrics/metrics.steam.svg
-          base: ""
-          plugin_steam: yes
-          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
-          plugin_steam_user: "76561199379635572"
-          plugin_steam_sections: recently-played, most-played
-          plugin_steam_games_limit: 5
-          
-      - name: WakaTime Metrics
-        uses: lowlighter/metrics@latest
-        continue-on-error: true
-        with:
-          token: NOT_NEEDED
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          filename: metrics/metrics.wakatime.full.svg
-          base: ""
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          plugin_wakatime_days: 180
-          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, editors-graphs, os, os-graphs
-          plugin_wakatime_limit: 10
-
-  # ── README Updates (The HUGE ASCII & Stats) ────────────────────────────────
-  readme-updates:
-    name: Update README Content
-    needs: metrics
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      
-      # 1. Monkeytype Dynamic Update
-      - name: Set up Python
-        uses: actions/setup-python@v5
+
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Install dependencies
         run: pip install requests
-        
+
       - name: Update Monkeytype Card
         run: python scripts/update_monkeytype.py
-        
+
       - name: Update Volt.fm Intelligence
         run: python scripts/update_volt.py
 
-      # 2. WakaTime HUGE ASCII
-      - name: WakaTime Awesome ASCII
-        uses: anmol098/waka-readme-stats@master
-        continue-on-error: true
-        with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_OS: "True"
-          SHOW_PROJECTS: "True"
-          SHOW_EDITORS: "True"
-          SHOW_TIMEZONE: "True"
-          SHOW_COMMIT: "True"
-          SHOW_LANGUAGE: "True"
-          SHOW_LINES_OF_CODE: "True"
-          SHOW_LANGUAGE_PER_REPO: "True"
-          SHOW_LOC_CHART: "True"
-          SHOW_DAYS_OF_WEEK: "True"
-          SHOW_PROFILE_VIEWS: "False"
-          SHOW_SHORT_INFO: "True"
-          SHOW_UPDATED_DATE: "True"
-          SHOW_TOTAL_CODE_TIME: "True"
-          SECTION_NAME: "waka"
-
-      - name: Update Typing SVG with WakaTime Stats
-        run: python scripts/update_typing.py
-
-      # 3. Dynamic Profile Content (Currently working on, Latest projects, PRs, Stars, Issues)
       - name: Update Dynamic Profile Sections
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-profile.mjs
 
-      # 4. GitHub Stats
       - name: Update Star Badges
         run: |
           RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
             -X POST -d '{"query":"query { user(login: \"paranjayy\") { repositories(first: 100, ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]) { nodes { stargazerCount } } starredRepositories { totalCount } } }"}' \
             https://api.github.com/graphql)
-          
+
           GIVEN=$(echo $RESULT | jq '.data.user.starredRepositories.totalCount')
           RECEIVED=$(echo $RESULT | jq '.data.user.repositories.nodes | map(.stargazerCount) | add')
-          
+
           if [ -z "$GIVEN" ] || [ "$GIVEN" == "null" ]; then GIVEN=0; fi
           if [ -z "$RECEIVED" ] || [ "$RECEIVED" == "null" ]; then RECEIVED=0; fi
-          
+
           GIVEN_BADGE='  <img src="https://img.shields.io/badge/Starred-'"$GIVEN"'-065f46?logo=github&logoColor=white" alt="Starred Repos" />'
           sed -i "/<!-- STARRED_COUNT -->/,/<!-- \/STARRED_COUNT -->/{ /<!-- STARRED_COUNT -->/!{ /<!-- \/STARRED_COUNT -->/!d; }; }" README.md
           sed -i "/<!-- STARRED_COUNT -->/a $GIVEN_BADGE" README.md
-          
+
           RECEIVED_BADGE='  <img src="https://img.shields.io/badge/Stars-'"$RECEIVED"'-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />'
           sed -i "/<!-- TOTAL_STARS -->/,/<!-- \/TOTAL_STARS -->/{ /<!-- TOTAL_STARS -->/!{ /<!-- \/TOTAL_STARS -->/!d; }; }" README.md
           sed -i "/<!-- TOTAL_STARS -->/a $RECEIVED_BADGE" README.md
-          
-      - name: Commit & Push README Updates
+
+      - name: Commit & Push
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md metrics/
-          git commit -m "chore: update intelligence hub metrics" || echo "No changes to commit"
-          git pull --rebase origin main
+          git commit -m "chore: sync profile data" || echo "No changes to commit"
+          git pull --rebase origin main 2>/dev/null || true
           git push
