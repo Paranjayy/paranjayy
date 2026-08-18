@@ -52,39 +52,71 @@
 
 ---
 
-<details>
-  <summary>📊 Dashboard — Projects, PRs, Issues & Stars</summary>
+<details open>
+  <summary>📊 Dashboard</summary>
   <br>
 
-#### 👷 Check out what I'm currently working on
+  <details>
+    <summary>👷 Check out what I'm currently working on</summary>
+    <br>
 
 <!--START_SECTION:currently_working-->
 <!-- DYNAMIC: currently_working_on -->
 <!--END_SECTION:currently_working-->
 
-#### 🌱 My latest projects
+  </details>
+
+  <details>
+    <summary>🌱 My latest projects</summary>
+    <br>
 
 <!--START_SECTION:latest_projects-->
 <!-- DYNAMIC: latest_projects -->
 <!--END_SECTION:latest_projects-->
 
-#### 🔨 My recent Pull Requests
+  </details>
+
+  <details>
+    <summary>🔨 My recent Pull Requests</summary>
+    <br>
 
 <!--START_SECTION:recent_prs-->
 <!-- DYNAMIC: recent_prs -->
 <!--END_SECTION:recent_prs-->
 
-#### 🎫 My recent Issues
+  </details>
+
+  <details>
+    <summary>🎫 My recent Issues</summary>
+    <br>
 
 <!--START_SECTION:recent_issues-->
 <!-- DYNAMIC: recent_issues -->
 <!--END_SECTION:recent_issues-->
 
-#### ⭐ Recent Stars
+  </details>
+
+  <details>
+    <summary>⭐ Recent Stars</summary>
+    <br>
 
 <!--START_SECTION:recent_stars-->
 <!-- DYNAMIC: recent_stars -->
 <!--END_SECTION:recent_stars-->
+
+  </details>
+
+  <details>
+    <summary>🤖 AI Token Usage (Tokscale)</summary>
+    <br>
+    <div align="center">
+      <a href="https://tokscale.ai/u/Paranjayy">
+        <img alt="Tokscale Stats for @Paranjayy" src="https://tokscale.ai/api/embed/Paranjayy/svg?graph=1&rank=total&tokens=compact&cost=compact" />
+      </a>
+      <br>
+      <p>Track my token usage across AI coding agents on the <a href="https://tokscale.ai">Tokscale leaderboard</a>.</p>
+    </div>
+  </details>
 
 </details>
 
@@ -240,18 +272,6 @@ PHP                      3 repos             █░░░░░░░░░░�
       <a href="https://www.last.fm/user/paranjay"><img src="https://img.shields.io/badge/Last.fm-paranjay-D01F3C?style=for-the-badge&logo=last.fm&logoColor=white" alt="Last.fm" /></a>
       <a href="https://stats.fm/paranjay"><img src="https://img.shields.io/badge/Stats.fm-paranjay-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Stats.fm" /></a>
     </p>
-  </div>
-</details>
-
-<details>
-  <summary>🤖 AI Token Usage (Tokscale)</summary>
-  <br>
-  <div align="center">
-    <a href="https://tokscale.ai/u/Paranjayy">
-      <img alt="Tokscale Stats for @Paranjayy" src="https://tokscale.ai/api/embed/Paranjayy/svg?graph=1&rank=total&tokens=compact&cost=compact" />
-    </a>
-    <br>
-    <p>Track my token usage across AI coding agents on the <a href="https://tokscale.ai">Tokscale leaderboard</a>.</p>
   </div>
 </details>
 
