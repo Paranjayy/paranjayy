@@ -65,7 +65,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-          
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Install dependencies
         run: pip install requests
         
@@ -101,7 +106,21 @@ jobs:
       - name: Update Typing SVG with WakaTime Stats
         run: python scripts/update_typing.py
 
-      # 3. GitHub Stats
+      # 3. Dynamic Profile Content (Currently working on, Latest projects, PRs, Stars, Issues)
+      - name: Update Dynamic Profile Sections
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/update-profile.mjs
+
+      # 4. Tokscale Token Usage Sync
+      - name: Sync Tokscale Token Usage
+        continue-on-error: true
+        env:
+          TOKSCALE_API_TOKEN: ${{ secrets.TOKSCALE_API_TOKEN }}
+        run: |
+          npx tokscale@latest submit --client opencode,claude,codex,gemini --week || echo "Tokscale submit failed (non-critical)"
+
+      # 5. GitHub Stats
       - name: Update Star Badges
         run: |
           RESULT=$(curl -s -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \

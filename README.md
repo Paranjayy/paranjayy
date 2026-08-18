@@ -3,11 +3,14 @@
   <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20Views&color=2e1065&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
-<img src="https://img.shields.io/badge/Stars-19-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
+  <img src="https://img.shields.io/badge/Stars-19-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
   <!-- /TOTAL_STARS -->
   <!-- STARRED_COUNT -->
-<img src="https://img.shields.io/badge/Starred-4338-065f46?logo=github&logoColor=white" alt="Starred Repos" />
+  <img src="https://img.shields.io/badge/Starred-4338-065f46?logo=github&logoColor=white" alt="Starred Repos" />
   <!-- /STARRED_COUNT -->
+  <!-- TOKSCALE -->
+  <a href="https://tokscale.ai/paranjayy"><img src="https://img.shields.io/badge/Tokscale-Usage-0073FF?style=flat&logo=token&logoColor=white" alt="Tokscale Usage" /></a>
+  <!-- /TOKSCALE -->
 </p>
 
 <br>
@@ -43,20 +46,84 @@
   <a href="https://discord.com/users/999432437740347486"><img src="https://img.shields.io/badge/Discord-paranjaydotdev-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://monkeytype.com/profile/Paranjayy"><img src="https://img.shields.io/badge/MonkeyType-E2B714?style=flat&logo=monkeytype&logoColor=black" alt="MonkeyType" /></a>
   <a href="https://www.youtube.com/@michealscott24"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" /></a>
-<a href="mailto:kparanjay245@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-kparanjay245%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" alt="Gmail" />
-<a href="https://huggingface.co/paranjay">
-  <img src="https://img.shields.io/badge/Hugging%20Face-FFCA28?style=flat&logo=huggingface&logoColor=black" alt="Hugging Face" />
-</a>
-
-<a href="https://codepen.io/paranjayy">
-  <img src="https://img.shields.io/badge/CodePen-FFFFFF?style=flat&logo=codepen&logoColor=black" alt="CodePen" />
-</a>
-</a>
-</a>
+  <a href="mailto:kparanjay245@gmail.com"><img src="https://img.shields.io/badge/Gmail-kparanjay245%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" alt="Gmail" /></a>
+  <a href="https://huggingface.co/paranjay"><img src="https://img.shields.io/badge/Hugging%20Face-FFCA28?style=flat&logo=huggingface&logoColor=black" alt="Hugging Face" /></a>
+  <a href="https://codepen.io/paranjayy"><img src="https://img.shields.io/badge/CodePen-FFFFFF?style=flat&logo=codepen&logoColor=black" alt="CodePen" /></a>
 </p>
 
 <br>
+
+---
+
+<details>
+  <summary>👷 Check out what I'm currently working on</summary>
+  <br>
+
+<!--START_SECTION:currently_working-->
+- [paranjayy](https://github.com/Paranjayy/paranjayy) - Config Files
+- [saptak](https://github.com/Paranjayy/saptak) - Saptak — an instrument studio in your browser: harmonium, piano, bansuri, sitar, tabla, 16-step drum machine. All synthesized live, no samples.
+- [limn](https://github.com/Paranjayy/limn) - Limn — an agent-native deploy platform. Build the whole app, let the agent ship it. (lakebed/postplan/hermes-style, rebuilt)
+- [sift](https://github.com/Paranjayy/sift) - Hazel, but in your terminal. A TUI file organizer built with TypeScript + Ink.
+- [cantos](https://github.com/Paranjayy/cantos) - Cantos — World Epic Explorer. Interactive family trees, timelines, character profiles, and comparative analysis for the world's great epics.
+<!--END_SECTION:currently_working-->
+
+</details>
+
+<details>
+  <summary>🌱 My latest projects</summary>
+  <br>
+
+<!--START_SECTION:latest_projects-->
+- [saptak](https://github.com/Paranjayy/saptak) - Saptak — an instrument studio in your browser: harmonium, piano, bansuri, sitar, tabla, 16-step drum machine. All synthesized live, no samples.
+- [limn](https://github.com/Paranjayy/limn) - Limn — an agent-native deploy platform. Build the whole app, let the agent ship it. (lakebed/postplan/hermes-style, rebuilt)
+- [backup-manager](https://github.com/Paranjayy/backup-manager) - No description
+- [sift](https://github.com/Paranjayy/sift) - Hazel, but in your terminal. A TUI file organizer built with TypeScript + Ink.
+- [cantos](https://github.com/Paranjayy/cantos) - Cantos — World Epic Explorer. Interactive family trees, timelines, character profiles, and comparative analysis for the world's great epics.
+<!--END_SECTION:latest_projects-->
+
+</details>
+
+<details>
+  <summary>🔨 My recent Pull Requests</summary>
+  <br>
+
+<!--START_SECTION:recent_prs-->
+- [Add paranjay.dev and Duolingo badges to profile README links section](https://github.com/Paranjayy/paranjayy/pull/14) on [Paranjayy/paranjayy](https://github.com/Paranjayy/paranjayy) `closed`
+- [Expand README for user and developer workflows, with DeepWiki entry point](https://github.com/Paranjayy/discord-scraper/pull/1) on [Paranjayy/discord-scraper](https://github.com/Paranjayy/discord-scraper) `closed`
+- [fix: restore floating panel classification and bar filtering](https://github.com/BarutSRB/OmniWM/pull/323) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed`
+- [fix(rules): resolve popup-induced floating bug (#306)](https://github.com/BarutSRB/OmniWM/pull/318) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed`
+- [Add seventv-search extension](https://github.com/raycast/extensions/pull/27424) on [raycast/extensions](https://github.com/raycast/extensions) `closed`
+<!--END_SECTION:recent_prs-->
+
+</details>
+
+<details>
+  <summary>🎫 My recent Issues</summary>
+  <br>
+
+<!--START_SECTION:recent_issues-->
+- [[ACP] Kimi K3 not showing in zed.dev/ACP](https://github.com/anomalyco/opencode/issues/37492) on [anomalyco/opencode](https://github.com/anomalyco/opencode) `closed` 💬3
+- [[Bug]popup in any app causes the app to float & [feature request]keyboard shortcut(right/left side cmd/opt) & workspace snapshot](https://github.com/BarutSRB/OmniWM/issues/306) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬6
+- [[Default Web Browser Manager] Not Functional](https://github.com/raycast/extensions/issues/27613) on [raycast/extensions](https://github.com/raycast/extensions) `open` 💬1
+- [Floating Windows Not Showing in Workspace Bar](https://github.com/BarutSRB/OmniWM/issues/200) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬2
+- [[Glitch]Ghosted Raycast Window When Borders On](https://github.com/BarutSRB/OmniWM/issues/177) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬3
+<!--END_SECTION:recent_issues-->
+
+</details>
+
+<details>
+  <summary>⭐ Recent Stars</summary>
+  <br>
+
+<!--START_SECTION:recent_stars-->
+- [ChrisTitusTech/titus-ai](https://github.com/ChrisTitusTech/titus-ai) - Codex and AI skills
+- [aryadwiputra/point-of-sales](https://github.com/aryadwiputra/point-of-sales) - Aplikasi kasir (point of sales) yang dibuat menggunakan Laravel 13, Inertia 3, React 19 dan TailwindCSS
+- [MGeurts/genealogy](https://github.com/MGeurts/genealogy) - Genealogy is a free and open-source family tree PHP application to record family members and their relationships, build with LARAVEL 13.
+- [arcahyadi/odysseus](https://github.com/arcahyadi/odysseus) - Self-hosted AI workspace. 
+- [KRTirtho/spotube](https://github.com/KRTirtho/spotube) - 🎧 Open source music streaming app! Available for both desktop & mobile!
+<!--END_SECTION:recent_stars-->
+
+</details>
 
 ---
 
@@ -100,7 +167,7 @@
 > 📜 83 Public Repositories 
  > 
 > 🔑 74 Private Repositories 
- > 
+
 **I'm a Night 🦉** 
 
 ```text
@@ -209,6 +276,22 @@ PHP                      3 repos             █░░░░░░░░░░�
     <p align="center">
       <a href="https://www.last.fm/user/paranjay"><img src="https://img.shields.io/badge/Last.fm-paranjay-D01F3C?style=for-the-badge&logo=last.fm&logoColor=white" alt="Last.fm" /></a>
       <a href="https://stats.fm/paranjay"><img src="https://img.shields.io/badge/Stats.fm-paranjay-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Stats.fm" /></a>
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>🤖 AI Token Usage (Tokscale)</summary>
+  <br>
+  <div align="center">
+    <a href="https://tokscale.ai/paranjayy">
+      <img src="https://tokscale.ai/api/badge/paranjayy" alt="Tokscale Leaderboard" />
+    </a>
+    <br><br>
+    <p>Track my token usage across AI coding agents on the <a href="https://tokscale.ai">Tokscale leaderboard</a>.</p>
+    <br>
+    <p>
+      <a href="https://tokscale.ai"><img src="https://img.shields.io/badge/Tokscale-0073FF?style=for-the-badge&logo=token&logoColor=white" alt="Tokscale" /></a>
     </p>
   </div>
 </details>
