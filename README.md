@@ -53,7 +53,7 @@
 ---
 
 <details open>
-  <summary>📊 Dashboard</summary>
+  <summary>🔗 What I'm Up To</summary>
   <br>
 
   <details>
