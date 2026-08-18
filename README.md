@@ -52,137 +52,6 @@
 
 ---
 
-<details open>
-  <summary>📌 Active</summary>
-  <br>
-
-  <details>
-    <summary>👷 Check out what I'm currently working on</summary>
-    <br>
-
-<!--START_SECTION:currently_working-->
-<!-- DYNAMIC: currently_working_on -->
-<!--END_SECTION:currently_working-->
-
-  </details>
-
-  <details>
-    <summary>🌱 My latest projects</summary>
-    <br>
-
-<!--START_SECTION:latest_projects-->
-<!-- DYNAMIC: latest_projects -->
-<!--END_SECTION:latest_projects-->
-
-  </details>
-
-  <details>
-    <summary>🔨 My recent Pull Requests</summary>
-    <br>
-
-<!--START_SECTION:recent_prs-->
-<!-- DYNAMIC: recent_prs -->
-<!--END_SECTION:recent_prs-->
-
-  </details>
-
-  <details>
-    <summary>🎫 My recent Issues</summary>
-    <br>
-
-<!--START_SECTION:recent_issues-->
-<!-- DYNAMIC: recent_issues -->
-<!--END_SECTION:recent_issues-->
-
-  </details>
-
-  <details>
-    <summary>⭐ Recent Stars</summary>
-    <br>
-
-<!--START_SECTION:recent_stars-->
-<!-- DYNAMIC: recent_stars -->
-<!--END_SECTION:recent_stars-->
-
-  </details>
-
-  <details>
-    <summary>🤖 AI Token Usage (Tokscale)</summary>
-    <br>
-    <div align="center">
-      <a href="https://tokscale.ai/u/Paranjayy">
-        <img alt="Tokscale Stats for @Paranjayy" src="https://tokscale.ai/api/embed/Paranjayy/svg?graph=1&rank=total&tokens=compact&cost=compact" />
-      </a>
-      <br>
-      <p>Track my token usage across AI coding agents on the <a href="https://tokscale.ai">Tokscale leaderboard</a>.</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>📡 Now</summary>
-    <br>
-
-> 🔨 Building **Limn** — agent-native deploy platform
-> 📚 Learning **Rust + Systems Programming**
-> 🎯 Focus shipping **Saptak** v1.0 this month
-> 💭 Thinking about **AI agents that actually work**
-
-  </details>
-
-  <details>
-    <summary>🧰 Toolbox</summary>
-    <br>
-
-| | |
-|---|---|
-| **Editor** | Cursor / VS Code |
-| **Terminal** | Warp / Ghostty |
-| **Shell** | zsh + starship |
-| **Browser** | Arc / Vivaldi |
-| **OS** | macOS |
-| **AI** | OpenCode, Claude, Cursor |
-| **Notes** | Obsidian |
-| **Design** | Figma |
-
-  </details>
-
-  <details>
-    <summary>💡 TIL</summary>
-    <br>
-
-- GitHub Actions `paths-ignore` won't trigger on ignored file changes — learned the hard way
-- `tokscale` tracks token usage across 30+ AI coding agents automatically
-- `lowlighter/metrics` can generate SVG cards for Steam, WakaTime, and more
-- Markdown `<details>` can be nested for clean toggle hierarchies
-
-  </details>
-
-  <details>
-    <summary>🔖 Bookmarks</summary>
-    <br>
-
-- [Limn](https://github.com/Paranjayy/limn) — agent-native deploy platform (my project)
-- [Tokscale](https://github.com/junhoyeo/tokscale) — track AI token usage across agents
-- [Ghostty](https://github.com/ghostty-org/ghostty) — fast, feature-rich terminal
-- [Starship](https://starship.rs) — cross-shell prompt
-- [warp.dev](https://warp.dev) — modern terminal with AI
-
-  </details>
-
-  <details>
-    <summary>🧪 Experiments</summary>
-    <br>
-
-- **Cantos** — world epic explorer with interactive timelines
-- **Sift** — TUI file organizer, Hazel but in terminal
-- **This README** — dynamic profile powered by GitHub Actions
-
-  </details>
-
-</details>
-
----
-
 <details>
   <summary>📊 Github Analytics, Streak & Monkeytype ⌨️</summary>
   <br>
@@ -344,6 +213,136 @@ PHP                      3 repos             █░░░░░░░░░░�
       <a href="https://stats.fm/paranjay"><img src="https://img.shields.io/badge/Stats.fm-paranjay-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Stats.fm" /></a>
     </p>
   </div>
+</details>
+
+---
+
+<details>
+  <summary>📌 Misc</summary>
+  <br>
+
+  <details>
+    <summary>👷 Check out what I'm currently working on</summary>
+    <br>
+
+<!--START_SECTION:currently_working-->
+<!-- DYNAMIC: currently_working_on -->
+<!--END_SECTION:currently_working-->
+
+  </details>
+
+  <details>
+    <summary>🌱 My latest projects</summary>
+    <br>
+
+<!--START_SECTION:latest_projects-->
+<!-- DYNAMIC: latest_projects -->
+<!--END_SECTION:latest_projects-->
+
+  </details>
+
+  <details>
+    <summary>🔨 My recent Pull Requests</summary>
+    <br>
+
+<!--START_SECTION:recent_prs-->
+<!-- DYNAMIC: recent_prs -->
+<!--END_SECTION:recent_prs-->
+
+  </details>
+
+  <details>
+    <summary>🎫 My recent Issues</summary>
+    <br>
+
+<!--START_SECTION:recent_issues-->
+<!-- DYNAMIC: recent_issues -->
+<!--END_SECTION:recent_issues-->
+
+  </details>
+
+  <details>
+    <summary>⭐ Recent Stars</summary>
+    <br>
+
+<!--START_SECTION:recent_stars-->
+<!-- DYNAMIC: recent_stars -->
+<!--END_SECTION:recent_stars-->
+
+  </details>
+
+  <details>
+    <summary>🤖 AI Token Usage (Tokscale)</summary>
+    <br>
+    <div align="center">
+      <a href="https://tokscale.ai/u/Paranjayy">
+        <img alt="Tokscale Stats for @Paranjayy" src="https://tokscale.ai/api/embed/Paranjayy/svg?graph=1&rank=total&tokens=compact&cost=compact" />
+      </a>
+      <br>
+      <p>Track my token usage across AI coding agents on the <a href="https://tokscale.ai">Tokscale leaderboard</a>.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📡 Now</summary>
+    <br>
+
+> 🔨 Building **Limn** — agent-native deploy platform
+> 📚 Learning **Rust + Systems Programming**
+> 🎯 Focus shipping **Saptak** v1.0 this month
+> 💭 Thinking about **AI agents that actually work**
+
+  </details>
+
+  <details>
+    <summary>🧰 Toolbox</summary>
+    <br>
+
+| | |
+|---|---|
+| **Editor** | Cursor / VS Code |
+| **Terminal** | Ghostty |
+| **Shell** | zsh + starship |
+| **Browser** | Arc |
+| **OS** | macOS |
+| **AI** | OpenCode, Claude, Cursor |
+| **Notes** | Obsidian |
+| **Design** | Figma |
+
+  </details>
+
+  <details>
+    <summary>💡 TIL</summary>
+    <br>
+
+- GitHub Actions `paths-ignore` won't trigger on ignored file changes — learned the hard way
+- `tokscale` tracks token usage across 30+ AI coding agents automatically
+- `lowlighter/metrics` can generate SVG cards for Steam, WakaTime, and more
+- Markdown `<details>` can be nested for clean toggle hierarchies
+
+  </details>
+
+  <details>
+    <summary>🔖 Bookmarks</summary>
+    <br>
+
+- [Limn](https://github.com/Paranjayy/limn) — agent-native deploy platform (my project)
+- [Tokscale](https://github.com/junhoyeo/tokscale) — track AI token usage across agents
+- [Ghostty](https://github.com/ghostty-org/ghostty) — fast, feature-rich terminal
+- [Starship](https://starship.rs) — cross-shell prompt
+
+  </details>
+
+  <details>
+    <summary>🧪 Experiments</summary>
+    <br>
+
+- **Cantos** — world epic explorer with interactive timelines
+- **Sift** — TUI file organizer, Hazel but in terminal
+- **This README** — dynamic profile powered by GitHub Actions
+
+  </details>
+
 </details>
 
 <!-- 
