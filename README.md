@@ -8,9 +8,6 @@
   <!-- STARRED_COUNT -->
   <img src="https://img.shields.io/badge/Starred-4338-065f46?logo=github&logoColor=white" alt="Starred Repos" />
   <!-- /STARRED_COUNT -->
-  <!-- TOKSCALE -->
-  <a href="https://tokscale.ai/paranjayy"><img src="https://img.shields.io/badge/Tokscale-Usage-0073FF?style=flat&logo=token&logoColor=white" alt="Tokscale Usage" /></a>
-  <!-- /TOKSCALE -->
 </p>
 
 <br>
@@ -56,71 +53,37 @@
 ---
 
 <details>
-  <summary>👷 Check out what I'm currently working on</summary>
+  <summary>📊 Dashboard — Projects, PRs, Issues & Stars</summary>
   <br>
+
+#### 👷 Check out what I'm currently working on
 
 <!--START_SECTION:currently_working-->
-- [paranjayy](https://github.com/Paranjayy/paranjayy) - Config Files
-- [saptak](https://github.com/Paranjayy/saptak) - Saptak — an instrument studio in your browser: harmonium, piano, bansuri, sitar, tabla, 16-step drum machine. All synthesized live, no samples.
-- [limn](https://github.com/Paranjayy/limn) - Limn — an agent-native deploy platform. Build the whole app, let the agent ship it. (lakebed/postplan/hermes-style, rebuilt)
-- [sift](https://github.com/Paranjayy/sift) - Hazel, but in your terminal. A TUI file organizer built with TypeScript + Ink.
-- [cantos](https://github.com/Paranjayy/cantos) - Cantos — World Epic Explorer. Interactive family trees, timelines, character profiles, and comparative analysis for the world's great epics.
+<!-- DYNAMIC: currently_working_on -->
 <!--END_SECTION:currently_working-->
 
-</details>
-
-<details>
-  <summary>🌱 My latest projects</summary>
-  <br>
+#### 🌱 My latest projects
 
 <!--START_SECTION:latest_projects-->
-- [saptak](https://github.com/Paranjayy/saptak) - Saptak — an instrument studio in your browser: harmonium, piano, bansuri, sitar, tabla, 16-step drum machine. All synthesized live, no samples.
-- [limn](https://github.com/Paranjayy/limn) - Limn — an agent-native deploy platform. Build the whole app, let the agent ship it. (lakebed/postplan/hermes-style, rebuilt)
-- [backup-manager](https://github.com/Paranjayy/backup-manager) - No description
-- [sift](https://github.com/Paranjayy/sift) - Hazel, but in your terminal. A TUI file organizer built with TypeScript + Ink.
-- [cantos](https://github.com/Paranjayy/cantos) - Cantos — World Epic Explorer. Interactive family trees, timelines, character profiles, and comparative analysis for the world's great epics.
+<!-- DYNAMIC: latest_projects -->
 <!--END_SECTION:latest_projects-->
 
-</details>
-
-<details>
-  <summary>🔨 My recent Pull Requests</summary>
-  <br>
+#### 🔨 My recent Pull Requests
 
 <!--START_SECTION:recent_prs-->
-- [Add paranjay.dev and Duolingo badges to profile README links section](https://github.com/Paranjayy/paranjayy/pull/14) on [Paranjayy/paranjayy](https://github.com/Paranjayy/paranjayy) `closed`
-- [Expand README for user and developer workflows, with DeepWiki entry point](https://github.com/Paranjayy/discord-scraper/pull/1) on [Paranjayy/discord-scraper](https://github.com/Paranjayy/discord-scraper) `closed`
-- [fix: restore floating panel classification and bar filtering](https://github.com/BarutSRB/OmniWM/pull/323) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed`
-- [fix(rules): resolve popup-induced floating bug (#306)](https://github.com/BarutSRB/OmniWM/pull/318) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed`
-- [Add seventv-search extension](https://github.com/raycast/extensions/pull/27424) on [raycast/extensions](https://github.com/raycast/extensions) `closed`
+<!-- DYNAMIC: recent_prs -->
 <!--END_SECTION:recent_prs-->
 
-</details>
-
-<details>
-  <summary>🎫 My recent Issues</summary>
-  <br>
+#### 🎫 My recent Issues
 
 <!--START_SECTION:recent_issues-->
-- [[ACP] Kimi K3 not showing in zed.dev/ACP](https://github.com/anomalyco/opencode/issues/37492) on [anomalyco/opencode](https://github.com/anomalyco/opencode) `closed` 💬3
-- [[Bug]popup in any app causes the app to float & [feature request]keyboard shortcut(right/left side cmd/opt) & workspace snapshot](https://github.com/BarutSRB/OmniWM/issues/306) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬6
-- [[Default Web Browser Manager] Not Functional](https://github.com/raycast/extensions/issues/27613) on [raycast/extensions](https://github.com/raycast/extensions) `open` 💬1
-- [Floating Windows Not Showing in Workspace Bar](https://github.com/BarutSRB/OmniWM/issues/200) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬2
-- [[Glitch]Ghosted Raycast Window When Borders On](https://github.com/BarutSRB/OmniWM/issues/177) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬3
+<!-- DYNAMIC: recent_issues -->
 <!--END_SECTION:recent_issues-->
 
-</details>
-
-<details>
-  <summary>⭐ Recent Stars</summary>
-  <br>
+#### ⭐ Recent Stars
 
 <!--START_SECTION:recent_stars-->
-- [ChrisTitusTech/titus-ai](https://github.com/ChrisTitusTech/titus-ai) - Codex and AI skills
-- [aryadwiputra/point-of-sales](https://github.com/aryadwiputra/point-of-sales) - Aplikasi kasir (point of sales) yang dibuat menggunakan Laravel 13, Inertia 3, React 19 dan TailwindCSS
-- [MGeurts/genealogy](https://github.com/MGeurts/genealogy) - Genealogy is a free and open-source family tree PHP application to record family members and their relationships, build with LARAVEL 13.
-- [arcahyadi/odysseus](https://github.com/arcahyadi/odysseus) - Self-hosted AI workspace. 
-- [KRTirtho/spotube](https://github.com/KRTirtho/spotube) - 🎧 Open source music streaming app! Available for both desktop & mobile!
+<!-- DYNAMIC: recent_stars -->
 <!--END_SECTION:recent_stars-->
 
 </details>
@@ -284,15 +247,11 @@ PHP                      3 repos             █░░░░░░░░░░�
   <summary>🤖 AI Token Usage (Tokscale)</summary>
   <br>
   <div align="center">
-    <a href="https://tokscale.ai/paranjayy">
-      <img src="https://tokscale.ai/api/badge/paranjayy" alt="Tokscale Leaderboard" />
+    <a href="https://tokscale.ai/u/Paranjayy">
+      <img alt="Tokscale Stats for @Paranjayy" src="https://tokscale.ai/api/embed/Paranjayy/svg?graph=1&rank=total&tokens=compact&cost=compact" />
     </a>
-    <br><br>
-    <p>Track my token usage across AI coding agents on the <a href="https://tokscale.ai">Tokscale leaderboard</a>.</p>
     <br>
-    <p>
-      <a href="https://tokscale.ai"><img src="https://img.shields.io/badge/Tokscale-0073FF?style=for-the-badge&logo=token&logoColor=white" alt="Tokscale" /></a>
-    </p>
+    <p>Track my token usage across AI coding agents on the <a href="https://tokscale.ai">Tokscale leaderboard</a>.</p>
   </div>
 </details>
 
