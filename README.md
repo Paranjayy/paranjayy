@@ -3,10 +3,10 @@
   <img src="https://komarev.com/ghpvc/?username=paranjayy&label=Profile%20Views&color=2e1065&style=flat" alt="Profile views" />
   <img src="https://gitviews.com/user/paranjayy/repos.svg?style=flat&label-color=%23555&color=6366f1" alt="GitHub Repo Views" />
   <!-- TOTAL_STARS -->
-  <img src="https://img.shields.io/badge/Stars-19-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
+<img src="https://img.shields.io/badge/Stars-19-fbbf24?logo=github&logoColor=black" alt="GitHub Stars" />
   <!-- /TOTAL_STARS -->
   <!-- STARRED_COUNT -->
-  <img src="https://img.shields.io/badge/Starred-4338-065f46?logo=github&logoColor=white" alt="Starred Repos" />
+<img src="https://img.shields.io/badge/Starred-4402-065f46?logo=github&logoColor=white" alt="Starred Repos" />
   <!-- /STARRED_COUNT -->
 </p>
 
@@ -226,7 +226,11 @@ PHP                      3 repos             █░░░░░░░░░░�
     <br>
 
 <!--START_SECTION:currently_working-->
-<!-- DYNAMIC: currently_working_on -->
+- [paranjayy](https://github.com/Paranjayy/paranjayy) - Config Files
+- [saptak](https://github.com/Paranjayy/saptak) - Saptak — an instrument studio in your browser: harmonium, piano, bansuri, sitar, tabla, 16-step drum machine. All synthesized live, no samples.
+- [limn](https://github.com/Paranjayy/limn) - Limn — an agent-native deploy platform. Build the whole app, let the agent ship it. (lakebed/postplan/hermes-style, rebuilt)
+- [sift](https://github.com/Paranjayy/sift) - Hazel, but in your terminal. A TUI file organizer built with TypeScript + Ink.
+- [cantos](https://github.com/Paranjayy/cantos) - Cantos — World Epic Explorer. Interactive family trees, timelines, character profiles, and comparative analysis for the world's great epics.
 <!--END_SECTION:currently_working-->
 
   </details>
@@ -236,7 +240,11 @@ PHP                      3 repos             █░░░░░░░░░░�
     <br>
 
 <!--START_SECTION:latest_projects-->
-<!-- DYNAMIC: latest_projects -->
+- [saptak](https://github.com/Paranjayy/saptak) - Saptak — an instrument studio in your browser: harmonium, piano, bansuri, sitar, tabla, 16-step drum machine. All synthesized live, no samples.
+- [limn](https://github.com/Paranjayy/limn) - Limn — an agent-native deploy platform. Build the whole app, let the agent ship it. (lakebed/postplan/hermes-style, rebuilt)
+- [backup-manager](https://github.com/Paranjayy/backup-manager) - No description
+- [sift](https://github.com/Paranjayy/sift) - Hazel, but in your terminal. A TUI file organizer built with TypeScript + Ink.
+- [cantos](https://github.com/Paranjayy/cantos) - Cantos — World Epic Explorer. Interactive family trees, timelines, character profiles, and comparative analysis for the world's great epics.
 <!--END_SECTION:latest_projects-->
 
   </details>
@@ -246,7 +254,11 @@ PHP                      3 repos             █░░░░░░░░░░�
     <br>
 
 <!--START_SECTION:recent_prs-->
-<!-- DYNAMIC: recent_prs -->
+- [Add paranjay.dev and Duolingo badges to profile README links section](https://github.com/Paranjayy/paranjayy/pull/14) on [Paranjayy/paranjayy](https://github.com/Paranjayy/paranjayy) `closed`
+- [Expand README for user and developer workflows, with DeepWiki entry point](https://github.com/Paranjayy/discord-scraper/pull/1) on [Paranjayy/discord-scraper](https://github.com/Paranjayy/discord-scraper) `closed`
+- [fix: restore floating panel classification and bar filtering](https://github.com/BarutSRB/OmniWM/pull/323) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed`
+- [fix(rules): resolve popup-induced floating bug (#306)](https://github.com/BarutSRB/OmniWM/pull/318) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed`
+- [Add seventv-search extension](https://github.com/raycast/extensions/pull/27424) on [raycast/extensions](https://github.com/raycast/extensions) `closed`
 <!--END_SECTION:recent_prs-->
 
   </details>
@@ -256,7 +268,11 @@ PHP                      3 repos             █░░░░░░░░░░�
     <br>
 
 <!--START_SECTION:recent_issues-->
-<!-- DYNAMIC: recent_issues -->
+- [[ACP] Kimi K3 not showing in zed.dev/ACP](https://github.com/anomalyco/opencode/issues/37492) on [anomalyco/opencode](https://github.com/anomalyco/opencode) `closed` 💬3
+- [[Bug]popup in any app causes the app to float & [feature request]keyboard shortcut(right/left side cmd/opt) & workspace snapshot](https://github.com/BarutSRB/OmniWM/issues/306) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬6
+- [[Default Web Browser Manager] Not Functional](https://github.com/raycast/extensions/issues/27613) on [raycast/extensions](https://github.com/raycast/extensions) `open` 💬1
+- [Floating Windows Not Showing in Workspace Bar](https://github.com/BarutSRB/OmniWM/issues/200) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬2
+- [[Glitch]Ghosted Raycast Window When Borders On](https://github.com/BarutSRB/OmniWM/issues/177) on [BarutSRB/OmniWM](https://github.com/BarutSRB/OmniWM) `closed` 💬3
 <!--END_SECTION:recent_issues-->
 
   </details>
@@ -266,7 +282,11 @@ PHP                      3 repos             █░░░░░░░░░░�
     <br>
 
 <!--START_SECTION:recent_stars-->
-<!-- DYNAMIC: recent_stars -->
+- [starfederation/datastar](https://github.com/starfederation/datastar) - The hypermedia framework.
+- [donnemartin/interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges) - 120+ interactive Python coding interview challenges (algorithms and data structures).  Includes Anki flashcards.
+- [posquit0/Awesome-CV](https://github.com/posquit0/Awesome-CV) - :page_facing_up: Awesome CV is LaTeX template for your outstanding job application
+- [aosabook/500lines](https://github.com/aosabook/500lines) - 500 Lines or Less
+- [libuv/libuv](https://github.com/libuv/libuv) - Cross-platform asynchronous I/O
 <!--END_SECTION:recent_stars-->
 
   </details>
