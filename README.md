@@ -53,7 +53,7 @@
 ---
 
 <details open>
-  <summary>🔗 What I'm Up To</summary>
+  <summary>📌 Active</summary>
   <br>
 
   <details>
