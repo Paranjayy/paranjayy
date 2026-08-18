@@ -118,6 +118,67 @@
     </div>
   </details>
 
+  <details>
+    <summary>📡 Now</summary>
+    <br>
+
+> 🔨 Building **Limn** — agent-native deploy platform
+> 📚 Learning **Rust + Systems Programming**
+> 🎯 Focus shipping **Saptak** v1.0 this month
+> 💭 Thinking about **AI agents that actually work**
+
+  </details>
+
+  <details>
+    <summary>🧰 Toolbox</summary>
+    <br>
+
+| | |
+|---|---|
+| **Editor** | Cursor / VS Code |
+| **Terminal** | Warp / Ghostty |
+| **Shell** | zsh + starship |
+| **Browser** | Arc / Vivaldi |
+| **OS** | macOS |
+| **AI** | OpenCode, Claude, Cursor |
+| **Notes** | Obsidian |
+| **Design** | Figma |
+
+  </details>
+
+  <details>
+    <summary>💡 TIL</summary>
+    <br>
+
+- GitHub Actions `paths-ignore` won't trigger on ignored file changes — learned the hard way
+- `tokscale` tracks token usage across 30+ AI coding agents automatically
+- `lowlighter/metrics` can generate SVG cards for Steam, WakaTime, and more
+- Markdown `<details>` can be nested for clean toggle hierarchies
+
+  </details>
+
+  <details>
+    <summary>🔖 Bookmarks</summary>
+    <br>
+
+- [Limn](https://github.com/Paranjayy/limn) — agent-native deploy platform (my project)
+- [Tokscale](https://github.com/junhoyeo/tokscale) — track AI token usage across agents
+- [Ghostty](https://github.com/ghostty-org/ghostty) — fast, feature-rich terminal
+- [Starship](https://starship.rs) — cross-shell prompt
+- [warp.dev](https://warp.dev) — modern terminal with AI
+
+  </details>
+
+  <details>
+    <summary>🧪 Experiments</summary>
+    <br>
+
+- **Cantos** — world epic explorer with interactive timelines
+- **Sift** — TUI file organizer, Hazel but in terminal
+- **This README** — dynamic profile powered by GitHub Actions
+
+  </details>
+
 </details>
 
 ---
