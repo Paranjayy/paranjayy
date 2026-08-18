@@ -144,6 +144,10 @@
   <summary>⌨️ Coding Activity (WakaTime)</summary>
   <br>
 
+  <details>
+    <summary>📊 Text Stats</summary>
+    <br>
+
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-148%20hrs%2018%20mins-blue?style=flat)
 
@@ -228,10 +232,16 @@ PHP                      3 repos             █░░░░░░░░░░�
  Last Updated on 16/08/2026 03:21:02 UTC
 <!--END_SECTION:waka-->
 
-  <br>
-  <div align="center">
-    <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/metrics/metrics.wakatime.full.svg" alt="WakaTime Detailed" />
-  </div>
+  </details>
+
+  <details>
+    <summary>📈 Visual Card</summary>
+    <br>
+    <div align="center">
+      <img src="https://raw.githubusercontent.com/Paranjayy/paranjayy/main/metrics/metrics.wakatime.full.svg" alt="WakaTime Detailed" />
+    </div>
+  </details>
+
 </details>
 
 <details>
