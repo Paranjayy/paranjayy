@@ -37,10 +37,10 @@ async function fetchJSON(url, retries = 3) {
 async function getRecentlyUpdatedRepos() {
   try {
     const data = await fetchJSON(
-      `https://api.github.com/users/${USERNAME}/repos?sort=pushed&per_page=10`
+      `https://api.github.com/users/${USERNAME}/repos?sort=pushed&per_page=10&visibility=public`
     );
     return data
-      .filter((r) => !r.fork && r.description)
+      .filter((r) => !r.fork && !r.private && r.description)
       .slice(0, 5)
       .map((r) => ({
         name: r.name,
@@ -57,10 +57,10 @@ async function getLatestRepos() {
   try {
     await sleep(500); // sequential delay
     const data = await fetchJSON(
-      `https://api.github.com/users/${USERNAME}/repos?sort=created&per_page=6`
+      `https://api.github.com/users/${USERNAME}/repos?sort=created&per_page=6&visibility=public`
     );
     return data
-      .filter((r) => !r.fork)
+      .filter((r) => !r.fork && !r.private)
       .slice(0, 5)
       .map((r) => ({
         name: r.name,
@@ -107,6 +107,25 @@ async function getRecentIssues() {
   } catch (err) {
     console.error('Failed to fetch recent issues:', err.message);
     return [];
+  }
+}
+
+async function getTotals() {
+  try {
+    await sleep(500);
+    const pr = await fetchJSON(
+      `https://api.github.com/search/issues?q=author:${USERNAME}+type:pr&per_page=1`
+    );
+    const issues = await fetchJSON(
+      `https://api.github.com/search/issues?q=author:${USERNAME}+type:issue&per_page=1`
+    );
+    return {
+      totalPRs: pr.total_count || 0,
+      totalIssues: issues.total_count || 0,
+    };
+  } catch (err) {
+    console.error('Failed to fetch totals:', err.message);
+    return { totalPRs: 0, totalIssues: 0 };
   }
 }
 
@@ -187,6 +206,9 @@ async function main() {
   const recentStars = await getRecentStars();
   console.log(`Found ${recentStars.length} recent stars`);
 
+  const { totalPRs, totalIssues } = await getTotals();
+  console.log(`Totals: ${totalPRs} PRs, ${totalIssues} issues`);
+
   const readmePath = path.join(process.cwd(), 'README.md');
   let readme = await fs.readFile(readmePath, 'utf-8');
 
@@ -201,6 +223,23 @@ async function main() {
 
   for (const [marker, content] of Object.entries(replacements)) {
     readme = readme.replace(marker, content);
+  }
+
+  // Replace total count badges
+  const prBadge = `  <img src="https://img.shields.io/badge/PRs-${totalPRs}-a855f7?logo=github&logoColor=white" alt="Total PRs" />`;
+  const issueBadge = `  <img src="https://img.shields.io/badge/Issues-${totalIssues}-e11d48?logo=github&logoColor=white" alt="Total Issues" />`;
+
+  if (readme.includes('<!-- TOTAL_PRS -->')) {
+    readme = readme.replace(
+      /<!-- TOTAL_PRS -->[\s\S]*?<!-- \/TOTAL_PRS -->/,
+      `<!-- TOTAL_PRS -->\n${prBadge}\n  <!-- /TOTAL_PRS -->`
+    );
+  }
+  if (readme.includes('<!-- TOTAL_ISSUES -->')) {
+    readme = readme.replace(
+      /<!-- TOTAL_ISSUES -->[\s\S]*?<!-- \/TOTAL_ISSUES -->/,
+      `<!-- TOTAL_ISSUES -->\n${issueBadge}\n  <!-- /TOTAL_ISSUES -->`
+    );
   }
 
   await fs.writeFile(readmePath, readme);
