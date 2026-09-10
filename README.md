@@ -332,4 +332,12 @@ Shell                    3 repos             █░░░░░░░░░░�
   🚀 PORTFOLIO ROADMAP 
   - Redirection: paranjayy.github.io -> paranjayy.com (Once domain is live)
   - Portfolio Build: [Link your portfolio repository here when ready]
+  
+[![GitHub Repo stars](https://img.shields.io/github/stars/paranjayy/paranjayy?style=plastic)](https://github.com/paranjayy/paranjayy/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/paranjayy/paranjayy?style=plastic)](https://github.com/paranjayy/paranjayy/forks)
+[![GitHub watchers](https://img.shields.io/github/watchers/paranjayy/paranjayy?style=plastic)](https://github.com/paranjayy/paranjayy/watchers)
+[![GitHub contributors](https://img.shields.io/github/contributors/paranjayy/paranjayy?style=plastic)](https://github.com/paranjayy/paranjayy/graphs/contributors)
+[![GitHub tag (with filter)](https://img.shields.io/github/v/tag/paranjayy/paranjayy?style=plastic&label=latest)](https://github.com/paranjayy/paranjayy/releases/latest)
+[![GitHub all releases](https://img.shields.io/github/downloads/paranjayy/paranjayy/total?style=plastic&label=total%20downloads)](https://github.com/paranjayy/paranjayy/releases)
+
 -->
